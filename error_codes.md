@@ -78,4 +78,88 @@ python main.py --url "YOUR_URL" --max-retries 5
 - `WARNING`: 可忽略的错误和警告
 - `ERROR`: 严重错误，导致处理失败
 
-使用 `--verbose` 参数可以看到更详细的调试信息。 
+使用 `--verbose` 参数可以看到更详细的调试信息。
+
+---
+
+# Google Maps Scraper Error Code Explanations
+
+## Error Code List
+
+| Error Code | Error Type | Description | Possible Causes | Recommended Action |
+|---|---|---|---|---|
+| 0 | SUCCESS | Success | - | Normal processing result |
+| 1001 | BROWSER_INIT_FAILED | Browser initialization failed | Chrome driver issue, permission problem, missing dependencies | Check Chrome driver version, system permissions |
+| 1002 | URL_LOAD_FAILED | URL loading failed | Network issue, invalid URL, timeout | Check network connection, URL format |
+| 1003 | BUSINESS_INFO_EXTRACTION_FAILED | Business info extraction failed | Page structure change, element location failed | Can be ignored, default values will be used |
+| 1004 | REVIEWS_BUTTON_NOT_FOUND | "Reviews" button not found | Business has no reviews, page structure change | Normal case, returns basic business info |
+| 1005 | REVIEWS_SCROLL_FAILED | Review scroll loading failed | Slow page load, network issue | Retry or ignore |
+| 1006 | REVIEWS_EXTRACTION_FAILED | Review extraction failed | Page structure change, permission issue | Retry or ignore |
+| 1007 | COORDINATES_EXTRACTION_FAILED | Coordinate extraction failed | URL format change, page redirect | Can be ignored, coordinate field will be empty |
+| 1008 | CSV_SAVE_FAILED | CSV file save failed | Insufficient disk space, permission issue | Check disk space and directory permissions |
+| 1009 | NETWORK_TIMEOUT | Network timeout | Slow network connection, slow server response | Increase retry count or timeout |
+| 1010 | ELEMENT_NOT_FOUND | Element not found | File does not exist, URL list is empty | Check input file and parameters |
+| 1999 | UNEXPECTED_ERROR | Unexpected error | Unknown exception, code logic error | Check log details, contact technical support |
+
+## Error Handling Strategy
+
+### 1. Retryable Errors
+The following error codes are recommended for retry:
+- `1002` (URL_LOAD_FAILED)
+- `1005` (REVIEWS_SCROLL_FAILED)
+- `1006` (REVIEWS_EXTRACTION_FAILED)
+- `1009` (NETWORK_TIMEOUT)
+- `1999` (UNEXPECTED_ERROR)
+
+### 2. Ignorable Errors
+The following errors do not affect the main functionality:
+- `1003` (BUSINESS_INFO_EXTRACTION_FAILED) - Default values will be used.
+- `1004` (REVIEWS_BUTTON_NOT_FOUND) - The business may have no reviews.
+- `1007` (COORDINATES_EXTRACTION_FAILED) - The coordinate field will be empty.
+
+### 3. Critical Errors
+The following errors require immediate attention:
+- `1001` (BROWSER_INIT_FAILED) - Environment configuration issue.
+- `1008` (CSV_SAVE_FAILED) - System resource issue.
+- `1010` (ELEMENT_NOT_FOUND) - Input parameter issue.
+
+## Usage Example
+
+### Handling Errors in Python Code
+```python
+from caller_example import GoogleMapsReviewsAPI
+
+api = GoogleMapsReviewsAPI()
+result = api.scrape_single_url("YOUR_URL")
+
+if result["success"]:
+    print("Scraping successful")
+    print(f"Business: {result['data']['business_info']['name']}")
+else:
+    error_code = result["error_code"]
+    
+    if error_code in [1002, 1005, 1006, 1009, 1999]:
+        print("Retryable error, retrying is recommended")
+    elif error_code in [1003, 1004, 1007]:
+        print("Ignorable error, continuing processing")
+    elif error_code in [1001, 1008, 1010]:
+        print("Critical error, requires immediate attention")
+        print(f"Error details: {result['error_message']}")
+```
+
+### Viewing Detailed Errors via Command Line
+```bash
+# Enable detailed logging
+python main.py --url "YOUR_URL" --verbose --json-output
+
+# Increase retry attempts
+python main.py --url "YOUR_URL" --max-retries 5
+```
+
+## Log Level Explanations
+
+- `INFO`: Normal processing information
+- `WARNING`: Ignorable errors and warnings
+- `ERROR`: Critical error, causing processing failure
+
+Use the `--verbose` flag to see more detailed debugging information. 
