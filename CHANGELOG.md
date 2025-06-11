@@ -33,4 +33,19 @@ All notable changes to this project will be documented in this file.
 - Async wrapper `async_batch_scrape`.
 - CLI improvements remain compatible.
 - Documentation site scaffolding (MkDocs).
-- CONTRIBUTING guide and Ruff config. 
+- CONTRIBUTING guide and Ruff config.
+
+## [0.4.0] - 2025-06-12
+### Added
+- **Data export utilities** - Export to CSV, Excel, JSON with auto-format detection
+- **Configuration management** - Persistent settings with `bob config` command
+- **Enhanced CLI** - Export and config subcommands
+- **Comprehensive test suite** - 12 passing tests covering all modules
+- **Pydantic v2 compatibility** - Updated validators and field definitions
+- **Package discovery fix** - Proper setuptools configuration
+
+### Changed
+- Fixed Pydantic v2 compatibility issues
+- Improved error handling and validation
+- Enhanced CLI with export and config management
+- Better project structure with proper package exclusions 

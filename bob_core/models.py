@@ -9,12 +9,12 @@ from datetime import datetime
 from enum import Enum
 
 try:
-    from pydantic import BaseModel, Field, validator
+    from pydantic import BaseModel, Field, field_validator
 except ImportError:
     # Fallback for environments without pydantic
     BaseModel = dict
     Field = lambda **kwargs: None
-    validator = lambda *args, **kwargs: lambda f: f
+    field_validator = lambda *args, **kwargs: lambda f: f
 
 __all__ = [
     "BusinessInfo",
@@ -44,7 +44,8 @@ class BusinessInfo(BaseModel):
     website: str = Field(default="Unavailable", description="Website URL")
     coordinates: Optional[Dict[str, float]] = Field(default=None, description="Lat/lng")
     
-    @validator("rating")
+    @field_validator("rating")
+    @classmethod
     def validate_rating(cls, v):
         """Ensure rating is reasonable."""
         if v and v != "Unrated":
@@ -67,7 +68,8 @@ class Review(BaseModel):
     time: str = Field(default="", description="Review timestamp")
     helpful_count: Optional[int] = Field(default=None, description="Helpful votes")
     
-    @validator("content")
+    @field_validator("content")
+    @classmethod
     def validate_content_length(cls, v):
         """Ensure content isn't excessively long."""
         if len(v) > 10000:  # 10k char limit
@@ -88,12 +90,9 @@ class ScrapeResult(BaseModel):
     scraped_at: Optional[datetime] = Field(default_factory=datetime.now)
     scrape_duration: Optional[float] = Field(default=None, description="Seconds taken")
     
-    @validator("reviews_count", always=True)
-    def sync_reviews_count(cls, v, values):
-        """Ensure reviews_count matches actual reviews length."""
-        if "reviews" in values:
-            return len(values["reviews"])
-        return v
+    def model_post_init(self, __context):
+        """Sync reviews_count after initialization."""
+        self.reviews_count = len(self.reviews)
 
 
 class BatchConfig(BaseModel):
@@ -104,9 +103,10 @@ class BatchConfig(BaseModel):
     timeout: int = Field(default=300, ge=30, le=1800, description="Timeout per URL")
     headless: bool = Field(default=True, description="Run browser headless")
     show_progress: bool = Field(default=True, description="Show progress bar")
-    output_format: str = Field(default="json", regex="^(json|csv|both)$")
+    output_format: str = Field(default="json", pattern="^(json|csv|both)$")
     
-    @validator("max_workers")
+    @field_validator("max_workers")
+    @classmethod
     def validate_workers(cls, v):
         """Reasonable worker limits."""
         if v > 10:

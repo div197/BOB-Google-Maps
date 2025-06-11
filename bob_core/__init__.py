@@ -10,9 +10,11 @@ __all__ = [
     "analytics", 
     "models",
     "playwright_backend",
+    "export",
+    "config",
 ]
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 from .cli import main as _cli_main
 
