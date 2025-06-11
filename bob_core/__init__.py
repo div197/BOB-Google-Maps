@@ -12,6 +12,8 @@ __all__ = [
     "playwright_backend",
     "export",
     "config",
+    "logging_config",
+    "rate_limiter",
 ]
 
 __version__ = "0.4.0"
