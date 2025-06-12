@@ -17,18 +17,21 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 
-from .error_codes import ErrorCodes
+from .error_codes import ErrorCodes, handle_error
 from .business_parser import BusinessParser
 from .review_parser import ReviewParser
 from .playwright_backend import PlaywrightScraper, PLAYWRIGHT_AVAILABLE
+from .circuit_breaker import get_circuit_breaker
+from .retry_strategy import retry_with_backoff, web_scraping_retry
 
 __all__ = ["GoogleMapsScraper"]
 
 class GoogleMapsScraper:
     """Multi-backend Google Maps scraper (Selenium + Playwright)."""
 
-    def __init__(self, headless: bool = True, timeout: int = 30, backend: str = "auto"):
-        """Initialize scraper with backend selection.
+    def __init__(self, headless: bool = True, timeout: int = 30, backend: str = "auto", 
+                 extract_reviews: bool = True, max_reviews: int = None):
+        """Initialize scraper with backend selection and extraction options.
         
         Parameters
         ----------
@@ -38,10 +41,28 @@ class GoogleMapsScraper:
             Timeout in seconds.
         backend : str
             Backend choice: "selenium", "playwright", or "auto" (prefer Playwright).
+        extract_reviews : bool
+            Whether to extract reviews (False for business-only mode).
+        max_reviews : int, optional
+            Maximum number of reviews to extract (None for unlimited).
         """
         self.headless = headless
         self.timeout = timeout
         self.backend = self._select_backend(backend)
+        self.extract_reviews = extract_reviews
+        self.max_reviews = max_reviews
+        
+        # Initialize circuit breakers for different operations
+        self.browser_circuit_breaker = get_circuit_breaker(
+            f"browser_{backend}", 
+            failure_threshold=3,
+            recovery_timeout=60
+        )
+        self.parsing_circuit_breaker = get_circuit_breaker(
+            "parsing",
+            failure_threshold=5,
+            recovery_timeout=30
+        )
     
     def _select_backend(self, backend: str) -> str:
         """Select the best available backend."""
@@ -60,7 +81,7 @@ class GoogleMapsScraper:
         """Scrape a single Google Maps place page using selected backend."""
         if self.backend == "playwright":
             scraper = PlaywrightScraper(headless=self.headless, timeout=self.timeout)
-            return scraper.scrape(url)
+            return scraper.scrape(url, extract_reviews=self.extract_reviews, max_reviews=self.max_reviews)
         else:
             return self._scrape_selenium(url)
     
@@ -87,13 +108,29 @@ class GoogleMapsScraper:
             driver.set_page_load_timeout(self.timeout)
             driver.get(url)
 
-            # Extract business info and reviews
+            # Extract business info
             business_info = BusinessParser(driver).parse()
-            reviews = ReviewParser(driver).parse_reviews()
-
             result["business_info"] = business_info
-            result["reviews"] = reviews
-            result["reviews_count"] = len(reviews)
+            
+            # Extract reviews only if requested
+            if self.extract_reviews:
+                review_parser = ReviewParser(driver)
+                if self.max_reviews:
+                    # Calculate max_scrolls based on max_reviews (roughly 10 reviews per scroll)
+                    max_scrolls = min(30, max(1, self.max_reviews // 10))
+                    review_parser.max_scrolls = max_scrolls
+                
+                reviews = review_parser.parse_reviews()
+                
+                # Limit reviews if max_reviews specified
+                if self.max_reviews and len(reviews) > self.max_reviews:
+                    reviews = reviews[:self.max_reviews]
+                
+                result["reviews"] = reviews
+                result["reviews_count"] = len(reviews)
+            else:
+                result["reviews"] = []
+                result["reviews_count"] = 0
             result["success"] = True
             return result
         except WebDriverException as exc:
@@ -111,6 +148,19 @@ class GoogleMapsScraper:
                 except Exception:
                     pass
 
+    def scrape_business_only(self, url: str) -> Dict[str, Any]:
+        """Scrape only business information (no reviews) for maximum speed."""
+        # Temporarily disable review extraction
+        original_extract_reviews = self.extract_reviews
+        self.extract_reviews = False
+        
+        try:
+            result = self.scrape(url)
+            return result
+        finally:
+            # Restore original setting
+            self.extract_reviews = original_extract_reviews
+    
     def scrape_batch(self, urls: List[str]) -> List[Dict[str, Any]]:
         """Bulk-scrape convenience wrapper (placeholder)."""
         return [self.scrape(u) for u in urls] 

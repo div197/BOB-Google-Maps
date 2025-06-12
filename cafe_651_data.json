@@ -1,0 +1,35 @@
+{
+  "url": "https://www.google.com/maps/place/Café+651/@26.2389,73.0243,15z?hl=en",
+  "success": true,
+  "error_code": 0,
+  "error_message": "",
+  "business_info": {
+    "name": "Café 651",
+    "rating": "4.3 stars",
+    "category": "Cafe",
+    "address": "11th B Rd, Sardarpura, Bhagat Ki Kothi, Jodhpur, Rajasthan 342003, India",
+    "phone": "099508 51651",
+    "website": "https://www.facebook.com/cafe651jodhpur/"
+  },
+  "reviews": [
+    {
+      "username": "neha bhargava",
+      "content": "Taste wise, the best place in Jodhpur! Loved the ambience too",
+      "rating": "5 stars",
+      "time": "9 months ago"
+    },
+    {
+      "username": "Harsh Kumar",
+      "content": "The only place in Jodhpur with actually good coffee. They use a medium roast beans unlike the really dark roast used everywhere else here",
+      "rating": "5 stars",
+      "time": "2 years ago"
+    },
+    {
+      "username": "Manisha",
+      "content": "This place is love. Loveee the food, in particular pasta, pizza, pancake and coffee are the must try from the menu.",
+      "rating": "5 stars",
+      "time": "3 years ago"
+    }
+  ],
+  "reviews_count": 254
+} 

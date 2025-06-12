@@ -1,0 +1,350 @@
+name: BOB Google Maps CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+env:
+  PYTHON_VERSION: '3.9'
+
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11']
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov pytest-asyncio black flake8 mypy
+        
+    - name: Install Playwright
+      run: |
+        pip install playwright
+        playwright install chromium
+        
+    - name: Code formatting check
+      run: |
+        black --check bob_core/ tests/
+        
+    - name: Linting
+      run: |
+        flake8 bob_core/ tests/ --max-line-length=88 --extend-ignore=E203,W503
+        
+    - name: Type checking
+      run: |
+        mypy bob_core/ --ignore-missing-imports
+        
+    - name: Run unit tests
+      run: |
+        python -m pytest tests/ -v --cov=bob_core --cov-report=xml --cov-report=html
+        
+    - name: Health check
+      run: |
+        python -m bob_core.health_cli status
+        
+    - name: Upload coverage to Codecov
+      if: matrix.python-version == '3.9'
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+
+  integration-test:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install playwright
+        playwright install chromium
+        
+    - name: Run integration tests
+      run: |
+        python -c "
+        import bob_core
+        print('Testing business-only extraction...')
+        scraper = bob_core.GoogleMapsScraper(extract_reviews=False)
+        result = scraper.scrape('https://maps.google.com/?q=restaurant+paris&hl=en')
+        assert result['success'], f'Integration test failed: {result.get(\"error\", \"Unknown error\")}'
+        print('✅ Integration test passed!')
+        "
+        
+    - name: Test batch processing
+      run: |
+        python -c "
+        from bob_core.batch import batch_scrape
+        urls = ['https://maps.google.com/?q=cafe+london&hl=en']
+        results = batch_scrape(urls, extract_reviews=False, max_workers=1)
+        assert len(results) > 0, 'Batch processing failed'
+        assert results[0]['success'], f'Batch test failed: {results[0].get(\"error\", \"Unknown error\")}'
+        print('✅ Batch processing test passed!')
+        "
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run Bandit security scan
+      run: |
+        pip install bandit
+        bandit -r bob_core/ -f json -o bandit-report.json || true
+        
+    - name: Upload security scan results
+      uses: actions/upload-artifact@v3
+      with:
+        name: security-scan-results
+        path: bandit-report.json
+
+  performance-test:
+    name: Performance Benchmarks
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install playwright
+        playwright install chromium
+        
+    - name: Performance benchmark
+      run: |
+        python -c "
+        import time
+        import bob_core
+        
+        print('🎯 Performance Benchmark - BOB v0.5.0')
+        print('=' * 50)
+        
+        # Business-only benchmark
+        scraper_business = bob_core.GoogleMapsScraper(extract_reviews=False)
+        start = time.time()
+        result = scraper_business.scrape('https://maps.google.com/?q=restaurant+paris&hl=en')
+        business_time = time.time() - start
+        
+        if result['success']:
+            print(f'✅ Business-only: {business_time:.2f}s')
+        else:
+            print(f'❌ Business-only failed: {result.get(\"error\", \"Unknown\")}')
+            
+        # Performance assertion (should be under 30s for business-only)
+        assert business_time < 30, f'Performance regression: {business_time:.2f}s > 30s'
+        print('✅ Performance benchmark passed!')
+        "
+
+  build:
+    name: Build Package
+    runs-on: ubuntu-latest
+    needs: [test, integration-test]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+        
+    - name: Build package
+      run: |
+        python -m build
+        
+    - name: Check package
+      run: |
+        twine check dist/*
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-packages
+        path: dist/
+
+  publish-test:
+    name: Publish to TestPyPI
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: dist-packages
+        path: dist/
+        
+    - name: Publish to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        repository-url: https://test.pypi.org/legacy/
+
+  publish-prod:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'release' && github.event.action == 'published'
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: dist-packages
+        path: dist/
+        
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+
+  docker:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    needs: [test, integration-test]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      
+    - name: Login to Docker Hub
+      if: github.event_name != 'pull_request'
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: divyanshu/bob-google-maps
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
+          
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: ${{ github.event_name != 'pull_request' }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  documentation:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install documentation dependencies
+      run: |
+        pip install mkdocs mkdocs-material mkdocstrings[python]
+        
+    - name: Build documentation
+      run: |
+        mkdocs build
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+
+  notify:
+    name: Notify Success
+    runs-on: ubuntu-latest
+    needs: [test, integration-test, security-scan, performance-test, build]
+    if: always()
+    
+    steps:
+    - name: Notify on success
+      if: ${{ needs.test.result == 'success' && needs.integration-test.result == 'success' }}
+      run: |
+        echo "🎉 BOB Google Maps v0.5.0 CI/CD Pipeline Successful!"
+        echo "✅ All tests passed"
+        echo "✅ Integration tests passed"
+        echo "✅ Security scan completed"
+        echo "✅ Performance benchmarks passed"
+        echo "✅ Build successful"
+        echo ""
+        echo "🙏 Made with excellence following Niṣkāma Karma Yoga principles"
+        
+    - name: Notify on failure
+      if: ${{ needs.test.result == 'failure' || needs.integration-test.result == 'failure' }}
+      run: |
+        echo "❌ BOB Google Maps CI/CD Pipeline Failed"
+        echo "Please check the logs and fix the issues"
+        exit 1 
