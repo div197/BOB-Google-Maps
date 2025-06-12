@@ -218,7 +218,6 @@ services:
     networks:
       - bob-network
     restart: unless-stopped
-    scale: 2
 
 # Networks
 networks:
