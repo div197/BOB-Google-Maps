@@ -238,7 +238,6 @@ volumes:
 # Use: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
 ---
 # docker-compose.dev.yml (development overrides)
-version: '3.8'
 
 services:
   bob-api:
