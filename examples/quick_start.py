@@ -25,7 +25,7 @@ def main():
     print("🙏 BOB Google Maps v0.5.0 - Quick Start Examples")
     print("=" * 50)
     
-    # Test URL - Replace with your own Google Maps URL
+    # Test URL - Real Google Maps URL for demonstration
     test_url = "https://maps.google.com/?q=restaurant+paris&hl=en"
     
     # Example 1: Business-Only Extraction (Fastest)

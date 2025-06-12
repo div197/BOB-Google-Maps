@@ -18,7 +18,7 @@ BOB is built with:
 
 ```bash
 # Fork and clone
-git clone https://github.com/YOUR_USERNAME/BOB-Google-Maps.git
+git clone https://github.com/div197/BOB-Google-Maps.git
 cd BOB-Google-Maps
 
 # Create virtual environment

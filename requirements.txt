@@ -1,53 +1,54 @@
 # BOB Google Maps v0.5.0 Dependencies
 # Production-ready Google Maps scraper with enterprise-grade features
+# Using latest versions for state-of-the-art performance
 
 # Core scraping dependencies
-selenium>=4.15.0
-playwright>=1.40.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
+selenium
+playwright
+beautifulsoup4
+lxml
 
 # Data processing and validation
-pydantic>=2.5.0
-pandas>=2.1.0
-numpy>=1.24.0
+pydantic
+pandas
+numpy
 
 # Analytics and NLP
-textblob>=0.17.1
-nltk>=3.8.1
+textblob
+nltk
 
 # HTTP and networking
-requests>=2.31.0
-urllib3>=2.0.0
+requests
+urllib3
 
 # CLI and progress tracking
-click>=8.1.0
-tqdm>=4.66.0
-rich>=13.7.0
+click
+tqdm
+rich
 
 # Configuration and serialization
-pyyaml>=6.0.1
-toml>=0.10.2
+pyyaml
+toml
 
 # Async support
-asyncio-throttle>=1.0.2
+asyncio-throttle
 
 # Development and testing (optional)
-pytest>=7.4.0
-pytest-cov>=4.1.0
-pytest-asyncio>=0.21.0
-black>=23.0.0
-flake8>=6.0.0
-mypy>=1.7.0
+pytest
+pytest-cov
+pytest-asyncio
+black
+flake8
+mypy
 
 # Performance monitoring
-psutil>=5.9.0
-memory-profiler>=0.61.0
+psutil
+memory-profiler
 
 # Export utilities
-openpyxl>=3.1.0
-xlsxwriter>=3.1.0
+openpyxl
+xlsxwriter
 
 # Logging and monitoring
-structlog>=23.2.0
-colorlog>=6.8.0 
+structlog
+colorlog 
