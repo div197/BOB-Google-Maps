@@ -1,0 +1,3 @@
+business_info_address,business_info_category,business_info_name,business_info_phone,business_info_rating,business_info_website,error_code,error_message,reviews,reviews_count,success,url
+Unknown,Unknown,Unknown,Unavailable,Unrated,Unavailable,0,,,0,True,https://maps.google.com/?q=restaurant+paris&hl=en
+Unknown,Unknown,Unknown,Unavailable,Unrated,Unavailable,0,,,0,True,https://maps.google.com/?q=cafe+london&hl=en

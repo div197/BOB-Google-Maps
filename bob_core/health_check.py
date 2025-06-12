@@ -408,26 +408,19 @@ class HealthMonitor:
 
 
 # Global health monitor instance
-_global_monitor: Optional[HealthMonitor] = None
+_global_health_monitor: Optional[HealthMonitor] = None
 
-
-def get_health_monitor() -> HealthMonitor:
-    """Get the global health monitor instance."""
-    global _global_monitor
-    if _global_monitor is None:
-        _global_monitor = HealthMonitor()
-        
-        # Add default health checks
-        _global_monitor.add_check(SystemHealthCheck())
-        _global_monitor.add_check(WebDriverHealthCheck())
-        _global_monitor.add_check(PlaywrightHealthCheck())
-    
-    return _global_monitor
+def get_global_health_monitor() -> HealthMonitor:
+    """Get or create global health monitor."""
+    global _global_health_monitor
+    if _global_health_monitor is None:
+        _global_health_monitor = HealthMonitor()
+    return _global_health_monitor
 
 
 def setup_default_health_checks() -> HealthMonitor:
     """Setup default health checks for BOB Google Maps."""
-    monitor = get_health_monitor()
+    monitor = get_global_health_monitor()
     
     # Add BOB-specific health checks
     def check_config():

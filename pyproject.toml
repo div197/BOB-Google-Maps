@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bob-google-maps"
-version = "0.5.0"
-description = "Enterprise-grade Google Maps scraper with business-only extraction and fault tolerance"
+version = "0.6.0"
+description = "Enterprise-grade Google Maps scraper with divine thermodynamics system and business intelligence"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
@@ -16,7 +16,8 @@ maintainers = [
 ]
 keywords = [
     "google-maps", "scraper", "business-intelligence", "data-extraction", 
-    "selenium", "playwright", "fault-tolerance", "enterprise", "production-ready"
+    "selenium", "playwright", "fault-tolerance", "enterprise", "production-ready",
+    "thermodynamics", "equilibrium", "divine-architecture", "0th-law"
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -32,6 +33,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Browsers",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Office/Business",
     "Typing :: Typed"
 ]
@@ -59,7 +61,10 @@ dependencies = [
     "openpyxl",
     "xlsxwriter",
     "structlog",
-    "colorlog"
+    "colorlog",
+    "fastapi",
+    "uvicorn",
+    "aiohttp"
 ]
 
 [project.optional-dependencies]
@@ -158,7 +163,8 @@ markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
     "integration: marks tests as integration tests",
     "unit: marks tests as unit tests",
-    "performance: marks tests as performance benchmarks"
+    "performance: marks tests as performance benchmarks",
+    "asyncio: marks tests as async tests"
 ]
 
 [tool.coverage.run]

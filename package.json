@@ -1,0 +1,73 @@
+{
+  "name": "bob-google-maps",
+  "version": "0.6.0",
+  "description": "Enterprise-grade Google Maps scraper with FastAPI deployment automation",
+  "main": "bob_core/__init__.py",
+  "scripts": {
+    "install": "python -m pip install -r requirements.txt && python -m pip install -e .",
+    "dev": "python -m uvicorn bob_api.main:app --reload --host 0.0.0.0 --port 8000",
+    "start": "python -m uvicorn bob_api.main:app --host 0.0.0.0 --port 8000",
+    "test": "python -m pytest tests/ -v",
+    "test:coverage": "python -m pytest tests/ -v --cov=bob_core --cov-report=html",
+    "lint": "python -m flake8 bob_core/ bob_api/ tests/",
+    "format": "python -m black bob_core/ bob_api/ tests/",
+    "type-check": "python -m mypy bob_core/ bob_api/",
+    "health": "python -m bob_core.health_cli status",
+    "build": "python scripts/build.py",
+    "build:docker": "docker build -t bob-google-maps:latest .",
+    "build:docker-api": "docker build -f Dockerfile.api -t bob-api:latest .",
+    "deploy:local": "python scripts/deploy.py --platform local",
+    "deploy:docker": "python scripts/deploy.py --platform docker",
+    "deploy:aws": "python scripts/deploy.py --platform aws",
+    "deploy:gcp": "python scripts/deploy.py --platform gcp",
+    "deploy:azure": "python scripts/deploy.py --platform azure",
+    "deploy:heroku": "python scripts/deploy.py --platform heroku",
+    "deploy:railway": "python scripts/deploy.py --platform railway",
+    "deploy:render": "python scripts/deploy.py --platform render",
+    "deploy:vercel": "python scripts/deploy.py --platform vercel",
+    "deploy:digitalocean": "python scripts/deploy.py --platform digitalocean",
+    "deploy:all": "python scripts/deploy.py --platform all",
+    "setup:aws": "python scripts/setup_cloud.py --provider aws",
+    "setup:gcp": "python scripts/setup_cloud.py --provider gcp",
+    "setup:azure": "python scripts/setup_cloud.py --provider azure",
+    "clean": "python scripts/clean.py",
+    "docs": "mkdocs serve",
+    "docs:build": "mkdocs build",
+    "benchmark": "python scripts/benchmark.py",
+    "security-scan": "python -m bandit -r bob_core/ bob_api/",
+    "pre-commit": "npm run format && npm run lint && npm run type-check && npm run test",
+    "release": "python scripts/release.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/div197/BOB-Google-Maps.git"
+  },
+  "keywords": [
+    "google-maps",
+    "scraper",
+    "fastapi",
+    "docker",
+    "cloud-deployment",
+    "business-intelligence",
+    "automation"
+  ],
+  "author": "Divyanshu Singh Chouhan <divyanshu@abcsteps.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/div197/BOB-Google-Maps/issues"
+  },
+  "homepage": "https://github.com/div197/BOB-Google-Maps#readme",
+  "engines": {
+    "python": ">=3.8"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "config": {
+    "deployment": {
+      "defaultPlatform": "docker",
+      "outputDirectory": "./dist",
+      "buildDirectory": "./build",
+      "configDirectory": "./deployment"
+    }
+  }
+} 

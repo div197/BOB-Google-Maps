@@ -8,6 +8,7 @@ import re
 from typing import List, Dict, Any, Optional, Tuple
 from collections import Counter, defaultdict
 from statistics import mean, median
+import time
 
 try:
     from textblob import TextBlob
@@ -18,8 +19,10 @@ except ImportError:
 __all__ = [
     "ReviewAnalyzer",
     "BusinessAnalyzer", 
+    "BusinessAnalytics",
     "MarketAnalyzer",
-    "SentimentScore"
+    "SentimentScore",
+    "analyze_business_data"
 ]
 
 
@@ -286,4 +289,48 @@ class MarketAnalyzer:
         return {
             "opportunities": opportunities,
             "total_opportunities": len(opportunities)
-        } 
+        }
+
+
+def analyze_business_data(business_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Analyze business data and return comprehensive insights."""
+    try:
+        analyzer = BusinessAnalyzer(business_data)
+        
+        # Get overall score
+        overall_analysis = analyzer.overall_score()
+        
+        # Analyze reviews if available
+        reviews = business_data.get("reviews", [])
+        review_analysis = {}
+        if reviews:
+            review_analyzer = ReviewAnalyzer(reviews)
+            review_analysis = {
+                "sentiment": review_analyzer.sentiment_analysis(),
+                "ratings": review_analyzer.rating_analysis(),
+                "keywords": review_analyzer.keyword_analysis()
+            }
+        
+        return {
+            "success": True,
+            "business_score": overall_analysis,
+            "review_analysis": review_analysis,
+            "timestamp": time.time() if 'time' in globals() else None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e),
+            "timestamp": time.time() if 'time' in globals() else None
+        }
+
+
+# Backward compatibility alias - BusinessAnalytics is the main interface
+class BusinessAnalytics(BusinessAnalyzer):
+    """Main business analytics interface.
+    
+    This is the primary class users should import and use.
+    Inherits all functionality from BusinessAnalyzer.
+    """
+    pass 

@@ -24,7 +24,7 @@ from .playwright_backend import PlaywrightScraper, PLAYWRIGHT_AVAILABLE
 from .circuit_breaker import get_circuit_breaker
 from .retry_strategy import retry_with_backoff, web_scraping_retry
 
-__all__ = ["GoogleMapsScraper"]
+__all__ = ["GoogleMapsScraper", "BOBScraper"]
 
 class GoogleMapsScraper:
     """Multi-backend Google Maps scraper (Selenium + Playwright)."""
@@ -164,3 +164,13 @@ class GoogleMapsScraper:
     def scrape_batch(self, urls: List[str]) -> List[Dict[str, Any]]:
         """Bulk-scrape convenience wrapper (placeholder)."""
         return [self.scrape(u) for u in urls] 
+
+
+# Backward compatibility alias - BOBScraper is the main interface
+class BOBScraper(GoogleMapsScraper):
+    """Main BOB Google Maps scraper interface.
+    
+    This is the primary class users should import and use.
+    Inherits all functionality from GoogleMapsScraper.
+    """
+    pass 

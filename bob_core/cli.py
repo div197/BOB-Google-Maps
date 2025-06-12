@@ -19,16 +19,27 @@ from .config import load_config, save_config, update_config
 def _single(args: argparse.Namespace) -> None:  # noqa: D401
     scraper = GoogleMapsScraper(
         headless=not args.no_headless, 
-        backend=args.backend
+        backend=args.backend,
+        extract_reviews=not args.business_only,
+        max_reviews=args.max_reviews
     )
-    result = scraper.scrape(args.url)
+    
+    if args.business_only:
+        result = scraper.scrape_business_only(args.url)
+    else:
+        result = scraper.scrape(args.url)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 def _batch(args: argparse.Namespace) -> None:  # noqa: D401
     input_path = Path(args.file)
     urls = [l.strip() for l in input_path.read_text(encoding="utf-8").splitlines() if l.strip()]
-    results = batch_scrape(urls, max_workers=args.workers)
+    results = batch_scrape(
+        urls, 
+        max_workers=args.workers,
+        extract_reviews=not args.business_only,
+        max_reviews=args.max_reviews
+    )
     print(json.dumps(results, ensure_ascii=False, indent=2))
 
 
@@ -113,11 +124,15 @@ def main() -> None:  # noqa: D401
     single.add_argument("--no-headless", action="store_true", help="Show browser UI")
     single.add_argument("--backend", choices=["selenium", "playwright", "auto"], 
                        default="auto", help="Browser backend")
+    single.add_argument("--business-only", action="store_true", help="Scrape business only")
+    single.add_argument("--max-reviews", type=int, help="Maximum number of reviews to scrape")
     single.set_defaults(func=_single)
 
     batch = sub.add_parser("batch", help="Batch scrape URLs from file (one per line)")
     batch.add_argument("file", help="Path to text file of URLs")
     batch.add_argument("--workers", type=int, default=4, help="Concurrency level")
+    batch.add_argument("--business-only", action="store_true", help="Scrape business only")
+    batch.add_argument("--max-reviews", type=int, help="Maximum number of reviews to scrape")
     batch.set_defaults(func=_batch)
 
     analyze = sub.add_parser("analyze", help="Analyze scraped data for insights")

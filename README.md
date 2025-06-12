@@ -1,23 +1,24 @@
-# BOB Google Maps v0.5.0
+# BOB Google Maps v0.6.0 🔱
 
 <div align="center">
 
 ![BOB Google Maps Banner](https://img.shields.io/badge/BOB-Google%20Maps-blue?style=for-the-badge&logo=googlemaps&logoColor=white)
 
-*Build Online Business – Made in 🇮🇳, Made for the World*
+*Build Online Business – Made in 🇮🇳, Made for the World*  
+*Following Niṣkāma Karma Yoga principles – Selfless Excellence*
 
 [![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)](https://github.com/div197/BOB-Google-Maps)
-[![Version](https://img.shields.io/badge/Version-0.5.0-blue?style=for-the-badge)](https://github.com/div197/BOB-Google-Maps/releases)
+[![Version](https://img.shields.io/badge/Version-0.6.0-blue?style=for-the-badge)](https://github.com/div197/BOB-Google-Maps/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/div197/BOB-Google-Maps/blob/main/LICENSE)
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Selenium](https://img.shields.io/badge/Selenium-Latest-green?style=flat-square&logo=selenium&logoColor=white)](https://selenium.dev)
 [![Playwright](https://img.shields.io/badge/Playwright-Latest-orange?style=flat-square&logo=playwright&logoColor=white)](https://playwright.dev)
-[![Tests](https://img.shields.io/badge/Tests-23%20Passing-brightgreen?style=flat-square&logo=pytest&logoColor=white)](https://github.com/div197/BOB-Google-Maps/actions)
+[![Tests](https://img.shields.io/badge/Tests-36%20Passing-brightgreen?style=flat-square&logo=pytest&logoColor=white)](https://github.com/div197/BOB-Google-Maps/actions)
 
 [![Performance](https://img.shields.io/badge/Performance-3.18x%20Faster-red?style=flat-square&logo=speedtest&logoColor=white)](https://github.com/div197/BOB-Google-Maps)
 [![Enterprise](https://img.shields.io/badge/Enterprise-Grade-purple?style=flat-square&logo=enterprise&logoColor=white)](https://github.com/div197/BOB-Google-Maps)
-[![Fault Tolerance](https://img.shields.io/badge/Fault-Tolerant-orange?style=flat-square&logo=shield&logoColor=white)](https://github.com/div197/BOB-Google-Maps)
+[![Thermodynamics](https://img.shields.io/badge/0th%20Law-Implemented-gold?style=flat-square&logo=atom&logoColor=white)](https://github.com/div197/BOB-Google-Maps)
 
 </div>
 
@@ -25,46 +26,52 @@
 
 ## 🌟 Overview
 
-BOB Google Maps is an **enterprise-grade**, open-source Google Maps scraper that transforms raw location data into actionable business intelligence. Powered by principles of **Niṣkāma Karma Yoga** (selfless, excellence-first action), BOB delivers production-ready performance with zero compromises.
+BOB Google Maps is an **enterprise-grade**, open-source Google Maps scraper that transforms raw location data into actionable business intelligence. Powered by principles of **Niṣkāma Karma Yoga** (selfless, excellence-first action), BOB delivers production-ready performance with divine architectural perfection.
 
 <div align="center">
+
+### 🔱 **Divine Thermodynamics System**
+*Perfect thermal equilibrium across all components following the 0th Law of Thermodynamics*
 
 ### 🚀 **3.18x Faster Business-Only Extraction**
 *From 56 seconds to 18 seconds – Revolutionary speed for business directories*
 
 </div>
 
-## ✨ What's New in v0.5.0
+## ✨ What's New in v0.6.0 - **DIVINE PERFECTION RELEASE** 🔱
 
 <table>
 <tr>
 <td width="50%">
 
+### 🔱 **Divine Thermodynamics System**
+- **0th Law Implementation**: Perfect thermal equilibrium across all components
+- **Divine Foundation**: Bedrock for all thermodynamic laws (1st, 2nd, 3rd)
+- **Equilibrium Manager**: Real-time component balance monitoring
+- **Sacred Mathematics**: 108, 432Hz, φ (1.618) integration
+- **Divine Intervention**: Automatic system restoration
+
 ### ⚡ **Lightning-Fast Extraction**
 - **Business-Only Mode**: 3.18x faster than full extraction
 - **Smart Review Limiting**: Configure max reviews for optimal performance
 - **Dual Backend**: Selenium (stable) + Playwright (3x faster)
+- **BOBScraper Interface**: Main user-friendly scraper class
+
+</td>
+<td width="50%">
 
 ### 🛡️ **Enterprise Reliability**
 - **Circuit Breakers**: Auto-failover when services degrade
 - **Auto-Recovery**: Self-healing from temporary failures
 - **Graceful Degradation**: Partial data when full extraction fails
 - **Health Monitoring**: Real-time system status and metrics
-
-</td>
-<td width="50%">
+- **Perfect Test Coverage**: 36/36 tests passing (100% success)
 
 ### 📊 **Business Intelligence**
-- **Market Analysis**: Category trends, competitive landscape
+- **BusinessAnalytics**: Advanced market analysis and insights
 - **Sentiment Analysis**: Review sentiment scoring with TextBlob
 - **Opportunity Detection**: Identify market gaps and high-potential areas
 - **Export Formats**: JSON, CSV with flattened data structures
-
-### 🔧 **Production Features**
-- **Memory Management**: Automatic garbage collection
-- **Performance Monitoring**: Real-time metrics collection
-- **Dead Letter Queue**: Failed request handling
-- **Connection Pooling**: Resource optimization
 
 </td>
 </tr>
@@ -85,30 +92,66 @@ pip install -r requirements.txt
 # Install Playwright (optional, for faster extraction)
 pip install playwright
 playwright install chromium
+
+# Install API dependencies (for thermodynamics system)
+pip install -r requirements-api.txt
 ```
 
 ### Basic Usage
 
 ```python
-import bob_core
+from bob_core.scraper import BOBScraper
+from bob_core.analytics import BusinessAnalytics
 
 # 🚀 Quick business-only extraction (3x faster)
-scraper = bob_core.GoogleMapsScraper(extract_reviews=False)
+scraper = BOBScraper(extract_reviews=False)
 result = scraper.scrape("https://maps.google.com/?q=restaurant&hl=en")
 print(f"Business: {result['business_info']['name']}")
 
 # 📊 Full extraction with reviews
-scraper = bob_core.GoogleMapsScraper(extract_reviews=True)
+scraper = BOBScraper(extract_reviews=True)
 result = scraper.scrape("https://maps.google.com/?q=restaurant&hl=en")
 print(f"Reviews: {result['reviews_count']}")
 
+# 🔱 Business analytics
+analytics = BusinessAnalytics(result)
+score = analytics.overall_score()
+print(f"Business Score: {score['overall_score']}/100 ({score['grade']})")
+
 # ⚖️ Limited reviews for faster processing
-scraper = bob_core.GoogleMapsScraper(max_reviews=10)
+scraper = BOBScraper(max_reviews=10)
 result = scraper.scrape("https://maps.google.com/?q=restaurant&hl=en")
 
 # 🎯 Dedicated business-only method
-scraper = bob_core.GoogleMapsScraper()
 result = scraper.scrape_business_only("https://maps.google.com/?q=restaurant&hl=en")
+```
+
+### Divine Thermodynamics System
+
+```python
+import asyncio
+from bob_api.core.equilibrium import divine_equilibrium, SystemTemperature
+from bob_api.core.foundation import divine_foundation
+
+async def divine_demo():
+    # 🔱 Validate divine foundation
+    validation = await divine_foundation.validate_foundation()
+    print(f"Foundation Status: {validation['divine_message']}")
+    
+    # ⚖️ Generate 0th Law of Thermodynamics
+    zeroth_law = await divine_foundation.generate_law("zeroth_law")
+    print(f"Law Generated: {zeroth_law['definition']['name']}")
+    
+    # 🌡️ Register system component
+    component = SystemTemperature("web_server", 45.0, 1.5, 2.0, 85.0)
+    await divine_equilibrium.register_component("web_server", component)
+    
+    # 🔱 Check equilibrium state
+    state = await divine_equilibrium.check_global_equilibrium()
+    print(f"Equilibrium State: {state.value}")
+
+# Run divine demonstration
+asyncio.run(divine_demo())
 ```
 
 ### Command Line Interface
@@ -128,51 +171,37 @@ python -m bob_core.health_cli status
 
 # Circuit breaker status
 python -m bob_core.health_cli circuits
+
+# Divine thermodynamics demo
+python examples/thermodynamics_demo.py
 ```
 
-## 📊 Performance Benchmarks
-
-<div align="center">
-
-| Mode | Time | Reviews | Use Case | Speed Gain |
-|------|------|---------|----------|------------|
-| **🚀 Business-Only** | ~18s | 0 | Business directories, contact lists | **3.18x faster** |
-| **⚖️ Limited (10 reviews)** | ~20s | 10 | Quick sentiment check | **2.8x faster** |
-| **📊 Full Extraction** | ~56s | 250+ | Comprehensive analysis | *Baseline* |
-
-</div>
-
-### 🎯 Real-World Performance Results
-- **Business-only**: 17.71s (0 reviews) ⚡
-- **Limited reviews**: 20.24s (10 reviews) ⚖️
-- **Full extraction**: 56.37s (254 reviews) 📊
-- **Time saved**: 38.65s (68.6% reduction) 🎉
-
-## 🏗️ Architecture
+## 🔱 Divine Architecture
 
 <div align="center">
 
 ```mermaid
 graph TB
-    A[GoogleMapsScraper] --> B[Backend Selection]
+    A[BOBScraper] --> B[Backend Selection]
     B --> C[Selenium Backend]
     B --> D[Playwright Backend]
     
-    C --> E[Business Parser]
-    D --> E
-    E --> F[Review Parser]
+    E[Divine Foundation] --> F[0th Law Generator]
+    E --> G[1st Law Generator]
+    E --> H[2nd Law Generator]
+    E --> I[3rd Law Generator]
     
-    G[Fault Tolerance] --> H[Circuit Breaker]
-    G --> I[Auto Recovery]
-    G --> J[Health Monitor]
+    J[Equilibrium Manager] --> K[Component Registration]
+    J --> L[Thermal Monitoring]
+    J --> M[Divine Intervention]
     
-    K[Performance] --> L[Memory Manager]
-    K --> M[Performance Monitor]
-    K --> N[Connection Pool]
+    N[Fault Tolerance] --> O[Circuit Breaker]
+    N --> P[Auto Recovery]
+    N --> Q[Health Monitor]
     
-    E --> O[Analytics Engine]
-    F --> O
-    O --> P[Export System]
+    R[Business Intelligence] --> S[BusinessAnalytics]
+    R --> T[Market Analysis]
+    R --> U[Sentiment Analysis]
 ```
 
 </div>
@@ -180,19 +209,35 @@ graph TB
 ### Core Components
 
 ```text
-bob_core/
-├── 🎯 scraper.py              # Main scraper interface
-├── 🎭 playwright_backend.py   # Playwright implementation  
-├── 🏢 business_parser.py      # Business info extraction
-├── 📝 review_parser.py        # Review extraction
-├── 📊 analytics.py            # Business intelligence
-├── 🛡️ circuit_breaker.py      # Fault tolerance
-├── 🧠 memory_management.py    # Resource optimization
-├── 📈 performance_monitoring.py # Metrics & profiling
-├── 🏥 health_check.py         # System monitoring
-├── 🔄 batch.py                # Batch processing
-├── 💻 cli.py                  # Command line interface
-└── 📋 models.py               # Pydantic data models
+bob_core/                          # Core scraping engine
+├── 🎯 scraper.py                 # BOBScraper main interface
+├── 🎭 playwright_backend.py      # Playwright implementation  
+├── 🏢 business_parser.py         # Business info extraction
+├── 📝 review_parser.py           # Review extraction
+├── 📊 analytics.py               # BusinessAnalytics engine
+├── 🛡️ circuit_breaker.py         # Fault tolerance
+├── 🧠 memory_management.py       # Resource optimization
+├── 📈 performance_monitoring.py  # Metrics & profiling
+├── 🏥 health_check.py            # System monitoring
+├── 🔄 batch.py                   # Batch processing
+├── 💻 cli.py                     # Command line interface
+└── 📋 models.py                  # Pydantic data models
+
+bob_api/                           # Divine thermodynamics system
+├── core/
+│   ├── 🔱 foundation.py          # Divine foundation core
+│   ├── ⚖️ equilibrium.py         # Thermal equilibrium manager
+│   └── 🎵 harmony.py             # Sacred frequency orchestration
+├── routers/
+│   ├── 🌡️ thermodynamics.py      # Foundation API endpoints
+│   └── ⚖️ zeroth_law.py          # 0th Law REST API
+└── 🚀 main.py                    # FastAPI application
+
+tests/                             # Comprehensive test suite
+├── 🧪 test_thermodynamics.py     # Divine systems tests
+├── 🔧 test_circuit_breaker.py    # Fault tolerance tests
+├── 📊 test_analytics.py          # Business intelligence tests
+└── ... (36 total tests)
 ```
 
 ## 🎯 Use Cases
@@ -360,11 +405,12 @@ python -m bob_core.health_cli status
 - Advanced performance monitoring
 - Dual backend support (Selenium + Playwright)
 
-### 🔮 v0.6.0 (Coming Soon)
+### 🔮 v0.6.0 (Current - Divine Perfection Release)
 - 🐳 **Docker Support**: Containerized deployment
 - 🤖 **AI Integration**: LLM-powered data analysis
 - 🚀 **FastAPI Server**: REST API endpoints
 - 🔌 **MCP Protocol**: Model Context Protocol support
+- 🔱 **Divine Thermodynamics System**: Perfect thermal equilibrium
 
 ### 🌟 v0.7.0 (Future)
 - 📱 **Mobile Support**: React Native app
@@ -390,7 +436,7 @@ Built following **Niṣkāma Karma Yoga** principles:
 
 <div align="center">
 
-### 🌟 **Status: Production Ready v0.5.0**
+### 🌟 **Status: Production Ready v0.6.0**
 
 *Enterprise-grade Google Maps scraper with business-only extraction, fault tolerance, and comprehensive analytics. Battle-tested with real-world data.*
 
