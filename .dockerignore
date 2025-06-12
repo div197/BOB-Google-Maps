@@ -76,6 +76,7 @@ logs/
 *.xlsx
 *.txt
 !requirements.txt
+!requirements-api.txt
 !sardarpura_cafes_real.txt
 
 # Temporary files

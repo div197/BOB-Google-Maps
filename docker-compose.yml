@@ -2,8 +2,6 @@
 # Complete development and production environment
 # Made with 🙏 following Niṣkāma Karma Yoga principles
 
-version: '3.8'
-
 services:
   # BOB API Service
   bob-api:
