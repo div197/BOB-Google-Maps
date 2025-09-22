@@ -1,54 +1,21 @@
-# BOB Google Maps v0.5.0 Dependencies
-# Production-ready Google Maps scraper with enterprise-grade features
-# Using latest versions for state-of-the-art performance
+# BOB Google Maps 1.0.0 - Production Requirements
+# Revolutionary Google Maps Alternative
+# Made in India 🇮🇳 | Revolutionary for the World 🌍
 
-# Core scraping dependencies
-selenium
-playwright
-beautifulsoup4
-lxml
+# Core web automation
+selenium>=4.15.0
 
-# Data processing and validation
-pydantic
-pandas
-numpy
+# HTTP requests for image verification
+requests>=2.31.0
 
-# Analytics and NLP
-textblob
-nltk
+# Additional utilities
+urllib3>=2.0.0
 
-# HTTP and networking
-requests
-urllib3
+# Optional: For future CSV/Excel export capabilities
+# pandas>=2.0.0
+# openpyxl>=3.1.0
 
-# CLI and progress tracking
-click
-tqdm
-rich
-
-# Configuration and serialization
-pyyaml
-toml
-
-# Async support
-asyncio-throttle
-
-# Development and testing (optional)
-pytest
-pytest-cov
-pytest-asyncio
-black
-flake8
-mypy
-
-# Performance monitoring
-psutil
-memory-profiler
-
-# Export utilities
-openpyxl
-xlsxwriter
-
-# Logging and monitoring
-structlog
-colorlog 
+# Development dependencies (optional)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0

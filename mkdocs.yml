@@ -1,7 +1,0 @@
-site_name: BOB Google Maps
-repo_url: https://github.com/div197/BOB-Google-Maps
-nav:
-  - Home: docs/index.md
-  - Installation: docs/installation.md
-  - API Reference: docs/api.md
-  - Advanced Usage: docs/advanced.md 

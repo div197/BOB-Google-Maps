@@ -1,3 +1,0 @@
-line-length = 100
-select = ["E", "F", "I", "N", "UP", "B"]
-ignore = ["D100", "D101", "D401"] 
