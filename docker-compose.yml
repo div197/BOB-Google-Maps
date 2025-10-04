@@ -10,6 +10,10 @@ services:
       dockerfile: Dockerfile
     container_name: bob-google-maps-v3.0.1
     image: bob-google-maps:3.0.1
+    # CRITICAL FIX: Use host IPC namespace for Chromium
+    # Prevents "Chromium can run out of memory" crashes
+    # Source: Playwright Docker documentation
+    ipc: host
     volumes:
       # Mount cache, logs, data, and export directories
       - bob_cache:/app/cache
