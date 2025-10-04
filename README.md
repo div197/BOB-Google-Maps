@@ -104,6 +104,19 @@ BOB V3.0 represents the pinnacle of Google Maps scraping technology:
 
 ---
 
+## ⚠️ IMPORTANT: Known Issues
+
+**Please read [KNOWN_ISSUES.md](KNOWN_ISSUES.md) before production use**
+
+### Current Reliability Status
+- ✅ **Single extractions:** 100% reliable
+- ⚠️ **Batch processing:** 60% reliable (Selenium browser lifecycle issues)
+- ❌ **Docker:** Not ready yet (Playwright browser path issues being fixed)
+
+**Recommendation:** Use single extraction mode for guaranteed reliability. See [KNOWN_ISSUES.md](KNOWN_ISSUES.md) for batch processing workarounds.
+
+---
+
 ## ⚡ QUICK START
 
 ### Installation

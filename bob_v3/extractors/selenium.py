@@ -246,6 +246,15 @@ class SeleniumExtractor:
     def _create_browser_session(self):
         """Create stealth browser session using undetected-chromedriver."""
 
+        # Critical fix: Kill any lingering Chrome processes before creating new browser
+        # This prevents "target window already closed" errors in batch processing
+        import subprocess
+        try:
+            subprocess.run(['pkill', '-f', 'chrome'], capture_output=True, timeout=2)
+            time.sleep(1)
+        except:
+            pass
+
         options = uc.ChromeOptions()
 
         # Core stealth options
@@ -382,7 +391,13 @@ class SeleniumExtractor:
 
         finally:
             if driver:
-                driver.quit()
+                try:
+                    driver.quit()
+                    # Critical: Wait for browser resources to be fully released
+                    # Fixes "target window already closed" error in batch processing
+                    time.sleep(2)
+                except:
+                    pass
             self._cleanup()
 
     def _convert_url_to_universal_format(self, any_google_maps_url):
