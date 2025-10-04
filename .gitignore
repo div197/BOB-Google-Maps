@@ -1,4 +1,6 @@
-# BOB Google Maps - Production .gitignore
+# BOB Google Maps V3.0 - Git Ignore
+# Author: Divyanshu Singh Chouhan
+# Release: October 3, 2025
 
 # Python
 __pycache__/
@@ -18,52 +20,78 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual environments
-.env
-.venv
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
 
-# IDE
+# PyTest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.project
+.pydevproject
+.settings/
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
-Desktop.ini
+
+# Project Specific
+cache/
+logs/
+data/
+exports/
+*.db
+*.log
+*.tmp
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test outputs
+test_output/
+downloaded_images/
+test_*.json
+test_*.csv
+test_*.xlsx
+test_cache.db
+single_business_result_*.json
+abcsteps*.json
+*_test_*.json
+
+# Temporary files
+temp/
+tmp/
+*.bak
 
 # Browser drivers
 chromedriver
 chromedriver.exe
 geckodriver
 geckodriver.exe
-
-# Logs
-*.log
-logs/
-
-# Test outputs
-test_output/
-downloaded_images/
-*.json
-!package.json
-!tsconfig.json
-single_business_result_*.json
-abcsteps*.json
-*_test_*.json
-
-# Temporary files
-*.tmp
-*.temp
-temp/
-tmp/
