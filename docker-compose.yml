@@ -1,9 +1,7 @@
 # BOB Google Maps V3.0.1 - Docker Compose
 # Author: Divyanshu Singh Chouhan
 # Release: October 3, 2025
-# Updated: October 4, 2025 (Refactored)
-
-version: '3.8'
+# Updated: October 4, 2025 (Refactored & Tested)
 
 services:
   bob-extractor:

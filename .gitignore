@@ -76,6 +76,7 @@ exports/
 
 # Test outputs
 test_output/
+test_results/
 downloaded_images/
 test_*.json
 test_*.csv
@@ -84,6 +85,7 @@ test_cache.db
 single_business_result_*.json
 abcsteps*.json
 *_test_*.json
+comprehensive_test.log
 
 # Temporary files
 temp/
