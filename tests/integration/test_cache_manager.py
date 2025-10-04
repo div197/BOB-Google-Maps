@@ -7,17 +7,11 @@ Real integration tests for SQLite cache system.
 """
 
 import pytest
-import sys
 import os
 from pathlib import Path
 from datetime import datetime, timedelta
 
-# Add project root to path
-project_root = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(project_root))
-sys.path.insert(0, str(project_root / "src" / "core"))
-
-from cache_manager_ultimate import CacheManager
+from bob_v3.cache import CacheManager
 from bob_v3.models import Business, Review
 
 

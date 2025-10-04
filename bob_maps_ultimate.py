@@ -18,16 +18,12 @@ Created: October 3, 2025
 Version: 3.0 Ultimate
 """
 
-import sys
-import os
 import argparse
 import json
 import time
 
-# Add src to path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
-
-from core.hybrid_engine_ultimate import HybridEngineUltimate
+# Use new package imports
+from bob_v3.extractors import HybridExtractor
 
 
 class BOBUltimate:
@@ -36,7 +32,7 @@ class BOBUltimate:
     def __init__(self):
         self.version = "3.0 ULTIMATE"
         self.release_date = "October 3, 2025"
-        self.engine = HybridEngineUltimate(use_cache=True, prefer_playwright=True)
+        self.engine = HybridExtractor(use_cache=True, prefer_playwright=True)
 
     def extract_single(self, url, force_fresh=False, include_reviews=True, max_reviews=5, output=None):
         """Extract single business with ultimate power."""

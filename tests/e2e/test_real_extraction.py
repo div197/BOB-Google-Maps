@@ -8,15 +8,8 @@ These are NOT dummy tests - they perform actual web scraping.
 """
 
 import pytest
-import sys
-from pathlib import Path
 
-# Add project root to path
-project_root = Path(__file__).parent.parent.parent
-sys.path.insert(0, str(project_root))
-sys.path.insert(0, str(project_root / "src" / "core"))
-
-from hybrid_engine_ultimate import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
 
 @pytest.mark.slow
