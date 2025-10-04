@@ -1,16 +1,17 @@
-# 🔱 BOB GOOGLE MAPS V3.0 - ULTIMATE EDITION
+# 🔱 BOB GOOGLE MAPS V3.0.1
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/div197/BOB-Google-Maps)
-[![Python](https://img.shields.io/badge/python-3.8+-brightgreen.svg)](https://python.org)
+[![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)](https://github.com/div197/BOB-Google-Maps)
+[![Python](https://img.shields.io/badge/python-3.10+-brightgreen.svg)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-Production%20Ready-success.svg)]()
-[![Release](https://img.shields.io/badge/release-Oct%203%2C%202025-red.svg)]()
+[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)]()
+[![Release](https://img.shields.io/badge/release-Oct%204%2C%202025-red.svg)]()
 
 **The Most Advanced Google Maps Data Extraction Platform Ever Built**
 
 **Author:** Divyanshu Singh Chouhan
-**Release Date:** October 3, 2025
-**Version:** 3.0.0 Ultimate Edition
+**Release Date:** October 3, 2025 (V3.0) | October 4, 2025 (V3.0.1 - Refactored)
+**Version:** 3.0.1
 
 ---
 
@@ -107,25 +108,41 @@ BOB V3.0 represents the pinnacle of Google Maps scraping technology:
 
 ### Installation
 
+#### Option 1: Pip Install (Recommended)
+
 ```bash
 # Clone repository
 git clone https://github.com/div197/BOB-Google-Maps.git
 cd BOB-Google-Maps
 
-# Install dependencies
-pip install -r requirements.txt
+# Install package in editable mode
+pip install -e .
 
 # Install Playwright browsers
-python3 -m playwright install chromium
+python -m playwright install chromium
+```
+
+#### Option 2: Docker (Production Ready)
+
+```bash
+# Clone repository
+git clone https://github.com/div197/BOB-Google-Maps.git
+cd BOB-Google-Maps
+
+# Start with one command!
+docker compose up -d
+
+# Extract data
+docker compose exec bob-extractor python -m bob_v3 "Starbucks New York"
 ```
 
 ### Basic Usage
 
 ```python
-from bob_v3 import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
 # Initialize extractor
-extractor = HybridExtractor()
+extractor = HybridExtractor(use_cache=True, prefer_playwright=True)
 
 # Extract single business
 result = extractor.extract("Starbucks Jodhpur")
@@ -140,17 +157,17 @@ print(f"Images: {len(result.photos)}")
 ### Command Line
 
 ```bash
-# Single extraction
-python3 bob_maps_ultimate.py "Business Name"
+# Module execution (recommended)
+python -m bob_v3 "Business Name"
 
 # Batch extraction (parallel)
-python3 bob_maps_ultimate.py --batch urls.txt --parallel --max-concurrent 10
+python -m bob_v3 --batch urls.txt --parallel --max-concurrent 10
 
 # Force fresh (bypass cache)
-python3 bob_maps_ultimate.py "Business Name" --fresh
+python -m bob_v3 "Business Name" --fresh
 
 # Show statistics
-python3 bob_maps_ultimate.py --stats
+python -m bob_v3 --stats
 ```
 
 ---
@@ -160,9 +177,9 @@ python3 bob_maps_ultimate.py --stats
 ### Example 1: Extract Single Business
 
 ```python
-from bob_v3 import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
-extractor = HybridExtractor(use_cache=True)
+extractor = HybridExtractor(use_cache=True, prefer_playwright=True)
 
 # Extract with all data
 business = extractor.extract_business(
@@ -192,9 +209,9 @@ for review in business.reviews:
 ### Example 2: Batch Processing with Parallel Extraction
 
 ```python
-from bob_v3 import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
-extractor = HybridExtractor()
+extractor = HybridExtractor(use_cache=True)
 
 # URLs to extract
 urls = [
@@ -219,7 +236,7 @@ print(f"High quality extractions: {len(successful)}/{len(urls)}")
 ### Example 3: Using Cache for Lightning-Fast Re-queries
 
 ```python
-from bob_v3 import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
 extractor = HybridExtractor(use_cache=True)
 
@@ -254,7 +271,7 @@ result = extractor.extract("Business Name")
 
 ```python
 from bob_v3.config import ExtractorConfig
-from bob_v3 import HybridExtractor
+from bob_v3.extractors import HybridExtractor
 
 # Custom configuration
 config = ExtractorConfig(
@@ -392,18 +409,65 @@ pytest tests/integration/
 
 ---
 
-## 🐳 DOCKER
+## 🐳 DOCKER (PRODUCTION READY)
+
+BOB V3.0.1 is fully Docker-ready with one-command deployment!
+
+### Quick Start
 
 ```bash
-# Build image
-docker build -t bob-v3:latest .
+# Start the service
+docker compose up -d
 
-# Run container
-docker run -it bob-v3:latest
+# Extract single business
+docker compose exec bob-extractor python -m bob_v3 "Starbucks New York"
 
-# Docker Compose
-docker-compose up
+# Batch extraction
+docker compose exec bob-extractor python -m bob_v3 --batch /app/local_data/urls.txt --parallel
+
+# View logs
+docker compose logs -f bob-extractor
+
+# Stop service
+docker compose down
 ```
+
+### Environment Configuration
+
+All settings are configurable via environment variables:
+
+```bash
+# Custom settings
+BOB_HEADLESS=true \
+BOB_MAX_CONCURRENT=20 \
+BOB_CACHE_ENABLED=true \
+docker compose up -d
+```
+
+**Available Environment Variables:**
+- `BOB_HEADLESS` - Run in headless mode (default: true)
+- `BOB_MAX_CONCURRENT` - Max parallel extractions (default: 10)
+- `BOB_CACHE_ENABLED` - Enable caching (default: true)
+- `BOB_CACHE_HOURS` - Cache expiration hours (default: 24)
+- `BOB_MAX_REVIEWS` - Max reviews to extract (default: 10)
+- `BOB_MAX_IMAGES` - Max images to extract (default: 20)
+- `BOB_LOG_LEVEL` - Log level (default: INFO)
+
+### Data Persistence
+
+Docker setup includes named volumes for persistence:
+- `bob_cache` - Cache database
+- `bob_logs` - Application logs
+- `bob_data` - Extracted data
+- `bob_exports` - Export files
+
+### Resource Limits
+
+Default configuration:
+- Memory: 2GB limit, 1GB reserved
+- CPUs: 2.0 limit, 1.0 reserved
+
+Adjust in `docker-compose.yml` based on your needs.
 
 ---
 
@@ -472,7 +536,32 @@ This tool extracts publicly available data from Google Maps. Please:
 
 ---
 
-## 🎉 WHAT'S NEW IN V3.0
+## 🎉 WHAT'S NEW IN V3.0.1 (October 4, 2025)
+
+### 📦 Package Refactoring
+- ✅ **Pip installable** - `pip install -e .` now works perfectly
+- ✅ **Clean imports** - Professional package structure
+- ✅ **Module execution** - `python -m bob_v3` supported
+- ✅ **No sys.path hacks** - Proper Python packaging
+
+### 🐳 Docker Production Ready
+- ✅ **One-command deployment** - `docker compose up -d`
+- ✅ **Environment configurable** - All settings via env vars
+- ✅ **Persistent storage** - Named volumes for cache/logs/data
+- ✅ **Resource limits** - Optimized CPU/memory configuration
+- ✅ **Healthchecks** - Automatic service monitoring
+
+### 🏗️ Architecture Improvements
+- ✅ **Renamed classes** - Removed "Ultimate" suffix for professionalism
+  - `PlaywrightExtractorUltimate` → `PlaywrightExtractor`
+  - `GoogleMapsExtractorV2Ultimate` → `SeleniumExtractor`
+  - `HybridEngineUltimate` → `HybridExtractor`
+  - `CacheManagerUltimate` → `CacheManager`
+- ✅ **Organized structure** - bob_v3/extractors/, bob_v3/cache/, bob_v3/utils/
+- ✅ **Absolute imports** - All imports use absolute paths
+- ✅ **Modern packaging** - pyproject.toml + setup.py
+
+## 🎉 WHAT'S NEW IN V3.0 (October 3, 2025)
 
 ### Major Features
 - ✅ Playwright integration (3-5x faster)
