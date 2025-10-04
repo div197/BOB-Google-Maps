@@ -36,23 +36,26 @@ RUN apt-get update && apt-get install -y \
 
 # Copy requirements first for better Docker caching
 COPY requirements.txt .
-COPY pyproject.toml .
-COPY setup.py .
 
-# Install BOB package
-RUN pip install --no-cache-dir -e .
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Install Playwright browsers
 RUN python -m playwright install chromium chromium-headless-shell
 RUN python -m playwright install-deps
 
-# Copy application code
+# Copy all application files
 COPY bob_v3/ ./bob_v3/
 COPY tests/ ./tests/
+COPY pyproject.toml .
+COPY setup.py .
 COPY *.md ./
 COPY *.sh ./
 COPY config.yaml .
 COPY .env.example .
+
+# Install BOB package in editable mode
+RUN pip install --no-cache-dir -e .
 
 # Create necessary directories with correct permissions
 RUN mkdir -p /app/cache /app/logs /app/data /app/exports && \
