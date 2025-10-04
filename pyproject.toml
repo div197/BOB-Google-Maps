@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bob-google-maps"
+version = "3.0.1"
+description = "Revolutionary Google Maps Data Extraction Platform - For data collectors, researchers, and analysts"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Divyanshu Singh Chouhan"}
+]
+keywords = ["google-maps", "scraper", "data-extraction", "playwright", "selenium", "web-scraping"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "selenium>=4.15.0",
+    "playwright>=1.40.0",
+    "undetected-chromedriver>=3.5.0",
+    "requests>=2.31.0",
+    "urllib3>=2.0.0",
+    "greenlet>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/div197/BOB-Google-Maps"
+Documentation = "https://github.com/div197/BOB-Google-Maps#readme"
+Repository = "https://github.com/div197/BOB-Google-Maps"
+Issues = "https://github.com/div197/BOB-Google-Maps/issues"
+
+[project.scripts]
+bob-maps = "bob_v3.cli:main"
+
+[tool.setuptools]
+packages = ["bob_v3", "bob_v3.extractors", "bob_v3.cache", "bob_v3.utils", "bob_v3.models", "bob_v3.config"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+markers = [
+    "slow: marks tests as slow (real web scraping)",
+    "integration: integration tests",
+    "e2e: end-to-end tests",
+]
