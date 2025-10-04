@@ -78,7 +78,18 @@ class HybridExtractor:
         if self.prefer_playwright:
             print("\n⚡ STEP 2: Trying Playwright extraction (fastest)...")
             try:
-                playwright_data = asyncio.run(self._extract_with_playwright(url, include_reviews, max_reviews))
+                # Check if there's already a running event loop
+                try:
+                    loop = asyncio.get_running_loop()
+                    # If we're already in an event loop, create task
+                    import concurrent.futures
+                    with concurrent.futures.ThreadPoolExecutor() as pool:
+                        playwright_data = pool.submit(
+                            lambda: asyncio.run(self._extract_with_playwright(url, include_reviews, max_reviews))
+                        ).result()
+                except RuntimeError:
+                    # No event loop running, safe to use asyncio.run()
+                    playwright_data = asyncio.run(self._extract_with_playwright(url, include_reviews, max_reviews))
 
                 if playwright_data.get('success'):
                     self.stats["playwright_success"] += 1

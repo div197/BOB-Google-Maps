@@ -24,6 +24,20 @@ import shutil
 import re
 import json
 from urllib.parse import unquote
+import ssl
+import certifi
+
+# Fix SSL certificate verification on macOS
+import os
+os.environ['SSL_CERT_FILE'] = certifi.where()
+
+# Create unverified SSL context as fallback (for development only)
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
 from bob_v3.utils.place_id import PlaceIDExtractor
 from bob_v3.utils.converters import enhance_place_id
 from bob_v3.utils.images import AdvancedImageExtractor
@@ -258,7 +272,8 @@ class SeleniumExtractor:
 
         try:
             # Use undetected-chromedriver for stealth
-            driver = uc.Chrome(options=options, version_main=None)
+            # Auto-detect Chrome version
+            driver = uc.Chrome(options=options, version_main=140)
             driver.set_page_load_timeout(45)
 
             # Additional stealth JavaScript
