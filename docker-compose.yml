@@ -1,6 +1,7 @@
-# BOB Google Maps V3.0 - Docker Compose
+# BOB Google Maps V3.0.1 - Docker Compose
 # Author: Divyanshu Singh Chouhan
 # Release: October 3, 2025
+# Updated: October 4, 2025 (Refactored)
 
 version: '3.8'
 
@@ -9,31 +10,107 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: bob-google-maps-v3
-    image: bob-google-maps:3.0.0
+    container_name: bob-google-maps-v3.0.1
+    image: bob-google-maps:3.0.1
     volumes:
-      # Mount cache, logs, and data directories
-      - ./cache:/app/cache
-      - ./logs:/app/logs
-      - ./data:/app/data
-      - ./exports:/app/exports
+      # Mount cache, logs, data, and export directories
+      - bob_cache:/app/cache
+      - bob_logs:/app/logs
+      - bob_data:/app/data
+      - bob_exports:/app/exports
+      # Optional: Mount local data
+      - ./data:/app/local_data:ro
     environment:
-      - BOB_HEADLESS=true
-      - BOB_CACHE_ENABLED=true
-      - BOB_CACHE_PATH=/app/cache/bob_cache_ultimate.db
-      - BOB_LOG_LEVEL=INFO
-      - BOB_MAX_CONCURRENT=10
-      - BOB_PARALLEL_ENABLED=true
-    command: tail -f /dev/null  # Keep container running
+      # Extraction settings
+      - BOB_HEADLESS=${BOB_HEADLESS:-true}
+      - BOB_TIMEOUT=${BOB_TIMEOUT:-60}
+      - BOB_MAX_RETRIES=${BOB_MAX_RETRIES:-3}
+      - BOB_STEALTH=${BOB_STEALTH:-true}
+
+      # Network settings
+      - BOB_INTERCEPT=${BOB_INTERCEPT:-true}
+      - BOB_BLOCK_RESOURCES=${BOB_BLOCK_RESOURCES:-true}
+
+      # Data extraction
+      - BOB_MAX_REVIEWS=${BOB_MAX_REVIEWS:-10}
+      - BOB_MAX_IMAGES=${BOB_MAX_IMAGES:-20}
+
+      # Cache settings
+      - BOB_CACHE_ENABLED=${BOB_CACHE_ENABLED:-true}
+      - BOB_CACHE_PATH=/app/cache/bob_cache.db
+      - BOB_CACHE_HOURS=${BOB_CACHE_HOURS:-24}
+      - BOB_AUTO_CLEANUP=${BOB_AUTO_CLEANUP:-true}
+
+      # Parallel processing
+      - BOB_PARALLEL_ENABLED=${BOB_PARALLEL_ENABLED:-true}
+      - BOB_MAX_CONCURRENT=${BOB_MAX_CONCURRENT:-10}
+      - BOB_CONTEXT_POOL=${BOB_CONTEXT_POOL:-5}
+
+      # Logging
+      - BOB_LOG_LEVEL=${BOB_LOG_LEVEL:-INFO}
+
+    # Resource limits (adjust based on your needs)
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '1.0'
+          memory: 1G
+
+    # Keep container running for exec commands
+    command: tail -f /dev/null
+
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "python", "-c", "import bob_v3; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
     networks:
       - bob-network
+
+# Named volumes for persistence
+volumes:
+  bob_cache:
+    driver: local
+  bob_logs:
+    driver: local
+  bob_data:
+    driver: local
+  bob_exports:
+    driver: local
 
 networks:
   bob-network:
     driver: bridge
 
-# Usage:
-# docker-compose up -d
-# docker-compose exec bob-extractor python bob_maps_ultimate.py "Business Name"
-# docker-compose exec bob-extractor python bob_maps_ultimate.py --batch urls.txt --parallel
-# docker-compose down
+# ==============================================================================
+# USAGE EXAMPLES
+# ==============================================================================
+#
+# 1. START THE SERVICE:
+#    docker-compose up -d
+#
+# 2. EXTRACT SINGLE BUSINESS:
+#    docker-compose exec bob-extractor python -m bob_v3 "Starbucks New York"
+#
+# 3. BATCH EXTRACTION:
+#    docker-compose exec bob-extractor python -m bob_v3 --batch /app/local_data/urls.txt --parallel
+#
+# 4. WITH CUSTOM SETTINGS:
+#    BOB_MAX_CONCURRENT=20 docker-compose up -d
+#
+# 5. VIEW LOGS:
+#    docker-compose logs -f bob-extractor
+#
+# 6. STOP SERVICE:
+#    docker-compose down
+#
+# 7. CLEAN VOLUMES:
+#    docker-compose down -v
+#
+# ==============================================================================

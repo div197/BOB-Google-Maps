@@ -1,13 +1,14 @@
-# BOB Google Maps V3.0 - Production Dockerfile
+# BOB Google Maps V3.0.1 - Production Dockerfile
 # Author: Divyanshu Singh Chouhan
 # Release: October 3, 2025
+# Updated: October 4, 2025 (Refactored)
 
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies for Playwright & Selenium
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
@@ -33,30 +34,43 @@ RUN apt-get update && apt-get install -y \
     xdg-utils \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first for better caching
+# Copy requirements first for better Docker caching
 COPY requirements.txt .
+COPY pyproject.toml .
+COPY setup.py .
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install BOB package
+RUN pip install --no-cache-dir -e .
 
 # Install Playwright browsers
-RUN python -m playwright install chromium
+RUN python -m playwright install chromium chromium-headless-shell
 RUN python -m playwright install-deps
 
 # Copy application code
-COPY . .
+COPY bob_v3/ ./bob_v3/
+COPY tests/ ./tests/
+COPY *.md ./
+COPY *.sh ./
+COPY config.yaml .
+COPY .env.example .
 
-# Create necessary directories
-RUN mkdir -p /app/cache /app/logs /app/data /app/exports
+# Create necessary directories with correct permissions
+RUN mkdir -p /app/cache /app/logs /app/data /app/exports && \
+    chmod 777 /app/cache /app/logs /app/data /app/exports
 
-# Set environment variables
-ENV PYTHONUNBUFFERED=1
-ENV BOB_HEADLESS=true
-ENV BOB_CACHE_ENABLED=true
-ENV BOB_LOG_LEVEL=INFO
+# Set environment variables (can be overridden via docker-compose)
+ENV PYTHONUNBUFFERED=1 \
+    BOB_HEADLESS=true \
+    BOB_CACHE_ENABLED=true \
+    BOB_CACHE_PATH=/app/cache/bob_cache.db \
+    BOB_LOG_LEVEL=INFO \
+    BOB_MAX_CONCURRENT=10 \
+    BOB_PARALLEL_ENABLED=true \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
-# Expose port (if running as API server in future)
-EXPOSE 8000
+# Healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "import bob_v3; print('healthy')" || exit 1
 
-# Default command
-CMD ["python", "bob_maps_ultimate.py", "--help"]
+# Default command - show help
+CMD ["python", "-m", "bob_v3", "--help"]
