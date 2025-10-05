@@ -384,15 +384,54 @@ class SeleniumExtractor:
             # Wait for page to load
             time.sleep(3)
 
+            # CRITICAL FIX (Oct 4, 2025): Handle search results page
+            # Issue: Generic searches (e.g., "IKEA Dubai") land on /maps/search/ instead of /maps/place/
+            # Solution: Detect search page and click first result to navigate to business detail page
+            current_url = driver.current_url
+            if '/maps/search/' in current_url:
+                print("🔍 Detected search results page - clicking first business...")
+                try:
+                    # Find first business result in left panel
+                    from selenium.webdriver.common.by import By
+                    first_result = driver.find_element(By.CSS_SELECTOR, 'a[href*="/maps/place/"]')
+                    business_name_preview = first_result.get_attribute('aria-label')
+                    print(f"   Clicking: {business_name_preview}")
+
+                    first_result.click()
+                    time.sleep(4)  # Wait for navigation and page load
+
+                    new_url = driver.current_url
+                    if '/maps/place/' in new_url:
+                        print("✅ Navigated to business detail page")
+                    else:
+                        print("⚠️ Still on search page, but will try extraction")
+
+                except Exception as e:
+                    print(f"⚠️ Could not click first result: {e}")
+                    print("   Will try extracting from current page")
+
             # Initialize smart tools
             smart_finder = SmartElementFinder(driver)
             scroll_loader = AggressiveScrollLoader(driver)
+
+            # CRITICAL FIX (Oct 4, 2025): Extract name BEFORE aggressive loading
+            # Issue: Aggressive scrolling removes the h1 element with business name
+            # Solution: Extract name early and cache it
+            business_name_early = None
+            try:
+                # Try primary selector that exists immediately after page load
+                name_elem = driver.find_element(By.CSS_SELECTOR, "h1.DUwDvf.lfPIob")
+                business_name_early = name_elem.text.strip()
+                if business_name_early:
+                    print(f"✅ Name extracted early (before aggressive loading): {business_name_early}")
+            except:
+                pass  # Will try other methods later
 
             # Aggressively load all content
             scroll_loader.scroll_to_load_all_content()
 
             # Extract comprehensive data
-            data = self._extract_business_data_ultimate(driver, smart_finder)
+            data = self._extract_business_data_ultimate(driver, smart_finder, business_name_early)
 
             # Extract images with enhanced method
             print("📸 Extracting business images with multi-phase strategy...")
@@ -474,8 +513,14 @@ class SeleniumExtractor:
 
         return f"{any_google_maps_url}{'&' if '?' in any_google_maps_url else '?'}hl=en"
 
-    def _extract_business_data_ultimate(self, driver, smart_finder):
-        """Extract business data using smart multi-strategy finder."""
+    def _extract_business_data_ultimate(self, driver, smart_finder, business_name_early=None):
+        """Extract business data using smart multi-strategy finder.
+
+        Args:
+            driver: Selenium WebDriver instance
+            smart_finder: SmartElementFinder instance
+            business_name_early: Pre-extracted business name (before aggressive loading)
+        """
 
         data = {
             "extraction_timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
@@ -501,8 +546,21 @@ class SeleniumExtractor:
         # Enhanced field selectors with MORE options
         field_configs = {
             "name": {
-                "selectors": [".DUwDvf.lfPIob", ".x3AX1-LfntMc-header-title", "h1", ".section-hero-header-title", ".fontHeadlineLarge"],
-                "xpath": ["//h1", "//h2[contains(@class, 'title')]"],
+                # FIXED (Oct 4, 2025): Target h1 in main content area, not sidebar
+                # Sidebar has h1="Results", main panel has business name
+                # Use .m6QErb (main panel) to avoid sidebar h1
+                "selectors": [
+                    ".DUwDvf.lfPIob",  # Primary business name selector
+                    ".m6QErb h1",  # Main panel h1 (avoids sidebar)
+                    ".x3AX1-LfntMc-header-title",
+                    "h1.fontHeadlineLarge",  # Specific h1, not generic
+                    ".section-hero-header-title"
+                ],
+                "xpath": [
+                    "//div[contains(@class, 'm6QErb')]//h1",  # h1 inside main panel
+                    "//h1[not(text()='Results')]",  # Any h1 except "Results"
+                    "//h2[contains(@class, 'title')]"
+                ],
                 "text": None
             },
             "rating": {
@@ -549,12 +607,18 @@ class SeleniumExtractor:
 
         # Extract each field using smart finder
         for field, config in field_configs.items():
-            result = smart_finder.find_with_strategies(
-                field,
-                config["selectors"],
-                config.get("xpath"),
-                config.get("text")
-            )
+            # Use pre-extracted name if available (extracted before aggressive loading)
+            if field == "name" and business_name_early:
+                result = business_name_early
+                print(f"✅ Using pre-extracted name: {result}")
+            else:
+                result = smart_finder.find_with_strategies(
+                    field,
+                    config["selectors"],
+                    config.get("xpath"),
+                    config.get("text")
+                )
+
             if result:
                 cleaned = self._clean_extracted_text(result, field)
                 if cleaned:
