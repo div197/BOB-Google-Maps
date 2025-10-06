@@ -1,0 +1,21 @@
+# BOB Google Maps 1.0.0 - Production Requirements
+# Revolutionary Google Maps Alternative
+# Made in India 🇮🇳 | Revolutionary for the World 🌍
+
+# Core web automation
+selenium>=4.15.0
+
+# HTTP requests for image verification
+requests>=2.31.0
+
+# Additional utilities
+urllib3>=2.0.0
+
+# Optional: For future CSV/Excel export capabilities
+# pandas>=2.0.0
+# openpyxl>=3.1.0
+
+# Development dependencies (optional)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0

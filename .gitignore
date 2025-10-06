@@ -1,4 +1,4 @@
-# BOB Google Maps - Production .gitignore
+# BOB Google Maps 1.0 - Production .gitignore
 
 # Python
 __pycache__/
