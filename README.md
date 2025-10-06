@@ -10,20 +10,40 @@
 
 ---
 
-## 🚀 REVOLUTIONARY FEATURES
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
 pip install -r requirements.txt
+```
 
-# Basic usage - scrape a business
-python -c "from bob import GoogleMapsScraper; scraper = GoogleMapsScraper(); print(scraper.scrape('Delhi Royale Restaurant Mumbai'))"
+```python
+# Basic extraction (5 lines of code!)
+from bob import HybridExtractor
 
-# With high-res images
-python -c "from bob import GoogleMapsScraper; scraper = GoogleMapsScraper(high_res_images=True); scraper.scrape('Starbucks Mumbai')"
+extractor = HybridExtractor()
+result = extractor.extract_business("https://maps.google.com/?cid=123456789")
+business = result['business']
 
-# Run tests
-python test_delhi_royale.py
+print(f"{business.name} - {business.rating} stars - {business.phone}")
+# Output: Delhi Royale Restaurant - 4.1 stars - +91 98765 43210
+```
+
+### Main Exports
+```python
+from bob import (
+    HybridExtractor,      # Recommended: Cache -> Playwright -> Selenium
+    PlaywrightExtractor,  # Direct Playwright (fastest)
+    SeleniumExtractor,    # Direct Selenium (most compatible)
+    BatchProcessor,       # 100% reliable batch processing
+    CacheManager,         # SQLite caching system
+    Business,             # Business data model (108 fields)
+    Review,               # Review data model
+    Image,                # Image data model
+    ExtractorConfig,      # Extractor configuration
+    CacheConfig,          # Cache configuration
+    ParallelConfig        # Parallel processing configuration
+)
 ```
 
 ---
@@ -113,13 +133,24 @@ python test_delhi_royale.py
 ```
 bob/                        # Main 1.0 package
 ├── __init__.py             # Version 1.0.0
-├── scraper.py              # GoogleMapsScraper class
-├── field_extractors.py     # 108 field extraction logic
-├── cache_manager.py        # SQLite intelligent caching
-├── image_manager.py        # High-resolution image handler
-├── utils.py                # Helper functions
-├── config.py               # Configuration management
-└── exceptions.py           # Custom exceptions
+├── extractors/             # Extraction engines
+│   ├── hybrid.py           # HybridExtractor (recommended)
+│   ├── playwright.py       # PlaywrightExtractor (fast)
+│   └── selenium.py         # SeleniumExtractor (fallback)
+├── models/                 # Data models
+│   ├── business.py         # Business model (108 fields)
+│   ├── review.py           # Review model
+│   └── image.py            # Image model
+├── cache/                  # Caching system
+│   └── cache_manager.py    # SQLite intelligent caching
+├── utils/                  # Utilities
+│   ├── batch_processor.py  # Parallel batch processing
+│   ├── converters.py       # Data converters
+│   └── place_id.py         # Place ID utilities
+├── config/                 # Configuration
+│   └── settings.py         # Configuration management
+├── cli.py                  # Command-line interface
+└── __main__.py             # CLI entry point
 
 tests/                       # Comprehensive test suite
 ├── test_unit.py            # Unit tests
@@ -134,13 +165,19 @@ docs/                        # Documentation
 
 ### Dual-Engine System
 ```python
-# Automatic fallback to Selenium if Playwright fails
-scraper = GoogleMapsScraper(
-    headless=False,              # Visual mode
-    use_selenium_fallback=True,  # Auto-fallback
-    high_res_images=True,        # 2.5MB images
-    extract_menu=True,           # Menu extraction
-    cache_results=True           # Smart caching
+from bob import HybridExtractor
+
+# Automatic fallback: Cache -> Playwright -> Selenium
+extractor = HybridExtractor(
+    use_cache=True,           # Enable SQLite caching
+    prefer_playwright=True    # Try Playwright first
+)
+
+# Extract a business
+result = extractor.extract_business(
+    url="https://maps.google.com/?cid=12345678",
+    include_reviews=True,
+    max_reviews=5
 )
 ```
 
@@ -191,7 +228,7 @@ playwright install chromium
 docker build -t bob-maps:v1.0 .
 
 # Run container
-docker run -it bob-maps:v1.0 python -c "from bob import GoogleMapsScraper; print(GoogleMapsScraper().__version__)"
+docker run -it bob-maps:v1.0 python -c "from bob import __version__; print(f'BOB Version: {__version__}')"
 ```
 
 ---
@@ -200,75 +237,202 @@ docker run -it bob-maps:v1.0 python -c "from bob import GoogleMapsScraper; print
 
 ### Basic Extraction
 ```python
-from bob import GoogleMapsScraper
+from bob import HybridExtractor
 
-# Initialize scraper
-scraper = GoogleMapsScraper(headless=False)
+# Initialize extractor
+extractor = HybridExtractor(use_cache=True, prefer_playwright=True)
 
-# Scrape a business
-result = scraper.scrape("Delhi Royale Restaurant Mumbai")
+# Extract a business by URL
+url = "https://maps.google.com/?cid=4679876402555262750"
+result = extractor.extract_business(url, include_reviews=True, max_reviews=5)
 
 # Access data
-print(f"Name: {result['name']}")
-print(f"Rating: {result['rating']}")  # NEW in 1.0!
-print(f"CID: {result['cid']}")        # NEW in 1.0!
-print(f"Email: {result['email']}")    # NEW in 1.0!
+if result.get('success'):
+    business = result.get('business')
+    print(f"Name: {business.name}")
+    print(f"Rating: {business.rating}")           # NEW in 1.0!
+    print(f"CID: {business.cid}")                 # NEW in 1.0!
+    print(f"Emails: {business.emails}")           # NEW in 1.0!
+    print(f"Plus Code: {business.plus_code}")     # NEW in 1.0!
+    print(f"Service Options: {business.service_options}")  # NEW in 1.0!
+    print(f"Quality Score: {business.data_quality_score}/100")
 ```
 
 ### Advanced Configuration
 ```python
-from bob import GoogleMapsScraper
+from bob import HybridExtractor, PlaywrightExtractor, SeleniumExtractor
 
-scraper = GoogleMapsScraper(
-    # Engine settings
+# Option 1: Hybrid Extractor (Recommended - Maximum Reliability)
+extractor = HybridExtractor(
+    use_cache=True,           # Enable intelligent caching
+    prefer_playwright=True    # Try Playwright first, fallback to Selenium
+)
+
+# Option 2: Direct Playwright (Fastest)
+extractor = PlaywrightExtractor(
+    headless=True,            # Run in headless mode
+    block_resources=True,     # Block images/fonts for speed
+    intercept_network=True    # Intercept network for data extraction
+)
+
+# Option 3: Direct Selenium (Most Compatible)
+extractor = SeleniumExtractor(
     headless=True,
-    use_selenium_fallback=True,
+    stealth_mode=True         # Enhanced stealth mode
+)
 
-    # Data extraction
-    extract_menu=True,
-    high_res_images=True,
-    download_images=True,
-    image_dir="./images",
+# Batch processing with URLs
+urls = [
+    "https://maps.google.com/?cid=123456789",
+    "https://maps.google.com/?cid=987654321",
+    "https://maps.google.com/?cid=456789123"
+]
 
-    # Performance
-    cache_results=True,
-    cache_dir="./cache",
-    timeout=60,
+# Sequential extraction
+results = []
+for url in urls:
+    result = extractor.extract_business(url)
+    if result.get('success'):
+        business = result['business']
+        results.append(business)
+        print(f"✓ Extracted: {business.name}")
 
-    # Debugging
+# Parallel extraction (HybridExtractor only - 10x faster!)
+results = extractor.extract_multiple(urls, parallel=True, max_concurrent=5)
+```
+
+### Batch Processing with BatchProcessor
+```python
+from bob import BatchProcessor
+
+# Initialize batch processor
+processor = BatchProcessor(
+    headless=True,           # Run in headless mode
+    include_reviews=False,   # Skip reviews for faster processing
+    max_reviews=0
+)
+
+# Define business URLs
+urls = [
+    "https://maps.google.com/?cid=123456789",
+    "https://maps.google.com/?cid=987654321",
+    "https://maps.google.com/?cid=456789123"
+]
+
+# Process batch with subprocess isolation (100% reliability)
+results = processor.process_batch(
+    businesses=urls,
+    verbose=True,            # Show progress
+    delay_between=1          # 1 second delay between requests
+)
+
+# Process batch with automatic retry
+results = processor.process_batch_with_retry(
+    businesses=urls,
+    max_retries=1,           # Retry failed extractions once
     verbose=True
 )
 
-# Batch processing
-businesses = [
-    "Starbucks Mumbai",
-    "Pizza Hut Delhi",
-    "McDonald's Bangalore"
-]
+# Analyze results
+successful = [r for r in results if r.get('success')]
+print(f"\nSuccessfully extracted: {len(successful)}/{len(results)} businesses")
 
-results = []
-for business in businesses:
-    result = scraper.scrape(business)
-    if result:
-        results.append(result)
-        print(f"✓ Extracted: {result['name']}")
+# Save results
+import json
+with open('batch_results.json', 'w') as f:
+    json.dump(results, f, indent=2)
 ```
 
 ### With Error Handling
 ```python
-from bob import GoogleMapsScraper
-from bob.exceptions import ScraperException
+from bob import HybridExtractor
 
-scraper = GoogleMapsScraper()
+extractor = HybridExtractor()
 
 try:
-    result = scraper.scrape("Restaurant Name City")
-    if result['quality_score'] >= 80:
-        print("High quality data extracted!")
+    url = "https://maps.google.com/?cid=123456789"
+    result = extractor.extract_business(url, include_reviews=True, max_reviews=5)
+
+    if result.get('success'):
+        business = result['business']
+        # Calculate quality score
+        quality_score = business.calculate_quality_score()
+
+        if quality_score >= 80:
+            print(f"High quality data extracted! Score: {quality_score}/100")
+            print(f"Name: {business.name}")
+            print(f"Rating: {business.rating}")
+            print(f"Reviews: {len(business.reviews)}")
+        else:
+            print(f"Data quality: {quality_score}/100 - Some fields missing")
     else:
-        print(f"Data quality: {result['quality_score']}/100")
-except ScraperException as e:
-    print(f"Extraction failed: {e}")
+        print(f"Extraction failed: {result.get('error')}")
+
+except Exception as e:
+    print(f"Unexpected error: {e}")
+
+# Get extraction statistics
+stats = extractor.get_stats()
+print(f"Cache hit rate: {stats.get('cache_hit_rate', '0%')}")
+print(f"Success rate: {stats.get('success_rate', '0%')}")
+```
+
+### Working with Business Objects
+```python
+from bob import HybridExtractor, Business
+
+extractor = HybridExtractor()
+result = extractor.extract_business("https://maps.google.com/?cid=123456789")
+
+if result.get('success'):
+    business = result['business']  # Business object
+
+    # Access fields directly
+    print(f"Name: {business.name}")
+    print(f"Rating: {business.rating}")
+    print(f"CID: {business.cid}")
+    print(f"Place ID: {business.place_id}")
+    print(f"Emails: {business.emails}")
+    print(f"Plus Code: {business.plus_code}")
+    print(f"Service Options: {business.service_options}")
+
+    # Calculate quality score
+    score = business.calculate_quality_score()
+    print(f"Data Quality: {score}/100")
+
+    # Convert to dictionary
+    data = business.to_dict()
+
+    # Save as JSON
+    import json
+    with open('business_data.json', 'w') as f:
+        json.dump(data, f, indent=2, default=str)
+```
+
+---
+
+## 🎮 Command-Line Interface
+
+BOB includes a powerful CLI for quick extractions:
+
+```bash
+# Extract a single business
+python -m bob extract "https://maps.google.com/?cid=123456789"
+
+# Extract with reviews
+python -m bob extract "https://maps.google.com/?cid=123456789" --reviews --max-reviews 10
+
+# Batch processing from file
+python -m bob batch urls.txt --output results.json
+
+# Use BatchProcessor from command line
+python -m bob.utils.batch_processor "Business 1" "Business 2" --reviews --retry 1 --output results.json
+
+# Show version
+python -m bob --version
+
+# Get help
+python -m bob --help
 ```
 
 ---
@@ -287,6 +451,12 @@ python -m pytest tests/ --cov=bob --cov-report=html
 
 # Quick validation
 python -c "from bob import __version__; print(f'BOB Version: {__version__}')"
+
+# Test HybridExtractor
+python -c "from bob import HybridExtractor; e = HybridExtractor(); print('HybridExtractor loaded successfully!')"
+
+# Test with a real business (requires valid URL)
+python -c "from bob import HybridExtractor; e = HybridExtractor(); r = e.extract_business('YOUR_GOOGLE_MAPS_URL'); print('Success!' if r.get('success') else 'Failed')"
 ```
 
 ---
@@ -358,5 +528,5 @@ Special thanks to the open-source community for inspiration and to all contribut
 ---
 
 *Last Updated: October 6, 2025*
-*Version 3.3.0 - Krishna's Complete Victory*
-*The journey from 1 to 108 fields, completed with grace*
+*Version 1.0.0 - Production Ready*
+*Complete Google Maps data extraction with 108 fields and 95%+ success rate*

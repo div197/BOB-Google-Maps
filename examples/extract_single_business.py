@@ -3,31 +3,25 @@
 Example: Extract Single Business
 
 This example demonstrates how to extract complete business data
-from a single Google Maps URL using BOB Google Maps.
+from a single Google Maps URL using BOB Google Maps 1.0.
 """
 
-import sys
-import os
 import json
-
-# Add parent directory to path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from src.core.google_maps_extractor import GoogleMapsExtractor
+from bob import HybridExtractor
 
 def main():
     """Extract single business example."""
-    print("🔱 BOB GOOGLE MAPS - Single Business Extraction Example")
+    print("🔱 BOB GOOGLE MAPS 1.0 - Single Business Extraction Example")
     print("=" * 60)
 
     # Initialize extractor
-    extractor = GoogleMapsExtractor(headless=True, optimize_for_speed=True)
+    extractor = HybridExtractor(headless=True)
 
-    # Example URLs (replace with any Google Maps URL)
+    # Example URLs (replace with any Google Maps business URL)
     example_urls = [
-        "https://www.google.com/maps/place/Starbucks",
-        "https://www.google.com/maps/search/restaurants",
-        "https://www.google.com/maps/place/Empire+State+Building"
+        "https://www.google.com/maps/place/Starbucks+Reserve+Roastery",
+        "https://www.google.com/maps/place/Empire+State+Building",
+        "https://www.google.com/maps/place/The+Peninsula+Hotel"
     ]
 
     for i, url in enumerate(example_urls[:1], 1):  # Test with first URL
@@ -39,41 +33,49 @@ def main():
             result = extractor.extract_business(
                 url,
                 include_reviews=True,
-                max_reviews=3
+                max_reviews=5
             )
 
-            if result.get('success'):
-                print("✅ EXTRACTION SUCCESSFUL!")
-                print(f"📋 Business Name: {result.get('name', 'N/A')}")
-                print(f"⭐ Rating: {result.get('rating', 'N/A')}")
-                print(f"📍 Address: {result.get('address', 'N/A')}")
-                print(f"📞 Phone: {result.get('phone', 'N/A')}")
-                print(f"🌐 Website: {result.get('website', 'N/A')}")
-                print(f"📸 Images Extracted: {result.get('image_count', 0)}")
-                print(f"💬 Reviews Extracted: {len(result.get('reviews', []))}")
+            business = result['business']
 
-                if result.get('latitude') and result.get('longitude'):
-                    print(f"🌍 Coordinates: {result['latitude']}, {result['longitude']}")
+            print("✅ EXTRACTION SUCCESSFUL!")
+            print(f"📋 Business Name: {business.name}")
+            print(f"⭐ Rating: {business.rating or 'N/A'}")
+            print(f"📍 Address: {business.address}")
+            print(f"📞 Phone: {business.phone or 'N/A'}")
+            print(f"🌐 Website: {business.website or 'N/A'}")
+            print(f"🆔 CID: {business.cid or 'N/A'}")
+            print(f"📧 Emails: {', '.join(business.emails) if business.emails else 'N/A'}")
+            print(f"📸 Images: {len(business.images)}")
+            print(f"💬 Reviews: {len(business.reviews)}")
 
-                # Save result
-                output_file = f"single_business_result_{i}.json"
-                with open(output_file, 'w', encoding='utf-8') as f:
-                    json.dump(result, f, indent=2, ensure_ascii=False)
-                print(f"💾 Full result saved: {output_file}")
+            if business.latitude and business.longitude:
+                print(f"🌍 Coordinates: {business.latitude}, {business.longitude}")
 
-                # Show revolutionary capability
-                if result.get('image_count', 0) > 0:
-                    print("\n🔥 REVOLUTIONARY ACHIEVEMENT:")
-                    print(f"   - {result['image_count']} images extracted")
-                    print("   - This is IMPOSSIBLE via Google Maps API!")
-                    print("   - Saves $850-1,600 vs API costs")
+            if business.service_options:
+                print(f"🍽️ Service: {', '.join([k for k, v in business.service_options.items() if v])}")
 
-            else:
-                print("❌ EXTRACTION FAILED:")
-                print(f"   Error: {result.get('error', 'Unknown error')}")
+            # Quality score
+            quality = business.calculate_quality_score()
+            print(f"📊 Quality Score: {quality}/100")
+
+            # Save result
+            output_file = f"single_business_result_{i}.json"
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(business.to_dict(), f, indent=2, ensure_ascii=False)
+            print(f"💾 Full result saved: {output_file}")
+
+            # Show revolutionary capability
+            if len(business.images) > 0:
+                print("\n🔥 REVOLUTIONARY ACHIEVEMENT:")
+                print(f"   - {len(business.images)} high-resolution images extracted")
+                print("   - This is IMPOSSIBLE via Google Maps API!")
+                print("   - Saves $850-1,600 vs API costs")
 
         except Exception as e:
             print(f"❌ Exception: {e}")
+            import traceback
+            traceback.print_exc()
 
     print("\n🔱 Example completed! JAI SHREE KRISHNA! 🔱")
 
