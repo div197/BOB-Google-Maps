@@ -1,0 +1,92 @@
+{
+  "extraction_timestamp": "2025-10-05 23:28:03",
+  "extractor": "BOB Google Maps 1.0.0",
+  "place_id_original": "0x0:0xc70b774b05694f1d",
+  "cid": 14342688602388516637,
+  "place_id": "14342688602388516637",
+  "place_id_confidence": "MEDIUM",
+  "place_id_format": "hex",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=14342688602388516637",
+  "name": "Delhi Royale",
+  "rating": 4.1,
+  "review_count": 1,
+  "address": "3, Wisma Longrich, 33, Jalan Yap Kwan Seng, Kampung Baru, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+  "phone": "+60 12-774 0155",
+  "website": "https://delhiroyale.com",
+  "category": "North Indian restaurant",
+  "price_range": "·₹₹",
+  "latitude": 3.162817,
+  "longitude": 101.714997,
+  "plus_code": "\n5P77+4X Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+  "attributes": [
+    "Serves dine-in",
+    "Offers takeaway",
+    "Has no-contact delivery"
+  ],
+  "service_options": {
+    "dine_in": true
+  },
+  "data_quality_score": 92,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Harikrishnan Premachandran\nLocal Guide · 88 reviews · 1,341 photos\n\n\n\n\n\n\n2 weeks ago\nNEW\nDuring my visit to Kuala Lumpur, I had the pleasure of dining at Delhi Royale, and it was an experience worth remembering. From the moment we walked in, the ambience was warm, inviting, and elegant — a perfect blend of traditional charm and … More\n0:08\n+22\n\nLike\n\nShare\nResponse from the owner 2 weeks ago\nThank you so much, Harikrishnan, for your thoughtful review and for dining with us during your ti",
+      "reviewer": "Harikrishnan Premachandran",
+      "rating": "4 stars",
+      "extracted_for": "research_and_analysis"
+    },
+    {
+      "review_index": 2,
+      "text": "Miha Gifts\nLocal Guide · 14 reviews · 36 photos\n\n\n\n\n\n\n4 months ago\nService charge is not mandatory in Malaysia. Can you believe they asked me to pay RM 29 which is 10% on total bill. I said the service charge is a tip and I will pay but give some discount on service charge. They called their Manager who I … More\n\nLike\n\nShare\nResponse from the owner 4 months ago\nDear guest,\n\nThank you for your feedback. Glad you enjoyed the food and ambiance, yes our … More",
+      "reviewer": "Miha Gifts",
+      "rating": "2 stars",
+      "extracted_for": "research_and_analysis"
+    },
+    {
+      "review_index": 3,
+      "text": "SiFeRa\nLocal Guide · 683 reviews · 2,544 photos\n\n\n\n\n\n\n2 months ago\nGood north indian food, affordable price, friendly staff. Smell of paint due to recent paintjob.\nServ…\nMore\n\nLike\n\nShare\nResponse from the owner a month ago\nDear SiFeRa,\nWe're glad you enjoyed our food. Thank you for a positive review. Apologies. for the paint smell, we're in the midst of some minor renovation works which will … More",
+      "reviewer": "SiFeRa",
+      "rating": "4 stars",
+      "extracted_for": "research_and_analysis"
+    },
+    {
+      "review_index": 4,
+      "text": "Ruth Clark\nLocal Guide · 201 reviews · 177 photos\n\n\n\n\n\n\n6 months ago\nService was good. Music was also soothing but the restaurant was very quiet. The butter chicken was a tad too sweet however the Set Indian thali was very good. More\n\nLike\n\nShare\nResponse from the owner 6 months ago\nDear Ruth,\n\nThank you for your feedback! We're glad you enjoyed the service, the soothing … More",
+      "reviewer": "Ruth Clark",
+      "rating": "3 stars",
+      "extracted_for": "research_and_analysis"
+    },
+    {
+      "review_index": 5,
+      "text": "Abu Shahriyer\nLocal Guide · 47 reviews · 132 photos\n\n\n\n\n\n\n7 months ago\nDelhi Royale is just a stone’s throw from the Petronas Twin Towers but far enough away to escape the tourist crowds. The food here is superb and a real taste of home. … More\n+3\n\nLike\n\nShare\nResponse from the owner 6 months ago\nDear Abu,\n\nThank you for this beautifully detailed review. Honestly, we’re tempted to frame … More",
+      "reviewer": "Abu Shahriyer",
+      "rating": "5 stars",
+      "extracted_for": "research_and_analysis"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "emails": [
+    "user@domain.com",
+    "info@delhiroyale.com"
+  ],
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNF2PInhuXSkBM5vNhUGCOusf7wD79Uv2fHE4ZI",
+    "https://lh3.googleusercontent.com/p/AF1QipPNzH0RHwVAchc4ifmlUIbQNaqQ4rwM101OarA5",
+    "https://lh3.googleusercontent.com/p/AF1QipNdOiUO_jrYRs-PZtMu14weTjGoZ4urdoJBMzlr",
+    "https://lh3.googleusercontent.com/p/AF1QipM6Q0-h2NLTCJ_32y1T1OBKCD6PSbmdXpibBCdc",
+    "https://lh3.googleusercontent.com/p/AF1QipPS72mseX0nTzMImPMNtg1NKNLp72-EGGn3URaV",
+    "https://lh3.googleusercontent.com/p/AF1QipOL4mw3K5OomhHpTSv7m9aHumwAyhKg0H8whHOo",
+    "https://lh3.googleusercontent.com/p/AF1QipNq9lqv6wayQtQOs97_9BNpkFHXx-oiP50Hw2Ej"
+  ],
+  "image_count": 7,
+  "extraction_phases": 5,
+  "extraction_method": "comprehensive_multi_phase",
+  "success": true,
+  "attempt": 1,
+  "capabilities": {
+    "images_impossible_via_api": true,
+    "cost_savings_vs_google_api": "$850-1,600 per 50,000 businesses",
+    "free_for_students_researchers_startups": true
+  }
+}
