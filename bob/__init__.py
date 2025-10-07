@@ -21,7 +21,7 @@ Performance:
 - Process leakage: Zero
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "Divyanshu Singh Chouhan"
 __release_date__ = "2025-10-07"
 __license__ = "MIT"

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bob-google-maps"
-version = "1.0.0"
-description = "Complete Google Maps Data Extraction Platform - Production-ready with 108 fields and 95%+ success rate"
+version = "1.1.0"
+description = "State-of-the-Art Google Maps Extraction - Ultra-optimized with Nishkaam Karma Yoga principles, <50MB memory, 75% reduction, zero cache dependency"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
