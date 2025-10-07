@@ -144,6 +144,11 @@ class PlaywrightExtractor:
                 print("🌐 Loading page...")
                 await page.goto(standard_url, wait_until="networkidle", timeout=45000)
 
+                # Check if we're on search results page and navigate to first business
+                if "/search/" in page.url:
+                    print("🔍 On search results page, looking for first business...")
+                    await self._navigate_to_first_business_result(page)
+
                 # Wait for main content (Playwright auto-waits!)
                 try:
                     await page.wait_for_selector(".DUwDvf, .x3AX1-LfntMc-header-title", timeout=10000)
@@ -256,6 +261,62 @@ class PlaywrightExtractor:
             return data
         except Exception as e:
             return {"success": False, "error": str(e)}
+
+    async def _navigate_to_first_business_result(self, page):
+        """Navigate from search results to the first business listing."""
+        try:
+            # Wait for search results to load
+            await page.wait_for_timeout(2000)
+            
+            # Multiple selectors for business results
+            business_selectors = [
+                "a[href*='/place/']",                    # Direct place links
+                ".Io6Yb.fontHeadlineSmall",              # Business name links
+                ".hfpxzc",                               # Result container links
+                "[data-href*='/place/']",                # Place links with data-href
+                "a[aria-label*='Directions']"            # Links with directions
+            ]
+            
+            business_link = None
+            
+            for selector in business_selectors:
+                try:
+                    elements = await page.query_selector_all(selector)
+                    for element in elements:
+                        href = await element.get_attribute("href") or await element.get_attribute("data-href")
+                        if href and "/place/" in href:
+                            business_link = href
+                            print(f"🎯 Found business link: {href[:80]}...")
+                            break
+                    if business_link:
+                        break
+                except:
+                    continue
+            
+            if business_link:
+                # Navigate to the business page
+                await page.goto(business_link, wait_until="networkidle", timeout=30000)
+                await page.wait_for_timeout(2000)
+                print("✅ Successfully navigated to business page")
+                return True
+            else:
+                # Try clicking the first result
+                try:
+                    first_result = await page.query_selector(".m6QErb, .bHzsHc, .lI9IFe")
+                    if first_result:
+                        await first_result.click()
+                        await page.wait_for_timeout(3000)
+                        print("✅ Clicked first business result")
+                        return True
+                except:
+                    pass
+            
+            print("⚠️ Could not find business result to click")
+            return False
+            
+        except Exception as e:
+            print(f"⚠️ Error navigating to business result: {e}")
+            return False
 
     async def _smart_scroll(self, page):
         """Smart scrolling to load lazy content."""
@@ -406,55 +467,78 @@ class PlaywrightExtractor:
         except:
             pass
 
-        # Extract Place ID and CID (ENHANCED V3.3)
+        # Extract Place ID and CID (ENHANCED V3.3 - FIXED)
         try:
             current_url = page.url
             place_id_raw = None
 
-            # Look for various Place ID formats
+            # Look for various Place ID formats (UPDATED PATTERNS)
             place_id_patterns = [
-                r'/place/[^/]+/data=([^?&]+)',
-                r'ftid=(0x[0-9a-f]+:0x[0-9a-f]+)',
-                r'1s(0x[0-9a-f]+:0x[0-9a-f]+)',
-                r'cid=(\d+)',
-                r'ludocid%3D(\d+)'
+                r'ftid=(0x[0-9a-f]+:0x[0-9a-f]+)',      # Original hex format
+                r'!1s(0x[0-9a-f]+:0x[0-9a-f]+)',       # New hex format
+                r'1s(0x[0-9a-f]+:0x[0-9a-f]+)',        # Alternative hex format
+                r'cid=(\d+)',                            # Direct CID
+                r'ludocid%3D(\d+)',                      # Encoded CID
+                r'!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)',      # Coordinate format
+                r'@(-?\d+\.\d+),(-?\d+\.\d+)',          # Simple coordinates
+                r'/place/([^/]+)/data=([^?&]+)',         # Place data format
+                r'q=([^&]+).*!1s(0x[0-9a-f]+:0x[0-9a-f]+)'  # Search with hex
             ]
 
+            print(f"🔍 Extracting Place ID from: {current_url[:100]}...")
+
             for pattern in place_id_patterns:
-                match = re.search(pattern, current_url)
+                match = re.search(pattern, current_url, re.IGNORECASE)
                 if match:
-                    place_id_raw = match.group(1)
+                    place_id_raw = match.group(1) if match.groups() else match.group(0)
                     data["place_id_original"] = place_id_raw
+                    print(f"✅ Found Place ID pattern: {pattern} -> {place_id_raw}")
 
                     # Convert to CID if it's a hex format
                     if ':' in place_id_raw and '0x' in place_id_raw:
                         data["place_id_format"] = "hex"
-                        # Extract CID from hex format
+                        # Extract CID from hex format (SECOND part is usually the CID)
                         hex_parts = place_id_raw.split(':')
-                        if len(hex_parts) == 2:
+                        if len(hex_parts) >= 2:
                             try:
                                 cid = int(hex_parts[1], 16)
-                                data["cid"] = cid
+                                data["cid"] = str(cid)  # Store as string to avoid integer issues
                                 data["place_id"] = str(cid)
                                 data["is_real_cid"] = True
                                 data["place_id_url"] = f"https://www.google.com/maps?cid={cid}"
-                            except:
-                                pass
-                    elif place_id_raw.isdigit():
-                        # Already a CID
-                        data["cid"] = int(place_id_raw)
+                                print(f"🔑 Extracted CID from hex: {cid}")
+                            except ValueError as e:
+                                print(f"⚠️ Hex conversion failed: {e}")
+                                # Try the first part instead
+                                try:
+                                    cid = int(hex_parts[0], 16)
+                                    data["cid"] = str(cid)
+                                    data["place_id"] = str(cid)
+                                    data["is_real_cid"] = True
+                                    print(f"🔑 Extracted CID from first hex part: {cid}")
+                                except:
+                                    pass
+                    elif place_id_raw.isdigit() and len(place_id_raw) > 5:
+                        # Already a CID (must be longer than 5 digits)
+                        data["cid"] = place_id_raw
                         data["place_id"] = place_id_raw
                         data["place_id_format"] = "cid"
                         data["is_real_cid"] = True
                         data["place_id_url"] = f"https://www.google.com/maps?cid={place_id_raw}"
+                        print(f"🔑 Extracted direct CID: {place_id_raw}")
                     else:
+                        # Other format, store as-is
                         data["place_id"] = place_id_raw
-                        data["place_id_format"] = "unknown"
+                        data["place_id_format"] = "other"
+                        print(f"🔑 Stored other Place ID format: {place_id_raw}")
 
                     data["place_id_confidence"] = "HIGH" if data.get("cid") else "MEDIUM"
                     break
-        except:
-            pass
+            else:
+                print("⚠️ No Place ID patterns matched in URL")
+                
+        except Exception as e:
+            print(f"⚠️ Place ID extraction error: {e}")
 
         # Extract attributes
         try:
@@ -679,9 +763,18 @@ class PlaywrightExtractor:
         return emails[:3]  # Return max 3 emails
 
     def _convert_url(self, url):
-        """Convert any URL to standard format."""
+        """Convert any URL to standard format with proper business page navigation."""
         if not url.startswith('http'):
+            # For business names, try direct search first, then navigate to first result
             return f"https://www.google.com/maps/search/{url.replace(' ', '+')}?hl=en"
+
+        # If it's already a place URL, keep it
+        if '/place/' in url:
+            return f"{url}{'&' if '?' in url else '?'}hl=en"
+        
+        # If it's a search URL, keep it but we'll need to navigate to first result
+        if '/search/' in url:
+            return f"{url}{'&' if '?' in url else '?'}hl=en"
 
         patterns = [
             r'/place/([^/@]+)',

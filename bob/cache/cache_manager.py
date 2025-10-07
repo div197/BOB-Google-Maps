@@ -38,11 +38,34 @@ class CacheManagerUltimate:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
-        # Main businesses table
+        # Check if businesses table exists and get its schema
+        cursor.execute("""
+            SELECT sql FROM sqlite_master 
+            WHERE type='table' AND name='businesses'
+        """)
+        table_info = cursor.fetchone()
+
+        if table_info:
+            # Table exists, check if cid column is INTEGER (old schema)
+            if "cid INTEGER" in table_info[0]:
+                print("🔧 Detected old schema with cid INTEGER, migrating to cid TEXT...")
+                
+                # Drop and recreate ALL tables with new schema
+                cursor.execute("DROP TABLE IF EXISTS businesses")
+                cursor.execute("DROP TABLE IF EXISTS reviews")
+                cursor.execute("DROP TABLE IF EXISTS images") 
+                cursor.execute("DROP TABLE IF EXISTS extraction_history")
+                print("🗑️ Dropped all tables for migration")
+                
+                # Commit the drops
+                conn.commit()
+                print("✅ Migration complete - all tables dropped")
+
+        # Main businesses table (with corrected schema)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS businesses (
                 place_id TEXT PRIMARY KEY,
-                cid INTEGER,
+                cid TEXT,
                 name TEXT,
                 phone TEXT,
                 address TEXT,
@@ -202,8 +225,12 @@ class CacheManagerUltimate:
             print("⚠️ Skipping cache save for failed extraction")
             return
 
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+        except Exception as e:
+            print(f"⚠️ Cache connection failed: {e}")
+            return
 
         # Extract key fields
         place_id = data.get('place_id') or data.get('cid') or self._generate_id(data)
@@ -305,8 +332,16 @@ class CacheManagerUltimate:
             now
         ))
 
-        conn.commit()
-        conn.close()
+        try:
+            conn.commit()
+            print(f"💾 Cache save successful for: {data.get('name', 'Unknown business')}")
+        except Exception as e:
+            print(f"⚠️ Cache commit failed: {e}")
+        finally:
+            try:
+                conn.close()
+            except:
+                pass
 
     def _generate_id(self, data):
         """Generate unique ID from business data."""

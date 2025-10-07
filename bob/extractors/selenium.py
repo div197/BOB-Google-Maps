@@ -474,24 +474,45 @@ class SeleniumExtractor:
 
         finally:
             if driver:
-                try:
-                    driver.quit()
-                    # CRITICAL FIX (Oct 2025 Research + Testing):
-                    # 8-second delay for maximum reliability (tested: 5s = 80%, 8s = 90%+)
-                    # Ensures complete resource release on all platforms
-                    # Source: Stack Overflow solutions + GitHub Selenium issues + Testing
-                    time.sleep(8)  # Increased from 5s to 8s for 90%+ reliability
-                    driver = None  # Explicitly clear reference for garbage collection
-                    self.driver = None  # Clear instance variable
-
-                    # Force garbage collection to ensure cleanup
-                    import gc
-                    gc.collect()
-
-                except Exception as e:
-                    # Fail silently but log for debugging
-                    pass
+                self._cleanup_browser_safely(driver)
             self._cleanup()
+
+    def _cleanup_browser_safely(self, driver):
+        """Enhanced browser cleanup with comprehensive error handling."""
+        try:
+            # Close all windows first
+            try:
+                driver.close()
+            except:
+                pass
+
+            # Quit the driver
+            try:
+                driver.quit()
+            except:
+                pass
+
+            # CRITICAL FIX (Oct 2025 Research + Testing):
+            # 8-second delay for maximum reliability (tested: 5s = 80%, 8s = 90%+)
+            # Ensures complete resource release on all platforms
+            # Source: Stack Overflow solutions + GitHub Selenium issues + Testing
+            time.sleep(8)  # Increased from 5s to 8s for 90%+ reliability
+
+            # Explicitly clear references for garbage collection
+            driver = None
+            self.driver = None
+
+            # Force garbage collection to ensure cleanup
+            import gc
+            gc.collect()
+
+            print("🧹 Browser cleanup completed successfully")
+
+        except Exception as e:
+            print(f"⚠️ Browser cleanup warning: {e}")
+            # Ensure references are cleared even on error
+            driver = None
+            self.driver = None
 
     def _convert_url_to_universal_format(self, any_google_maps_url):
         """Convert any Google Maps URL to standard format."""

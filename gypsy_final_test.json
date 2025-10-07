@@ -1,0 +1,22 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Results",
+  "rating": 4.0,
+  "review_count": 13134,
+  "latitude": 26.2770247,
+  "longitude": 73.0049451,
+  "place_id_original": "26.2770247",
+  "place_id": "26.2770247",
+  "place_id_format": "other",
+  "place_id_confidence": "MEDIUM",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nriGO35_JCnoSiKQFzKIBra9eZIw6GvuiWoYc-n34QBWl_QaCjybDIV73GGlFbf1i-SFtN1dHnGHN6SNXnPxDcyyYYZaZl_dJXXbPCZugOhPvRmsXi9nyPnmxnZSv8AoUAIux4fRC-jF3zU=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npUYj8DKjG-we_nPt2z2x--NY2R2mWT62bRtnFdVl1YQQMrv68Rk7KMM0hannUETTeIYnFueGGfkLf1_0ZQp8tIRfFmdyQPegrrSav2NqOaa_VDPG9LvRGzrCGm_igfoviI30Jceg=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 37,
+  "reviews": [],
+  "total_reviews_extracted": 0,
+  "success": true,
+  "extraction_time_seconds": 175.9
+}

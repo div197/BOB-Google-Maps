@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "error": "All extraction methods failed",
+  "tried_methods": [
+    "cache",
+    "playwright",
+    "selenium_v2"
+  ]
+}
