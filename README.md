@@ -1,4 +1,4 @@
-# BOB Google Maps - State-of-the-Art Business Data Extraction
+# BOB Google Maps - State-of-the-Art Business Data Extraction V1.2.0
 
 🧘 **A revolutionary Google Maps data extraction platform built with Nishkaam Karma Yoga principles. Achieves maximum performance through minimal resource usage and complete detachment from outcomes.**
 
@@ -16,6 +16,38 @@
 - **🔄 Memory-Optimized Parallel Processing**: Extract multiple businesses efficiently
 - **🐳 Docker-Ready**: Production-ready with enlightened resource management
 - **🎯 95%+ Success Rate**: Proven reliability across thousands of extractions
+
+## 🆕 V1.2.0 Enhanced Review Extraction
+
+- **📋 10 Reviews Default**: Extract up to 10 reviews by default (vs 5 in v1.1.0)
+- **👤 Enhanced Reviewer Data**: Extract reviewer names, photos, and total review counts
+- **⭐ Detailed Rating Information**: Extract numeric ratings and rating text
+- **📅 Temporal Data**: Extract review dates and relative timestamps
+- **👍 Engagement Metrics**: Extract helpful vote counts and owner responses
+- **🎯 Quality Scoring**: Each review includes extraction confidence scores
+- **🧘 Intelligent Resource Blocking**: Smart blocking that allows review-related content
+- **📊 Data Completeness Metrics**: Track what percentage of review fields are successfully extracted
+
+### V1.2.0 Review Data Structure
+
+```json
+{
+  "review_index": 1,
+  "reviewer_name": "John Doe",
+  "reviewer_photo": "https://...",
+  "reviewer_total_reviews": 47,
+  "rating": 5,
+  "rating_text": "5 stars", 
+  "review_date": "2 weeks ago",
+  "review_text": "Excellent service and atmosphere!",
+  "text_length": 35,
+  "helpful_count": 12,
+  "owner_response": "Thank you for your feedback!",
+  "extraction_confidence": 95,
+  "data_completeness": 80,
+  "extraction_method": "Playwright Enhanced V1.2.0"
+}
+```
 
 ## 🚀 Quick Start
 
@@ -47,8 +79,8 @@ print(f"Rating: {result['rating']}")
 # Extract by Google Maps URL
 result = extract_business("https://www.google.com/maps/place/Starbucks")
 
-# Extract with reviews
-result = extract_business("Apple Store Manhattan", include_reviews=True, max_reviews=5)
+# Extract with reviews (V1.2.0 Enhanced - 10 reviews default)
+result = extract_business("Apple Store Manhattan", include_reviews=True, max_reviews=10)
 ```
 
 ### Command Line Interface

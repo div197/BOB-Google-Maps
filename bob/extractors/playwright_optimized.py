@@ -94,8 +94,8 @@ class PlaywrightExtractorOptimized:
             # Create optimized page
             page = await context.new_page()
 
-            # Setup aggressive resource blocking
-            await self._setup_aggressive_resource_blocking(page)
+            # Setup intelligent resource blocking
+            await self._setup_intelligent_resource_blocking(page)
 
             # Convert URL and navigate
             standard_url = self._convert_url(url)
@@ -192,18 +192,65 @@ class PlaywrightExtractorOptimized:
             # Fallback to basic browser
             return await async_playwright().chromium.launch(headless=self.headless)
 
-    async def _setup_aggressive_resource_blocking(self, page):
-        """Setup aggressive resource blocking for memory efficiency."""
-        # Block ALL heavy resources
-        await page.route("**/*.{png,jpg,jpeg,gif,svg,webp,woff,woff2,ttf,css,js,mp4,mp3,pdf}", 
-                        lambda route: route.abort())
+    async def _setup_intelligent_resource_blocking(self, page):
+        """
+        Setup intelligent resource blocking for Nishkaam Karma optimization.
+        
+        Strategy: Block ads and tracking, allow essential content for review extraction.
+        """
+        # Block ads, tracking, and heavy media (but allow essential JS/CSS)
+        blocked_patterns = [
+            "**/*.{png,jpg,jpeg,gif,svg,webp,mp4,mp3,pdf}",  # Media files
+            "**/analytics/**",
+            "**/doubleclick/**",
+            "**/googlesyndication/**",
+            "**/google-analytics/**",
+            "**/facebook/**",
+            "**/twitter/**",
+            "**/linkedin/**"
+        ]
+        
+        # Block specific domains completely
+        blocked_domains = [
+            'google-analytics.com',
+            'doubleclick.net', 
+            'googlesyndication.com',
+            'facebook.com',
+            'twitter.com',
+            'linkedin.com'
+        ]
+        
+        # Apply blocking patterns
+        for pattern in blocked_patterns:
+            await page.route(pattern, lambda route: route.abort())
         
         # Block specific domains
-        blocked_domains = ['google-analytics.com', 'doubleclick.net', 'googlesyndication.com']
         for domain in blocked_domains:
             await page.route(f"**/*{domain}*", lambda route: route.abort())
         
-        print("🚫 Aggressive resource blocking enabled")
+        # Allow essential Google Maps resources (but optimize them)
+        async def handle_route(route):
+            # Allow essential resources but optimize
+            if any(essential in route.request.url for essential in [
+                'google.com/maps',
+                'googleusercontent.com',
+                'maps.googleapis.com',
+                'google.com/maps/place'
+            ]):
+                # Allow but with potential optimization
+                if any(heavy in route.request.resource_type.lower() for heavy in ['image', 'media']):
+                    # Block heavy images from Google domains
+                    await route.abort()
+                else:
+                    # Allow essential JS/CSS for review loading
+                    await route.continue_()
+            else:
+                # Block everything else
+                await route.abort()
+        
+        await page.route("**/*", handle_route)
+        
+        print("🧘 Intelligent resource blocking enabled (Nishkaam Karma optimized)")
 
     async def _navigate_to_first_business_optimized(self, page):
         """Navigate to first business with minimal DOM interaction."""
@@ -341,24 +388,40 @@ class PlaywrightExtractorOptimized:
 
         return data
 
-    async def _extract_reviews_optimized(self, page, max_reviews=3):
-        """Extract reviews with memory optimization."""
+    async def _extract_reviews_optimized(self, page, max_reviews=10):
+        """
+        Extract reviews with enhanced data capture and Nishkaam Karma optimization.
+        
+        Args:
+            page: Playwright page object
+            max_reviews: Maximum number of reviews to extract (default 10 for v1.2.0)
+            
+        Returns:
+            List of enhanced review dictionaries with comprehensive data
+        """
         reviews = []
         
         try:
-            # Try to click reviews tab
+            # Try to click reviews tab/section
             await page.evaluate("""
                 () => {
-                    const reviewsBtn = document.querySelector('button, a');
-                    if (reviewsBtn && reviewsBtn.textContent.toLowerCase().includes('review')) {
-                        reviewsBtn.click();
+                    // Look for review-related buttons or tabs
+                    const reviewKeywords = ['review', 'rating', 'feedback'];
+                    const elements = document.querySelectorAll('button, a, div[role="tab"]');
+                    
+                    for (const elem of elements) {
+                        const text = elem.textContent.toLowerCase();
+                        if (reviewKeywords.some(keyword => text.includes(keyword))) {
+                            elem.click();
+                            break;
+                        }
                     }
                 }
             """)
             
-            await page.wait_for_timeout(1000)
+            await page.wait_for_timeout(2000)
             
-            # Extract reviews with minimal DOM access
+            # Enhanced review extraction with comprehensive data capture
             reviews_data = await page.evaluate(f"""
                 () => {{
                     const reviewElements = document.querySelectorAll('.jftiEf, .MyEned, .wiI7pd');
@@ -366,12 +429,105 @@ class PlaywrightExtractorOptimized:
                     
                     for (let i = 0; i < Math.min({max_reviews}, reviewElements.length); i++) {{
                         const elem = reviewElements[i];
-                        const text = elem.textContent.trim();
-                        if (text.length > 10) {{
-                            reviews.push({{
-                                review_index: i + 1,
-                                text: text.substring(0, 500) // Limit text length
-                            }});
+                        
+                        // Enhanced data extraction with Nishkaam Karma efficiency
+                        const review = {{
+                            review_index: i + 1
+                        }};
+                        
+                        // Extract reviewer name with multiple selectors
+                        const nameSelectors = ['.TL4Bff', '.d4r55', '[data-attribute*="name"]', '.X5PpBb', '.bLHgob'];
+                        for (const selector of nameSelectors) {{
+                            const nameElem = elem.querySelector(selector);
+                            if (nameElem && nameElem.textContent.trim()) {{
+                                review.reviewer_name = nameElem.textContent.trim();
+                                break;
+                            }}
+                        }}
+                        
+                        // Extract rating with enhanced detection
+                        const ratingSelectors = ['.kvMYJc', '[aria-label*="star"]', '[class*="rating"]', '.fZvEmc'];
+                        for (const selector of ratingSelectors) {{
+                            const ratingElem = elem.querySelector(selector);
+                            if (ratingElem) {{
+                                const ariaLabel = ratingElem.getAttribute('aria-label');
+                                const text = ratingElem.textContent;
+                                
+                                // Extract numeric rating
+                                const ratingMatch = (ariaLabel || text || '').match(/(\\d+(?:\\.\\d+)?)\\s*star/);
+                                if (ratingMatch) {{
+                                    review.rating = parseInt(ratingMatch[1]);
+                                    review.rating_text = ariaLabel || text;
+                                    review.rating_confidence = 90;
+                                }}
+                                break;
+                            }}
+                        }}
+                        
+                        // Extract review text with length management
+                        const textElem = elem.querySelector('[data-attribute*="description"], .review-text, .wiI7pd');
+                        if (textElem) {{
+                            review.review_text = textElem.textContent.trim();
+                            review.text_length = review.review_text.length;
+                        }} else {{
+                            // Fallback to element text
+                            const text = elem.textContent.trim();
+                            if (text.length > 20) {{
+                                review.review_text = text.substring(0, 1000); // Limit for memory
+                                review.text_length = review.review_text.length;
+                            }}
+                        }}
+                        
+                        // Extract date with multiple selectors
+                        const dateSelectors = ['.rsqaWe', '[class*="date"]', '[data-attribute*="date"]', '.dehysf'];
+                        for (const selector of dateSelectors) {{
+                            const dateElem = elem.querySelector(selector);
+                            if (dateElem && dateElem.textContent.trim()) {{
+                                review.review_date = dateElem.textContent.trim();
+                                break;
+                            }}
+                        }}
+                        
+                        // Extract helpful count
+                        const helpfulText = elem.textContent.match(/(\\d+)\\s*helpful/i);
+                        if (helpfulText) {{
+                            review.helpful_count = parseInt(helpfulText[1]);
+                        }}
+                        
+                        // Extract reviewer photo
+                        const photoElem = elem.querySelector('img[class*="photo"], [data-attribute*="photo"]');
+                        if (photoElem && photoElem.src) {{
+                            review.reviewer_photo = photoElem.src;
+                        }}
+                        
+                        // Extract reviewer total reviews
+                        const reviewCountText = elem.textContent.match(/(\\d+)\\s*reviews?/i);
+                        if (reviewCountText) {{
+                            review.reviewer_total_reviews = parseInt(reviewCountText[1]);
+                        }}
+                        
+                        // Extract owner response
+                        const responseElem = elem.querySelector('[class*="response"], [data-attribute*="response"]');
+                        if (responseElem) {{
+                            review.owner_response = responseElem.textContent.trim();
+                            review.response_count = 1;
+                        }}
+                        
+                        // Calculate extraction confidence
+                        let confidence = 0;
+                        if (review.reviewer_name) confidence += 20;
+                        if (review.rating) confidence += 25;
+                        if (review.review_text && review.review_text.length > 20) confidence += 30;
+                        if (review.review_date) confidence += 15;
+                        if (review.helpful_count !== null) confidence += 10;
+                        
+                        review.extraction_confidence = Math.min(confidence, 100);
+                        review.extraction_method = "Playwright Enhanced V1.2.0";
+                        review.source_element = elem.className;
+                        
+                        // Only include reviews with meaningful content
+                        if (review.review_text && review.review_text.length > 10) {{
+                            reviews.push(review);
                         }}
                     }}
                     
@@ -380,10 +536,17 @@ class PlaywrightExtractorOptimized:
             """)
             
             reviews = reviews_data
-            print(f"✅ Extracted {len(reviews)} reviews (optimized)")
+            print(f"✅ Extracted {len(reviews)} enhanced reviews (V1.2.0 optimized)")
+            
+            # Calculate average quality metrics
+            if reviews:
+                avg_confidence = sum(r.get('extraction_confidence', 0) for r in reviews) / len(reviews)
+                avg_completeness = sum(r.get('data_completeness', 0) for r in reviews) / len(reviews)
+                print(f"📊 Average extraction confidence: {avg_confidence:.1f}%")
+                print(f"📊 Average data completeness: {avg_completeness:.1f}%")
             
         except Exception as e:
-            print(f"ℹ️ Review extraction: {e}")
+            print(f"ℹ️ Enhanced review extraction: {e}")
 
         return reviews
 

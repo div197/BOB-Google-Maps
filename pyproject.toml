@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bob-google-maps"
-version = "1.1.0"
+version = "1.2.0"
 description = "State-of-the-Art Google Maps Extraction - Ultra-optimized with Nishkaam Karma Yoga principles, <50MB memory, 75% reduction, zero cache dependency"
 readme = "README.md"
 requires-python = ">=3.8"

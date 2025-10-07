@@ -57,7 +57,7 @@ class HybridExtractorOptimized:
             "avg_memory_mb": 0
         }
 
-    def extract_business(self, url, include_reviews=True, max_reviews=5):
+    def extract_business(self, url, include_reviews=True, max_reviews=10):
         """
         Extract business with ultimate optimization and zero cache dependency.
         
