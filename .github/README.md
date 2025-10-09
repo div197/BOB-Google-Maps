@@ -6,7 +6,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](docker-compose.yml)
 [![Success Rate](https://img.shields.io/badge/Success%20Rate-95%25+-brightgreen.svg)](README.md)
-[![Performance](https://img.shields.io/badge/Performance-3-5x%20Faster-orange.svg)](README.md)
 
 ## ✨ Revolutionary Features
 
