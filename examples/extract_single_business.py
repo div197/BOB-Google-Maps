@@ -3,7 +3,8 @@
 Example: Extract Single Business
 
 This example demonstrates how to extract complete business data
-from a single Google Maps URL using BOB Google Maps 1.0.
+from a single Google Maps URL using BOB Google Maps Ultimate V3.0.
+Triple-engine architecture with intelligent caching.
 """
 
 import json
@@ -11,8 +12,8 @@ from bob import HybridExtractor
 
 def main():
     """Extract single business example."""
-    print("🔱 BOB GOOGLE MAPS 1.0 - Single Business Extraction Example")
-    print("=" * 60)
+    print("🔱 BOB GOOGLE MAPS ULTIMATE V3.0 - Single Business Extraction Example")
+    print("=" * 70)
 
     # Initialize extractor
     extractor = HybridExtractor(headless=True)

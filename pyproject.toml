@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bob-google-maps"
-version = "1.2.0"
-description = "State-of-the-Art Google Maps Extraction - Ultra-optimized with Nishkaam Karma Yoga principles, <50MB memory, 75% reduction, zero cache dependency"
+version = "3.0.0"
+description = "BOB Google Maps Ultimate V3.0 - The most powerful Google Maps scraper with triple-engine architecture, intelligent caching, and 95%+ success rate"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
