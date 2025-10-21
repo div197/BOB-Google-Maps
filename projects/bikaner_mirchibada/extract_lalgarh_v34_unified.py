@@ -57,7 +57,7 @@ class UnifiedExtractionV34:
         Extract complete business intelligence.
 
         Args:
-            business_query: Business name or query
+            business_query: Business name or query (converts to Google Maps URL)
 
         Returns:
             dict: Complete business data with all enhancements
@@ -67,10 +67,15 @@ class UnifiedExtractionV34:
         print("="*70)
         print(f"Extracting: {business_query}\n")
 
+        # Generate Google Maps search URL from business name
+        search_query = business_query.replace(" ", "+")
+        google_maps_url = f"https://www.google.com/maps/search/{search_query}"
+        print(f"📍 Search URL: {google_maps_url}\n")
+
         # PHASE 1: Core extraction
         print("PHASE 1: Core Business Extraction")
         print("-"*70)
-        result = self.extractor.extract_business(business_query, include_reviews=True, max_reviews=5)
+        result = self.extractor.extract_business(google_maps_url, include_reviews=True, max_reviews=5)
 
         if not result.get('success'):
             print("❌ Core extraction failed")
