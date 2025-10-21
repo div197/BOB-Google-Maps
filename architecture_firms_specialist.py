@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Architecture Firms Specialist Agent - BOB Google Maps Ultimate V3.0
-Premium Architecture Firms Extraction Mission
+Architecture Firms Specialist Agent - BOB Google Maps v3.4.1
+Specialized extraction for architecture firms with collaboration potential
 
-Target: 10 NEW architecture firms across UAE with interior design collaboration potential
-Focus: Residential, Commercial, Mixed-use projects with 4.0+ rating
+Target: Premium architecture firms across UAE with interior design partnerships
+Focus: 4.0+ rated firms in residential, commercial, and mixed-use projects
 """
 
 import json
@@ -455,7 +455,7 @@ class ArchitectureFirmsExtractor:
             "mission_metadata": {
                 "extraction_date": datetime.now().isoformat(),
                 "specialist_agent": "Architecture Firms Specialist Agent",
-                "tool_used": "BOB Google Maps Ultimate V3.0",
+                "tool_used": "BOB Google Maps v3.4.1",
                 "target_region": "UAE (Dubai, Abu Dhabi, Sharjah)",
                 "focus_areas": self.mission_params["focus_areas"],
                 "quality_threshold": f"{self.mission_params['min_rating']}+ rating"
@@ -522,7 +522,7 @@ class ArchitectureFirmsExtractor:
             "extraction_metadata": {
                 "mission_date": datetime.now().isoformat(),
                 "specialist_agent": "Architecture Firms Specialist Agent",
-                "system": "BOB Google Maps Ultimate V3.0",
+                "system": "BOB Google Maps v3.4.1",
                 "search_strategies_used": self.search_strategies,
                 "quality_filters_applied": {
                     "minimum_rating": self.mission_params["min_rating"],
@@ -542,7 +542,7 @@ class ArchitectureFirmsExtractor:
 def main():
     """Execute the architecture firms extraction mission"""
 
-    print("🏛️  ARCHITECTURE FIRMS SPECIALIST AGENT - BOB GOOGLE MAPS ULTIMATE V3.0")
+    print("🏛️  ARCHITECTURE FIRMS SPECIALIST AGENT - BOB Google Maps v3.4.1")
     print("=" * 80)
     print("🎯 MISSION: Extract 10 premium architecture firms across UAE")
     print("📍 FOCUS: Firms with interior design collaboration potential")
