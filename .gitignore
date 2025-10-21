@@ -95,3 +95,18 @@ chromedriver
 chromedriver.exe
 geckodriver
 geckodriver.exe
+# Build artifacts and eggs
+*.egg-info/
+build/
+dist/
+
+# Runtime directories
+logs/
+data/
+__pycache__/
+*.pyc
+*.pyo
+
+# Cache databases
+*.db
+*.sqlite
