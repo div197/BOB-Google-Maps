@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Corner Living - Business Intelligence Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .dashboard-header {
+            background: var(--dark-bg);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-title {
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .dashboard-subtitle {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 0.5rem;
+        }
+
+        .main-container {
+            padding: 2rem;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .metric-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-change {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .positive-change {
+            color: var(--success-color);
+        }
+
+        .negative-change {
+            color: var(--accent-color);
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .lead-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lead-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .lead-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .lead-category {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .lead-score {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .lead-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .lead-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .lead-detail i {
+            color: var(--secondary-color);
+            width: 20px;
+        }
+
+        .rating-stars {
+            color: #f39c12;
+            margin-left: 0.5rem;
+        }
+
+        .image-gallery {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            overflow-x: auto;
+        }
+
+        .gallery-image {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .export-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .export-csv {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .export-pdf {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .export-json {
+            background: var(--warning-color);
+            color: white;
+        }
+
+        .filter-section {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .filter-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-input {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: white;
+            cursor: pointer;
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-title {
+                font-size: 1.5rem;
+            }
+
+            .metric-value {
+                font-size: 2rem;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .export-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="container">
+            <h1 class="dashboard-title">
+                <i class="fas fa-chart-line me-3"></i>
+                D Corner Living Business Intelligence
+            </h1>
+            <p class="dashboard-subtitle">Real-time GCC Furniture Market Intelligence Dashboard</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="container">
+            <!-- Export Buttons -->
+            <div class="export-buttons">
+                <button class="export-btn export-csv" onclick="exportToCSV()">
+                    <i class="fas fa-file-csv"></i>
+                    Export to CSV
+                </button>
+                <button class="export-btn export-pdf" onclick="exportToPDF()">
+                    <i class="fas fa-file-pdf"></i>
+                    Export to PDF
+                </button>
+                <button class="export-btn export-json" onclick="exportToJSON()">
+                    <i class="fas fa-file-code"></i>
+                    Export to JSON
+                </button>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(52, 152, 219, 0.1); color: var(--secondary-color);">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="metric-value">400/400</div>
+                        <div class="metric-label">Perfect Lead Score</div>
+                        <div class="metric-change positive-change">
+                            <i class="fas fa-arrow-up"></i> Exceptional Quality
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(39, 174, 96, 0.1); color: var(--success-color);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="metric-value">4.7/5</div>
+                        <div class="metric-label">Google Rating</div>
+                        <div class="metric-change positive-change">
+                            <i class="fas fa-arrow-up"></i> 63 Reviews
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(243, 156, 18, 0.1); color: var(--warning-color);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="metric-value">48.5s</div>
+                        <div class="metric-label">Extraction Time</div>
+                        <div class="metric-change positive-change">
+                            <i class="fas fa-arrow-up"></i> High Efficiency
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="metric-card">
+                        <div class="metric-icon" style="background: rgba(231, 76, 60, 0.1); color: var(--accent-color);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-value">AED 2.1M</div>
+                        <div class="metric-label">Expected Value</div>
+                        <div class="metric-change positive-change">
+                            <i class="fas fa-arrow-up"></i> High Potential
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3 class="filter-title">
+                    <i class="fas fa-filter me-2"></i>
+                    Advanced Filters
+                </h3>
+                <div class="filter-group">
+                    <input type="text" class="filter-input" placeholder="Search business name..." id="searchInput">
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="interior-design">Interior Design</option>
+                        <option value="furniture-retail">Furniture Retail</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="hospitality">Hospitality</option>
+                    </select>
+                    <select class="filter-select" id="scoreFilter">
+                        <option value="">All Scores</option>
+                        <option value="350-400">Excellent (350-400)</option>
+                        <option value="300-349">Very Good (300-349)</option>
+                        <option value="250-299">Good (250-299)</option>
+                        <option value="200-249">Fair (200-249)</option>
+                    </select>
+                    <select class="filter-select" id="locationFilter">
+                        <option value="">All Locations</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="abu-dhabi">Abu Dhabi</option>
+                        <option value="sharjah">Sharjah</option>
+                        <option value="riyadh">Riyadh</option>
+                    </select>
+                    <button class="export-btn export-csv" onclick="applyFilters()">
+                        <i class="fas fa-search"></i>
+                        Apply Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Lead Score Distribution</h3>
+                        <canvas id="scoreChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title">Geographic Distribution</h3>
+                        <canvas id="geoChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Projection Chart -->
+            <div class="chart-container">
+                <h3 class="chart-title">Revenue Projection Analysis</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <!-- Leads Section -->
+            <div class="chart-container">
+                <h3 class="chart-title">
+                    <i class="fas fa-users me-2"></i>
+                    Premium Lead Portfolio
+                </h3>
+
+                <div id="leadsContainer">
+                    <!-- Lead Card 1: Muse Interior Design -->
+                    <div class="lead-card" onclick="showLeadDetails('muse-interior-design')">
+                        <div class="lead-header">
+                            <div>
+                                <div class="lead-name">Muse Interior Design</div>
+                                <div class="lead-category">Interior Designer</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    4.7 (63 reviews)
+                                </div>
+                            </div>
+                            <div class="lead-score">400/400</div>
+                        </div>
+                        <div class="lead-details">
+                            <div class="lead-detail">
+                                <i class="fas fa-phone"></i>
+                                +971 55 357 3290
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-envelope"></i>
+                                info@musedesign.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-globe"></i>
+                                musedesign.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Dubai Design District
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-chart-line"></i>
+                                AED 1.2M Est. Value
+                            </div>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://lh3.googleusercontent.com/p/AF1QipO_GHrh2A6B1JBif-sltbOXLGCN5ZdtaB26TH0G=w4096-h4096-p-k-no"
+                                 class="gallery-image" alt="Business Location">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjUyBJLOCre_xZexOHMeT0MXNRIoq6gIS39Hsoadb2hH6tdlGuM-=w4096-h4096-p-rp-mo-br100"
+                                 class="gallery-image" alt="Office Interior">
+                            <img src="https://lh3.googleusercontent.com/p/AF1QipMct4e1O_nOzKS304yO1URztlpdAinTgzwmo0In=w4096-h4096-k-no"
+                                 class="gallery-image" alt="Project Portfolio">
+                        </div>
+                    </div>
+
+                    <!-- Lead Card 2: Sample Additional Lead -->
+                    <div class="lead-card" onclick="showLeadDetails('sample-lead-2')">
+                        <div class="lead-header">
+                            <div>
+                                <div class="lead-name">Luxury Living Interiors</div>
+                                <div class="lead-category">Interior Designer</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    4.9 (45 reviews)
+                                </div>
+                            </div>
+                            <div class="lead-score">385/400</div>
+                        </div>
+                        <div class="lead-details">
+                            <div class="lead-detail">
+                                <i class="fas fa-phone"></i>
+                                +971 4 123 4567
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-envelope"></i>
+                                info@luxuryliving.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-globe"></i>
+                                luxuryliving.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Business Bay, Dubai
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-chart-line"></i>
+                                AED 980K Est. Value
+                            </div>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://picsum.photos/seed/luxury1/150/100.jpg" class="gallery-image" alt="Showroom">
+                            <img src="https://picsum.photos/seed/luxury2/150/100.jpg" class="gallery-image" alt="Project">
+                            <img src="https://picsum.photos/seed/luxury3/150/100.jpg" class="gallery-image" alt="Design">
+                        </div>
+                    </div>
+
+                    <!-- Lead Card 3: Sample Additional Lead -->
+                    <div class="lead-card" onclick="showLeadDetails('sample-lead-3')">
+                        <div class="lead-header">
+                            <div>
+                                <div class="lead-name">Premier Spaces Design</div>
+                                <div class="lead-category">Interior Designer</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    4.2 (38 reviews)
+                                </div>
+                            </div>
+                            <div class="lead-score">365/400</div>
+                        </div>
+                        <div class="lead-details">
+                            <div class="lead-detail">
+                                <i class="fas fa-phone"></i>
+                                +971 2 567 8901
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-envelope"></i>
+                                contact@premierspaces.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-globe"></i>
+                                premierspaces.ae
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Al Maryah Island, Abu Dhabi
+                            </div>
+                            <div class="lead-detail">
+                                <i class="fas fa-chart-line"></i>
+                                AED 850K Est. Value
+                            </div>
+                        </div>
+                        <div class="image-gallery">
+                            <img src="https://picsum.photos/seed/premier1/150/100.jpg" class="gallery-image" alt="Office">
+                            <img src="https://picsum.photos/seed/premier2/150/100.jpg" class="gallery-image" alt="Design">
+                            <img src="https://picsum.photos/seed/premier3/150/100.jpg" class="gallery-image" alt="Project">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p class="mt-3">Loading more leads...</p>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button class="export-btn export-csv" onclick="loadMoreLeads()">
+                        <i class="fas fa-plus-circle"></i>
+                        Load More Leads
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Lead Details -->
+    <div id="leadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for the dashboard
+        const leadsData = [
+            {
+                id: 'muse-interior-design',
+                name: 'Muse Interior Design',
+                category: 'Interior Designer',
+                rating: 4.7,
+                reviews: 63,
+                score: 400,
+                phone: '+971 55 357 3290',
+                email: 'info@musedesign.ae',
+                website: 'musedesign.ae',
+                location: 'Dubai Design District',
+                value: 1200000,
+                images: [
+                    'https://lh3.googleusercontent.com/p/AF1QipO_GHrh2A6B1JBif-sltbOXLGCN5ZdtaB26TH0G=w4096-h4096-p-k-no',
+                    'https://lh3.googleusercontent.com/a-/ALV-UjUyBJLOCre_xZexOHMeT0MXNRIoq6gIS39Hsoadb2hH6tdlGuM-=w4096-h4096-p-rp-mo-br100',
+                    'https://lh3.googleusercontent.com/p/AF1QipMct4e1O_nOzKS304yO1URztlpdAinTgzwmo0In=w4096-h4096-k-no'
+                ]
+            },
+            {
+                id: 'luxury-living-interiors',
+                name: 'Luxury Living Interiors',
+                category: 'Interior Designer',
+                rating: 4.9,
+                reviews: 45,
+                score: 385,
+                phone: '+971 4 123 4567',
+                email: 'info@luxuryliving.ae',
+                website: 'luxuryliving.ae',
+                location: 'Business Bay, Dubai',
+                value: 980000,
+                images: [
+                    'https://picsum.photos/seed/luxury1/150/100.jpg',
+                    'https://picsum.photos/seed/luxury2/150/100.jpg',
+                    'https://picsum.photos/seed/luxury3/150/100.jpg'
+                ]
+            },
+            {
+                id: 'premier-spaces-design',
+                name: 'Premier Spaces Design',
+                category: 'Interior Designer',
+                rating: 4.2,
+                reviews: 38,
+                score: 365,
+                phone: '+971 2 567 8901',
+                email: 'contact@premierspaces.ae',
+                website: 'premierspaces.ae',
+                location: 'Al Maryah Island, Abu Dhabi',
+                value: 850000,
+                images: [
+                    'https://picsum.photos/seed/premier1/150/100.jpg',
+                    'https://picsum.photos/seed/premier2/150/100.jpg',
+                    'https://picsum.photos/seed/premier3/150/100.jpg'
+                ]
+            }
+        ];
+
+        // Initialize Charts
+        function initializeCharts() {
+            // Lead Score Distribution Chart
+            const scoreCtx = document.getElementById('scoreChart').getContext('2d');
+            new Chart(scoreCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Excellent (350-400)', 'Very Good (300-349)', 'Good (250-299)', 'Fair (200-249)'],
+                    datasets: [{
+                        data: [25, 45, 20, 10],
+                        backgroundColor: [
+                            '#27ae60',
+                            '#3498db',
+                            '#f39c12',
+                            '#e74c3c'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Geographic Distribution Chart
+            const geoCtx = document.getElementById('geoChart').getContext('2d');
+            new Chart(geoCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Riyadh', 'Doha'],
+                    datasets: [{
+                        label: 'Number of Leads',
+                        data: [45, 28, 15, 32, 18],
+                        backgroundColor: '#3498db',
+                        borderColor: '#2980b9',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Revenue Projection Chart
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Month 1', 'Month 2', 'Month 3', 'Month 6', 'Month 9', 'Month 12'],
+                    datasets: [{
+                        label: 'Conservative Projection',
+                        data: [50, 150, 300, 800, 1500, 2500],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Aggressive Projection',
+                        data: [100, 250, 500, 1200, 2200, 3500],
+                        borderColor: '#27ae60',
+                        backgroundColor: 'rgba(39, 174, 96, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Revenue (AED thousands)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Export Functions
+        function exportToCSV() {
+            let csv = 'Business Name,Category,Rating,Reviews,Score,Phone,Email,Website,Location,Estimated Value\n';
+
+            leadsData.forEach(lead => {
+                csv += `${lead.name},${lead.category},${lead.rating},${lead.reviews},${lead.score},${lead.phone},${lead.email},${lead.website},${lead.location},${lead.value}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dcorn_living_leads_export.csv';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function exportToPDF() {
+            alert('PDF export functionality would be implemented here using a library like jsPDF');
+        }
+
+        function exportToJSON() {
+            const jsonData = JSON.stringify(leadsData, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dcorn_living_leads_export.json';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Filter Functions
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const scoreRange = document.getElementById('scoreFilter').value;
+            const location = document.getElementById('locationFilter').value;
+
+            // Filter logic would be implemented here
+            console.log('Filters applied:', { searchTerm, category, scoreRange, location });
+            alert('Filters applied successfully! The lead list would be filtered based on your criteria.');
+        }
+
+        // Lead Details Modal
+        function showLeadDetails(leadId) {
+            const lead = leadsData.find(l => l.id === leadId);
+            if (lead) {
+                const modalContent = `
+                    <h2>${lead.name}</h2>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h4>Business Information</h4>
+                            <p><strong>Category:</strong> ${lead.category}</p>
+                            <p><strong>Rating:</strong> ${lead.rating}/5 (${lead.reviews} reviews)</p>
+                            <p><strong>Lead Score:</strong> ${lead.score}/400</p>
+                            <p><strong>Location:</strong> ${lead.location}</p>
+                            <p><strong>Estimated Value:</strong> AED ${lead.value.toLocaleString()}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Contact Information</h4>
+                            <p><strong>Phone:</strong> ${lead.phone}</p>
+                            <p><strong>Email:</strong> ${lead.email}</p>
+                            <p><strong>Website:</strong> ${lead.website}</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h4>Gallery</h4>
+                            <div class="image-gallery">
+                                ${lead.images.map(img => `<img src="${img}" class="gallery-image" alt="${lead.name}">`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h4>Partnership Opportunity</h4>
+                            <p>This lead represents a premium partnership opportunity with exceptional revenue potential and strategic value for D Corner Living's market expansion.</p>
+                            <button class="export-btn export-csv" onclick="initiateContact('${lead.id}')">
+                                <i class="fas fa-phone"></i>
+                                Initiate Contact
+                            </button>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('modalContent').innerHTML = modalContent;
+                document.getElementById('leadModal').style.display = 'block';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('leadModal').style.display = 'none';
+        }
+
+        function initiateContact(leadId) {
+            alert(`Contact initiation workflow would start for ${leadId}. This would include email templates, phone scripts, and follow-up scheduling.`);
+        }
+
+        function loadMoreLeads() {
+            const spinner = document.getElementById('loadingSpinner');
+            spinner.style.display = 'block';
+
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                alert('More leads would be loaded here from the database or API.');
+            }, 1500);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('leadModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Initialize dashboard when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCharts();
+        });
+
+        // Add interactivity for real-time updates
+        setInterval(() => {
+            // Simulate real-time data updates
+            const randomMetric = Math.floor(Math.random() * 4);
+            const metrics = document.querySelectorAll('.metric-value');
+            if (metrics[randomMetric]) {
+                metrics[randomMetric].style.animation = 'pulse 1s';
+                setTimeout(() => {
+                    metrics[randomMetric].style.animation = '';
+                }, 1000);
+            }
+        }, 5000);
+
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

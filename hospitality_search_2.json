@@ -1,0 +1,86 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Hospitality Group Of Companies, Abu Dhabi",
+  "rating": 3.9,
+  "review_count": 7,
+  "address": "1203 & 1201 Lulu Center Building, Salam Street - Abu Dhabi - United Arab Emirates",
+  "phone": "+971 2 644 8600",
+  "website": "http://hospitalityce.com/",
+  "hours": "Open ⋅ Closes 4:30 pm Thursday8 am–4:30 pmFriday8 am–3 pmSaturday8 am–4:30 pmSundayClosedMonday8 am–4:30 pmTuesday8 am–4:30 pmWednesday8 am–4:30 pmSuggest new hours",
+  "category": "Corporate office",
+  "latitude": 24.4982563,
+  "longitude": 54.3706603,
+  "place_id_original": "0x3e5e665fa4ba540f:0x43503f39b10c0839",
+  "place_id_format": "hex",
+  "cid": "4850446315694065721",
+  "place_id": "4850446315694065721",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=4850446315694065721",
+  "place_id_confidence": "HIGH",
+  "plus_code": "F9XC+87 Abu Dhabi - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 4:30 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a-/ALV-UjW25RZsyES_Zrjtl3UXEDrmwyA4bJUfVEP_WS1oLrTlvfamkCpy=w4096-h4096-p-rp-mo-ba6-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOyEqoVA0hxoc2NOBsldmb9dsnqq52aC44pPcH4=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNMOOTJVI-IPcbb6pWPxEztH-vbmN5pFlD00ZiJ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXGPcOUDhiA7QDkE-JZel_Leq1QhWozFYaVxR2EOzillknW5r9D=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocLwghoQFolhMm0_vaZe5su4-R-CnH9V-u0DzxWpdaL_kpeR5HY=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npzzrGhRbKdbiJ-dWrfDorMbDo5F-MZJlpRr7gb7lHd4CnC4PV-I0meKd69wH9fO6cm8RfgZSPRUp3e36mnnEtnCXcRXs7NWDQ3gFFTeJwlT5BHT27Vo-myayMAfCeU8r-ED72g=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no8hQbsJ-__vCwdygyaQKK2XyX-fZtQMxRWomV1NWshO-Ku4h5Y0JhywIIxPHA8QHLgSofafKuDZ143aORT2YrPw63kKNIpGbeOvn4ni-uuBKT6RKtjruY2mIx8dKdqSvjaEcOX=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOyEqoVA0hxoc2NOBsldmb9dsnqq52aC44pPcH4=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Muhammad ayub chLocal Guide · 930 reviews · 1,425 photos2 months ago 💞 💕 💞 💕 MashaAllah 🙏 💞 🙏 💞 🙏 💞 nice group of companies 💕🙏💕🙏💕 …Like Share",
+      "reviewer": "Muhammad ayub ch",
+      "rating": "4 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "💞 💕 💞 💕 MashaAllah 🙏 💞 🙏 💞 🙏 💞 nice group of companies 💕🙏💕🙏💕 …"
+    },
+    {
+      "review_index": 3,
+      "text": "💞 💕 💞 💕 MashaAllah 🙏 💞 🙏 💞 🙏 💞 nice group of companies 💕🙏💕🙏💕 …"
+    },
+    {
+      "review_index": 4,
+      "text": "Fatima AlkhooriLocal Guide · 21 reviews · 77 photos3 years ago Very bad operator with zero attitude!!!! I called to ask few questions and she said we don’t have and hanged up!!!Like Share",
+      "reviewer": "Fatima Alkhoori"
+    },
+    {
+      "review_index": 5,
+      "text": "Very bad operator with zero attitude!!!! I called to ask few questions and she said we don’t have and hanged up!!!"
+    },
+    {
+      "review_index": 6,
+      "text": "Very bad operator with zero attitude!!!! I called to ask few questions and she said we don’t have and hanged up!!!"
+    },
+    {
+      "review_index": 7,
+      "text": "rehan aamir1 review · 3 photosa year ago Very good Accommodation and catering facilities in Ruwais area.Like Share",
+      "reviewer": "rehan aamir",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 8,
+      "text": "Very good Accommodation and catering facilities in Ruwais area."
+    },
+    {
+      "review_index": 9,
+      "text": "Very good Accommodation and catering facilities in Ruwais area."
+    },
+    {
+      "review_index": 10,
+      "text": "Gattu Chinia1 review3 years ago I want to go join a hospitality groupLike Share",
+      "reviewer": "Gattu Chinia",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 50.37
+}

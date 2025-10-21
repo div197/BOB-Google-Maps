@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "JIDA Design",
+  "rating": 4.9,
+  "review_count": 209,
+  "address": "Nahdat An Nashr, Ar Rawdah, Jeddah 23432, Saudi Arabia",
+  "phone": "+966 57 085 8571",
+  "website": "http://www.jidadesign.com/",
+  "hours": "Open ⋅ Closes 5 pm Thursday9 am–5 pmFridayClosedSaturdayClosedSunday9 am–5 pmMonday9 am–5 pmTuesday9 am–5 pmWednesday9 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 21.5548433,
+  "longitude": 39.1574332,
+  "place_id_original": "0x15c3d006c1e91925:0x9804062a3936f5dc",
+  "place_id_format": "hex",
+  "cid": "10953886972090185180",
+  "place_id": "10953886972090185180",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=10953886972090185180",
+  "place_id_confidence": "HIGH",
+  "plus_code": "H534+WX Ar Rawdah, Jeddah Saudi Arabia",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipP7RrdouZfkXTZ3L0rgn8am7gbtnhNOTDlXjcRy=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPMAps-GAVT1Klr1gmeyi28TiZ3HF3Bs4WzhEvx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKONLyIUaGG7B2YKoSekLUrq1rTKItWuy0lvnixS23mfLEytQ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipP7RrdouZfkXTZ3L0rgn8am7gbtnhNOTDlXjcRy=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXiE52L8plMJzZOSWWnDVjYnVCgB4OhX3pdWFRGNb7zYHf0hgHS=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noE4aXaJf_ZbkFmHa-dPg2HZyDg09UXwW2oZZ7JQoUJfneHMFVB_9Kf9EcDpj7en8EN3_JrLFGOqcZ46aGBfkQUcjGp3WklLbz-Wu3oPCpev4--wKAGbq9FTbzhHeAAOxWSCoVE=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nohRAkOYetCaKlOTl8t9U6IyhB04RM2X2U8KhIFKCbOiziQGbxom7jUa_XBCZJmF9cuHHLcd3L0m2uYnLAw6d2kI8x3Q1S3ex9IEaznjcDfV9h4xUfPBigXRkHA8rdJYKwvRpNm=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO3I1yNdOneNK_6cQ5RA6y8oycrN_7jt8tB0S01=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLagNZh1G5cQKq2W8UzNhKyPScFKKfYKaGUhZV2DVQ4dexylw=w4096-h4096-p-rp-mo-ba4-br100"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "AhmedLocal Guide · 70 reviews · 14 photos7 months ago Very poor communication. I texted them once through WhatsApp and they replied then for the next 5 days I kept texting with no reply at all. I tried calling their other number 9200 and a lady answered who didn't know anything, and she kept … MoreLike Share Response from the owner 7 months agoKindly contact us on 0598585897 or send us any communication details and we’ll contact you as soon as possible .. regardless we don’t have any project with anyone named Ahmed in this time of you writing this review.. this is not right facts .. kindly share the right information for the sake of you being honest..",
+      "reviewer": "Ahmed"
+    },
+    {
+      "review_index": 2,
+      "text": "Very poor communication. I texted them once through WhatsApp and they replied then for the next 5 days I kept texting with no reply at all. I tried calling their other number 9200 and a lady answered who didn't know anything, and she kept … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Very poor communication. I texted them once through WhatsApp and they replied then for the next 5 days I kept texting with no reply at all. I tried calling their other number 9200 and a lady answered who didn't know anything, and she kept …"
+    },
+    {
+      "review_index": 4,
+      "text": "Kindly contact us on 0598585897 or send us any communication details and we’ll contact you as soon as possible .. regardless we don’t have any project with anyone named Ahmed in this time of you writing this review.. this is not right facts .. kindly share the right information for the sake of you being honest.."
+    },
+    {
+      "review_index": 5,
+      "text": "Ali Muiny9 reviews · 8 photos8 years ago Very professional, world class standards and up to date with international design brands. Great promising execution. Wish you all the best. Thumbs up !Like5 Share",
+      "reviewer": "Ali Muiny",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 59.32
+}

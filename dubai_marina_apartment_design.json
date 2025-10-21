@@ -1,0 +1,53 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Algebra Contracting LLC 800-INTERIOR",
+  "rating": 4.8,
+  "review_count": 45,
+  "address": "Marina Heights Tower, Office 102 - Dubai Marina - Dubai - United Arab Emirates",
+  "phone": "+971 4 883 7300",
+  "website": "https://algebra-contracting.com/",
+  "hours": "Open ⋅ Closes 5 pm Thursday8 am–5 pmFriday8 am–5 pmSaturday10 am–1 pmSundayClosedMonday8 am–5 pmTuesday8 am–5 pmWednesday8 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.0868684,
+  "longitude": 55.1483699,
+  "place_id_original": "0x3e5f6831a6c31c79:0x195647e7d1881335",
+  "place_id_format": "hex",
+  "cid": "1825725759923688245",
+  "place_id": "1825725759923688245",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=1825725759923688245",
+  "place_id_confidence": "HIGH",
+  "plus_code": "34PX+P8 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocIJul7vpYZqDnsEBJOTBygpPDCWyv7txIDoFeEqcGfsQTvLmA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocLpdHLvF2rWsttvnTU642RB_WKZncQ4nmTFN6LpKQ0nVSg9Fg=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN9VQgVfKSAJRrt-RisaFOx0ASReSlzl1hSU8IB=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMc-NVXOKq0CjSl78Yhjx3ruJEo0wPx5a3zL8hh=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN9VQgVfKSAJRrt-RisaFOx0ASReSlzl1hSU8IB=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLJCNW8tzVzuZskUvLuPGDiAS0Ecfyey-u_ToepjF2pd6j6qw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO8_6BDXhoBDeAz4BjcSrVPEiOTvnOzreD80tKA=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO6jQsKHtlNhx5PCtvsuIK1616gvhPwTAkfqNpJ=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "remy lamuscatella9 reviews · 10 photosa year ago Algebra Contracting recently renovated our 4 bathrooms, and we are extremely pleased with the results.\nThe quality of their work is outstanding, and the project was completed on time … More +5Like Share Response from the owner a year agoThank you very much for your thoughtful review and for trusting Algebra Contracting with your renovation projects once again. We are truly pleased to hear that you are happy with the results of your bathroom renovations, and we appreciate … More",
+      "reviewer": "remy lamuscatella",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Algebra Contracting recently renovated our 4 bathrooms, and we are extremely pleased with the results.\nThe quality of their work is outstanding, and the project was completed on time … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Algebra Contracting recently renovated our 4 bathrooms, and we are extremely pleased with the results.\nThe quality of their work is outstanding, and the project was completed on time …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 57.68
+}

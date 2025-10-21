@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "SK-Touch Interior Design Studio",
+  "rating": 4.8,
+  "review_count": 16,
+  "address": "4343, Ar Rawdah, Jeddah 23432, Saudi Arabia",
+  "phone": "+966 50 564 4518",
+  "website": "https://www.sk-touch.com/",
+  "hours": "Open ⋅ Closes 5 pm Thursday9 am–5 pmFridayClosedSaturdayClosedSunday9 am–5 pmMonday9 am–5 pmTuesday9 am–5 pmWednesday9 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 21.5602541,
+  "longitude": 39.1561275,
+  "place_id_original": "0x15c3db181379a1b7:0x47a33b10a9f1e866",
+  "place_id_format": "hex",
+  "cid": "5162034540653439078",
+  "place_id": "5162034540653439078",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=5162034540653439078",
+  "place_id_confidence": "HIGH",
+  "plus_code": "H564+4F Ar Rawdah, Jeddah Saudi Arabia",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a-/ALV-UjURqZfY69JF3sioh8Sr79NbrJ6ftugIM6UOzm7oPtnPM6oVCA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipM5aCF4f0XaG1kx7pIefQ1uKhqi9AS_QqKTjOt9=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocI6_rCK0s824xuT6lKar8M90dS5wbB4L5MuqZ31vqwzI18B_w=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWXYCSP-XUu3DJ2OnWj9-JpPqmyC3rRYRhSqwG1IsMWaFI6uYMi=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMbCBFkQ_G46Ckwtt5M83dYdGFKKEdx6JOjcbvs=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP7I5VDpuj-Y6OtYqFYg-npF-LVeh8O3lW9tNMQ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP7I5VDpuj-Y6OtYqFYg-npF-LVeh8O3lW9tNMQ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO2zuEJlYcDJa1NOkqtw8FQZfjrv-gsjhQeYck8=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMEXVuU0PzKR-o-9V6lNdyWIDNEdr32vgEdFkIm=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "info@sk-touch.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "leyla itani2 reviews4 years ago An Interior Architecture studio that understand the clients needs. SK-Touch Interior Design Studio created a wonderful project with us and most importantly we did not exceed our budget including the Furniture.Like1 Share",
+      "reviewer": "leyla itani",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "An Interior Architecture studio that understand the clients needs. SK-Touch Interior Design Studio created a wonderful project with us and most importantly we did not exceed our budget including the Furniture."
+    },
+    {
+      "review_index": 3,
+      "text": "An Interior Architecture studio that understand the clients needs. SK-Touch Interior Design Studio created a wonderful project with us and most importantly we did not exceed our budget including the Furniture."
+    },
+    {
+      "review_index": 4,
+      "text": "Pierre RAFFOUL6 reviews4 years ago I've had the chance to work with Sk-Touch, the team is very professional and the scope of work covers all industries. Whether you are planning to open a restaurant, design your offices, home, etc. Sk-Touch is the go to solutionLike Share Response from the owner 4 years ago🙏 Pierre and u are always considered one of the team with your great spirits on bored. …",
+      "reviewer": "Pierre RAFFOUL",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "I've had the chance to work with Sk-Touch, the team is very professional and the scope of work covers all industries. Whether you are planning to open a restaurant, design your offices, home, etc. Sk-Touch is the go to solution"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 57.24
+}

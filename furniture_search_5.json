@@ -1,0 +1,65 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Mahran Furniture Factory",
+  "rating": 5.0,
+  "review_count": 22,
+  "address": "Ajman Industrial 1 - Ajman - United Arab Emirates",
+  "phone": "+971 52 750 1961",
+  "hours": "Open ⋅ Closes 7 pm Thursday8 am–7 pmFriday8 am–7 pmSaturday8 am–7 pmSunday8 am–7 pmMonday8 am–7 pmTuesday8 am–7 pmWednesday8 am–7 pmSuggest new hours",
+  "category": "Furniture Manufacturer",
+  "latitude": 25.388742,
+  "longitude": 55.49047,
+  "place_id_original": "0x3e5f5877f60ef507:0xcdb94c3e9fc9098b",
+  "place_id_format": "hex",
+  "cid": "14823963480319134091",
+  "place_id": "14823963480319134091",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=14823963480319134091",
+  "place_id_confidence": "HIGH",
+  "plus_code": "9FQR+F5 Ajman - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 7 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8jthgx-SOlBGk-8lcLSTf76918v97JOBBUTheLd3nqmEv-6p7Lb_OO59qRPa42Chu2BvRLQPyaFeQv5EGmPF3-YN-UPCeceXa_kOCDyfwWy6qF3L-TFmoBT6ii36tAl2xmoAP=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noRHQl3QsDwMKAFX3fRiTYPI2aL7M5WSYU5pMREcJJvN18zfB44rBDchGsKQJ_IbADBkIgstWJpmNG5mqzr25mEBeCpTBS1ZwVluzX5Fp0s_GwFkBYbz7noEdq1-CUJ1NR15ye_wA=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4notj6L5oABC9enlJ06IRhGjgmFCg0Bws4WhZ_rQKrA71dMqW4PGwLka_IcpIGu6q4e5LvWvgbq1VN-neEdsl1XWZpExBC-jLlOeXOPgucIVB1NYXyXpguCNr37kptuYubpXmgpV=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIZhvDlmtrYXf1V71hVgCrcRmreYyzloaMn_smlJlJAtlV2Kw=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOZCf4k1z9xPBtv78ZxvlmMNDsAVhkHMxF6X8B7=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noHqUaCPko3Fz1nZPcLgrsnNoepMck7ZGBIdigyIMyodEQg-gs3nyrehkmBbAcTTGorCcQEnDJgGtGYBYpeRtN1OBAFa0sZQTFMy4GjZlDO2V7DE2dtmiu7l2HfR-3oOrKU3HX3=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noRHQl3QsDwMKAFX3fRiTYPI2aL7M5WSYU5pMREcJJvN18zfB44rBDchGsKQJ_IbADBkIgstWJpmNG5mqzr25mEBeCpTBS1ZwVluzX5Fp0s_GwFkBYbz7noEdq1-CUJ1NR15ye_wA=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVAR_uccBQj84TBlgGWvxvDt6ljkoCxrk2njTCHEWlvp_m-tYm5=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXuxf7aD9U4Y63EW8b7YlCWm8tKB4b-1QhxwmAAXKHoX0gofuw=w4096-h4096-p-rp-mo-ba3-br100"
+  ],
+  "data_quality_score": 82,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Rashid AL-ZarouniLocal Guide · 10 reviews · 53 photos9 months ago Manufactured 24 units of new classic single sofa within the given duration of 48 hoursLike Share",
+      "reviewer": "Rashid AL-Zarouni",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Manufactured 24 units of new classic single sofa within the given duration of 48 hours"
+    },
+    {
+      "review_index": 3,
+      "text": "Manufactured 24 units of new classic single sofa within the given duration of 48 hours"
+    },
+    {
+      "review_index": 4,
+      "text": "Nasir MahmoodLocal Guide · 6 reviews · 18 photos8 months ago",
+      "reviewer": "Nasir Mahmood",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Zarouni ALocal Guide · 48 reviews · 151 photos2 years ago",
+      "reviewer": "Zarouni A",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 56.08
+}

@@ -1,0 +1,72 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Napoli Office Furniture Company LLC",
+  "rating": 4.0,
+  "review_count": 50,
+  "address": "Al Wahda St - Bu Danig - Hay Al Qasimiah - Sharjah - United Arab Emirates",
+  "phone": "+971 55 951 3045",
+  "website": "http://www.napoliuae.com/",
+  "hours": "Open ⋅ Closes 9 pm Thursday9 am–9 pmFriday9 am–9 pmSaturday9 am–9 pmSunday9 am–9 pmMonday9 am–9 pmTuesday9 am–9 pmWednesday9 am–9 pmSuggest new hours",
+  "category": "Office furniture store",
+  "latitude": 25.3411626,
+  "longitude": 55.4032813,
+  "place_id_original": "0x3e5f5860d74b9de1:0x9687ae2247fbca34",
+  "place_id_format": "hex",
+  "cid": "10846829689804933684",
+  "place_id": "10846829689804933684",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=10846829689804933684",
+  "place_id_confidence": "HIGH",
+  "attributes": [
+    "Has in-store shopping",
+    "In-store pick-up for online orders",
+    "Offers delivery"
+  ],
+  "service_options": {
+    "delivery": true
+  },
+  "plus_code": "8CR3+F8 Sharjah - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 9 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPdj86DOpdG9nv9lE3ncyem67WgCrbIYwxzIt0-=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNthUpS70B0FyUr6uzuKbEC7WlQbvAM1vICx2rm=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP49E9jeVg1Qe4vg8T_39Hwk0Kkcp3N8Q41RMw2=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPPlGgQn4Ll-e-okRsbiAKglzMUa2UhWwuPLDEo=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjW6Kps3B5jgTXU72i3-WrU5gLL8BbYT1MZavT_BHa3DzCB4wvbj=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjU0EwWmQryKYwIkOciHXzlvFygyrgNRokRMlK4EFynU9-iezZoV=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUoinqAGedBAYhVIxwlfZhkECNzfE7hg_hclT9AHiIaUKuYaBnF=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrRRpzxktCrUmH8rRqKQVzk9PPlVgnxMAxlU3qj8drR191xXC-RgqyI10ou3RXJNFf-Z89YoI_xgEsf-EmLaluImvA4Y01n8QtFCifD7luDHi19wnFQvO6SesSNJJmYnXwlbS54=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNthUpS70B0FyUr6uzuKbEC7WlQbvAM1vICx2rm=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Raashid P.S4 reviewsEdited a year ago Our workstation and chairs were successfully delivered today. They were early and the entire delivery team were both efficient and skilled. They had fixed our furniture satisfactorily as we had expected. Thank you Napoli Furniture for a very pleasant experience. I recommend Napoli furniture for your furniture needs.Like1 Share Response from the owner a year agoThank you so much for your 5 star rating! We are so pleased that you had a great experience. Thank you again!",
+      "reviewer": "Raashid P.S",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Our workstation and chairs were successfully delivered today. They were early and the entire delivery team were both efficient and skilled. They had fixed our furniture satisfactorily as we had expected. Thank you Napoli Furniture for a very pleasant experience. I recommend Napoli furniture for your furniture needs."
+    },
+    {
+      "review_index": 3,
+      "text": "Our workstation and chairs were successfully delivered today. They were early and the entire delivery team were both efficient and skilled. They had fixed our furniture satisfactorily as we had expected. Thank you Napoli Furniture for a very pleasant experience. I recommend Napoli furniture for your furniture needs."
+    },
+    {
+      "review_index": 4,
+      "text": "Thank you so much for your 5 star rating! We are so pleased that you had a great experience. Thank you again!"
+    },
+    {
+      "review_index": 5,
+      "text": "Sasi ram Kanna4 reviews · 3 photosa year ago Friendly owner and staff, Mr. Shefeek, is very polite and approachable with customers and clients. Their prices are also good. My furniture was damaged during the last flood, and the team at Napoli Furniture repaired most of it. I also … MoreLike1 Share Response from the owner 6 months agoThank you, Sasi Ram Kanna, for your 5-star rating and kind words about Napoli Furniture! We are delighted to hear that you had a positive experience with our friendly owner and staff, especially Mr. Shefeek. We are glad you found our prices … More",
+      "reviewer": "Sasi ram Kanna",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 58.9
+}

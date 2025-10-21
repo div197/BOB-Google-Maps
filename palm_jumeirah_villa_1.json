@@ -1,0 +1,57 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "VM Design • Build (Villa & More)",
+  "rating": 5.0,
+  "review_count": 2,
+  "address": "Onyx tower 2 - Al Thanyah Third - The Greens - Dubai - United Arab Emirates",
+  "phone": "+971 58 565 6404",
+  "website": "http://www.villaandmore.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday9 am–6 pmFriday8 am–12 pmSaturday9 am–6 pmSundayClosedMonday9 am–6 pmTuesday9 am–6 pmWednesday9 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.0967163,
+  "longitude": 55.1695758,
+  "place_id_original": "0x3e5f6baddb8aa259:0x4b17c35dd8d638d",
+  "place_id_format": "hex",
+  "cid": "338188017821639565",
+  "place_id": "338188017821639565",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=338188017821639565",
+  "place_id_confidence": "HIGH",
+  "plus_code": "35W9+MR Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipM_Pmi3F98plomms3DkPXA4bAAsHA2MR0zDpik1=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOra8w2CuErnIIR4p6qwSST-YudTySQ3Gva7vxr=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMgJ9JFepe65jC_Dt5UucP3USSQK5tJfOa2Qxur=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM_Pmi3F98plomms3DkPXA4bAAsHA2MR0zDpik1=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKxD-3eWfjjdg4Xd9fex8ibDhbgOy_thIjd6r0BYDCv4yti_4C_=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqZhXnJeFpI7VVWJyP__PlBX-Xjt325W0_fTeLmaZCPbbCeUFES_gWklSKnu31sjO6JfoIpMboMPO9pp-CkcyP2vV_RLaRToraocoHnQi-wCQUWNsOzY644cQaAo4zHgbWHLRMp=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIhuDqiunSQUy2IwNDEzZ4GcWuTxbd0pWfdybPCP7krK0ZF_g=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocITWDW6O-yxPgBPLv2NrgZl44RZGU6uwPULY2Po4zMhEJN6cg=w4096-h4096-p-rp-mo-br100"
+  ],
+  "emails": [
+    "info@villaandmore.com",
+    "8c4075d5481d476e945486754f783364@sentry.io"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Rama Sbei2 reviews11 months ago Very talented and professional team, great work!Like Share",
+      "reviewer": "Rama Sbei",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Very talented and professional team, great work!"
+    },
+    {
+      "review_index": 3,
+      "text": "Very talented and professional team, great work!"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 57.03
+}

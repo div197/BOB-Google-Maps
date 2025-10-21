@@ -1,0 +1,8 @@
+{
+  "version": "3.4.1",
+  "launched": "2025-10-21T12:14:09.304403",
+  "expected_businesses": 20,
+  "rate_limit": 20,
+  "max_retries": 2,
+  "estimated_time": 7.0
+}

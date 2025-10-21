@@ -1,0 +1,25 @@
+{
+  "extraction_method": "Selenium Optimized Minimalist",
+  "address": "Behind Mall of the Emirates - Umm Suqeim St - Al Barsha - Al Barsha 1 - Dubai - United Arab Emirates",
+  "category": "Home improvement store",
+  "cid": "7841303714089314000",
+  "latitude": 25.1081869,
+  "longitude": 55.2751458,
+  "name": "Danube Home Dubai Al Barsha",
+  "phone": "+971 4 239 7409",
+  "place_id": "7841303714089314000",
+  "place_id_original": "0x3e5f6bcb66dc3439:0x6cd1e82ed63ea873",
+  "rating": 4.6,
+  "review_count": 9,
+  "website": "https://www.google.com/url?q=https://danubehome.com/ae/en/%3Futm_source%3Dgmb%26utm_medium%3Dgoogle%26utm_campaign%3Dseo-local&opi=79508299&sa=U&ved=0ahUKEwiUkdCs1paQAxUmjZUCHZ4zFEMQ61gIFygT&usg=AOvVaw1Tft-lgf-PJii0AbcXDGSX",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPdjLcS1DtwyQu38ziiviXXhdtzn3OQrO6s9HsE=w32-h32-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPdjLcS1DtwyQu38ziiviXXhdtzn3OQrO6s9HsE=w80-h92-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMtdW9O36_3fAvZhW1wiBq8OyQGN-mFdCo7VYxX=w80-h92-p-k-no"
+  ],
+  "data_quality_score": 79,
+  "success": true,
+  "extractor_version": "Selenium Optimized V4.0",
+  "memory_optimized": true,
+  "extraction_time_seconds": 13.14
+}

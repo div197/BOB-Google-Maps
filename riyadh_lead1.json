@@ -1,0 +1,64 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "La Vida Interior Design",
+  "rating": 4.4,
+  "review_count": 65,
+  "address": "مبنى رمز القابضه الدور الاول مكتب, No. 111, As Sahafah, الرياض، طريق انس بن مالك حي, Riyadh 13321, Saudi Arabia",
+  "phone": "+966 53 222 4427",
+  "website": "https://lavidalives.com/",
+  "hours": "Open ⋅ Closes 7 pm Updated by this business 11 weeks agoThursday9 am–7 pmFriday10 am–5 pmSaturday10 am–5 pmSunday9 am–7 pmMonday9 am–7 pmTuesday9 am–7 pmWednesday9 am–7 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.8176897,
+  "longitude": 46.642083,
+  "place_id_original": "0x3e2ee41a778df40d:0xabbc7bf83679dbfa",
+  "place_id_format": "hex",
+  "cid": "12374902182103342074",
+  "place_id": "12374902182103342074",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=12374902182103342074",
+  "place_id_confidence": "HIGH",
+  "plus_code": "RJ9R+3R As Sahafah, Riyadh Saudi Arabia",
+  "current_status": "Open ⋅ Closes 7 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a-/ALV-UjVUxBiHpXWRyI-1q9hJCj_BL_mF38NW9L8eOqQRCPAKfkJGNi2y=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMMMFQEObBOVXD4OXNG2n6u7Ylt2NtyA3bybmRf=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOeqE9-anGzcoOV5rj8p5rIH1nNwmUTNkx8nq8M=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMMMFQEObBOVXD4OXNG2n6u7Ylt2NtyA3bybmRf=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN9whOiix4lbtwpblsxw5b4JJS4aW-vepHh7J76=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO2ZoPzyYBWnNJiy8wvdp_Ic8ag4CIlg7w43CoO=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPjWMsMoymIByTi_gEMEJACwakvvOSiF7rUwa53=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMkPNRZrRvbbQ2EpKOJnAwsWZctASM6bsybol2U=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKMmfIdeRvS8Kk3UJAdFK2juoE7aVpqSh0c_cBnKnznzNkiUg=w4096-h4096-p-rp-mo-br100"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Gehad Khalil1 review · 2 photosa year ago They are very professional and made the entire experience amazing.\nthey all have done a great job whenever any help was required by them, they always come forward with the project.\nit was overall a good experience.Like1 Share Response from the owner a year agoThank you for your impression. Translated by Google ・ See original (Arabic)",
+      "reviewer": "Gehad Khalil",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "They are very professional and made the entire experience amazing.\nthey all have done a great job whenever any help was required by them, they always come forward with the project.\nit was overall a good experience."
+    },
+    {
+      "review_index": 3,
+      "text": "They are very professional and made the entire experience amazing.\nthey all have done a great job whenever any help was required by them, they always come forward with the project.\nit was overall a good experience."
+    },
+    {
+      "review_index": 4,
+      "text": "Thank you for your impression."
+    },
+    {
+      "review_index": 5,
+      "text": "Nada Ali1 reviewa year ago Very professional team and very punctual. I've worked with them on 2 projects and they did an exceptional job.Like Share Response from the owner a year agoWorking with you was an honor for our team, we thank you for giving us the chance to, and looking forward to new 🌷 …",
+      "reviewer": "Nada Ali",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 53.27
+}

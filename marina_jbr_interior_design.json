@@ -1,0 +1,57 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Blak Interiors",
+  "rating": 5.0,
+  "review_count": 1,
+  "address": "Marina Plaza - Office 1506 - Dubai Marina - Dubai - United Arab Emirates",
+  "phone": "+971 56 415 3334",
+  "website": "http://blakinteriors.com/",
+  "hours": "Open ⋅ Closes 5 pm Thursday9 am–5 pmFriday9 am–5 pmSaturdayClosedSundayClosedMonday9 am–5 pmTuesday9 am–5 pmWednesday9 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.0753976,
+  "longitude": 55.1398252,
+  "place_id_original": "0x3e5f6d7e628877ad:0xc7e4f84040b4389d",
+  "place_id_format": "hex",
+  "cid": "14403910463084837021",
+  "place_id": "14403910463084837021",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=14403910463084837021",
+  "place_id_confidence": "HIGH",
+  "plus_code": "34GQ+5W Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocKniy_mxOaXr5NPWOCfBXWumvYan-j1Wj5JBy4oNecL4_SGNw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWBRUWgmQXdwWILJQpfHGB5QLBk19O56pI2LIOKpyEmgt8XKdJ7=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocLWpqTk5TEMPK3411DSeEINg2IHnXC9dR72LY7Na0QITu5E7Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPY-8GVuk-GZNQESPc30DLoHdxKxHJuwfWXCEZU=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPCkHhOLcNxDzDjfBraitmwgcgWpI3l8tx8bZ59=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMHcbYgNWTR74OtGJdDWIYP-cPJuwLY-k6PLuUg=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNjbA2SZ7wjT8yPpB91Zz18HhfMaftMMG3uKEKy=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNjbA2SZ7wjT8yPpB91Zz18HhfMaftMMG3uKEKy=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNsoDMe1KiiP7RAX1msdwYp1bOc5Pa1V07Sia48=w4096-h4096-p-k-no"
+  ],
+  "emails": [
+    "info@blakinteriors.com"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Rajesh Kumar4 reviewsa year ago I cannot recommend Caio highly enough. Throughout the entire project, he demonstrated an incredible level of patience, creativity, and professionalism. Every detail, no matter how small, was thoughtfully considered, and his dedication to … MoreLike1 Share Response from the owner a month agoThank you so much, Rajesh, for your kind words! It was a joy to bring your vision to life, and we are truly grateful for your trust. Knowing that the results exceeded your expectations inspires us to continue creating with passion and precision.",
+      "reviewer": "Rajesh Kumar",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "I cannot recommend Caio highly enough. Throughout the entire project, he demonstrated an incredible level of patience, creativity, and professionalism. Every detail, no matter how small, was thoughtfully considered, and his dedication to … More"
+    },
+    {
+      "review_index": 3,
+      "text": "I cannot recommend Caio highly enough. Throughout the entire project, he demonstrated an incredible level of patience, creativity, and professionalism. Every detail, no matter how small, was thoughtfully considered, and his dedication to …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 58.12
+}

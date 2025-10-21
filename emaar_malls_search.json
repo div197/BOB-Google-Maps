@@ -1,0 +1,84 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Emaar Malls Group",
+  "rating": 4.1,
+  "review_count": 31,
+  "address": "Emaar Square Building 3 - Sheikh Mohammed bin Rashid Blvd - Burj Khalifa - Dubai - United Arab Emirates",
+  "phone": "+971 4 367 5588",
+  "category": "Corporate office",
+  "latitude": 25.2005368,
+  "longitude": 55.2720982,
+  "place_id_original": "0x3e5f4280cfb774d5:0x8c24b06d406dff76",
+  "place_id_format": "hex",
+  "cid": "10098390247750369142",
+  "place_id": "10098390247750369142",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=10098390247750369142",
+  "place_id_confidence": "HIGH",
+  "plus_code": "672C+6R Dubai - United Arab Emirates",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocIlxAgUOBIihD4WqgnRFTbClpmqm9C9fQneX6vxiicPr3wU0Q=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRmBbZyDgS7nQCAE1itDpAnd9NLxKDEN3fwLr15u0hKC7PcYh-tCid8rSPCuDPEMdRuv6ocCn5cIsrieD0ZSlzWwakWHS6_KZ05mhS1kx5q7eGx-Ct6m-d-kZY8pv5AcHpyDkJqg=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8mdulNYqZ8vmsMillhYOj03xXAzQRtBC98oDnhG119CA32DPQ4oA93munIZLf07ZH4U0sVRIG31G4VX067t2ldYOqblxEshyZ_bEHLFMlwH5rNS6ZARpXvHUWI84MyObV-hx8=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8mdulNYqZ8vmsMillhYOj03xXAzQRtBC98oDnhG119CA32DPQ4oA93munIZLf07ZH4U0sVRIG31G4VX067t2ldYOqblxEshyZ_bEHLFMlwH5rNS6ZARpXvHUWI84MyObV-hx8=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVpUvquTsPHB9qftbH7Sk-DAmAxaaDSw0eNcQ1d5eCllZZRPrWm=w4096-h4096-p-rp-mo-ba5-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrNp0b6LEAuWyb8K81UVGCvcs1encVQcR9opQEkGIFWWhfeKGdLBVQk0wr7HNTrDhUSSIQd_oOpDxTIVUz8cJ2SZoNjDF_cBPMuf9BjWzykKuHHCrFFa3Gq2ATulwjQ9Ef4ApDC=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noPEZ7dW9657bpvZUInw_kLrdKVZcUgnOshNP46LgMcrBstCITeEdqthMtEC4WyqCc4l8o3mLoYR353i8aZSgA_vwsPep7F_pGg-nc7FYLrnIr0jKCvPxMBB8DyPHCw4Ypd8scfi50vooY=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVyhC8IUvjuog77d7kYrCl7c7XVt7ZuP4mExBUnDYXOZ1M_aXA4=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPAamxbhSdYtmpmK0myZTEZHF2ufO7aUmTZNU8_01OC-OqJNxRnIrDxcdSFNAXQtkdxCk8T8FOQGXExygm17wLDH37nHCBast10tfDHT1CGB4w4EPy-IRBoGGT4cBWVIoSoLo=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 75,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Franchesca Brianna De GuzmanLocal Guide · 176 reviews · 566 photos11 months ago An impressive blend of modern innovation and rich cultural heritage. It’s not your typical mall—you can do so much more here! From shopping to dining and entertainment, there’s something for everyone. It’s truly a unique experience that stands out from other malls, offering both luxury and cultural charm.Like Share",
+      "reviewer": "Franchesca Brianna De Guzman",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "An impressive blend of modern innovation and rich cultural heritage. It’s not your typical mall—you can do so much more here! From shopping to dining and entertainment, there’s something for everyone. It’s truly a unique experience that stands out from other malls, offering both luxury and cultural charm."
+    },
+    {
+      "review_index": 3,
+      "text": "An impressive blend of modern innovation and rich cultural heritage. It’s not your typical mall—you can do so much more here! From shopping to dining and entertainment, there’s something for everyone. It’s truly a unique experience that stands out from other malls, offering both luxury and cultural charm."
+    },
+    {
+      "review_index": 4,
+      "text": "Malik MalikLocal Guide · 74 reviews · 24 photos5 months ago Krishan from India  is one of the best drivers that I met in the mall he is hard worker and polite and really cooperativeLike Share",
+      "reviewer": "Malik Malik",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Krishan from India  is one of the best drivers that I met in the mall he is hard worker and polite and really cooperative"
+    },
+    {
+      "review_index": 6,
+      "text": "Krishan from India  is one of the best drivers that I met in the mall he is hard worker and polite and really cooperative"
+    },
+    {
+      "review_index": 7,
+      "text": "Noman AhmedLocal Guide · 24 reviews · 12 photos6 months ago It is a very beautiful place and good for shopping but for rich people also and also has the very best parking  space. In parking you will find sports carsLike Share",
+      "reviewer": "Noman Ahmed",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 8,
+      "text": "It is a very beautiful place and good for shopping but for rich people also and also has the very best parking  space. In parking you will find sports cars"
+    },
+    {
+      "review_index": 9,
+      "text": "It is a very beautiful place and good for shopping but for rich people also and also has the very best parking  space. In parking you will find sports cars"
+    },
+    {
+      "review_index": 10,
+      "text": "David Marsh20 reviews · 2 photosa year ago It took me 25 mins to get out cinema park at Dubai mall. Half the exits shutoff. For goodness sake fix it. What a shambles.Like Share",
+      "reviewer": "David Marsh"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 85.61
+}

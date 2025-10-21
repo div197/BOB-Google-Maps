@@ -1,0 +1,29 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "JBR interior",
+  "rating": 5.0,
+  "review_count": 6,
+  "address": "62QF+GPR, Bhagat Ki Kothi, Jodhpur, Rajasthan 342011",
+  "hours": "Temporarily closed JBR interior is temporarily closed. If that's wrong, please suggest an edit.Suggest an edit",
+  "category": "Hindu temple",
+  "latitude": 26.2388659,
+  "longitude": 73.0242632,
+  "place_id_original": "0x39418b170f55c3b5:0xad03333efb22d2cc",
+  "place_id_format": "hex",
+  "cid": "12466864539086017228",
+  "place_id": "12466864539086017228",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=12466864539086017228",
+  "place_id_confidence": "HIGH",
+  "current_status": "Temporarily closed",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipOw436uCfY_CBhj36khLoqlFner-pK3xmHIldpQ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPEZ_hBykVABs83DZAWNmoEWjmBEsTdMvY7fhYG=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 62,
+  "reviews": [],
+  "total_reviews_extracted": 0,
+  "success": true,
+  "extraction_time_seconds": 39.63
+}

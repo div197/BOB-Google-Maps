@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Future Decoration",
+  "rating": 4.8,
+  "review_count": 126,
+  "address": "Al Hujoon St, Al Diyafah, Makkah 24221, Saudi Arabia",
+  "phone": "+966 55 599 1027",
+  "website": "https://www.facebook.com/aImstakbldlkor",
+  "category": "Interior designer",
+  "latitude": 21.4398178,
+  "longitude": 39.7947229,
+  "place_id_original": "0x15c21b6712411585:0x547ec1cf52e0deda",
+  "place_id_format": "hex",
+  "cid": "6088516842444349146",
+  "place_id": "6088516842444349146",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=6088516842444349146",
+  "place_id_confidence": "HIGH",
+  "plus_code": "CQQV+WV Makkah Saudi Arabia",
+  "current_status": "",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipOYxoC_oCMWJLYuZE0_Wyo5ht2evacqHfpiicYZ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocINnAdPGAQUP3C4ePBbmUf2iuId4UL0HXqzMsiFFjqmknWo=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocJBjnhdJ44cJ405AABJ2CfKV8NQvotlpKJi9t8LlDnoFxAd7Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqd7RwHneulFq0ffwij4nupmKvGMMHtr17ocJTwaUJHlRxfYtCF5iWlKd_7CAVmE3il_bEfYz9yjo-Om5A5a5OxG_nR-mTxYIwZK1yomIm8yI4dMgRSmXePK_CDn8t6EL9zBrM=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMqhhSqoexU5OJ8NDUPDemBdTfsjX5_4s-3f1Vw=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPnLcMyW2GLCVIy9a-Q5_ttcFCZKtDsFlnBTFcx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLSymGyTqisq_elCvEB5btQbZqjlRaBiCAGQwmElGY1DEjkLQ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPnLcMyW2GLCVIy9a-Q5_ttcFCZKtDsFlnBTFcx=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOW5060D4xQKXEXLsPETqd5NES4m_ryoa8qjVts=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "عبد العزيز محمد1 reviewa month ago The store offers high-quality products at competitive prices and does a job with integrity and skill. This is why we recommend it. Thank you, Abu Elias, for your cooperative spirit and kind treatment. Translated by Google ・ See original (Arabic)Like Share",
+      "reviewer": "عبد العزيز محمد",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "The store offers high-quality products at competitive prices and does a job with integrity and skill. This is why we recommend it. Thank you, Abu Elias, for your cooperative spirit and kind treatment."
+    },
+    {
+      "review_index": 3,
+      "text": "The store offers high-quality products at competitive prices and does a job with integrity and skill. This is why we recommend it. Thank you, Abu Elias, for your cooperative spirit and kind treatment."
+    },
+    {
+      "review_index": 4,
+      "text": "خالد ال رديني4 reviews · 3 photosa month ago The store is excellent in terms of prices, quality, and speed of delivery. The best employee is Anas, who has high and refined morals and is helpful. Translated by Google ・ See original (Arabic)Like Share",
+      "reviewer": "خالد ال رديني",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "The store is excellent in terms of prices, quality, and speed of delivery. The best employee is Anas, who has high and refined morals and is helpful."
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 86.8
+}

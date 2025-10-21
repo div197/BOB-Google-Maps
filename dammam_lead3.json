@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "تنفيذ و تشطيبات داخليه | GOLDENROPES",
+  "rating": 5.0,
+  "review_count": 13,
+  "address": "Prince Mohammed Bin Fahd Road, Muhammed Ibn Saud, Dammam 31341, Saudi Arabia",
+  "phone": "+966 53 531 6104",
+  "website": "http://www.goldenropes.com/",
+  "hours": "Open ⋅ Closes 5 pm Thursday10 am–5 pmFridayClosedSaturdayClosedSunday10 am–5 pmMonday10 am–5 pmTuesday10 am–5 pmWednesday10 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 26.4322487,
+  "longitude": 50.1177226,
+  "place_id_original": "0x3e49fbdfe0c72071:0x2fad48bffaf7e918",
+  "place_id_format": "hex",
+  "cid": "3435482080140060952",
+  "place_id": "3435482080140060952",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=3435482080140060952",
+  "place_id_confidence": "HIGH",
+  "plus_code": "C4J9+V3 Dammam Saudi Arabia",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPR8xTikDnnZd-FE7chkhye6XitXePUPzc-fPWy=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMU9MiWvrEQEr4WGLZ_31i57BRqHNvEP30rjKrQ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUQGTPY6J5CmxUsAX-wy6pYAzHPjTCykFt1u-OifKY1zC7Z9HDU=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMU9MiWvrEQEr4WGLZ_31i57BRqHNvEP30rjKrQ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOa6rYKHdyL90MEQkot-LfZmwoXImdz_YBPfJBs=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNOeKFxYxv7H4y1inxAfJ-05AgfAs4Iauk681Ha=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKFd7-QEGBIyeVLw3rfk7rtvQfz7kxpl5LlxjCzFpjfjGcl8g=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPmuofjALA3YizsCuJsPaPtZ8FJzWIoAWVQ3EMc=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMeC8Yobx418CJ0hzOADsh42J2pubis5Gp2oFXB=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "arwa.dawoud@goldenropes.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Rahma Tarabzouni13 reviews4 years ago Amazing!! Keep it up😍 & good luck! …Like1 Share",
+      "reviewer": "Rahma Tarabzouni",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Amazing!! Keep it up😍 & good luck! …"
+    },
+    {
+      "review_index": 3,
+      "text": "Amazing!! Keep it up😍 & good luck! …"
+    },
+    {
+      "review_index": 4,
+      "text": "محمد مرعي3 reviews4 years ago High quality with a good price.Like2 Share Response from the owner 4 years agoThank you",
+      "reviewer": "محمد مرعي",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "High quality with a good price."
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 56.49
+}

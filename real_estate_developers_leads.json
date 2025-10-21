@@ -1,0 +1,673 @@
+{
+  "extraction_metadata": {
+    "extractor_version": "BOB Google Maps Ultimate V3.0",
+    "extraction_date": "2025-10-09T13:40:49.681435",
+    "mission": "Real Estate Developers Lead Extraction",
+    "target_count": 10,
+    "actual_count": 10,
+    "quality_threshold": "4.0+ rating",
+    "location_focus": "UAE (Dubai, Abu Dhabi, etc.)"
+  },
+  "extraction_statistics": {
+    "total_searches": 10,
+    "successful_extractions": 10,
+    "failed_extractions": 0,
+    "high_quality_leads": 10
+  },
+  "developers": [
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:39:10.183937",
+      "search_query": "Emaar Properties Dubai",
+      "location_focus": "Dubai",
+      "company_name": "Emaar Properties PJSC",
+      "rating": 4.4,
+      "review_count": 318,
+      "address": "Emaar Square Building #3، Al Sa'ada Street - United Arab Emirates",
+      "phone": "+971 4 366 1688",
+      "website": "https://www.google.com/url?q=https://www.emaar.com/en/%3Futm_source%3DGoogle%26utm_medium%3Dlocalsearch%26utm_campaign%3DLocalSearch&opi=79508299&sa=U&ved=0ahUKEwi-gK2E1ZaQAxWOhJUCHQDmGX8Q61gIFCgQ&usg=AOvVaw2F-vS0sFRw9OtEKw5wgNey",
+      "emails": [],
+      "category": "Real estate developer",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "5533631711628068000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npV-RL-E8U0qXMojtn2nYsjomN6LqGgABGcV2iZzDiZpL4FVdLhFtc0J6gtJ7Q7e10e8gxFb2yUough9hm1IHAGcI3lkNlbRI1G_0MZ6ZjLafCYVb8O3dTdvPOvp6r12b8GptE=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npV-RL-E8U0qXMojtn2nYsjomN6LqGgABGcV2iZzDiZpL4FVdLhFtc0J6gtJ7Q7e10e8gxFb2yUough9hm1IHAGcI3lkNlbRI1G_0MZ6ZjLafCYVb8O3dTdvPOvp6r12b8GptE=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npV-RL-E8U0qXMojtn2nYsjomN6LqGgABGcV2iZzDiZpL4FVdLhFtc0J6gtJ7Q7e10e8gxFb2yUough9hm1IHAGcI3lkNlbRI1G_0MZ6ZjLafCYVb8O3dTdvPOvp6r12b8GptE=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npqau-F_cZN4klLwvGLara2ywAxrSYWGQ8DI7svuRfAiSkKwltOPwWbDfIWm3Bjg9jtcWB5IJBWhnAqU_4yFAKvWk4LyLt3u9-BJF7lMu2qct6QbzQN1lVefDY2bDDbuxF-aFU=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/a/ACg8ocL2aLlBqMCIqrDIvFcGO6yzDkCWtI97sCG3OxVql2lXmMAqLA=w36-h36-p-rp-mo-ba2-br100"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Ms Mona",
+          "rating": "1 star",
+          "text": "worst customer service ever, first they put me on hold for 14 minutes, when i called back to complain about how displeased i was, the customer service agent started arguing and then DISCONNECTED THE C...",
+          "date": "4 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "worst customer service ever, first they put me on hold for 14 minutes, when i called back to complain about how displeased i was, the customer service agent started arguing and then DISCONNECTED THE C...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "worst customer service ever, first they put me on hold for 14 minutes, when i called back to complain about how displeased i was, the customer service agent started arguing and then DISCONNECTED THE C...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Ayeshah Ahmad",
+          "rating": "1 star",
+          "text": "EMAAR have invoiced me a year later of all the back logged services fees, and expect me to pay the full some in a couple of weeks. I had done my due diligence to check whether i indeed did owe any ser...",
+          "date": "9 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "EMAAR have invoiced me a year later of all the back logged services fees, and expect me to pay the full some in a couple of weeks. I had done my due diligence to check whether i indeed did owe any ser...",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 6000000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "STANDARD - Reliable developer for project pipeline",
+        "contact_priority": "MEDIUM - Standard developer, steady pipeline"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:39:23.360960",
+      "search_query": "Damac Properties Dubai",
+      "location_focus": "Dubai",
+      "company_name": "DAMAC Properties",
+      "rating": 5,
+      "review_count": 5,
+      "address": "Damac Executive Heights - Jebel Ali Race Course Rd - Al Thanyah First - Barsha Heights - Dubai - United Arab Emirates",
+      "phone": "+971 4 520 5470",
+      "website": "https://www.google.com/url?q=https://www.damacproperties.com/en/%3Futm_source%3Dgoogle-mybusiness%26utm_medium%3Dbusiness-listings%26utm_campaign%3Dorganic-business-listings%26campaign_id%3Da121n000002O06w&opi=79508299&sa=U&ved=0ahUKEwjGhuyK1ZaQAxVyDrkGHZetPGQQ61gIFygT&usg=AOvVaw0RL8EsqVRXUMwnmh1TAN2j",
+      "emails": [],
+      "category": "Real estate developer",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "5850878934705096000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqIBMHLa1C51z2tZyGCEIVi4k2iAT5Id_vqVWF8gcVJZqUQINi5kxDT4Xau646EKd3vlkgDAF7BwgqJy_YTxbu2MDmvsU2KRB9xc7Df8RFNUGrO7sfqLBrvM-5KoYYWFh8rOiBi=w224-h372-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrl3AkCUwfMhO52yvEPa9DFVxMP_sOPCEfUGUqemXj5ljde_PUbZ_kRJ6a06lJhZNPCd5Olt3heNYBcRrGWViuJ3fa4Uo9SbUHXfd8XWeIPFz5OxZ-yZFq8MNFCpjn8VAZFo-QBLg=w395-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqjO3o1etCdpz6dInzFavtXJWNhmLcenkqBQs-xIDBC0GnJzxUprHvea9aYK29mu_8sCNUSnNn2cZQqiW7bMHrlYvHeBgWWi2qEW_FJSPrIVGWk-n-JYGvPdyAlJmMtLU2J_tVr4Q=w224-h372-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqCrsuiK6LITxHbQDKQFfznXdwunw63f2pIxg--Nea9UC5jMaNgnxAUhneqhMj4EZKWm9tqhr6NEWulPaPvb-xEEXrRjEDXQtzmWt7dZ_XjePcDd7ajgU40WcS0q6brNWByvALF8w=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no7pwU7GdnzfmEuLU-JpnyQ7g66vzuk-PfemCjeurCy0OurzsVD_KFWXZ3vIVLkDn2d9TPYLnjqmHGxO9aBL_Ybjhq3wmEp3yhzzq_oXMgonHH1cwgcf14I90GrfJsS9C3aTD2F=w224-h341-k-no"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Jigna Stott",
+          "rating": "1 star",
+          "text": "This company is the worst. They claim that 'you can do everything' on their magic app however in reality it's simply a portal to open support tickets which are sent to some untrained person who can't ...",
+          "date": "Edited 3 weeks ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "This company is the worst. They claim that 'you can do everything' on their magic app however in reality it's simply a portal to open support tickets which are sent to some untrained person who can't ...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "This company is the worst. They claim that 'you can do everything' on their magic app however in reality it's simply a portal to open support tickets which are sent to some untrained person who can't ...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Hello Jigna,\n\nWe understand your concerns and are committed to addressing them. Please reach … More",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Sehban Sawani",
+          "rating": "1 star",
+          "text": "⭐☆☆☆☆\n\nUnfair Violation Penalty – Immediate Senior Management Attention Required …",
+          "date": "a week ago"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 10000000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "IMMEDIATE - Top-tier developer, high-value target"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:39:36.011150",
+      "search_query": "Aldar Properties Abu Dhabi",
+      "location_focus": "Abu Dhabi",
+      "company_name": "Aldar Square",
+      "rating": 4.6,
+      "review_count": 16,
+      "address": "FJQ6+2Q8 - East Al Khuyoul St - Yas Island - YS1 - Abu Dhabi - United Arab Emirates",
+      "phone": "+971 800 25327",
+      "website": "https://www.google.com/url?q=https://www.aldar.com/&opi=79508299&sa=U&ved=0ahUKEwiJ8uGQ1ZaQAxUwkJUCHTtSPYQQ61gIFigS&usg=AOvVaw263m1qsTXtwXtGUNiEZZ_L",
+      "emails": [],
+      "category": "Real estate developer",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "426151582997919100",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipMwoSTdF0H2D7k_5lrHwCKnmX_LuWVvI8qmeCYI=w454-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np3TNZSFd4hkejTcAuzWA-3dSN__G8-qGQwGtRao9kzwnscfs038m1szuiygCqpwPxKPXDdBXuD8WJ-35gtO9a8-wu5C733NvweuJbugyHzsw4wYzEJMB2FokSF915Cfr91p77Ttw=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noSn5zAAnu8kgb7iXcFF8CN7lY41oVTeeue3HXIsvVSN9NLgfjXUgL-1LBtC1WeLYDX4iwNQybeiMaUAgh8uNKw1PCB1zYT34q_f3qoJPQZnQL0796X_hU5cKz2OimB4Y5A5tWR=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no9h3PN8bkN6ZSXsEew_fg5ZecHvD1V70_1Cy3ZH1PAfziOyxXVzvoPfgEDQeXj-z_kHRVFu3MJw9AbbvuPxkl0ZxAqy34uIN7JrIQBM8kvEliGi5MZidUohcqWKV2YEaL_qwgU=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noPoujUzgCmMia9F3zLG4xyUUTCkM-RCmhXrHyB5bzjeBcmKFyeSG7dJHb7XxoSO39tVi5SrjcJbCYkczLBIWjnqk0BjY4r3itr-i_WPdqwlfN3zwIcXFuRgc5qU5EkC9D0h0Lu=w224-h397-k-no"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Lauren Marie Moran",
+          "rating": "5 stars",
+          "text": "I would like to share my appreciation for Souzan from Aldar’s Customer Care team. She is consistently professional, attentive, and genuinely helpful, always ensuring my queries are addressed clearly a...",
+          "date": "3 weeks ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "I would like to share my appreciation for Souzan from Aldar’s Customer Care team. She is consistently professional, attentive, and genuinely helpful, always ensuring my queries are addressed clearly a...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "I would like to share my appreciation for Souzan from Aldar’s Customer Care team. She is consistently professional, attentive, and genuinely helpful, always ensuring my queries are addressed clearly a...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Ashid shah",
+          "rating": "5 stars",
+          "text": "I swung by Al Dar's office at Al Dar Square – what a slick setup they've got! It seems like an awesome workspace for their crew. The entrance is super inviting, and the back office is decked out with ...",
+          "date": "2 years ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "I swung by Al Dar's office at Al Dar Square – what a slick setup they've got! It seems like an awesome workspace for their crew. The entrance is super inviting, and the back office is decked out with ...",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "Commercial Buildings"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:39:49.873061",
+      "search_query": "Meraas Dubai",
+      "location_focus": "Dubai",
+      "company_name": "Meraas | Sales Boutique",
+      "rating": 4.6,
+      "review_count": 8,
+      "address": "City Walk Phase 2 Building 09 - Dubai - United Arab Emirates",
+      "phone": "+971 800 637227",
+      "website": "https://www.google.com/url?q=https://www.meraas.com/%3Futm_source%3Dgoogle%26utm_campaign%3Dlocal_search%26utm_medium%3Dorganic%26utm_content%3DMS-Boutique&opi=79508299&sa=U&ved=0ahUKEwis876X1ZaQAxWtpZUCHSJXF7sQ61gIFCgQ&usg=AOvVaw12Pe9-u0WBBfkZJtCCfY8W",
+      "emails": [],
+      "category": "Corporate office",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "17494728168467632000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrMgXVZNDFoz99OzCuIgavWjie6CvoFbg7T5XqTAZRVLEa6M3YDZtSuVV5WHkKjbqa-j2Xcvixd2xY-tTcLaYHLEYfUJ8NLqP7UtROYLL-xCx4ai8X7bFA356aTRRERJeovug3gEA=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrTUwFnRE80pFYxoZYWuisuyo3d2loDvsQjeryYF8ctpGfYGeSXBXdDV47gxBzfIHQdnJSEQAyd9XsLHol8RsUrxV3SlL7NTlserRTG1Gun5osnjurDOm-JPvFxE0EPTONnTY_ouw=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nopO7Ta8I1NElg2wCssbrGo6fwRr_a331-70ewJ0tuyqZr3dUtkY3Ov9FhY_qwpYBP1sxIJ6tIpLYpGo3Y0zp5fsIJN4Dr0i_WmzUwZ_MVI4xn3tX0ki75A-ZFr20p2eAy_V_1X=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/a-/ALV-UjUXsnUDRYiBdDXgodAHSAkT088z6jMwPLRBoWAl83HsxUo_g94=w36-h36-p-rp-mo-ba3-br100",
+        "https://lh3.googleusercontent.com/a-/ALV-UjXiqaFuxrqnfHaxmcZ8bF0w1vIpwuku5ltGcpMliwcjHyqcoT0=w36-h36-p-rp-mo-br100"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Gulf Formations",
+          "rating": "5 stars",
+          "text": "The Meraas sales office reflects the brand perfectly: modern, innovative, and lifestyle-driven. Every time I’ve been, the team focused not just on the property but the community, how City Walk, Bluewa...",
+          "date": "a month ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The Meraas sales office reflects the brand perfectly: modern, innovative, and lifestyle-driven. Every time I’ve been, the team focused not just on the property but the community, how City Walk, Bluewa...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The Meraas sales office reflects the brand perfectly: modern, innovative, and lifestyle-driven. Every time I’ve been, the team focused not just on the property but the community, how City Walk, Bluewa...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Belgrave Estates",
+          "rating": "5 stars",
+          "text": "Visited the Meraas sales centre at City Walk. The team were friendly and made it easy to explore the different residential options. The centre itself is well-laid-out and provides a real sense of the ...",
+          "date": "a month ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Visited the Meraas sales centre at City Walk. The team were friendly and made it easy to explore the different residential options. The centre itself is well-laid-out and provides a real sense of the ...",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "Commercial Buildings"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:02.944854",
+      "search_query": "Nakheel Dubai",
+      "location_focus": "Dubai",
+      "company_name": "Palm Jumeirah Mall by Dubai Retail",
+      "rating": 4.7,
+      "review_count": 20,
+      "address": "Center of Palm Jumeirah - Dubai - United Arab Emirates",
+      "phone": "+971 800 738245",
+      "website": "https://www.google.com/url?q=https://palmjumeirahmall.ae/&opi=79508299&sa=U&ved=0ahUKEwjs5cSd1ZaQAxUSqJUCHR-0K98Q61gIFCgQ&usg=AOvVaw11bsVgnJyyltHMEmqb9UIE",
+      "emails": [],
+      "category": "Shopping mall",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "15110424864096526000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr_UOw6HM709AbSMJ3Ot17qXCWGq8OhvKEh9b8fDzJqhnvHJJomxWhcYlE0qytdWuJYoLr7myajrPqwcb-RYvN1kD3-0D6-rFxGehKIr5Ky1rPbw8UtypqZ7EfUBa58NbEMFRvi=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrEVe7jWj4V6uEJ08CLSPFDZLd8gvsGrZ2TB5IKn_7aH0MVckaHGE83JxPj8TlLeDrvO8T5GLIFD7E2xsN-Mpep_3ARdR8DEhNFRgWVfOOQ9Gvju06nC-yXlhqljCKPKJ8CIUnqtA=w529-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr4lMgfEBzEAPaKEZbU8S3n9TsZOETNhjwfR97w2m1ICX8hIOWU8tJDP792Bsm5UXsVY1N0sshlhFsfvJ5LLu8gN8V6VijY1ZT52rbF4XsAt3kd6Pn1np8icO60E90BYXTxSGSh=w224-h298-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipOwENCElRvVTlu4jF2EXHF5tWSTW3RJdPhfQ_f4=w281-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr0BJ8p5E3NMp6UqgjFiEalqbujMOoCWVpLVnHx_JYtXQ201T6atxsKp3ioxa-0B-wfNS5V7enrgOh5Fr3c_mbsUM7oUwiBzQLIRjOeSIidors5HKaoDFnPdW7HJuQNq-NwR3PNSQ=w224-h298-k-no-pi0-ya120-ro0-fo100"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Sai Vinesh",
+          "rating": "5 stars",
+          "text": "The mall has an average crowd, not too crowded and not too empty, making it easy to explore and enjoy. You’ll find everything you need here, and even the whole Palm Jumeirah feels calm and not overly ...",
+          "date": "a week ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The mall has an average crowd, not too crowded and not too empty, making it easy to explore and enjoy. You’ll find everything you need here, and even the whole Palm Jumeirah feels calm and not overly ...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The mall has an average crowd, not too crowded and not too empty, making it easy to explore and enjoy. You’ll find everything you need here, and even the whole Palm Jumeirah feels calm and not overly ...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Hi Sai, we’re thrilled to hear about your positive experience! We look forward to welcoming you again soon. Palm Jumeirah Mall Team",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Samer Aoudi",
+          "rating": "5 stars",
+          "text": "One of my favorite malls in Dubai and the only one located on the Palm Jumeirah. It has a variety of retail shops and restaurants, but there’s a lot of focus on entertainment. Highly recommended for f...",
+          "date": "3 months ago"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:13.674170",
+      "search_query": "Dubai Properties",
+      "location_focus": "Dubai",
+      "company_name": "Dubai Properties | Customer Care Centre",
+      "rating": 4.1,
+      "review_count": 169,
+      "address": "Meraas & Nakheel Sales Center - Building 4 King Salman Bin Abdulaziz Al Saud St - Al Sufouh - Al Sufouh 2 - Dubai - United Arab Emirates",
+      "phone": "+971 800 37823",
+      "website": "https://www.google.com/url?q=https://www.dp.ae/&opi=79508299&sa=U&ved=0ahUKEwjfk5Kj1ZaQAxUjTWwGHVN1FZoQ61gIFygT&usg=AOvVaw2IJ2Y9UHr4X7HAyUip9eJN",
+      "emails": [],
+      "category": "Real estate developer",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "15292298071945173000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipOknQigWP5nFuR6ZI7sLMTcsB7qX_vr8RxyEdzU=w783-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHdpqpvivnMKzvm4xRn3TicBM8h3Hi8oagDc4vUmiNafEIRQV1ODEikeI5qLMmd2aSOdZnM3jZlCMLcY80NQoABEUWAumxSq6Ud1ho5kKPqK4mugzbSUWkkOHuhcuRVyhZ-t7EQQ=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqaub0OifY8TphKgLzkeo3ya1UhFUL53LokuVVbE6gml6INDsverRjy2o2pc6A46bJ1ORzVEgTNf1hk_kHb54XZjLzxvOa2fYFONCVifbwkhSBrSwNQz43QdaTvOLHmAza_vCB3=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no_eXjm7B8w8QQSjbnfM2INXMPHpU4e7u5tLAF6BZevGvMu4xKAxK0SziZOGn69244VLPlZYKAOXKQnWXpHib-FzmOK1L1ZY12cqUb_3SrY7VjS5dYAUf0QS7B0ygQ91MB391_yMQ=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipOknQigWP5nFuR6ZI7sLMTcsB7qX_vr8RxyEdzU=w783-h298-k-no"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Massimo Molteni",
+          "rating": "1 star",
+          "text": "Worst Service ever and worst developer for buying properties. JBR area by DP is a nightmare right now: unsafe, illegal hostels running everywhere, (against Civil defence law, with properities having u...",
+          "date": "a year ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Worst Service ever and worst developer for buying properties. JBR area by DP is a nightmare right now: unsafe, illegal hostels running everywhere, (against Civil defence law, with properities having u...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Worst Service ever and worst developer for buying properties. JBR area by DP is a nightmare right now: unsafe, illegal hostels running everywhere, (against Civil defence law, with properities having u...",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Ahmed Yousry",
+          "rating": "1 star",
+          "text": "It has now been over three months since I submitted a reimbursement request for overpaid installments, yet no resolution has been provided. Today, I approached the customer service representative at D...",
+          "date": "3 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "It has now been over three months since I submitted a reimbursement request for overpaid installments, yet no resolution has been provided. Today, I approached the customer service representative at D...",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 6000000,
+        "project_types": [
+          "High-Rise Apartments"
+        ],
+        "partnership_value": "STANDARD - Reliable developer for project pipeline",
+        "contact_priority": "MEDIUM - Standard developer, steady pipeline"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:21.373411",
+      "search_query": "Emaar Beachfront Dubai",
+      "location_focus": "Dubai",
+      "company_name": "Emaar Beachfront",
+      "rating": 4.7,
+      "review_count": null,
+      "address": "Marsa Dubai - Dubai - United Arab Emirates",
+      "phone": null,
+      "website": null,
+      "emails": [],
+      "category": "Island",
+      "latitude": null,
+      "longitude": null,
+      "place_id": null,
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npfUTzvzgSUCGyQfL-qKkAvdVtbCyOj8AAeGZypJAEMEYb1cBZNLYHTPymG7x65gzxVhVf5pkdpaYIfzDrTDHPGBw-OzhhgSOF7rcBKCgIz_kKrFSb0I3xk4-2I-1u61WWJD8OU=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nowYiuozFii65d-E4GOmjV8f7IImIK0PBD5hBdE6nRfFVVqipa3va75nE3SizgHeFu0XCIQnNa5fFb-EufPykvr3vfchEZOuvWk1vJPDbi7ydkCnpHy8bKLReNeD3Arf8J3kAc=w224-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrb2BC3I402D63wvGpLCYayGUAIXuUjZ86XXURbxTNi7NHzRB2XNInVayj64llJAyW10HM127DagWNpU2klqGlNCkcjR2U2B2i1YRfR7Mby51G4uFc4VSGgVKSQJuWJAafr5BY=w224-h395-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRqZkgY3vFO-97rNo5xg5LLwqZbDH3jlJyFKymiuD37w5LP63E38HF0E3-RZgheAYG40Orvd-2XlMGAmUCLm0rizs5j8MlmPlGhBi7x9OR2AbJdKuS_Nju_XO81893suNEL-qa=w224-h298-k-no-pi0.53926414-ya359.8506-ro-0.29334173-fo100",
+        "https://lh3.googleusercontent.com/a-/ALV-UjX4xKTyZmwNSSp59UrDkZcdTzFXlY09_GUzkrdS7IcTt1Hu-AU=w36-h36-p-rp-mo-br100"
+      ],
+      "reviews_count": 9,
+      "recent_reviews": [
+        {
+          "reviewer": "onebeachfrontdubai",
+          "rating": "5 stars",
+          "text": "Brilliant location, amenities and views",
+          "date": "4 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Brilliant location, amenities and views",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Brilliant location, amenities and views",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Alina",
+          "rating": "5 stars",
+          "text": "Amazing sunsets with such a beautiful views\nI rented an apartment holidays in Grand Blue Elie Saab.",
+          "date": "8 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Amazing sunsets with such a beautiful views\nI rented an apartment holidays in Grand Blue Elie Saab.",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 57,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "High-Rise Apartments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:28.801554",
+      "search_query": "Damac Hills Dubai",
+      "location_focus": "Dubai",
+      "company_name": "DAMAC Hills",
+      "rating": 4.5,
+      "review_count": 2,
+      "address": null,
+      "phone": null,
+      "website": null,
+      "emails": [],
+      "category": null,
+      "latitude": null,
+      "longitude": null,
+      "place_id": null,
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipPI11YAcEul6EQRtey5puUZa_O2MAGAQJ3yAQ0W=w156-h114-p-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipNUae8CW8-lmJjG_QtKTh-rml2Ff31wwLywKgZs=w156-h114-p-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipNYXbqnMQmkdXCAzYrBoA0qzm3z5rbeK94Hd47Q=w156-h114-p-k-no",
+        "https://lh5.googleusercontent.com/proxy/N-ROZb5cHo1m5fok_avq_QXt8fNGAQklo75CZYLg5zagn2CrWrP4g2aRELg1gtCAhfIb-AWQC1XARjkMIVLqPqJoaBO1tgrybXdKuJ0PunkBEvd5bFO3sP1TieHyZTy4qTlnRu-YuYr1fvSQsXWna86msJLxbg=w156-h114-p-k-no",
+        "https://lh5.googleusercontent.com/proxy/KMzDvMJIxCJ6EYmxugtkTNRNciDiaf0epyeiScRT5xE4Kn-Y91F2EQrNsJ2I10u7TqZGActRxniIBoA4YlVRhk5NfO2qYt7Pd8mqwOLtyvg5v6A4cHPtWX7wHxsRRT_GkniyYxeZFVlYoTfHeVAlYXxfBWX1yVQ=w156-h114-p-k-no"
+      ],
+      "reviews_count": 0,
+      "recent_reviews": [],
+      "data_quality_score": 33,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:36.475319",
+      "search_query": "Yas Island Abu Dhabi",
+      "location_focus": "Abu Dhabi",
+      "company_name": "Yas Island",
+      "rating": 4.6,
+      "review_count": null,
+      "address": "Yas Island - Abu Dhabi - United Arab Emirates",
+      "phone": null,
+      "website": "https://www.google.com/url?q=http://www.yasisland.ae/&opi=79508299&sa=U&ved=0ahUKEwiFismt1ZaQAxX5IrkGHTnODn4Q61gIDygK&usg=AOvVaw2SnJR-vNcjBx0pANMLpf3L",
+      "emails": [],
+      "category": "Island",
+      "latitude": null,
+      "longitude": null,
+      "place_id": null,
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrNqUxBv7kJYXsBDYWatlK4Zv8Xzd5aTVVN8MXZRI5Q7SsYSjWbXAm6JJFaPpszeo6yCa5TRFPzyEpYroIQre2HBHTmwddJxtSNj5pzX03JpV5iWtQfl6X4tSb_zVhkOJnXmcUdhQ=w467-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noammhdwtSNOtb_jcwbbzOF2R0n00tyGE3Aj3ZfvOTLuhXR4YqT3kw-R96a8WucJ2IjCD9s00sj2iJyb5KIjeUWhpLn9AKFGO3mjskyjd4JbLuI7jrOG36cTb0wEFMMvLJq7-Vfc-4xgmrT=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrau_t3UgbYBPMwmhRBLK01gZL0Bw51YhzLSPFwFis6lWOIA76z9qvure9uPQ6waoNHJsqF9cBP9zYjPdxDX2OS_CJRsrftA0nwmkZ8FyFER3Sn0OV1tnN-WxkhWycQ4TBTUc0j=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noBmdcLIQ2-o0j0y24eB518LkCHmFuu-7aMJTerbmbGGhS4DcRKuJsMzsygv3yYBpNGV4d8CIz1-6hDLdtGacEyhIEMw4y8v5CZji4Jh5nZffdQv-8goK0VYhmQ91HKKfgZIUxNxA=w224-h298-k-no-pi-20-ya340-ro-0-fo100",
+        "https://lh3.googleusercontent.com/a/ACg8ocKHkWmYHshk0Dt8hVlJh3OTOT3Md8XWtJQ9opAxkcIqaFFfl6Ej=w36-h36-p-rp-mo-br100"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Shanzah Nazir (Liza)",
+          "rating": "5 stars",
+          "text": "The bested experience you can ever have . It was fun worth exploring. I would love to go once more",
+          "date": "a week ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The bested experience you can ever have . It was fun worth exploring. I would love to go once more",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "The bested experience you can ever have . It was fun worth exploring. I would love to go once more",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "JALAL ALHARBI",
+          "rating": "5 stars",
+          "text": "My experience with Yas Island was wonderful, thank God.\nI booked the hotel through their website, and the reservation includes tickets, entry, and play for all the parks. We visited SeaWorld, Warner B...",
+          "date": "a month ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "My experience with Yas Island was wonderful, thank God.\nI booked the hotel through their website, and the reservation includes tickets, entry, and play for all the parks. We visited SeaWorld, Warner B...",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 65,
+      "interior_design_potential": {
+        "revenue_potential_aed": 7500000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "HIGH - Quality developer, strong potential"
+      }
+    },
+    {
+      "extractor_version": "BOB Ultimate V3.0",
+      "extraction_date": "2025-10-09T13:40:49.681333",
+      "search_query": "Dubai South Properties",
+      "location_focus": "Dubai",
+      "company_name": "Dubai South Sales Center",
+      "rating": 5,
+      "review_count": 1,
+      "address": "W6WF+47 - Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates",
+      "phone": "+971 58 579 6673",
+      "website": "https://www.google.com/url?q=https://dubai-south.ae/&opi=79508299&sa=U&ved=0ahUKEwjggOaz1ZaQAxUpGLkGHRwPKS4Q61gIFCgQ&usg=AOvVaw02kJQqOpUcHN7TohjA1Mci",
+      "emails": [],
+      "category": "Real estate developer",
+      "latitude": null,
+      "longitude": null,
+      "place_id": "17067463375914865000",
+      "photos_count": 5,
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipPhh4bz_ZYJWqXe0V8GSChD1Kx8N-gDqOPkImSz=w447-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrqDbgQverJBhUWx35yyYiHeHzlKQPxX3Vy78CQpMuCx-wltAaL1Ln8YySAEjzqAGUGYJcpR5u0pUELAGlSSikcOkXkk2girNNXkyddYKNPGZB5COnJK6eoIo83DiSHAP-A_1MEElKwLwfq=w447-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npNqDPlAKIfxbUjjJB8vzqwRMT61zdF43AX1eK4FiAGZZIHMa-tLme2nT0GpRLfjLgMb9JIZEx5cr95jPQpCUuhv-xfUWjfC4hvSWh5746VuGNIV5TZEchyQoYH99nSClPt5XtLZA=w224-h398-k-no",
+        "https://lh3.googleusercontent.com/p/AF1QipOrMpFcYuk4rRz6u_LlJJD8Y3eSMKXOzCLvU9Li=w397-h298-k-no",
+        "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nohRibmLLLTDFJAlswLP_lN8Rsv4H5R0UhhZgpb9h6ds3FduAbdECy4bmalTp_2_l0rEpCh-dUBeiqfhNZ4ktbGW3f9GJwXzB2IMgwgCPsQbEB8aLIPZeVw7C-J1OyqKAunAuOX=w447-h298-k-no"
+      ],
+      "reviews_count": 10,
+      "recent_reviews": [
+        {
+          "reviewer": "Amrit Darnal",
+          "rating": "1 star",
+          "text": "Worst experience from sales team.\nThey have too much attitude ,no proper briefing and disrespect to the clients.\nNo proper response as if they are the only sales person in Dubai south. …",
+          "date": "3 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Worst experience from sales team.\nThey have too much attitude ,no proper briefing and disrespect to the clients.\nNo proper response as if they are the only sales person in Dubai south. …",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "Worst experience from sales team.\nThey have too much attitude ,no proper briefing and disrespect to the clients.\nNo proper response as if they are the only sales person in Dubai south. …",
+          "date": "N/A"
+        },
+        {
+          "reviewer": "Hetty Key",
+          "rating": "1 star",
+          "text": "⸻\n\nMisleading Promises – Disappointing delivery and units …",
+          "date": "5 months ago"
+        },
+        {
+          "reviewer": "N/A",
+          "rating": "N/A",
+          "text": "⸻\n\nMisleading Promises – Disappointing delivery and units …",
+          "date": "N/A"
+        }
+      ],
+      "data_quality_score": 75,
+      "interior_design_potential": {
+        "revenue_potential_aed": 10000000,
+        "project_types": [
+          "Mixed-Use Developments"
+        ],
+        "partnership_value": "MEDIUM - Quality developer with good market presence",
+        "contact_priority": "IMMEDIATE - Top-tier developer, high-value target"
+      }
+    }
+  ],
+  "strategic_analysis": {
+    "total_revenue_potential_aed": 77000000,
+    "average_revenue_potential_aed": 7700000,
+    "high_value_developers_count": 8,
+    "project_type_distribution": {
+      "Mixed-Use Developments": 6,
+      "Commercial Buildings": 2,
+      "High-Rise Apartments": 2
+    },
+    "recommended_approach": {
+      "immediate_contacts": 2,
+      "high_priority_contacts": 6,
+      "total_market_opportunity": "AED 77,000,000"
+    }
+  }
+}

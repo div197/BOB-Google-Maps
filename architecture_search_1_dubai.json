@@ -1,0 +1,4 @@
+{
+  "businesses": [],
+  "error": "HybridExtractorOptimized.extract_business() got an unexpected keyword argument 'max_results'. Did you mean 'max_reviews'?"
+}

@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Spazio Design & Build International L.L.C",
+  "rating": 4.9,
+  "review_count": 71,
+  "address": "Musaffah - M40 - Abu Dhabi - United Arab Emirates",
+  "phone": "+971 2 626 8383",
+  "website": "http://www.spaziodb.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday8 am–6 pmFriday8 am–5 pmSaturday8 am–1 pmSundayClosedMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.3458745,
+  "longitude": 54.4887999,
+  "place_id_original": "0x3e5e6665201ef4af:0xf4a2cbcca0ff2472",
+  "place_id_format": "hex",
+  "cid": "17627875971216385138",
+  "place_id": "17627875971216385138",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=17627875971216385138",
+  "place_id_confidence": "HIGH",
+  "plus_code": "8FWQ+8G Abu Dhabi - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNTSYKTLFYvOp_BFQ0rLyuKhkKZCdBqvAPMhQog=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVyLF-Qa7Zo5JRqTvir0Yiv5Ndlq840Rqk37nqgerZMkpejbjbvmA=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocIJBfGuw5Y_PokpW5HMdakGQGSr0l7xdsQ2eD9fsklXPHqjwA=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMe_xPjJdv7errd3ZpnIhcINmQtwu7VLG7f9SRl=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOQT325k9bZ-kElaIEVjsjeegyY-lbUzWZvqg_Z=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMe_xPjJdv7errd3ZpnIhcINmQtwu7VLG7f9SRl=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPS9tai_Tmurp33ClPylH17bNXK6lTwGKvNOfWa=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVAKYP1pc0W9oaXttN19CzNiwmORQ9Xv2CMCsOpW2EjZIrOv8gq=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipM4sYRwcB47cpchECtw_B1xEvJ7xdGAL5UQ8x62=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "user@domain.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "sujith nairLocal Guide · 28 reviews · 65 photosEdited 4 years ago Pent house floor ....inside abudhabi city behind. Al ahlia hospitalLike Share Response from the owner 2 years agoWe have moved to Mussafah M40,beside NMC medical center.",
+      "reviewer": "sujith nair",
+      "rating": "4 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Pent house floor ....inside abudhabi city behind. Al ahlia hospital"
+    },
+    {
+      "review_index": 3,
+      "text": "Pent house floor ....inside abudhabi city behind. Al ahlia hospital"
+    },
+    {
+      "review_index": 4,
+      "text": "We have moved to Mussafah M40,beside NMC medical center."
+    },
+    {
+      "review_index": 5,
+      "text": "Shabil P HamzaLocal Guide · 31 reviews · 8 photos2 years ago Premiim works and good qualityLike1 Share Response from the owner 2 years agoThankyou for the visit.",
+      "reviewer": "Shabil P Hamza",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 50.42
+}

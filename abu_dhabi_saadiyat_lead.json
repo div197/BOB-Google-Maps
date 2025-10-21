@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "mustard&linen interior design",
+  "rating": 4.6,
+  "review_count": 88,
+  "address": "0000 - Abu Dhabi - United Arab Emirates",
+  "phone": "+971 2 673 5889",
+  "website": "http://www.mustardandlinen.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday9 am–6 pmFriday9 am–6 pmSaturdayClosedSundayClosedMonday9 am–6 pmTuesday9 am–6 pmWednesday9 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.5620974,
+  "longitude": 54.4597512,
+  "place_id_original": "0x3e5e6676bd58962f:0xa1afba84e29b09f9",
+  "place_id_format": "hex",
+  "cid": "11650735840931023353",
+  "place_id": "11650735840931023353",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=11650735840931023353",
+  "place_id_confidence": "HIGH",
+  "plus_code": "HF65+RW Abu Dhabi - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipMkDebQTFCKIRLGEO4TSs3UbKDhaDj6QabQgR6L=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJiHGUfOZnbok6DKfiozLQ8U4RdZ8HcqezHGL4lS-SxUDo5pA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMCA4VSaidAdSYEIGBNphEhB1vdm-8g8iQGxdZe=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIiBs7590iBJjdezfJ67AyLN-rdY64ZM0H6hxQcIjNuGSVlrQ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOrEOg0CJnZtR-twiMwLJkLagG89YYIV2wIw3Tx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOFnA9iIEhefOO8170VuTgrtXyoVKsc1cWGLz9n=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLR65T4rrPCLHj3vgBlj_jJl7bkJehstB-HKr5K04Fl8XwbUw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMkDebQTFCKIRLGEO4TSs3UbKDhaDj6QabQgR6L=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPffaQNZAD_ZeHzXjQErQryaWSMn1ZsJQM9Mak=w4096-h4096-p-k-no"
+  ],
+  "emails": [
+    "info@mustardandlinen.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Anju Thomas10 reviews · 1 photoa year ago mustard&linen has a unique yet creative style! Super cool interiors with the most intricate details. Having them as your interior designers is just chef’s kiss! See your project come to life with their efforts, high end design and curated detailing, you’ll never regret it!Like Share",
+      "reviewer": "Anju Thomas",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "mustard&linen has a unique yet creative style! Super cool interiors with the most intricate details. Having them as your interior designers is just chef’s kiss! See your project come to life with their efforts, high end design and curated detailing, you’ll never regret it!"
+    },
+    {
+      "review_index": 3,
+      "text": "mustard&linen has a unique yet creative style! Super cool interiors with the most intricate details. Having them as your interior designers is just chef’s kiss! See your project come to life with their efforts, high end design and curated detailing, you’ll never regret it!"
+    },
+    {
+      "review_index": 4,
+      "text": "Dinah Ghafari4 reviews · 1 photoa year ago Beyond their top notch designs & expertise in interior design, Mustard & Linen's personalized approach creates a sense of connection, making clients feel like part of the family throughout the design process.Like Share",
+      "reviewer": "Dinah Ghafari",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Beyond their top notch designs & expertise in interior design, Mustard & Linen's personalized approach creates a sense of connection, making clients feel like part of the family throughout the design process."
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 50.3
+}

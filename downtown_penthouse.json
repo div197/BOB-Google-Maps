@@ -1,0 +1,66 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Upper Room Interiors",
+  "rating": 4.5,
+  "review_count": 161,
+  "address": "ParkLane Tower - Office: 1501 - 15th Floor - Business Bay - Dubai - United Arab Emirates",
+  "phone": "+971 52 158 5923",
+  "website": "https://urinteriors.ae/",
+  "category": "Interior designer",
+  "latitude": 25.1852338,
+  "longitude": 55.2618939,
+  "place_id_original": "0xadca6ae8f8d1835b:0x8c7fca5154c7c83e",
+  "place_id_format": "hex",
+  "cid": "10124032938015705150",
+  "place_id": "10124032938015705150",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=10124032938015705150",
+  "place_id_confidence": "HIGH",
+  "plus_code": "57P6+3Q Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 10 pmSee more hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocKB1ygfCGKWpqCcH4XpqHl8raFtXS7lFN2TxWmRdGSMm9rQug=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN1-qI6nER-IgLw4ckNToIF9kk_r_XRmGU52IuU=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXQSDZj23PIMkfBoOvS9-rl6KgfBR467meB3kLjilvXndNixrI=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipM1qZJA1DjSHMOy1W6UC-1Vs-FY9NoBxsC_qy1B=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPRA5JJ7uVnZRh_2sAHwMO6hM1dxERDuRWcjlJx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN1-qI6nER-IgLw4ckNToIF9kk_r_XRmGU52IuU=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLlrkRFC53Ni9LR5xIqtP0JQy89OSLFfbxb--22sPbmU-k3Ag=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipM_-HkZnx_v2TaJkl1q9vF43V5sd4zgn9RAh6xn=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMKvEDb5Jv9vvAUepOieyxkVf8wMnqk_an420QW=w4096-h4096-p-k-no"
+  ],
+  "emails": [
+    "info@urinteriors.ae"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Caroline Fiala3 reviews · 4 photos6 months ago 5 Stars – Exceptional Home Renovation & Interior Styling in Dubai Creek Harbour\n\nI cannot speak highly enough of Upper Room Interiors. We recently completed a … MoreLike Share Response from the owner 5 months agoThank you so much for your kind words and for trusting Upper Room Interiors with your full home renovation and interior styling in Dubai Creek Harbour. It was truly a pleasure working with you to bring your vision to life. … More",
+      "reviewer": "Caroline Fiala",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "5 Stars – Exceptional Home Renovation & Interior Styling in Dubai Creek Harbour\n\nI cannot speak highly enough of Upper Room Interiors. We recently completed a … More"
+    },
+    {
+      "review_index": 3,
+      "text": "5 Stars – Exceptional Home Renovation & Interior Styling in Dubai Creek Harbour\n\nI cannot speak highly enough of Upper Room Interiors. We recently completed a …"
+    },
+    {
+      "review_index": 4,
+      "text": "Thank you so much for your kind words and for trusting Upper Room Interiors with your full home renovation and interior styling in Dubai Creek Harbour. It was truly a pleasure working with you to bring your vision to life. … More"
+    },
+    {
+      "review_index": 5,
+      "text": "Jennifer Brown7 reviews · 3 photos3 months ago Upper Room Interiors is hands down the best interior design company in Dubai we’ve worked with. They turned our Dubai Marina apartment into a stunning modern space with smart layouts and custom finishes. Their team truly understands … MoreLike Share Response from the owner 3 months agoThank you for the wonderful feedback! We're so glad you loved your Dubai Marina apartment. It was a pleasure delivering a smooth and tailored apartment interior design experience.",
+      "reviewer": "Jennifer Brown",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 79.66
+}

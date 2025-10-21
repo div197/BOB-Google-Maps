@@ -1,0 +1,89 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Last Farm F&B Trading Co. L.L.C.",
+  "rating": 4.4,
+  "review_count": 17,
+  "address": "Al Saud Building - Al Qusais Industrial Area - Al Qusais Industrial Area 4 - Dubai - United Arab Emirates",
+  "phone": "+971 4 266 1361",
+  "website": "http://lastfarm.ae/",
+  "category": "Food products supplier",
+  "latitude": 25.2914669,
+  "longitude": 55.3967617,
+  "place_id_original": "0x3ef5f936228c9081:0xbc7cf19eb6d844f2",
+  "place_id_format": "hex",
+  "cid": "13581996240217326834",
+  "place_id": "13581996240217326834",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=13581996240217326834",
+  "place_id_confidence": "HIGH",
+  "plus_code": "79RW+HP Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pmSee more hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocJqn1aiY1u85qwk6C4bggvnErR7JE2kn7-5PLh_v-PHxlnaIuNr=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXfFn-uknKZ24PgIIdNNKMN8kGmwxJpHyHgN7BTxUqDkkGZz45eiw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipObPylUMEaOUtuV8uaWw_ITgS4uqpAG_ElV6BXU=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJtAw6jiHGLILVekuSWQCoD--Af_bS-l1Fnlar6izP_dVU_Lg=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipNRVw5ORw_5ag-g1QB0XBJee9bWFy5s_00FaNMw=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Niyas PyLocal Guide · 8 reviews · 1 photo8 years ago Fantastic companyLike Share",
+      "reviewer": "Niyas Py",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Fantastic company"
+    },
+    {
+      "review_index": 3,
+      "text": "Fantastic company"
+    },
+    {
+      "review_index": 4,
+      "text": "anoop kp2 reviews3 years ago",
+      "reviewer": "anoop kp",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "farhan archiesLocal Guide · 166 reviews · 124 photos4 years ago",
+      "reviewer": "farhan archies",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 6,
+      "text": "Salman Rana1 review4 years ago",
+      "reviewer": "Salman Rana",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 7,
+      "text": "Hassan Elmubarak (BLACK)Local Guide · 19 reviews · 16 photos5 years ago",
+      "reviewer": "Hassan Elmubarak (BLACK)"
+    },
+    {
+      "review_index": 8,
+      "text": "Irshad murad5 reviews · 5 photos5 years ago",
+      "reviewer": "Irshad murad",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 9,
+      "text": "Mahmoud Sarhan6 years ago",
+      "reviewer": "Mahmoud Sarhan",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 10,
+      "text": "Mohammed AhmedLocal Guide · 122 reviews · 37 photos6 years ago",
+      "reviewer": "Mohammed Ahmed"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 88.14
+}

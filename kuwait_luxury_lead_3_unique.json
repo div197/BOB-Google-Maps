@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Hammad Group - حماد جروب",
+  "rating": 4.4,
+  "review_count": 18,
+  "address": "Persian الفارسی،, Arabian Gulf St، السالمية،, Kuwait",
+  "phone": "+965 2571 1730",
+  "website": "http://hammad-group.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday9 am–6 pmFridayClosedSaturday9 am–6 pmSunday9 am–6 pmMonday9 am–6 pmTuesday9 am–6 pmWednesday9 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 29.3470109,
+  "longitude": 48.0921948,
+  "place_id_original": "0x3fcf762fef461097:0xf97b69bf04cca75",
+  "place_id_format": "hex",
+  "cid": "1123567412919978613",
+  "place_id": "1123567412919978613",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=1123567412919978613",
+  "place_id_confidence": "HIGH",
+  "plus_code": "83WR+RV Salmiya, Kuwait",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocJX253ao9_v_VPwxA2Yg4ObKBcrf5tFDtYvugeWOYc24SU5TA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPUNUwhWTWYA0466ea1zMpXG-lRDXfu5RkANpCo=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4non_xTJeewjvBbO3ItfVzEsgSTXGxZY_DCjRyQ0ZLaGNzwOhYQQOobh4VDcwx0U5m-MNpmc4bK-9WimpU-EmHAA_wh8Uge8MGf30-VPogVWOmJvXw4wp10ZHFW8-YvA0pntc10Vow=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVh3k_6xwrYAGzv-HfT0LuxDBZgovlmr_q6g3mrZLA1BAX4D8mz=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXLAToNS35bmhTGpq_CyKvYVGf-xOAOLZTjLQW0MSIUpNj8HAM=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMJklH8HK8r6S9PkJ38g0-nYT5z7yVrFE9P0NCZ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNxDzwbIzO1XAuAUHHJNCn9vXBMHarhcYgj_4ZO=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM2e2GoRomjGG2sD9An-dHAWPoXbJThNvJSORXw=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM2e2GoRomjGG2sD9An-dHAWPoXbJThNvJSORXw=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Abdullah Alduaij9 reviews · 4 photos2 years ago One of the worst company I have ever dealt with. Very poor quality, bad communication and management does not have any decent respect to their customers. The very high unrealstic price of their contracts and The luxury 3D design they … MoreLike2 Share",
+      "reviewer": "Abdullah Alduaij"
+    },
+    {
+      "review_index": 2,
+      "text": "One of the worst company I have ever dealt with. Very poor quality, bad communication and management does not have any decent respect to their customers. The very high unrealstic price of their contracts and The luxury 3D design they … More"
+    },
+    {
+      "review_index": 3,
+      "text": "One of the worst company I have ever dealt with. Very poor quality, bad communication and management does not have any decent respect to their customers. The very high unrealstic price of their contracts and The luxury 3D design they …"
+    },
+    {
+      "review_index": 4,
+      "text": "Dr. Mohsen DashtiLocal Guide · 23 reviews · 1 photo7 years ago I have been dealing with Hammad Group over the past few months to prepare my café and so far so good. Honestly Eng. Mohammad & his team are very well dedicated and professional as well as friendly and welcoming. … MoreLike4 Share",
+      "reviewer": "Dr. Mohsen Dashti",
+      "rating": "4 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "I have been dealing with Hammad Group over the past few months to prepare my café and so far so good. Honestly Eng. Mohammad & his team are very well dedicated and professional as well as friendly and welcoming. … More"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 58.53
+}

@@ -1,0 +1,64 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Real Visions Interiors Oman الرؤية الحقيقية للديكور و التصميم",
+  "rating": 5.0,
+  "review_count": 438,
+  "address": "Muscat, Oman",
+  "phone": "+968 24 616854",
+  "website": "http://www.rvi.design/",
+  "hours": "Open ⋅ Closes 5 pm Thursday8 am–5 pmFridayClosedSaturdayClosedSunday8 am–5 pmMonday8 am–5 pmTuesday8 am–5 pmWednesday8 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 23.6019222,
+  "longitude": 58.3637911,
+  "place_id_original": "0x3e8e00043a0bc7df:0x24b12cdf6f48c972",
+  "place_id_format": "hex",
+  "cid": "2643943794399562098",
+  "place_id": "2643943794399562098",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=2643943794399562098",
+  "place_id_confidence": "HIGH",
+  "plus_code": "J927+QG Muscat, Oman",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPf9CLEifknLo4JI4bru0Bqj687e_XzHO02CBQP_-a6V7zy0rk_S2A2b8dvfKFzUUN0by5toJURZHazvTJ8iSIRPZSG2BLqsUCRNjuAEowdT0wTIGgh5bP3Z79L91p6Dlq6ls=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruHEEZTGL7l9cZQKjIGREZy-3cef26QRvEnTaoMS2oTi-oNd11nWEnz0s0_aN78sneFs5I_Z--pT2jbWvOOuXbPdtJS_AHP0_1ETXfPPRapxQMuFJT-l07AdoSuvsf1DUQ8dsd=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOCVKTl0y7uG3NnOMQh0wyfHxBBSr0TIWqOXKWr=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruHEEZTGL7l9cZQKjIGREZy-3cef26QRvEnTaoMS2oTi-oNd11nWEnz0s0_aN78sneFs5I_Z--pT2jbWvOOuXbPdtJS_AHP0_1ETXfPPRapxQMuFJT-l07AdoSuvsf1DUQ8dsd=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWRhaI3VWYL9rRS_zgsl6Y9vyqnHwQyg4kReUQKsG5jDZm_-r1W=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npSXKi2LYaV4ng9uI2gsNLGSbDl0V2IJkIyNzIoZFwmMCSO2qpiXpjdkav7sfBVI8nsqfbo97fUidHv7s9xZIv7VUq5k3HBZa3pp9gPTs5BVQjtJtMPg0w902hqN08T145PDQhWaDcvFFpr=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVTvQf_tmaITO-vwvL_ew90PDn6arhJ8Zyrqvty-MR4TBG8t93iHw=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUOrVNaFkCZCDxCFjENq2DO8yieCD4-U91vXhNz_NXWTYOTxWYJ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nofEj7gFmMVCxBo2kKtGtaScp_UKn0r3M6Y-w0kVkd17TfFVKU_GpNtWSGbv_3qtWk4eBeS_WHQ3TnrvlPYVKL_Rd48jVc8iRHUy72uFUJoIIlawwsUGNH-Nff8tGOa6rCUpYFSlB2XrGE=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Rebecca Olson11 reviewsa year ago Real Vision Interiors is a step above the rest -- the team is super professional, experienced, and incredible at what they do.  You know how with design, some have it and some don't?  RVI definitely has it!  They utilize the best quality … MoreLike Share",
+      "reviewer": "Rebecca Olson",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Real Vision Interiors is a step above the rest -- the team is super professional, experienced, and incredible at what they do.  You know how with design, some have it and some don't?  RVI definitely has it!  They utilize the best quality … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Real Vision Interiors is a step above the rest -- the team is super professional, experienced, and incredible at what they do.  You know how with design, some have it and some don't?  RVI definitely has it!  They utilize the best quality …"
+    },
+    {
+      "review_index": 4,
+      "text": "Nicolette Willemse2 reviews6 years ago They do amazing work.Like1 Share",
+      "reviewer": "Nicolette Willemse",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "They do amazing work."
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 48.69
+}

@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "جبس بورد 24",
+  "rating": 5.0,
+  "address": "4675 جبل النور, حي جبل النور, 7620, Makkah 24238, Saudi Arabia",
+  "phone": "+966 56 035 4712",
+  "website": "https://pin.it/29bay86xh",
+  "hours": "Open ⋅ Closes 12 am Thursday4 am–12 amFriday4 am–12 amSaturday4 am–12 amSunday4 am–12 amMonday4 am–12:30 amTuesday4 am–12 amWednesday4 am–12 amSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 21.4529272,
+  "longitude": 39.8614681,
+  "place_id_original": "0x15c203236b42de79:0x4ae9f7124eafe456",
+  "place_id_format": "hex",
+  "cid": "5398117286381872214",
+  "place_id": "5398117286381872214",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=5398117286381872214",
+  "place_id_confidence": "HIGH",
+  "plus_code": "FV36+5H Makkah Saudi Arabia",
+  "current_status": "Open ⋅ Closes 12 am",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipOGyk1jjws4tLgMMbXtlCd3rz1W_NS3gHkGuNet=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN4qOLeWmihT5DTo93zZrwS3na219LXKAs29C6L=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npC8WfpYY0yPA9FGr-wGvr6bCCw0FwwIwOMSvBT6sA2opfBxQ795HzBztWDIFBxTMEDmZqLCcO_fVGFXNFhZP58430JpGjGklfG8dcKzOSbqLNg-fGype67h5OhrV-sM8m5X0RFLgQy4VKV=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPvG146i83dZn5hzhs8zavPUAAvfEbeSISnMjoC=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM910OX1kYMGL2TxHEm42-7yIytRmRBvCZ6Zkot=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM910OX1kYMGL2TxHEm42-7yIytRmRBvCZ6Zkot=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVqZkT117xIV0KtgI10PO7lB9lv_tMkb8gyPXi5XnrASFG2NEaNxw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocLnFRSe7u8lzrj3JF_vCk2fWqJ-FI7cvzX7Ru3RZvt11d3ktg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocIYJF0n7MaThLMWv9ljThHaW3DRdLEI_K6R2YHJ4egHoaaHhQ=w4096-h4096-p-rp-mo-br100"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Atif Gujjar2 reviews2 months ago Nice person good work 👍 …Like Share Response from the owner 2 months agoYour wonderful evaluation motivates us to always provide the best. Thank you ❤️ Translated by Google ・ See original (Arabic)",
+      "reviewer": "Atif Gujjar",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Nice person good work 👍 …"
+    },
+    {
+      "review_index": 3,
+      "text": "Nice person good work 👍 …"
+    },
+    {
+      "review_index": 4,
+      "text": "Your wonderful evaluation motivates us to always provide the best. Thank you ❤️"
+    },
+    {
+      "review_index": 5,
+      "text": "Rana Sab2 reviews2 months ago amazing work keep up broLike Share Response from the owner 2 months agoYour wonderful evaluation motivates us to always provide the best. Thank you ❤️ Translated by Google ・ See original (Arabic)",
+      "reviewer": "Rana Sab",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 83.95
+}

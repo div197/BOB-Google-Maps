@@ -1,0 +1,66 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "تصميم ديكور | شركة تصميم داخلي | مكتب تصميم داخلي | LUXURIOUS",
+  "rating": 4.9,
+  "review_count": 29,
+  "address": "NADSCO Building 1st Floor, 9th Street, Al Adamah, Dammam 32242, Saudi Arabia",
+  "phone": "+966 50 567 2614",
+  "website": "http://www.luxurious-studio.com/",
+  "category": "Interior designer",
+  "latitude": 26.4317035,
+  "longitude": 50.1075746,
+  "place_id_original": "0x3e49fb2ddb3791f1:0xbb8ed4304f3d0217",
+  "place_id_format": "hex",
+  "cid": "13514972835738354199",
+  "place_id": "13514972835738354199",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=13514972835738354199",
+  "place_id_confidence": "HIGH",
+  "plus_code": "C4J5+M2 Dammam Saudi Arabia",
+  "current_status": "Open ⋅ Closes 6 pmSee more hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipP2ByjJgXpvz3dtxA317pBe_n38O3HmiVVHrSXF=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNrGD8VCuideugHRnq0yYambjLnOXCe6y8eiXXV=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVcCQeejlQgCmYtCc0ZH8Y4xo-bGxMvNClG8ucUm6AScLULocFaDg=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOkFudi4vHLbKV04WQTWjgoLz1uXSpVb9vjvvWh=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOkFudi4vHLbKV04WQTWjgoLz1uXSpVb9vjvvWh=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMv8cekGCgvmJzqmhhltwLR6bwN9FH-O-RC4qNP=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP5RBhn30_v3T62s24MQP6zGrg0ntlGR8PwrJs0=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWJ07Ia69vRUOupqmi55ggKOatGUqqeRa5H4lWmMJcAgIE3jMI=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjW78zaTenikpaK0pS469-y0wkkiEKbcwzs0OfrTaw07Zhdhh0c=w4096-h4096-p-rp-mo-br100"
+  ],
+  "emails": [
+    "info@luxurious-studio.com"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "محمد المعجل4 reviews · 1 photoEdited a year ago It was so great to work with LUXURIOUS INTERIOR DESIGN ,  WE HAVE a land and they helped us from design , appointing a main contractor, they allowed  us to do many revisions on design without any extra charge , we use their discount with the furniture stores , thanks to ALL designers was so great in all stages .\n.. MoreLike7 Share Response from the owner a year agoit's our pleasure to have a great client like you ❤️",
+      "reviewer": "محمد المعجل",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "It was so great to work with LUXURIOUS INTERIOR DESIGN ,  WE HAVE a land and they helped us from design , appointing a main contractor, they allowed  us to do many revisions on design without any extra charge , we use their discount with the furniture stores , thanks to ALL designers was so great in all stages .\n.. More"
+    },
+    {
+      "review_index": 3,
+      "text": "It was so great to work with LUXURIOUS INTERIOR DESIGN ,  WE HAVE a land and they helped us from design , appointing a main contractor, they allowed  us to do many revisions on design without any extra charge , we use their discount with the furniture stores , thanks to ALL designers was so great in all stages .\n.."
+    },
+    {
+      "review_index": 4,
+      "text": "it's our pleasure to have a great client like you ❤️"
+    },
+    {
+      "review_index": 5,
+      "text": "Fayez Al-Helal10 reviews · 1 photoa year ago Peace be upon you.\nI wanted to share my honest opinion with a testimony that I will be held accountable for before God. … More Translated by Google ・ See original (Arabic)Like3 Share Response from the owner a year agoMr. Fayez, a high-class customer like you deserves the best services we can offer. The work team is always at your service. Thank you for the more than wonderful evaluation. Translated by Google ・ See original (Arabic)",
+      "reviewer": "Fayez Al-Helal",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 79.63
+}

@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Exotic Interiors Studio",
+  "rating": 4.9,
+  "review_count": 203,
+  "address": "16C Street - Al Quoz - Al Quoz Industrial Area 4 - Dubai - United Arab Emirates",
+  "phone": "+971 52 542 2227",
+  "website": "https://www.exoticinteriors.me/",
+  "category": "Interior designer",
+  "latitude": 25.1152176,
+  "longitude": 55.2297221,
+  "place_id_original": "0x3e5f695651188713:0xc8a0ff5260f646f",
+  "place_id_format": "hex",
+  "cid": "903552220821152879",
+  "place_id": "903552220821152879",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=903552220821152879",
+  "place_id_confidence": "HIGH",
+  "plus_code": "468H+3V Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 7 pmUpdated by this business 5 weeks agoSee more hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPhnte1-YkcnOBNwWU_tXq56WAjT6vrfL-WtZwQ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJq3MvFhI6zxWhmJgsPaTDE8xdt8d6ht-i5Xw1K5THRtqjH6g=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocIHGN0I5JLkgM2VoyePteYURzkF2mzKlq-NdDtgKwpvvPtimw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPhnte1-YkcnOBNwWU_tXq56WAjT6vrfL-WtZwQ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNk8hymIUD4K0XL5PkRVrdvwAj0THa9I_XV219T=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMJ6bRaX66skyt8ZDEu9Sn7cnQy-jGXS0o3gEWM=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNqh045hC_cs00cBVUKIVY9f_akpBg1qt9LrAp9=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVVtBQV7yfAsH3jP-G_D7q8_-UXuqya_wRT_mO_gDS3NtPgMORG=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipP5W0yZ7sik68ffHgHn4HVHiJW8WCPOBaw05Md-=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "yashraj duggalLocal Guide · 8 reviews · 8 photos8 months ago The team at Exotic Interiors Studio is fantastic! From the initial consultation to the final execution, they were attentive, patient, and full of creative ideas. They truly understood my needs and delivered a space that reflects the style … MoreLike Share Response from the owner 8 months agoDear Yashraj,\nWe would like to thank you for sharing your experience with Exotic Interiors Studio. We are delighted to hear that you are pleased with our services and … More",
+      "reviewer": "yashraj duggal",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "The team at Exotic Interiors Studio is fantastic! From the initial consultation to the final execution, they were attentive, patient, and full of creative ideas. They truly understood my needs and delivered a space that reflects the style … More"
+    },
+    {
+      "review_index": 3,
+      "text": "The team at Exotic Interiors Studio is fantastic! From the initial consultation to the final execution, they were attentive, patient, and full of creative ideas. They truly understood my needs and delivered a space that reflects the style …"
+    },
+    {
+      "review_index": 4,
+      "text": "Dear Yashraj,\nWe would like to thank you for sharing your experience with Exotic Interiors Studio. We are delighted to hear that you are pleased with our services and … More"
+    },
+    {
+      "review_index": 5,
+      "text": "Arun MohanLocal Guide · 14 reviews · 17 photosEdited 8 months ago Exotic Interiors has been a valued customer of ours for over a decade, and it's been an absolute pleasure working with them.  Mr. Naseem Ahmad and Mr. Ahmed Thoufeer have been instrumental in building and maintaining this strong … MoreLike Share Response from the owner 8 months agoDear Arun,\nWe would like to thank you for sharing your experience with Exotic Interiors Studio. We are delighted to hear that you are pleased with our services and … More",
+      "reviewer": "Arun Mohan",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 81.53
+}

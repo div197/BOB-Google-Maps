@@ -1,0 +1,85 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Apparel Group Head Office Building 1",
+  "rating": 4.4,
+  "review_count": 30,
+  "address": "Exit 18, Plot No. S21317 - Jabal Ali Industrial Second - South Freezone - Dubai - United Arab Emirates",
+  "phone": "+971 4 813 6111",
+  "website": "https://www.apparelgroup.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday8 am–6 pmFriday8 am–6 pmSaturdayClosedSundayClosedMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Corporate office",
+  "latitude": 24.946774,
+  "longitude": 55.072678,
+  "place_id_original": "0x3e5f0db8184086e7:0xd443bc32b9e965f6",
+  "place_id_format": "hex",
+  "cid": "15295275685533804022",
+  "place_id": "15295275685533804022",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=15295275685533804022",
+  "place_id_confidence": "HIGH",
+  "plus_code": "W3WF+P3 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocK1EbIdBwH4dMYpJ2-fZ4FTLG6UkHn12yq92reCPBZH9TZ8sA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrVkZWotE03x8AOWJZjLKSaCAmJZZ1z1Px8VP1kZT2RPaAPBstBvNM4C2eoiyc97Bt_6zq059XQTL_YNrqZmoYjeE2pjdioYeAQsCEUQ64drpuHryVCSgaDkmvViJA_YftqDmAH=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKQzuZ24fUnohpyNGb18VbJO-0Nh56-IkY-mnWVnVGvTUbOoQ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMrIwCFR-Rn1JD_kh3IQAcnvLoTPNOT4DtbLO1L=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN0KXKIb5ERRVqbXExCFZ0HAvEK1a6ik7_VG1uw=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMrIwCFR-Rn1JD_kh3IQAcnvLoTPNOT4DtbLO1L=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npuyFFbWFcJc86lyA1P4rPlo-Kg6UeLSHT0XFaTAriPhIlREgWM8EZS9zAV37aaMUz--ycf2EGREJ6MlbEROfOoYVQPQ_aYPZb3_kyaeal6SA-LQCvgbb9dL5yodusgVcs_PZHC=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPT9j2NqjsNBnNvLiCKtMcRq4jZUXhCZ9hfg36o=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVJG3Xbu9K7daBGch1y-2osOlyyxC-Lv3TWhIPnare87L54lw0=w4096-h4096-p-rp-mo-br100"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Karl Meto1 review · 2 photosa week ago New Been trying to reach them but never get hold of anyone. I placed this order few weeks ago via amazon but still delayed, i hope their not prepping my item from mars to earth. I could not think of any valid reasons why they are late. Clearly … MoreLike Share",
+      "reviewer": "Karl Meto"
+    },
+    {
+      "review_index": 2,
+      "text": "Been trying to reach them but never get hold of anyone. I placed this order few weeks ago via amazon but still delayed, i hope their not prepping my item from mars to earth. I could not think of any valid reasons why they are late. Clearly … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Been trying to reach them but never get hold of anyone. I placed this order few weeks ago via amazon but still delayed, i hope their not prepping my item from mars to earth. I could not think of any valid reasons why they are late. Clearly …"
+    },
+    {
+      "review_index": 4,
+      "text": "ساره اليامور2 reviews2 months ago Hello, I’m an AI student currently working on a graduation project focused on integrating Artificial Intelligence with Fashion Technology and sustainability. … MoreLike Share",
+      "reviewer": "ساره اليامور",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Hello, I’m an AI student currently working on a graduation project focused on integrating Artificial Intelligence with Fashion Technology and sustainability. … More"
+    },
+    {
+      "review_index": 6,
+      "text": "Hello, I’m an AI student currently working on a graduation project focused on integrating Artificial Intelligence with Fashion Technology and sustainability. …"
+    },
+    {
+      "review_index": 7,
+      "text": "Arman Mohammad1 review · 1 photo4 months ago Dear Hiring Teams .\nI have been keep applying for Sales Associate job positions on your career job portals but I never get any sort of responses. … MoreLike Share Response from the owner 3 months agoHello Arman, thank you for reaching out! For job openings and inquiries, please visit our Careers page at https://apparelgroup.com/en/careers",
+      "reviewer": "Arman Mohammad",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 8,
+      "text": "Dear Hiring Teams .\nI have been keep applying for Sales Associate job positions on your career job portals but I never get any sort of responses. … More"
+    },
+    {
+      "review_index": 9,
+      "text": "Dear Hiring Teams .\nI have been keep applying for Sales Associate job positions on your career job portals but I never get any sort of responses. …"
+    },
+    {
+      "review_index": 10,
+      "text": "Hello Arman, thank you for reaching out! For job openings and inquiries, please visit our Careers page at https://apparelgroup.com/en/careers"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 60.81
+}

@@ -1,0 +1,68 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Inside interior design company",
+  "rating": 4.6,
+  "review_count": 64,
+  "address": "tower - floor 9, Alshuhada Street Down town, شرق - شارع الشهداء برج داون تاون - دور ٩, 00965, Kuwait",
+  "phone": "+965 6906 2779",
+  "website": "http://www.inside-kw.com/",
+  "hours": "Open ⋅ Closes 10 pm Thursday10 am–10 pmFridayClosedSaturday10 am–10 pmSunday10 am–10 pmMonday10 am–10 pmTuesday10 am–10 pmWednesday10 am–10 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 29.3786507,
+  "longitude": 47.9908886,
+  "place_id_original": "0x3fcf8592d2a66ced:0x371cef1854077fa2",
+  "place_id_format": "hex",
+  "cid": "3971311859201965986",
+  "place_id": "3971311859201965986",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=3971311859201965986",
+  "place_id_confidence": "HIGH",
+  "plus_code": "9XHR+F9 Kuwait City, Kuwait",
+  "current_status": "Open ⋅ Closes 10 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNeoHvVIuwjWI_m6654w1XhGIE1WJUfJpC3QCGb=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLEgpdxhf7yTAkv96NbehWK0-l5UAYmMcMkJxKpaVR5GxkAgA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOT2kse8lIsNwO3Lw3AUQ8ywMLpuwQrc8ko8LbB=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNeoHvVIuwjWI_m6654w1XhGIE1WJUfJpC3QCGb=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMQBaRi65i3u87lxHlc0dXdD2rpyox6JR8pT3mY=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNd9PrfggrSsw5lPMr4F8wJDOwMTo8uceWYSo2S=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIUTqui-igDLJU9d7iO2-IxhibX-212w3-2fXNH324Bu7Qytw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocIQLyz0mqS1v13YHtG70kYj-00V5y-tj0-zjx1iwEBC8JizUA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMK8sClO-45TjM800h-owf674vUMphITYRvOCgH=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "jonpinhorn.typedesign@gmail.com",
+    "impallari@gmail.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Katia Dabbas1 reviewa year ago Excellent work ...thank you insideLike Share",
+      "reviewer": "Katia Dabbas",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Excellent work ...thank you inside"
+    },
+    {
+      "review_index": 3,
+      "text": "Excellent work ...thank you inside"
+    },
+    {
+      "review_index": 4,
+      "text": "Genan Yaakoub1 reviewa year ago perfect work , keep goingLike Share",
+      "reviewer": "Genan Yaakoub",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "perfect work , keep going"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 57.0
+}

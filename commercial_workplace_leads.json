@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "4Space Management",
+  "rating": 4.9,
+  "review_count": 206,
+  "address": "HDS Business Centre - Unit No. 3508 Cluster M - Jumeirah Lake Towers - Dubai - United Arab Emirates",
+  "phone": "+971 4 438 5537",
+  "website": "https://4space.ae/",
+  "hours": "Open ⋅ Closes 6 pm Thursday8:30 am–6 pmFriday8:30 am–6 pmSaturdayClosedSundayClosedMonday8:30 am–6 pmTuesday8:30 am–6 pmWednesday8:30 am–6 pmSuggest new hours",
+  "category": "Interior architect office",
+  "latitude": 25.0641917,
+  "longitude": 55.1380504,
+  "place_id_original": "0x3e5f6cb32f32c09d:0x41c2ee3bb4196b2d",
+  "place_id_format": "hex",
+  "cid": "4738611698139228973",
+  "place_id": "4738611698139228973",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=4738611698139228973",
+  "place_id_confidence": "HIGH",
+  "plus_code": "347Q+M6 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipN4cNmr4vUc3DHHOLl2qv3f9G-s6xTnA3ZWLC7n=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOPuKYj3pNtkR67_IPQkDXu3nCHC-mLgOQZWcth=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMZP5J6-N0UY0QcV2rpFjRge2yb6wImi-1ub3sn=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO0RXANSKEwxyRWxYm7BY_5-BO-Dy5HO59cLo_a=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN4cNmr4vUc3DHHOLl2qv3f9G-s6xTnA3ZWLC7n=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipObXxSJt_x4pkgSbuM17Dkc9hKVnXh2H3r-sX_M=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJkzzqGdZfmOH6l48Vrp4R9NPZE2qqP1KqaRvnrtdf6LdL_0Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO2TBFPCBFBGkAsnvw4Xz3vQDjuKDvD4rP0lGod=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJZRuiAmY64GKqRsALm6-fISrG37y6bSbYOSbYXOW0zl1Omog=w4096-h4096-p-rp-mo-br100"
+  ],
+  "emails": [
+    "info@4space.ae"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Alex Swainson2 reviews3 months ago Working with 4Space Design has been an absolute pleasure. Their team is professional, well-organized, and highly collaborative. They value quality and craftsmanship, and it's clear they’re deeply committed to delivering exceptional results … MoreLike Share",
+      "reviewer": "Alex Swainson",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Working with 4Space Design has been an absolute pleasure. Their team is professional, well-organized, and highly collaborative. They value quality and craftsmanship, and it's clear they’re deeply committed to delivering exceptional results … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Working with 4Space Design has been an absolute pleasure. Their team is professional, well-organized, and highly collaborative. They value quality and craftsmanship, and it's clear they’re deeply committed to delivering exceptional results …"
+    },
+    {
+      "review_index": 4,
+      "text": "Anwar Khiami2 reviews · 10 photos4 months ago I had a great experience working with 4SPACE Design. Their creativity, attention to detail, and ability to blend aesthetics with functionality truly stand out. The team was professional, responsive, and delivered the project on time with … MoreLike Share Response from the owner 4 months agoThank you for your kind words and recommendation! We're glad you enjoyed our virtual design feature. It was a pleasure working with you, and we’re proud to have delivered a space that reflects your vision. … More",
+      "reviewer": "Anwar Khiami",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "I had a great experience working with 4SPACE Design. Their creativity, attention to detail, and ability to blend aesthetics with functionality truly stand out. The team was professional, responsive, and delivered the project on time with … More"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 50.41
+}

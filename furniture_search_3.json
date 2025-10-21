@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "SM Lux Home - Top Furniture Manufacturers & Suppliers in Dubai, UAE",
+  "rating": 4.8,
+  "review_count": 34,
+  "address": "Churchill Tower - 24th - Business Bay - Dubai - United Arab Emirates",
+  "phone": "+971 54 999 5522",
+  "website": "https://smluxhome.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday9 am–6 pmFriday9 am–6 pmSaturdayClosedSundayClosedMonday9 am–6 pmTuesday9 am–6 pmWednesday9 am–6 pmSuggest new hours",
+  "category": "Furniture Manufacturer",
+  "latitude": 25.1808756,
+  "longitude": 55.2633706,
+  "place_id_original": "0x3e5f690cda35f675:0x7ec2ccb83f0a25d2",
+  "place_id_format": "hex",
+  "cid": "9134088085964465618",
+  "place_id": "9134088085964465618",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=9134088085964465618",
+  "place_id_confidence": "HIGH",
+  "plus_code": "57J7+98 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPC9qJngHCtIjA4q8NyQXDS1Pr7_nwu9XHiSGfx=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMgBCNKhxlq_19_2fYNLdsTsiS_Ck4iH-gXrZ3t=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNTz9fOkBoTH4cJLk8e0lpXCWOkJt10LkV1xb1L=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocL0D1UDJPLlotEzT6h-QfL1WoAy3vf8iuESNtDoQsISvxCLOA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPC9qJngHCtIjA4q8NyQXDS1Pr7_nwu9XHiSGfx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nriLCQ4hzAa5WM2sAdhp8E1bqk1rCfGKYk5-ea5_F0Yc3TZafTDK36wOQVvltEG2P8UhHIgGQEURcEVMubd7fTwzYd1KbxjoybqWTbEljPEqqn-DkC8FgvgkcfjIZ4bBpuEtqP885x112IA=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLZjxJziK7Zq8I7hk5JUOq0WBglwqEVYd2yobocBBY9W3rjMg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN3lWMwHNbtKA0KQqH2Xg1b0Z0r59sqsdgnhE3f=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKtN6fSLWUEuz7JOA5yhx5mR7aDULzRdnoV7TuaSziyA0S4Qw=w4096-h4096-p-rp-mo-br100"
+  ],
+  "emails": [
+    "info@smluxhome.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Sanjeev Renu2 reviews · 2 photos3 weeks ago New They designed every piece perfectly for my space.Like1 Share Response from the owner 2 weeks agoThank you for your thoughtful feedback. We’re committed to excellence and truly value your support.",
+      "reviewer": "Sanjeev Renu",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "They designed every piece perfectly for my space."
+    },
+    {
+      "review_index": 3,
+      "text": "They designed every piece perfectly for my space."
+    },
+    {
+      "review_index": 4,
+      "text": "Thank you for your thoughtful feedback. We’re committed to excellence and truly value your support."
+    },
+    {
+      "review_index": 5,
+      "text": "Maayon Master7 reviews4 weeks ago My furniture is easy to maintain and always looks fresh. Thanks SM LUX!!Like Share Response from the owner 2 weeks agoThank you for your thoughtful feedback. We’re committed to excellence and truly value your support.",
+      "reviewer": "Maayon Master",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 59.94
+}

@@ -1,0 +1,69 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Vater -Office Fit Out & Interior design company Riyadh",
+  "rating": 4.9,
+  "review_count": 7,
+  "address": "Turki Al-Awwal Street, Al Muhammadiyah District, King Saud University, Building No. 6783, Second Floor, Riyadh 12362, Saudi Arabia",
+  "phone": "+966 53 968 8825",
+  "website": "https://www.vater.sa/riyadh.php",
+  "hours": "Open ⋅ Closes 6 pm Thursday8 am–6 pmFridayClosedSaturday8 am–6 pmSunday8 am–6 pmMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.7275547,
+  "longitude": 46.6434444,
+  "place_id_original": "0x4b2cad4fba9366a7:0x701b2a8473914689",
+  "place_id_format": "hex",
+  "cid": "8078097104982066825",
+  "place_id": "8078097104982066825",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=8078097104982066825",
+  "place_id_confidence": "HIGH",
+  "plus_code": "PJHV+29 Al Mohammadiyyah, Riyadh Saudi Arabia",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipMk3er0_KQ6n3Cimz1tPf5IorO-0MT1syhLemFJ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUNJAqiCCM3jhjIKwIAG1upC5_-vvM7TDS8r2M3karjBDjgfdGk=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMaO3ikSfMp8zApmNHnVimrgSeAMQRZHIHu-lsr=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIJIRnKtSsYslNkqhBwiaiKUazhNQq85Cv7qrBuzX2uYqpg7Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOTQRxTc32DedcRXgQiHaGT2QVKvtMnGNU7u889=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNY0bGq6HdxXmlnUMOS4-EMYDJn43zkOlR5R11y=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO98ye0evLbxyfDaW9N8UowX9pgHqG7kHabYP9D=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO98ye0evLbxyfDaW9N8UowX9pgHqG7kHabYP9D=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIIVei-hWqV5wpIqkmT7I0D4h09c6Oc21DEfSmaHhtGsBh-Vw=w4096-h4096-p-rp-mo-br100"
+  ],
+  "emails": [
+    "info@vater.qa",
+    "sales@vater.qa",
+    "info@vater.sa"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "rasheed sealand1 review6 months ago One of the best interior design company in ksaLike Share",
+      "reviewer": "rasheed sealand",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "One of the best interior design company in ksa"
+    },
+    {
+      "review_index": 3,
+      "text": "One of the best interior design company in ksa"
+    },
+    {
+      "review_index": 4,
+      "text": "vater dammam1 reviewa year ago \"Best design company i’ve seen, best management and professional team\"Like Share",
+      "reviewer": "vater dammam",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "\"Best design company i’ve seen, best management and professional team\""
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 58.3
+}

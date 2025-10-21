@@ -1,0 +1,54 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Perfect Creations Interiors",
+  "rating": 4.5,
+  "review_count": 161,
+  "address": "26th St - near Samrat Wire & Metal Warehouse - Al Quoz - Al Quoz Industrial Area 4 - Dubai - United Arab Emirates",
+  "phone": "+971 4 222 3946",
+  "website": "https://pcinteriors.ae/",
+  "hours": "Open ⋅ Closes 6 pm Thursday8 am–6 pmFriday8 am–6 pmSaturday8 am–3 pmSundayClosedMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.1159209,
+  "longitude": 55.2381724,
+  "place_id_original": "0x3e5f69502e33f625:0xfa75a344308f53f8",
+  "place_id_format": "hex",
+  "cid": "18047510595024933880",
+  "place_id": "18047510595024933880",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=18047510595024933880",
+  "place_id_confidence": "HIGH",
+  "plus_code": "468Q+97 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocLPi-9ZXSczT5tf1yVpeRvJiaMDsAvPtX0iJdJGKsICwLahTw=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMCBHNSt_gintTJix7MLNLm8EAiXEPks5Nq7uR7=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNsGWJdbYfY0MouiGUto9j3aAPL3l-oDYnS1God=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjW6S-1Nu_Xzhly8lhKZnFq1ZnYplnoOQgKR2KuY1u4EHtLxowc=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipOMoy3PdQMqNHcSiC1gTJxReeJXeeFPXMjwED01=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVlwNAMRbXCUP-HftdG434rwegUllVcbMOH09ny-OjgefqRKfnR=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMKvEDb5Jv9vvAUepOieyxkVf8wMnqk_an420QW=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNXLhp5Sl5A6VfeSspCooZo94ZXTr6eoq0UgayG=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOMoy3PdQMqNHcSiC1gTJxReeJXeeFPXMjwED01=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Abdo FaresLocal Guide · 15 reviews · 1 photo8 months ago I cannot recommend Perfect Creations enough! They did an absolutely phenomenal job on my recent construction project in Dubai. From start to finish, the entire team was professional, skilled, and dedicated to delivering the highest quality … MoreLike Share",
+      "reviewer": "Abdo Fares",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "I cannot recommend Perfect Creations enough! They did an absolutely phenomenal job on my recent construction project in Dubai. From start to finish, the entire team was professional, skilled, and dedicated to delivering the highest quality … More"
+    },
+    {
+      "review_index": 3,
+      "text": "I cannot recommend Perfect Creations enough! They did an absolutely phenomenal job on my recent construction project in Dubai. From start to finish, the entire team was professional, skilled, and dedicated to delivering the highest quality …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 56.05
+}

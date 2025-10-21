@@ -1,0 +1,57 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "MODENESE Interior Design Dubai – Fit Out Contractor – Luxury Classic Italian Furniture & Lightings",
+  "rating": 5.0,
+  "review_count": 4,
+  "address": "Palace Downtown - Burj Khalifa - Dubai - United Arab Emirates",
+  "phone": "+971 55 382 7652",
+  "website": "http://www.modeneseinteriors.com/",
+  "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.192838,
+  "longitude": 55.276427,
+  "place_id_original": "0x3e5f69baab96945f:0x42d3bc63a8b1773e",
+  "place_id_format": "hex",
+  "cid": "4815399562807179070",
+  "place_id": "4815399562807179070",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=4815399562807179070",
+  "place_id_confidence": "HIGH",
+  "plus_code": "57VG+4H Dubai - United Arab Emirates",
+  "current_status": "Open 24 hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPPSMzXaGW9orWIznYmnJUTAWrbaVYGUT5unY8G=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPPSMzXaGW9orWIznYmnJUTAWrbaVYGUT5unY8G=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJ-pXXAiZAoGJPtu1AyS5WXDENsmPGi8CBzUYGCRutI_c3yQg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXnSVM22ZlqJ7OiqEdjzly9c0zgbxxp4DIxfXkayMUQbNTlTYjQ=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrySSpvSQ77lHVf1W93IhBs06SxhJKcWVQDDCfwSMFMdY5jeDlSKZ-hY4mnGWppExPu1TM5rLlpXIA3xFPLtS59vdcMEAp7ZPKZVG7-eCmkzM9J8FRsR3r7aTI7iqLscWqUwp9a0Q=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWcZsTvdY9lEqolwR26J5qjpJ4-zAJ1tHJpYva2KQcOGoyXpwRh=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO_iAuF3PObCDq-YNLzNt5OIvzI8QsRf2jkLUfG=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPS6Jib3d-XPRo7LcWvjVRGwGHVfNhAN7xDgXCT=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "info@modeneseinteriors.com",
+    "info@modenesegastone.com"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Sara MuziLocal Guide · 48 reviews · 86 photosa year ago When passion for creativity and functionality meet the flawless Italian taste, the result could be only something genial. I was looking something luxurious, captivating and respectful of my Italian roots for my apartment in Dubai, and … MoreLike Share",
+      "reviewer": "Sara Muzi",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "When passion for creativity and functionality meet the flawless Italian taste, the result could be only something genial. I was looking something luxurious, captivating and respectful of my Italian roots for my apartment in Dubai, and … More"
+    },
+    {
+      "review_index": 3,
+      "text": "When passion for creativity and functionality meet the flawless Italian taste, the result could be only something genial. I was looking something luxurious, captivating and respectful of my Italian roots for my apartment in Dubai, and …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 59.83
+}

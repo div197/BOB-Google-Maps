@@ -1,0 +1,62 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "FastSquad Interiors - Office, Villa & Apartment Fit-Out Services Dubai",
+  "rating": 4.8,
+  "address": "Binary By Omniyat - Business Bay - Dubai - United Arab Emirates",
+  "phone": "+971 52 642 6893",
+  "website": "https://www.fastsquad.ae/",
+  "hours": "Open ⋅ Closes 6 pm Updated by this business 11 weeks agoThursday8 am–6 pmFriday8 am–6 pmSaturday8 am–6 pmSundayClosedMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Interior Decorator",
+  "latitude": 25.1815668,
+  "longitude": 55.2715102,
+  "place_id_original": "0x3e5f693a9c57ccf3:0x744f44a5600dc8a2",
+  "place_id_format": "hex",
+  "cid": "8380992908631591074",
+  "place_id": "8380992908631591074",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=8380992908631591074",
+  "place_id_confidence": "HIGH",
+  "plus_code": "57JC+JJ Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq66jQcei44N-67LZHwzj3qbsX8xNq_jy93g7W-TQ29xL8nEq0mklgEQcEf74btrFf-ktK6dIxEmemZuEOa9Ad8I8zf6iYAXtC5aAkoAN1-ZWdABF3IS1nqP4kdembA7kH6A5Eu-dLRE3MZ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIp84ipQS9jq_njZF0fmNDpk0EvBDh1G2JSGfF8mhCRoxfuD8mJ=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMQpiTYzBEqk-797AyUexx3MpXwTq7o_OvpFxXx=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN3nrU8jDnIbAeXUUNkKEN1ZUf-AuGCT5ItD4Wz=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nowhkJkCHUHdcDZruJZ7iuNYWH3M3tJr9wyKHm-IbhXWOVq_ZWZLHP6pmR2QfcQpGoSRfz4C0xCPHccR69isYvK8vRVxTnT157sgCICZmj_pBVZwaS36KE-pdfEBcl8EV4zeNYgA3VzZzM=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjV5dR4mvNqKvvdUo6ZTOQ9TkvKGHY7oxxpON57QbuhnreINWQl5=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXGEWgh4MOys89p-TmjeVQ1VgKQiQiv6ZiBa_P1NJ0wN9wvysFx=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMQpiTYzBEqk-797AyUexx3MpXwTq7o_OvpFxXx=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Sijo JoseLocal Guide · 13 reviews · 3 photos2 months ago Fast Squad Fitout Interiors did a fantastic job renovating our apartment. The workmanship and attention to detail were excellent, and the materials used were top quality. Each stage of the project was handled professionally. Highly recommend them.Like Share",
+      "reviewer": "Sijo Jose",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Fast Squad Fitout Interiors did a fantastic job renovating our apartment. The workmanship and attention to detail were excellent, and the materials used were top quality. Each stage of the project was handled professionally. Highly recommend them."
+    },
+    {
+      "review_index": 3,
+      "text": "Fast Squad Fitout Interiors did a fantastic job renovating our apartment. The workmanship and attention to detail were excellent, and the materials used were top quality. Each stage of the project was handled professionally. Highly recommend them."
+    },
+    {
+      "review_index": 4,
+      "text": "Shanal Jacob.8 reviews · 1 photo2 months ago Happy to refer the team fast squad. I’m really happy and satisfied as a customer 1yr back they have completed my office renovation al warsan. We are very happy and still whatever the maintenance we have they always come and fix it.Like Share",
+      "reviewer": "Shanal Jacob.",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Happy to refer the team fast squad. I’m really happy and satisfied as a customer 1yr back they have completed my office renovation al warsan. We are very happy and still whatever the maintenance we have they always come and fix it."
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 81.11
+}

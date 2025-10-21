@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Portray Interiors Design & Decor Fit Out",
+  "rating": 4.6,
+  "review_count": 88,
+  "address": "Emirates real estate corp - Office 109 - building number 20 - beside liwa university - Al Danah - E11 - Abu Dhabi - United Arab Emirates",
+  "phone": "+971 50 442 3100",
+  "website": "http://www.portrayinteriors.com/",
+  "hours": "Open ⋅ Closes 8 pm Thursday10 am–8 pmFriday10 am–8 pmSaturdayClosedSunday10 am–8 pmMonday10 am–8 pmTuesday10 am–8 pmWednesday10 am–8 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.4847879,
+  "longitude": 54.3764817,
+  "place_id_original": "0x3e5e66668c1fb433:0xd36b8666f358356f",
+  "place_id_format": "hex",
+  "cid": "15234417941238265199",
+  "place_id": "15234417941238265199",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=15234417941238265199",
+  "place_id_confidence": "HIGH",
+  "plus_code": "F9MG+WH Abu Dhabi - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 8 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocIYwwHfOr4bHMJpYjsBEAh4P3o3Wy2JQoA3Ci7AAsVZP2Hr5Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVt_odtuD-OXTQzAabmjS1GswEfy36raxSY1b2-H7n6qZQW6Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipNcdUDTrHVjWXq332DL9WpfmnaEEoQx80WktBg=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKcOciXZTOkVHMFgqESoz41YHSJRoKG1RXsFCji8BW1gY9S9g=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO5ZyAEjwK_G12B8YeDaZdcGL0RoUzkcnyJZyE=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO4BZckTTPBmoQMMtkPbk7L93uXJHZN4-cGdbw=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPffaQNZAD_ZeHzXjQErQryaWSMn1ZsJQM9Mak=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPffaQNZAD_ZeHzXjQErQryaWSMn1ZsJQM9Mak=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOFnA9iIEhefOO8170VuTgrtXyoVKsc1cWGLz9n=w4096-h4096-p-k-no"
+  ],
+  "emails": [
+    "info@portrayinteriors.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "12K INTERIORS1 reviewa year ago \"Exceptional Design and Attention to Detail!\"\n\nPortray Interiors Design & Decor Fit Out truly exceeded my expectations! From … MoreLike Share",
+      "reviewer": "12K INTERIORS",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "\"Exceptional Design and Attention to Detail!\"\n\nPortray Interiors Design & Decor Fit Out truly exceeded my expectations! From … More"
+    },
+    {
+      "review_index": 3,
+      "text": "\"Exceptional Design and Attention to Detail!\"\n\nPortray Interiors Design & Decor Fit Out truly exceeded my expectations! From …"
+    },
+    {
+      "review_index": 4,
+      "text": "CIVIL Meenakshi S 0252 reviewsa year ago Portray interior Design decor Fit-Out Company did an amazing job with our interior. The team was professional, detail-oriented, and exceeded our expectations. Highly recommend them for quality and reliable fit-out services!\" I would suggest for every one who needs they're dream home !!!!! Love it and thank youLike Share",
+      "reviewer": "CIVIL Meenakshi S 025",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Portray interior Design decor Fit-Out Company did an amazing job with our interior. The team was professional, detail-oriented, and exceeded our expectations. Highly recommend them for quality and reliable fit-out services!\" I would suggest for every one who needs they're dream home !!!!! Love it and thank you"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 55.63
+}

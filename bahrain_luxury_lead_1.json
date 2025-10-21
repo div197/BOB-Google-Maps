@@ -1,0 +1,58 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "New Style Interior Decoration And Management W.L.L",
+  "rating": 5.0,
+  "review_count": 18,
+  "address": "2120, Manama, Bahrain",
+  "phone": "+973 3382 7135",
+  "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 26.2271654,
+  "longitude": 50.5950725,
+  "place_id_original": "0x3e49af31dba09831:0x5f2134d9136a24a2",
+  "place_id_format": "hex",
+  "cid": "6854818214772876450",
+  "place_id": "6854818214772876450",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=6854818214772876450",
+  "place_id_confidence": "HIGH",
+  "plus_code": "6HGW+V2 Manama, Bahrain",
+  "current_status": "Open 24 hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/a/ACg8ocJM1gBozNH8oA2y7Vj7mIUVbnJDzwnxurODZ0OFIqDGKZappg=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN9NTJvzSCKWnNKrKguxGBNbmfqcww1Q6xldgPm=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOXzgr5UYgjEjHkcF_CbP76-AWTHNdAgfCOmc1J=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjU0Ahcn1ecAvK0fKAMRco_RHlbsGHa2Xzdllm-MdsmIn5XZUUk=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUK-RypuQ_fDKMsVCBhRhEGdzIr9o5XQ-SMd1AeJTXslEoz45Zy3g=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqXJEq5tTN0ok5TWlsiFS3Wc36xFohhMaimPUiBrPagwuEZ-i_8wWFoRI07HR1mH8v8wCeMNSvWydAZXbIo2SeIbktskULY9V8hc7yQIb9ICXvNtn3euU0a7KpycmMUhhc_Y4-2QQ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqXJEq5tTN0ok5TWlsiFS3Wc36xFohhMaimPUiBrPagwuEZ-i_8wWFoRI07HR1mH8v8wCeMNSvWydAZXbIo2SeIbktskULY9V8hc7yQIb9ICXvNtn3euU0a7KpycmMUhhc_Y4-2QQ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no9lo628nQyK5fkf2kUJfk41w6D6jWlbxTZhY3Igvu6Gw0WJ77ZSaSWbNLdr9NEazYKoAyZiT43WTCQaTKMwG5A98eGYa5wFVp5pbz9yCWVVLKAY0zyYv5q2KGOAul8iJbXiECzGA=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 80,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Lavanya ChavaliLocal Guide · 23 reviews · 19 photosa year ago We had our work done with this new style interiors and made the impossible work very simply  at affordable price within the given time. And we are never going to go for other interior decors. Such a lovely and quality  work done.Like Share Response from the owner a year agoThank you",
+      "reviewer": "Lavanya Chavali",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "We had our work done with this new style interiors and made the impossible work very simply  at affordable price within the given time. And we are never going to go for other interior decors. Such a lovely and quality  work done."
+    },
+    {
+      "review_index": 3,
+      "text": "We had our work done with this new style interiors and made the impossible work very simply  at affordable price within the given time. And we are never going to go for other interior decors. Such a lovely and quality  work done."
+    },
+    {
+      "review_index": 5,
+      "text": "Kashif MehmoodLocal Guide · 17 reviewsa year ago Excellent Service and Best electrical work I've ever seen. Very precise and affordable during my visit in Bahrain.Like2 Share Response from the owner a year agoThank you",
+      "reviewer": "Kashif Mehmood",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 4,
+  "success": true,
+  "extraction_time_seconds": 55.19
+}

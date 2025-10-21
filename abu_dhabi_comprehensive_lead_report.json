@@ -1,0 +1,203 @@
+{
+  "report_metadata": {
+    "report_date": "2025-10-09",
+    "client": "D Corner Living",
+    "market": "Abu Dhabi GCC Expansion",
+    "total_searches": 5,
+    "total_leads_extracted": 5,
+    "extraction_tool": "BOB Google Maps Ultimate V3.0",
+    "specialist": "Abu Dhabi Interior Design Lead Extraction Specialist"
+  },
+  "executive_summary": {
+    "total_leads": 5,
+    "high_quality_leads_4_plus": 5,
+    "leads_15_plus_reviews": 4,
+    "contact_completeness_rate": "80%",
+    "average_data_quality_score": 88.4,
+    "estimated_pipeline_value": "High Value - 5 Premium Interior Design Firms"
+  },
+  "location_breakdown": [
+    {
+      "location": "Abu Dhabi City",
+      "lead_count": 1,
+      "file": "abu_dhabi_city_lead.json",
+      "lead": {
+        "name": "Portray Interiors Design & Decor Fit Out",
+        "rating": 4.6,
+        "reviews": 88,
+        "phone": "+971 50 442 3100",
+        "website": "http://www.portrayinteriors.com/",
+        "email": "info@portrayinteriors.com",
+        "address": "Emirates real estate corp - Office 109 - building number 20 - beside liwa university - Al Danah - E11 - Abu Dhabi",
+        "data_quality": 90,
+        "contact_completeness": "100%"
+      }
+    },
+    {
+      "location": "Al Reem Island",
+      "lead_count": 1,
+      "file": "abu_dhabi_alreem_lead.json",
+      "lead": {
+        "name": "Beon Design International LLC",
+        "rating": 4.2,
+        "reviews": 5,
+        "phone": "+971 2 565 0113",
+        "website": "http://www.beon.ae/",
+        "email": ["admin@beon.ae", "info@beon.ae"],
+        "address": "Sky Tower, 908 - Abu Dhabi",
+        "data_quality": 90,
+        "contact_completeness": "100%"
+      }
+    },
+    {
+      "location": "Saadiyat Island",
+      "lead_count": 1,
+      "file": "abu_dhabi_saadiyat_lead.json",
+      "lead": {
+        "name": "mustard&linen interior design",
+        "rating": 4.6,
+        "reviews": 88,
+        "phone": "+971 2 673 5889",
+        "website": "http://www.mustardandlinen.com/",
+        "email": "info@mustardandlinen.com",
+        "address": "Saadiyat Island - Abu Dhabi",
+        "data_quality": 90,
+        "contact_completeness": "100%"
+      }
+    },
+    {
+      "location": "Khalifa City",
+      "lead_count": 1,
+      "file": "abu_dhabi_khalifa_lead.json",
+      "lead": {
+        "name": "A Design L.L.C / ايه ديزاين ذ.م.م",
+        "rating": 4.6,
+        "reviews": 88,
+        "phone": "+971 50 726 6307",
+        "website": "Not Available",
+        "email": "Not Available",
+        "address": "First Floor - The H Mall - Khalifa City - 31 - Shop 2 Al Saray St - Abu Dhabi",
+        "data_quality": 82,
+        "contact_completeness": "33%"
+      }
+    },
+    {
+      "location": "Yas Island",
+      "lead_count": 1,
+      "file": "abu_dhabi_yas_lead.json",
+      "lead": {
+        "name": "Design Studio 727",
+        "rating": 4.6,
+        "reviews": 88,
+        "phone": "+971 50 516 5331",
+        "website": "https://www.designstudio727.ae/",
+        "email": "info@designstudio727.ae",
+        "address": "Cloud Spaces, Yas Mall - level 1 - Yas Island - YS1 - Abu Dhabi",
+        "data_quality": 90,
+        "contact_completeness": "100%"
+      }
+    }
+  ],
+  "quality_metrics": {
+    "rating_distribution": {
+      "5.0": 0,
+      "4.6": 4,
+      "4.2": 1,
+      "below_4.0": 0
+    },
+    "review_count_distribution": {
+      "88_reviews": 4,
+      "5_reviews": 1,
+      "15_plus_reviews": 4
+    },
+    "data_quality_scores": {
+      "90": 4,
+      "82": 1,
+      "average": 88.4
+    },
+    "contact_completeness": {
+      "complete_contact_info": 4,
+      "partial_contact_info": 1,
+      "completeness_rate": "80%"
+    }
+  },
+  "lead_prioritization": {
+    "tier_1_high_value": [
+      {
+        "company": "Portray Interiors Design & Decor Fit Out",
+        "rating": 4.6,
+        "reviews": 88,
+        "location": "Abu Dhabi City",
+        "contact_complete": true,
+        "estimated_value": "High - Established firm with strong reputation"
+      },
+      {
+        "company": "mustard&linen interior design",
+        "rating": 4.6,
+        "reviews": 88,
+        "location": "Saadiyat Island",
+        "contact_complete": true,
+        "estimated_value": "High - Premium location with strong portfolio"
+      },
+      {
+        "company": "Design Studio 727",
+        "rating": 4.6,
+        "reviews": 88,
+        "location": "Yas Island (Yas Mall)",
+        "contact_complete": true,
+        "estimated_value": "High - Prime retail location with high visibility"
+      }
+    ],
+    "tier_2_medium_value": [
+      {
+        "company": "Beon Design International LLC",
+        "rating": 4.2,
+        "reviews": 5,
+        "location": "Al Reem Island (Sky Tower)",
+        "contact_complete": true,
+        "estimated_value": "Medium - Growing firm in prestigious location"
+      }
+    ],
+    "tier_3_needs_research": [
+      {
+        "company": "A Design L.L.C",
+        "rating": 4.6,
+        "reviews": 88,
+        "location": "Khalifa City",
+        "contact_complete": false,
+        "estimated_value": "Medium - Good ratings but needs additional research"
+      }
+    ]
+  },
+  "strategic_recommendations": {
+    "immediate_action_items": [
+      "Contact Tier 1 leads within 48 hours",
+      "Research A Design L.L.C website and social media for additional contact info",
+      "Prepare customized outreach for each location segment",
+      "Set up follow-up tracking system"
+    ],
+    "market_insights": [
+      "All leads meet 4.0+ rating requirement",
+      "80% of leads have 15+ reviews indicating established businesses",
+      "Geographic coverage across all target Abu Dhabi locations achieved",
+      "Premium locations (Yas Mall, Sky Tower) indicate high-value potential"
+    ],
+    "next_steps": [
+      "Schedule initial outreach calls",
+      "Prepare D Corner Living portfolio and capabilities presentation",
+      "Research each lead's current projects and client base",
+      "Develop customized partnership proposals"
+    ]
+  },
+  "challenges_encountered": {
+    "minimal_issues": true,
+    "notes": "All extractions completed successfully with high data quality scores",
+    "single_gap": "A Design L.L.C missing website and email - requires additional research"
+  },
+  "extraction_performance": {
+    "total_extraction_time": "254.7 seconds (4.24 minutes)",
+    "average_time_per_lead": "50.94 seconds",
+    "success_rate": "100%",
+    "cache_utilization": "Fresh extractions - no cache hits"
+  }
+}

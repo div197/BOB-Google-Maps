@@ -1,0 +1,57 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "JP Buildhome Jodhpur",
+  "rating": 4.9,
+  "review_count": 55,
+  "address": "DASPA HOUSE, OLD, Loco Rd, Ratanada, Jodhpur, Rajasthan 342008",
+  "phone": "098294 60007",
+  "website": "https://www.jpbuildhome.com/",
+  "hours": "Open ⋅ Closes 7:30 pm Thursday10 am–7:30 pmFriday10 am–7:30 pmSaturday10 am–7:30 pmSunday10 am–7:30 pmMonday10 am–7:30 pmTuesday10 am–7:30 pmWednesday10 am–7:30 pmSuggest new hours",
+  "category": "Real Estate Builders & Construction Company",
+  "latitude": 26.2750724,
+  "longitude": 73.0256777,
+  "place_id_original": "0x39418c459c69c7bd:0x11d15b494bfc70af",
+  "place_id_format": "hex",
+  "cid": "1283907739142877359",
+  "place_id": "1283907739142877359",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=1283907739142877359",
+  "place_id_confidence": "HIGH",
+  "plus_code": "72GG+27 Jodhpur, Rajasthan",
+  "current_status": "Open ⋅ Closes 7:30 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipOxRkJw-ByvKrgpiyyCEd8RUH2etgZjGv-cok5u=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjVhEQjpUP9FOtrZE7BFj17RS9xWULmjT2i2fh1-mFIiMvsOxQ8B=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPH_RdZPDbiRitav_KqTwgtvT5XFDtNI_xUlBCA=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUrKIJBfIOeCdpY05zfyBcFqgFbvUOB7ZilVjwBFWX-vC8Kc7_lYg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO3ygU6NORI-y2dXEviy7EnMBaMkbyismklTmGe=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIFl22jyslftMiALdnpt1fb5ova36IK5GO2opOxixSJd9BU3Q=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN_kYTlVfksrZwyR2qWt39qSVfxeCudASflbWbP=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipO3ygU6NORI-y2dXEviy7EnMBaMkbyismklTmGe=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNk5UhbQVX2tCUTPrmDZgVbCsSHWq-dN3g_RJyH=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "info@jpbuildhome.com"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Prerak Charan2 reviews9 months ago JP Buildhome is ideally situated in a prime location, providing easy access to essential amenities and major landmarks. It is located in a well-developed area with a peaceful neighborhood, making it perfect for families and professionals … MoreLike Share",
+      "reviewer": "Prerak Charan",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "JP Buildhome is ideally situated in a prime location, providing easy access to essential amenities and major landmarks. It is located in a well-developed area with a peaceful neighborhood, making it perfect for families and professionals … More"
+    },
+    {
+      "review_index": 3,
+      "text": "JP Buildhome is ideally situated in a prime location, providing easy access to essential amenities and major landmarks. It is located in a well-developed area with a peaceful neighborhood, making it perfect for families and professionals …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 57.5
+}

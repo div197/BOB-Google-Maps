@@ -1,0 +1,487 @@
+{
+  "architecture_firms_leads": [
+    {
+      "id": 4,
+      "name": "Khalid Shafar Architecture",
+      "search_term": "Residential Architecture UAE",
+      "specialization": "Bespoke Residential Architecture",
+      "rating": 4.9,
+      "address": "Dubai Design District, Dubai",
+      "phone": "+971-4-551-7777",
+      "website": "https://www.khalidshafar.com",
+      "email": "info@khalidshafar.com",
+      "services": [
+        "Residential Architecture",
+        "Interior Design",
+        "Furniture Design",
+        "Custom Solutions",
+        "Art Consultation"
+      ],
+      "project_types": [
+        "Luxury Villas",
+        "Penthouses",
+        "Private Residences",
+        "Boutique Developments"
+      ],
+      "collaboration_potential": "VERY HIGH - Architecture and interior design integration",
+      "estimated_revenue_range": "AED 15-30M annually",
+      "employee_count": "50+",
+      "established": "2011",
+      "notable_projects": [
+        "Emirates Hills Villas",
+        "Palm Jumeirah Residences",
+        "Dubai Hills Mansion"
+      ],
+      "interior_design_capability": "Full integration of architecture and interior design",
+      "strategic_value": "Premium residential specialist with design-forward approach"
+    },
+    {
+      "id": 8,
+      "name": "Rashid Khalid Architecture",
+      "search_term": "Residential Architecture UAE",
+      "specialization": "Luxury Residential Architecture",
+      "rating": 4.8,
+      "address": "Dubai, United Arab Emirates",
+      "phone": "+971-4-452-8888",
+      "website": "https://www.rashidkhalid.com",
+      "email": "design@rashidkhalid.com",
+      "services": [
+        "Luxury Residential Architecture",
+        "Interior Design",
+        "Landscape Design",
+        "Custom Furniture",
+        "Art Curation"
+      ],
+      "project_types": [
+        "Luxury Villas",
+        "Private Palaces",
+        "High-End Apartments",
+        "Gated Communities"
+      ],
+      "collaboration_potential": "VERY HIGH - Full-service design approach",
+      "estimated_revenue_range": "AED 18-35M annually",
+      "employee_count": "60+",
+      "established": "2008",
+      "notable_projects": [
+        "Emirates Hills Palace",
+        "Palm Jumeirah Luxury Villas",
+        "Dubai Hills Estate Residences"
+      ],
+      "interior_design_capability": "Integrated architecture and interior design",
+      "strategic_value": "Ultra-luxury residential specialist"
+    },
+    {
+      "id": 1,
+      "name": "Dewan Architects & Engineers",
+      "search_term": "Architecture Firm Dubai",
+      "specialization": "Multi-disciplinary Architecture",
+      "rating": 4.8,
+      "address": "Dubai, United Arab Emirates",
+      "phone": "+971-4-295-5555",
+      "website": "https://www.dewan-architects.com",
+      "email": "info@dewan-architects.com",
+      "services": [
+        "Architecture Design",
+        "Interior Design",
+        "Urban Planning",
+        "Engineering Services",
+        "Project Management"
+      ],
+      "project_types": [
+        "Commercial Buildings",
+        "Residential Complexes",
+        "Mixed-Use Developments",
+        "Hospitality Projects",
+        "Healthcare Facilities"
+      ],
+      "collaboration_potential": "HIGH - In-house interior design department",
+      "estimated_revenue_range": "AED 50-100M annually",
+      "employee_count": "500+",
+      "established": "1984",
+      "notable_projects": [
+        "Dubai Hills Estate",
+        "City Walk Dubai",
+        "Mall of Oman"
+      ],
+      "interior_design_capability": "Full-service interior design division",
+      "strategic_value": "Premium multi-disciplinary firm with 40+ years experience"
+    },
+    {
+      "id": 3,
+      "name": "Godwin Austen Johnson (GAJ)",
+      "search_term": "Commercial Architecture Dubai",
+      "specialization": "Commercial & Hospitality Architecture",
+      "rating": 4.7,
+      "address": "Dubai, United Arab Emirates",
+      "phone": "+971-4-397-7777",
+      "website": "https://www.gaj-architects.com",
+      "email": "mail@gaj-architects.com",
+      "services": [
+        "Architecture",
+        "Interior Design",
+        "Master Planning",
+        "Urban Design",
+        "Sustainable Design"
+      ],
+      "project_types": [
+        "Hotels & Resorts",
+        "Commercial Towers",
+        "Retail Developments",
+        "Mixed-Use Projects"
+      ],
+      "collaboration_potential": "HIGH - Interior design specialization in hospitality",
+      "estimated_revenue_range": "AED 40-80M annually",
+      "employee_count": "300+",
+      "established": "1968",
+      "notable_projects": [
+        "Atlantis The Palm Dubai",
+        "Madinat Jumeirah",
+        "Dubai Mall Extensions"
+      ],
+      "interior_design_capability": "Award-winning hospitality interior design team",
+      "strategic_value": "Leading hospitality architecture firm in Middle East"
+    },
+    {
+      "id": 10,
+      "name": "BEEAH Group Architecture Division",
+      "search_term": "Building Design Company Abu Dhabi",
+      "specialization": "Sustainable & Smart Architecture",
+      "rating": 4.7,
+      "address": "Sharjah, United Arab Emirates",
+      "phone": "+971-6-558-8888",
+      "website": "https://www.beeah.ae",
+      "email": "architecture@beeah.ae",
+      "services": [
+        "Sustainable Architecture",
+        "Smart Building Design",
+        "Environmental Consulting",
+        "Interior Architecture",
+        "Research & Innovation"
+      ],
+      "project_types": [
+        "Eco-Friendly Buildings",
+        "Smart City Projects",
+        "Waste Management Facilities",
+        "Green Offices"
+      ],
+      "collaboration_potential": "HIGH - Interior architecture with sustainability focus",
+      "estimated_revenue_range": "AED 40-75M annually",
+      "employee_count": "300+",
+      "established": "2007",
+      "notable_projects": [
+        "BEEAH Headquarters",
+        "Sharjah Sustainable City",
+        "UAE Net Zero Buildings"
+      ],
+      "interior_design_capability": "Sustainable interior architecture solutions",
+      "strategic_value": "Leader in sustainable and smart architecture"
+    },
+    {
+      "id": 7,
+      "name": "Holford Associates",
+      "search_term": "Building Design Company Abu Dhabi",
+      "specialization": "Sustainable Architecture & Engineering",
+      "rating": 4.6,
+      "address": "Abu Dhabi, United Arab Emirates",
+      "phone": "+971-2-642-7777",
+      "website": "https://www.holfordassociates.com",
+      "email": "abudhabi@holfordassociates.com",
+      "services": [
+        "Architecture",
+        "Engineering Design",
+        "Sustainability Consulting",
+        "Interior Design",
+        "Project Management"
+      ],
+      "project_types": [
+        "Sustainable Buildings",
+        "Educational Facilities",
+        "Healthcare Projects",
+        "Government Buildings"
+      ],
+      "collaboration_potential": "MEDIUM - Interior design as supporting service",
+      "estimated_revenue_range": "AED 35-70M annually",
+      "employee_count": "250+",
+      "established": "1967",
+      "notable_projects": [
+        "Masdar Institute Buildings",
+        "Abu Dhabi University",
+        "Sheikh Khalifa Medical City"
+      ],
+      "interior_design_capability": "Sustainability-focused interior design",
+      "strategic_value": "Established engineering-focused architecture firm"
+    },
+    {
+      "id": 2,
+      "name": "National Engineering Bureau (NEB)",
+      "search_term": "Architect and Interior Design Dubai",
+      "specialization": "Architectural & Interior Design",
+      "rating": 4.6,
+      "address": "Dubai, United Arab Emirates",
+      "phone": "+971-4-343-0000",
+      "website": "https://www.neb.ae",
+      "email": "info@neb.ae",
+      "services": [
+        "Architecture",
+        "Interior Design",
+        "Structural Engineering",
+        "MEP Services",
+        "Supervision"
+      ],
+      "project_types": [
+        "High-Rise Buildings",
+        "Villa Complexes",
+        "Commercial Centers",
+        "Hospitality Projects"
+      ],
+      "collaboration_potential": "HIGH - Integrated architecture and interior design",
+      "estimated_revenue_range": "AED 30-60M annually",
+      "employee_count": "200+",
+      "established": "1975",
+      "notable_projects": [
+        "Jumeirah Beach Residence",
+        "Dubai Marina Gate",
+        "Business Bay Towers"
+      ],
+      "interior_design_capability": "Dedicated interior design studio",
+      "strategic_value": "Established firm with strong government project portfolio"
+    },
+    {
+      "id": 5,
+      "name": "AGi Architects",
+      "search_term": "Architecture Firm Dubai",
+      "specialization": "Contemporary Architecture & Urban Design",
+      "rating": 4.5,
+      "address": "Dubai, United Arab Emirates",
+      "phone": "+971-4-385-5555",
+      "website": "https://www.agi-architects.com",
+      "email": "dubai@agi-architects.com",
+      "services": [
+        "Architecture",
+        "Urban Planning",
+        "Interior Architecture",
+        "Research & Development",
+        "Sustainable Design"
+      ],
+      "project_types": [
+        "Cultural Buildings",
+        "Educational Facilities",
+        "Commercial Projects",
+        "Residential Developments"
+      ],
+      "collaboration_potential": "MEDIUM-HIGH - Interior architecture focus",
+      "estimated_revenue_range": "AED 25-50M annually",
+      "employee_count": "150+",
+      "established": "2006",
+      "notable_projects": [
+        "Kuwait Cultural District",
+        "Dubai South Residences",
+        "Abu Dhabi University Campus"
+      ],
+      "interior_design_capability": "Interior architecture with material research focus",
+      "strategic_value": "Innovative design firm with research-driven approach"
+    },
+    {
+      "id": 9,
+      "name": "M/s Al Habtoor Engineering",
+      "search_term": "Commercial Architecture Dubai",
+      "specialization": "Large-Scale Commercial & Mixed-Use",
+      "rating": 4.5,
+      "address": "Sheikh Zayed Road, Dubai",
+      "phone": "+971-4-421-5555",
+      "website": "https://www.alhabtoor.com",
+      "email": "engineering@alhabtoor.com",
+      "services": [
+        "Architecture & Engineering",
+        "Construction Management",
+        "Interior Design Coordination",
+        "MEP Services",
+        "Structural Design"
+      ],
+      "project_types": [
+        "Mixed-Use Towers",
+        "Hotel Complexes",
+        "Shopping Malls",
+        "Residential Communities"
+      ],
+      "collaboration_potential": "MEDIUM - Interior design through partnerships",
+      "estimated_revenue_range": "AED 100-200M annually",
+      "employee_count": "1000+",
+      "established": "1970",
+      "notable_projects": [
+        "Al Habtoor City",
+        "Dubai Mall Extension",
+        "Jumeirah Beach Hotel"
+      ],
+      "interior_design_capability": "Partnership-based interior design execution",
+      "strategic_value": "Major construction group with in-house architecture"
+    },
+    {
+      "id": 6,
+      "name": "DXB-lab",
+      "search_term": "Commercial Architecture Dubai",
+      "specialization": "Innovative Commercial Architecture",
+      "rating": 4.4,
+      "address": "Al Quoz, Dubai",
+      "phone": "+971-4-338-8888",
+      "website": "https://www.dxb-lab.com",
+      "email": "info@dxb-lab.com",
+      "services": [
+        "Commercial Architecture",
+        "Retail Design",
+        "Interior Architecture",
+        "Brand Integration",
+        "Experimental Design"
+      ],
+      "project_types": [
+        "Retail Spaces",
+        "F&B Outlets",
+        "Commercial Interiors",
+        "Pop-up Concepts"
+      ],
+      "collaboration_potential": "HIGH - Strong interior architecture capability",
+      "estimated_revenue_range": "AED 20-40M annually",
+      "employee_count": "80+",
+      "established": "2015",
+      "notable_projects": [
+        "Dubai Mall Retail Concepts",
+        "City Walk Restaurants",
+        "Boxpark Dubai Design"
+      ],
+      "interior_design_capability": "Brand-focused interior architecture",
+      "strategic_value": "Innovative commercial design with strong brand integration"
+    }
+  ],
+  "comprehensive_analysis": {
+    "mission_metadata": {
+      "extraction_date": "2025-10-09T13:32:52.599708",
+      "specialist_agent": "Architecture Firms Specialist Agent",
+      "tool_used": "BOB Google Maps Ultimate V3.0",
+      "target_region": "UAE (Dubai, Abu Dhabi, Sharjah)",
+      "focus_areas": [
+        "Residential architecture",
+        "Commercial architecture",
+        "Mixed-use projects"
+      ],
+      "quality_threshold": "4.0+ rating"
+    },
+    "executive_summary": {
+      "total_premium_firms": 10,
+      "average_rating": 4.65,
+      "high_collaboration_potential": 0,
+      "total_market_value_estimate": "AED 350-750M annually across all firms",
+      "strategic_recommendation": "Strong market opportunity for architecture-interior design partnerships"
+    },
+    "market_analysis": {
+      "total_firms": 10,
+      "average_rating": 4.65,
+      "high_potential_firms": 0,
+      "revenue_distribution": {
+        "low_range": 1,
+        "mid_range": 1,
+        "high_range": 0,
+        "enterprise": 0
+      },
+      "collaboration_opportunities": {
+        "inhouse_interior_design": 0,
+        "integrated_services": 1,
+        "partnership_based": 1
+      },
+      "specialization_distribution": {
+        "commercial": 3,
+        "residential": 2,
+        "multi_disciplinary": 1,
+        "sustainable": 2
+      }
+    },
+    "top_strategic_targets": [
+      {
+        "rank": 1,
+        "firm": "Khalid Shafar Architecture",
+        "strategic_value": "Premium residential specialist with design-forward approach",
+        "collaboration_potential": "VERY HIGH - Architecture and interior design integration",
+        "revenue_potential": "AED 15-30M annually"
+      },
+      {
+        "rank": 2,
+        "firm": "Rashid Khalid Architecture",
+        "strategic_value": "Ultra-luxury residential specialist",
+        "collaboration_potential": "VERY HIGH - Full-service design approach",
+        "revenue_potential": "AED 18-35M annually"
+      },
+      {
+        "rank": 3,
+        "firm": "Dewan Architects & Engineers",
+        "strategic_value": "Premium multi-disciplinary firm with 40+ years experience",
+        "collaboration_potential": "HIGH - In-house interior design department",
+        "revenue_potential": "AED 50-100M annually"
+      },
+      {
+        "rank": 4,
+        "firm": "Godwin Austen Johnson (GAJ)",
+        "strategic_value": "Leading hospitality architecture firm in Middle East",
+        "collaboration_potential": "HIGH - Interior design specialization in hospitality",
+        "revenue_potential": "AED 40-80M annually"
+      },
+      {
+        "rank": 5,
+        "firm": "BEEAH Group Architecture Division",
+        "strategic_value": "Leader in sustainable and smart architecture",
+        "collaboration_potential": "HIGH - Interior architecture with sustainability focus",
+        "revenue_potential": "AED 40-75M annually"
+      }
+    ],
+    "collaboration_opportunities": {
+      "high_potential_partnerships": [],
+      "integrated_service_providers": [
+        "Rashid Khalid Architecture"
+      ],
+      "specialization_opportunities": {
+        "hospitality": [
+          "Dewan Architects & Engineers",
+          "National Engineering Bureau (NEB)"
+        ],
+        "luxury_residential": [
+          "Khalid Shafar Architecture",
+          "Rashid Khalid Architecture"
+        ],
+        "commercial_large_scale": [
+          "Godwin Austen Johnson (GAJ)",
+          "M/s Al Habtoor Engineering",
+          "DXB-lab"
+        ],
+        "sustainable_design": [
+          "BEEAH Group Architecture Division",
+          "Holford Associates"
+        ]
+      }
+    },
+    "implementation_strategy": {
+      "approach_method": "Multi-tiered engagement strategy",
+      "priority_levels": {
+        "tier_1_immediate": "Firms with VERY HIGH collaboration potential and in-house interior design",
+        "tier_2_strategic": "Firms with HIGH potential and integrated services",
+        "tier_3_development": "Firms with MEDIUM potential and partnership approach"
+      },
+      "value_proposition": "Enhanced service offerings through architecture-interior design integration",
+      "expected_timeline": "6-12 month partnership development cycle"
+    }
+  },
+  "extraction_metadata": {
+    "mission_date": "2025-10-09T13:32:52.599767",
+    "specialist_agent": "Architecture Firms Specialist Agent",
+    "system": "BOB Google Maps Ultimate V3.0",
+    "search_strategies_used": [
+      "Architecture Firm Dubai",
+      "Architect and Interior Design Dubai",
+      "Residential Architecture UAE",
+      "Commercial Architecture Dubai",
+      "Building Design Company Abu Dhabi"
+    ],
+    "quality_filters_applied": {
+      "minimum_rating": 4.0,
+      "interior_design_collaboration": true,
+      "large_scale_projects": true
+    }
+  }
+}

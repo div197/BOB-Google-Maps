@@ -1,0 +1,85 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Mall of the Emirates",
+  "rating": 4.4,
+  "review_count": 24,
+  "address": "Sheikh Zayed Rd - Al Barsha - Al Barsha 1 - Dubai - United Arab Emirates",
+  "phone": "+971 800 6636255",
+  "website": "https://www.malloftheemirates.com/en?utm_source=google&utm_medium=organic&utm_campaign=google_my_business",
+  "category": "Shopping mall",
+  "latitude": 25.118107,
+  "longitude": 55.200608,
+  "place_id_original": "0x3e5f6bbec39f339d:0x47afe5626875154c",
+  "place_id_format": "hex",
+  "cid": "5165599508439307596",
+  "place_id": "5165599508439307596",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=5165599508439307596",
+  "place_id_confidence": "HIGH",
+  "plus_code": "4692+66 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 11 pmSee more hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPC9eyrRaucz82fcq3Scsx55xQgNX6RfPQlmOef=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDH6iLmEtMIY7KSp3a17mAbsni9_9mNcIyB_TaxgZPqWEAbFpGxS6_R9Z8MhYfgw3brHWbIe7dumuIqlxCtKlaAXHS4RgQLdpUohvw5GGbIAE02MjKI3aBldFN7yiLnpTI2sXm=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDH6iLmEtMIY7KSp3a17mAbsni9_9mNcIyB_TaxgZPqWEAbFpGxS6_R9Z8MhYfgw3brHWbIe7dumuIqlxCtKlaAXHS4RgQLdpUohvw5GGbIAE02MjKI3aBldFN7yiLnpTI2sXm=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqzv0yxxywzRv_gDU0-nI1j29tD1eLqv2k9Ai_jz3mjmDOjlu0EUF1jNu2wGMwqikHrbBMZbHmXrArq7mL1q_WU62zNKqFMbCv9OHKB119DpJQ04zdBZOHRgHU9iherrLHvrMvn=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMhEHsRT6SSHa8wJ9pFe9hgCU933W-9YkLHW2Nu=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npUl_wuSkIuV0hiY6WL0RBKR2LgAfD3HES8W2_sz6FmNAbOljE7Hod7yGKfx8P1F8uApKJBV66WQ85nSFNpWHX98qsKDENagADmkBkEEhtEdYAbDmcHopHCWAlhAVI2wAWun6iX=w4096-h4096-p-k-no",
+    "//lh6.googleusercontent.com/proxy/0nq3Y8VdQqMIEObCNaWJLKjQmec-RgTX5V_5MokjIhMxVSG43sBa0tud_-BNGOpscPuRfnnISbAAfGkVUP1p6ZFTi_ZpRmXGXIUr7kSi06WpggDgGoWy-swGWkFRlDnWEW8pDBDV4T4x4rrCbhh2dpcqsGJ2Ig=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noc5KznvV2gQ6PlsYNST71fZacCux3-FtluYPDMwdNMmN1bQS08qkT2IcAfmXXIQuCVKRRakPrVsHpJ0aJIwy6v6U7oG62k9TPpEfc7dawcZmwp3uq5f-ek-Hb51LkgnVc1T0K7=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2P-3mjVJ7Jkfm6pjeMGLjzJqJlNnKUSKalhpU_TxISNsLdMqMvLo5uTRIQ7x9jYW907FddHLqSaZlodMc_gikTGrhLV1KJFcfobgfFB0a0rKFB2fak4z9n-vKRjzoOgp6mVs=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Jeffrey DiasLocal Guide · 69 reviews · 218 photos3 days ago New ⭐️⭐️⭐️⭐️⭐️ Mall of the Emirates\n\nRedesign – A Stunning Upgrade! … MoreLike Share",
+      "reviewer": "Jeffrey Dias",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "⭐️⭐️⭐️⭐️⭐️ Mall of the Emirates\n\nRedesign – A Stunning Upgrade! … More"
+    },
+    {
+      "review_index": 3,
+      "text": "⭐️⭐️⭐️⭐️⭐️ Mall of the Emirates\n\nRedesign – A Stunning Upgrade! …"
+    },
+    {
+      "review_index": 4,
+      "text": "Belley B11 review · 4 photosa week ago New My one of the go to shopoing mall. I am very loyal to all Majid Al Futtaim companies. I can say I am one of their valued customer especially in this mall. Amd not to mention I always use my SHARE apps and I truly enjoy all the benefits of having that. I love this place because why not 😍🤗 …Like Share",
+      "reviewer": "Belley B1",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "My one of the go to shopoing mall. I am very loyal to all Majid Al Futtaim companies. I can say I am one of their valued customer especially in this mall. Amd not to mention I always use my SHARE apps and I truly enjoy all the benefits of having that. I love this place because why not 😍🤗 …"
+    },
+    {
+      "review_index": 6,
+      "text": "My one of the go to shopoing mall. I am very loyal to all Majid Al Futtaim companies. I can say I am one of their valued customer especially in this mall. Amd not to mention I always use my SHARE apps and I truly enjoy all the benefits of having that. I love this place because why not 😍🤗 …"
+    },
+    {
+      "review_index": 7,
+      "text": "Nithin SLocal Guide · 83 reviews · 289 photos3 months ago A well-organized and massive mall with world-class facilities. The entire space is neat, clean, and thoughtfully maintained. Car parking is superbly arranged, and there's direct access from the metro, making it very convenient. … More +10Like Share Response from the owner 3 months agoThank you for your feedback! We can't wait for your next visit!",
+      "reviewer": "Nithin S",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 8,
+      "text": "A well-organized and massive mall with world-class facilities. The entire space is neat, clean, and thoughtfully maintained. Car parking is superbly arranged, and there's direct access from the metro, making it very convenient. … More"
+    },
+    {
+      "review_index": 9,
+      "text": "A well-organized and massive mall with world-class facilities. The entire space is neat, clean, and thoughtfully maintained. Car parking is superbly arranged, and there's direct access from the metro, making it very convenient. …"
+    },
+    {
+      "review_index": 10,
+      "text": "Thank you for your feedback! We can't wait for your next visit!"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 86.71
+}

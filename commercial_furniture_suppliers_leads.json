@@ -1,0 +1,137 @@
+{
+  "mission_metadata": {
+    "extraction_date": "2025-10-09T13:47:23.748891",
+    "mission_type": "Commercial Furniture Suppliers",
+    "target_count": 10,
+    "actual_count": 4,
+    "region": "UAE",
+    "categories": [
+      "Office",
+      "Hotel",
+      "Restaurant",
+      "Retail",
+      "Commercial"
+    ],
+    "quality_threshold": "4.0+ rating (3.5+ for commercial)",
+    "tool": "BOB Google Maps Ultimate V3.0",
+    "extraction_method": "Selenium Optimized V4.0"
+  },
+  "suppliers": [
+    {
+      "name": "Bloomr",
+      "rating": 4.9,
+      "reviews_count": 5,
+      "phone": "04 548 0448",
+      "address": "Dubai Festival City Mall Ground Floor - دبي",
+      "website": "N/A",
+      "category": "Homewares Shop",
+      "cid": "15628510309622350000",
+      "latitude": 25.1081869,
+      "longitude": 55.2751458,
+      "extraction_date": "2025-10-09T13:45:51.915456",
+      "search_query": "Office Furniture Dubai",
+      "quality_score": 71,
+      "extraction_method": "Selenium Optimized Minimalist",
+      "extraction_time": 14.33,
+      "estimated_revenue_aed": 3696000.0,
+      "revenue_range": "AED 2,956,800.0 - 4,435,200.0",
+      "strategic_factors": [
+        "Premium reputation - excellent client satisfaction"
+      ],
+      "strategic_value_score": 1
+    },
+    {
+      "name": "WORKSPACE®",
+      "rating": 4.7,
+      "reviews_count": 115,
+      "phone": "+971 4 344 0009",
+      "address": "Ground Floor, Dnata Bldg - Sheikh Zayed Rd - Dubai - United Arab Emirates",
+      "website": "https://workspace.ae/",
+      "emails": [],
+      "category": "Office furniture store",
+      "cid": "11269922009281246747",
+      "latitude": 25.1866735,
+      "longitude": 55.2564957,
+      "extraction_date": "2025-10-09T13:45:34.345250",
+      "search_query": "Existing data - WORKSPACE®",
+      "quality_score": 90,
+      "extraction_method": "Playwright Ultimate",
+      "extraction_time": 0,
+      "estimated_revenue_aed": 5241600.0,
+      "revenue_range": "AED 4,193,280.0 - 6,289,920.0",
+      "strategic_factors": [
+        "Premium reputation - excellent client satisfaction",
+        "High market presence and trust",
+        "Large-scale project experience",
+        "Professional web presence",
+        "High data quality - reliable information"
+      ],
+      "strategic_value_score": 5
+    },
+    {
+      "name": "Danube Home Dubai Al Barsha",
+      "rating": 4.6,
+      "reviews_count": 9,
+      "phone": "+971 4 239 7409",
+      "address": "Behind Mall of the Emirates - Umm Suqeim St - Al Barsha - Al Barsha 1 - Dubai - United Arab Emirates",
+      "website": "https://www.google.com/url?q=https://danubehome.com/ae/en/%3Futm_source%3Dgmb%26utm_medium%3Dgoogle%26utm_campaign%3Dseo-local&opi=79508299&sa=U&ved=0ahUKEwjW26XM1paQAxVYnpUCHQGXAhYQ61gIFygT&usg=AOvVaw04cz2tgBVdl9LTzLc_Voq9",
+      "category": "Home improvement store",
+      "cid": "7841303714089314000",
+      "latitude": 25.1077159,
+      "longitude": 55.2751458,
+      "extraction_date": "2025-10-09T13:46:09.215876",
+      "search_query": "Office Furniture Store Dubai",
+      "quality_score": 79,
+      "extraction_method": "Selenium Optimized Minimalist",
+      "extraction_time": 14.04,
+      "estimated_revenue_aed": 3575200.0,
+      "revenue_range": "AED 2,860,160.0 - 4,290,240.0",
+      "strategic_factors": [
+        "Premium reputation - excellent client satisfaction",
+        "Professional web presence",
+        "High data quality - reliable information"
+      ],
+      "strategic_value_score": 3
+    },
+    {
+      "name": "Signature Closets by Al Huzaifa",
+      "rating": 4.3,
+      "reviews_count": 6,
+      "phone": "+971 4 380 2500",
+      "address": "Al Ferdous Building 3 - Shop no. 11 - 13 Al Wasl Rd - Al Safa First - Al Safa 1 - Dubai - United Arab Emirates",
+      "website": "https://www.google.com/url?q=https://alhuzaifa.com/en/signatureclosets&opi=79508299&sa=U&ved=0ahUKEwiLpqTh1paQAxWkGLkGHSkfFlMQ61gIFygT&usg=AOvVaw14hFjzKu0BxoNGVpOza3SB",
+      "category": "Furniture maker",
+      "cid": "4111078025732551700",
+      "latitude": 25.1081869,
+      "longitude": 55.2751458,
+      "extraction_date": "2025-10-09T13:46:53.191152",
+      "search_query": "Commercial Furniture Dubai",
+      "quality_score": 79,
+      "extraction_method": "Selenium Optimized Minimalist",
+      "extraction_time": 13.88,
+      "estimated_revenue_aed": 3222400.0,
+      "revenue_range": "AED 2,577,920.0 - 3,866,880.0",
+      "strategic_factors": [
+        "Professional web presence",
+        "High data quality - reliable information"
+      ],
+      "strategic_value_score": 2
+    }
+  ],
+  "summary": {
+    "total_suppliers": 4,
+    "premium_suppliers_4plus": 4,
+    "average_rating": 4.625,
+    "total_estimated_revenue": 15735200.0,
+    "suppliers_with_website": 3,
+    "dubai_suppliers": 4,
+    "abu_dhabi_suppliers": 0,
+    "average_quality_score": 79.75,
+    "categories_covered": [
+      "Homewares Shop",
+      "Office furniture store",
+      "Home improvement store",
+      "Furniture maker"
+    ]
+  }
+}

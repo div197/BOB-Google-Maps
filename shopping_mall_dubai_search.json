@@ -1,0 +1,88 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Dubai Mall Management Office",
+  "rating": 4.4,
+  "review_count": 19,
+  "address": "57XH+77G - Financial Ctr St - Burj Khalifa - Dubai - United Arab Emirates",
+  "phone": "+971 800 382246255",
+  "website": "http://www.thedubaimall.com/",
+  "category": "Corporate office",
+  "latitude": 25.1981756,
+  "longitude": 55.2781917,
+  "place_id_original": "0x3e5f4282f676d791:0xbac8f65990294cd1",
+  "place_id_format": "hex",
+  "cid": "13459278350927875281",
+  "place_id": "13459278350927875281",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=13459278350927875281",
+  "place_id_confidence": "HIGH",
+  "current_status": "",
+  "photos": [
+    "https://lh3.googleusercontent.com/a-/ALV-UjXjJZwfq1lkOT8De37oCVV3PcW0lAfpXGyHebmUpUCJW5y_Xh2gNw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrULb4L0-MvMIII-0POZcaBANAN7NiTAebUV4-9dwimHEFGyEZZvKV5h40N2dz6xIoVQrdjpRxpD2lF5W1Bxd_a5Cz2zXNXxDDJJcRPPhZB8QmStdEOM-bCPUOnEX_rOEF_qF36=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nocNbDYmST6xrwPWKLGRDgaW9o6_wpk_Yp1RUAREFL6xNfchVOKoE5sDhoXYLiSoc7-TJqsoQLb1E7CcldSVQVYol6wexzkViD8SIJMgQNfiKHytjnpnZ-EaNl7LD6OtzOVvXagYA=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8mdulNYqZ8vmsMillhYOj03xXAzQRtBC98oDnhG119CA32DPQ4oA93munIZLf07ZH4U0sVRIG31G4VX067t2ldYOqblxEshyZ_bEHLFMlwH5rNS6ZARpXvHUWI84MyObV-hx8=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJMsReNI4sK287EyQG57GFUj6TdxoTjIlxa-rjliocOTC7a=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noiS0uUVSdqwJUHySw-BRbyl3GqZPGYkLGyMrxUal3UN_YxIFMQpmbc7U02TVYzvJYAst1-NJ4WQabJv4CWEGcs3h5ek19oXwG7VqwLxQo-QlBvhtvG6yu_cD34-Ri4Z8T4i4fC=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKGJ6887ZQMZoOKW4xPgwR35WF9j_w4QbjVy45_uJvQMSI7yeg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noiS0uUVSdqwJUHySw-BRbyl3GqZPGYkLGyMrxUal3UN_YxIFMQpmbc7U02TVYzvJYAst1-NJ4WQabJv4CWEGcs3h5ek19oXwG7VqwLxQo-QlBvhtvG6yu_cD34-Ri4Z8T4i4fC=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npY32P9ae7uMORWVEK5XUMfhZNjXv77EhD6HnpWOkY2ZKhabkvjcSqBLDB5f60kgZbhZn0K2ZRwOqLXmnS6fFoluaNbVgVnoZoHd35uLqNdESe6o95Kk1NuNR-o-FadBnMdQ5vxoA=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "xxxxx@xxx.com",
+    "enquiry@thedubaimall.com"
+  ],
+  "data_quality_score": 83,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Myo Khaing7 reviews4 months ago Dubai Mall traffic control is blocked main road and all cars could not come out easily and rounding inside the parking and we need to wait long queue traffic to come out from mall .Like Share",
+      "reviewer": "Myo Khaing",
+      "rating": "2 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Dubai Mall traffic control is blocked main road and all cars could not come out easily and rounding inside the parking and we need to wait long queue traffic to come out from mall ."
+    },
+    {
+      "review_index": 3,
+      "text": "Dubai Mall traffic control is blocked main road and all cars could not come out easily and rounding inside the parking and we need to wait long queue traffic to come out from mall ."
+    },
+    {
+      "review_index": 4,
+      "text": "Bishnu Chhetri8 reviews · 5 photos7 months ago The mall counter pass fashion avenue he is so rude and has no discipline to talk . Please take action to such security who is spoiling our mall grades his name is wakashLike Share",
+      "reviewer": "Bishnu Chhetri"
+    },
+    {
+      "review_index": 5,
+      "text": "The mall counter pass fashion avenue he is so rude and has no discipline to talk . Please take action to such security who is spoiling our mall grades his name is wakash"
+    },
+    {
+      "review_index": 6,
+      "text": "The mall counter pass fashion avenue he is so rude and has no discipline to talk . Please take action to such security who is spoiling our mall grades his name is wakash"
+    },
+    {
+      "review_index": 7,
+      "text": "eam Lareneg2 reviews2 months ago Ajay Kapoor  the one who assisted us is nice and accommodatingLike Share",
+      "reviewer": "eam Lareneg",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 8,
+      "text": "Ajay Kapoor  the one who assisted us is nice and accommodating"
+    },
+    {
+      "review_index": 9,
+      "text": "Ajay Kapoor  the one who assisted us is nice and accommodating"
+    },
+    {
+      "review_index": 10,
+      "text": "Ismail Ali kan8 reviews · 2 photos7 months ago I came somy times and went to Mall staff smoking area it's very bad no chairs all sitting on the floor. … MoreLike Share",
+      "reviewer": "Ismail Ali kan"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 96.83
+}

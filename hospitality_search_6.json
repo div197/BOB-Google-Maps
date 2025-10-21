@@ -1,0 +1,82 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "FIVE Palm Jumeirah Hotel",
+  "rating": 4.9,
+  "review_count": 3605,
+  "address": "No. 1 Palm - Dubai - United Arab Emirates",
+  "phone": "+971 4 455 9999",
+  "website": "https://palmjumeirah.fivehotelsandresorts.com/",
+  "price_range": "·5-star hotel",
+  "latitude": 25.1043296,
+  "longitude": 55.1487691,
+  "place_id_original": "0x3e5f6b376313ecff:0x5adbb050ac44b8ae",
+  "place_id_format": "hex",
+  "cid": "6547020343847205038",
+  "place_id": "6547020343847205038",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=6547020343847205038",
+  "place_id_confidence": "HIGH",
+  "plus_code": "443X+PG Dubai - United Arab Emirates",
+  "current_status": "",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipMiiWR3lJFlsHiSxN8WHGcgZA2jB-HCIRry6aGf=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npaRNJXIl05-qE-gjgKD7_gxmYI3JMk4cy5W-2n7vy7mviAJNSAKMwZVSCroVg5GS6DK97MuLak7lwdDw29VuV4Xb8iqW5lMpYqfC-MBYumWdDjujyDMbOYh-YRF9Y2RgEd93WB2QPQ_gnG=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMthG3-8gHnaO_EQpAXLSwioeGcPLJVLuiuCxSL=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruIZCyXG_gtGjt0fvXSCcnGobOHAPZkMrG_gXuNtYVywzrCZcoQAP1Rp7qcIt4OZYmM7BDlliPeLEt7rDpJqeDWPWnignLlXJdRihqoLgx44S_FEWwwEZo9dejt4xrcO-h_BCXsWrCBEPy=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMthG3-8gHnaO_EQpAXLSwioeGcPLJVLuiuCxSL=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr_0Q0NRxfIzCgp5mb4LvlqOP_HfFhYytlduQ2-LIK4maKShbr5aGqN1RhDrwRtOECpTGYUElFcopjVFfi4ZKtF4vaCwYD-C7xpAOI_pkUDiJhZaSo6rnd-MzRpnpFnevUvCyAM=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr5e9ACcYgrt-rrsZOUP-9rcVwkm3gpxfkWT8xKN7VvD9Tvdcmp_GRf_qsNZ4Zd-w4MQNVLqwGMqEdVk42ljTXnwEmjMRIahdriXm4yN3v-ejFfpRiv_5J6p1Trtpd7ggQxzLLB=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM0C50unI-j95wFvLryV7YvaCp0LAqNhDDrj_YN=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq-9ebKe0OxvY2QIq99qEWBoTAZOJqqKstACA1jyfz2AhJKU4mFK2yA2pbUybisoxhqU8LIQoWeUJO1CJZA6tFT9w-aneMREWElMC4RzlUD0UAqUb49m-cYwFvgFYUpb2M3F6zs=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 75,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Mich OliverasLocal Guide · 11 reviews · 6 photos5/52 weeks ago on Google New I went to Praia on a Sunday by myself and ended up having the best time. The vibe was super friendly and welcoming, and it didn’t take long before I was chatting and making new friends. The staff were attentive without being pushy, the … MoreLike Share Response from the owner 2 weeks agoHi Mich,\n\nThank You for Recognising what makes our ‘Vibe at FIVE’ Unstoppable. … More",
+      "reviewer": "Mich Oliveras"
+    },
+    {
+      "review_index": 2,
+      "text": "I went to Praia on a Sunday by myself and ended up having the best time. The vibe was super friendly and welcoming, and it didn’t take long before I was chatting and making new friends. The staff were attentive without being pushy, the … More"
+    },
+    {
+      "review_index": 3,
+      "text": "I went to Praia on a Sunday by myself and ended up having the best time. The vibe was super friendly and welcoming, and it didn’t take long before I was chatting and making new friends. The staff were attentive without being pushy, the …"
+    },
+    {
+      "review_index": 4,
+      "text": "Hi Mich,\n\nThank You for Recognising what makes our ‘Vibe at FIVE’ Unstoppable. … More"
+    },
+    {
+      "review_index": 5,
+      "text": "Blessing Dada6 reviews5/52 weeks ago on Google New This is now my second time at the hotel for my partners birthday, and once again exceeded my expectations - I had a list of wants to make the day special and they went above and beyond. All the staff are lovely and extremely pleasant, we … MoreLike Share Response from the owner 2 weeks agoHi Blessing,\n\nThank You for Recognising what makes our ‘Vibe at FIVE’ Unstoppable. … More",
+      "reviewer": "Blessing Dada"
+    },
+    {
+      "review_index": 6,
+      "text": "This is now my second time at the hotel for my partners birthday, and once again exceeded my expectations - I had a list of wants to make the day special and they went above and beyond. All the staff are lovely and extremely pleasant, we … More"
+    },
+    {
+      "review_index": 7,
+      "text": "This is now my second time at the hotel for my partners birthday, and once again exceeded my expectations - I had a list of wants to make the day special and they went above and beyond. All the staff are lovely and extremely pleasant, we …"
+    },
+    {
+      "review_index": 8,
+      "text": "Hi Blessing,\n\nThank You for Recognising what makes our ‘Vibe at FIVE’ Unstoppable. … More"
+    },
+    {
+      "review_index": 9,
+      "text": "Aya HamedLocal Guide · 14 reviews · 12 photos5/52 weeks ago on Google New Had the best time at FIVE Palm Jumeirah pool! 🌴 The atmosphere is absolutely unmatched – upbeat music all day, creating the perfect vibe for relaxing or getting into party mode. The poolside setting is stunning with beautiful views and a … MoreLike Share Response from the owner 2 weeks agoHi Aya,\n\nThank You for Recognising what makes our ‘Vibe at FIVE’ Unstoppable. … More",
+      "reviewer": "Aya Hamed"
+    },
+    {
+      "review_index": 10,
+      "text": "Had the best time at FIVE Palm Jumeirah pool! 🌴 The atmosphere is absolutely unmatched – upbeat music all day, creating the perfect vibe for relaxing or getting into party mode. The poolside setting is stunning with beautiful views and a … More"
+    }
+  ],
+  "total_reviews_extracted": 10,
+  "success": true,
+  "extraction_time_seconds": 90.18
+}

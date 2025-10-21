@@ -1,0 +1,42 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Paradise Palace Design",
+  "rating": 5.0,
+  "review_count": 4,
+  "address": "Salwa Rd, Doha, Qatar",
+  "phone": "+974 5582 2394",
+  "hours": "Open ⋅ Closes 9 pm Thursday8 am–9 pmFridayClosedSaturday8 am–9 pmSunday8 am–9 pmMonday8 am–9 pmTuesday8 am–9 pmWednesday8 am–9 pmSuggest new hours",
+  "category": "Interior Decorator",
+  "latitude": 25.2597795,
+  "longitude": 51.4886515,
+  "place_id_original": "0x3e45dbb3b9c5241b:0x42c6134f11afd208",
+  "place_id_format": "hex",
+  "cid": "4811554482212033032",
+  "place_id": "4811554482212033032",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=4811554482212033032",
+  "place_id_confidence": "HIGH",
+  "plus_code": "7F5Q+WF Doha, Qatar",
+  "current_status": "Open ⋅ Closes 9 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipMidfvnI4I_gYtIob3bySXEExfbm9aGvTMrSBQ5=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocLz0dX2e2of6v2yZR2K7qzqRfofGBw413Q9jEiHrxW29ULZBA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqzbCgQCr-0SvvAtgImD5Zw6tCyNV_Kpvya-duHckraMa8ei1lcWWd7GvskX1tcaJYk9ysq9HTSKkDAi1FLjjqk3b1FangBOzBHpROoxFzVfBiHg8WP8PVaEmuAIvUyJs4CCCP5_GSHGh8y=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrKh_lS6gi_mFKrjY04Yoq2nOu7rlNcR2M-ZQ7UutqOax7rYG6uwAh7wjk15h8UO8CNFVCYc1OCq5qPP6jcA5Qzd7mBwyNf30G2TNZThBANbhqrppMQiCFzIev6ikamZVArkMaH=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrKh_lS6gi_mFKrjY04Yoq2nOu7rlNcR2M-ZQ7UutqOax7rYG6uwAh7wjk15h8UO8CNFVCYc1OCq5qPP6jcA5Qzd7mBwyNf30G2TNZThBANbhqrppMQiCFzIev6ikamZVArkMaH=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP4v6LMjQMgbDXyj4xdQKEIcchCxFBnS3FBoCDS=w4096-h4096-p-k-no"
+  ],
+  "data_quality_score": 74,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Khybar Cargoa year ago",
+      "reviewer": "Khybar Cargo",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 1,
+  "success": true,
+  "extraction_time_seconds": 49.5
+}

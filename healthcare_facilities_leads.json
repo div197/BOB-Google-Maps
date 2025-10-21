@@ -1,0 +1,331 @@
+{
+  "mission_metadata": {
+    "generated_by": "BOB Google Maps Ultimate V3.0 - Healthcare Facilities Specialist Agent",
+    "extraction_date": "2025-10-09T13:40:49.391823",
+    "total_facilities_analyzed": 8,
+    "mission_parameters": {
+      "target_count": 8,
+      "min_rating": 4.0,
+      "focus_areas": [
+        "Hospitals",
+        "Clinics",
+        "Medical Centers",
+        "Healthcare Groups"
+      ],
+      "geographic_focus": "UAE (Dubai & Abu Dhabi)"
+    }
+  },
+  "executive_summary": {
+    "total_premium_facilities": 8,
+    "average_rating": 4.8625,
+    "total_estimated_revenue": 47170760,
+    "high_growth_facilities": 6,
+    "multi_facility_groups": 0
+  },
+  "premium_healthcare_facilities": [
+    {
+      "rank": 1,
+      "facility_details": {
+        "name": "Saudi German Hospital | SGH Dubai",
+        "category": "Private hospital",
+        "rating": 4.9,
+        "review_count": 159,
+        "address": "Hessa Street 331 West, Al Barsha 3, Exit - 36 Sheikh Zayed Rd - opposite American School - Dubai - United Arab Emirates",
+        "phone": "+971 800 2211",
+        "website": "/url?q=https://saudigerman.com/dubai/&opi=79508299&sa=U&ved=0ahUKEwiL5ISp05aQAxVrRmcHHcViLw0Q61gIFygS&usg=AOvVaw2u1lqXDJWbti9ObTMpwRN8",
+        "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+        "location": {
+          "latitude": 25.0972091,
+          "longitude": 55.1835059
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 5151755,
+          "max_revenue_aed": 9567545,
+          "avg_revenue_aed": 7359650
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": true,
+          "expansion_likely": false,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 800 2211",
+        "website": "/url?q=https://saudigerman.com/dubai/&opi=79508299&sa=U&ved=0ahUKEwiL5ISp05aQAxVrRmcHHcViLw0Q61gIFygS&usg=AOvVaw2u1lqXDJWbti9ObTMpwRN8",
+        "google_maps_cid": "15010497244413953979",
+        "place_id_url": "https://www.google.com/maps?cid=15010497244413953979"
+      }
+    },
+    {
+      "rank": 2,
+      "facility_details": {
+        "name": "Saudi German Hospital | SGH Dubai",
+        "category": "Private hospital",
+        "rating": 4.9,
+        "review_count": 159,
+        "address": "Hessa Street 331 West, Al Barsha 3, Exit - 36 Sheikh Zayed Rd - opposite American School - Dubai - United Arab Emirates",
+        "phone": "+971 800 2211",
+        "website": "/url?q=https://saudigerman.com/dubai/&opi=79508299&sa=U&ved=0ahUKEwjm24rX05aQAxX5KLkGHQDYOnIQ61gIFygS&usg=AOvVaw3_ZqBLg_rBM_0XbtDNFnyq",
+        "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+        "location": {
+          "latitude": 25.0972091,
+          "longitude": 55.1835059
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 5151755,
+          "max_revenue_aed": 9567545,
+          "avg_revenue_aed": 7359650
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": true,
+          "expansion_likely": false,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 800 2211",
+        "website": "/url?q=https://saudigerman.com/dubai/&opi=79508299&sa=U&ved=0ahUKEwjm24rX05aQAxX5KLkGHQDYOnIQ61gIFygS&usg=AOvVaw3_ZqBLg_rBM_0XbtDNFnyq",
+        "google_maps_cid": "15010497244413953979",
+        "place_id_url": "https://www.google.com/maps?cid=15010497244413953979"
+      }
+    },
+    {
+      "rank": 3,
+      "facility_details": {
+        "name": "Al Zahra Hospital Dubai",
+        "category": "Hospital",
+        "rating": 4.9,
+        "review_count": 128,
+        "address": "Sheikh Zayed Rd - Al Barsha - Al Barsha 1 - Dubai - United Arab Emirates",
+        "phone": "+971 4 378 6666",
+        "website": "/url?q=https://azhd.ae/&opi=79508299&sa=U&ved=0ahUKEwiPgavW05aQAxXoHLkGHe_vHzgQ61gIFigR&usg=AOvVaw01cnQgxx43lWm4kyV010qe",
+        "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+        "location": {
+          "latitude": 25.1059573,
+          "longitude": 55.1805302
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 5013960,
+          "max_revenue_aed": 9311640,
+          "avg_revenue_aed": 7162800
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": true,
+          "expansion_likely": false,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 4 378 6666",
+        "website": "/url?q=https://azhd.ae/&opi=79508299&sa=U&ved=0ahUKEwiPgavW05aQAxXoHLkGHe_vHzgQ61gIFigR&usg=AOvVaw01cnQgxx43lWm4kyV010qe",
+        "google_maps_cid": "1948472360167822358",
+        "place_id_url": "https://www.google.com/maps?cid=1948472360167822358"
+      }
+    },
+    {
+      "rank": 4,
+      "facility_details": {
+        "name": "Valiant Clinic",
+        "category": "Medical clinic",
+        "rating": 4.9,
+        "review_count": 67,
+        "address": "سيتي ووك City Walk - 13th St - Al Wasl - Dubai - United Arab Emirates",
+        "phone": "+971 54 200 5010",
+        "website": "/url?q=http://valiantclinic.com/&opi=79508299&sa=U&ved=0ahUKEwjI4-i51JaQAxUFtJUCHYCYHQgQ61gIGCgT&usg=AOvVaw3U4TGFDAaeSXEb9PLabbf5",
+        "hours": "Open ⋅ Closes 7 pm Thursday9 am–7 pmFriday9 am–7 pmSaturday9 am–7 pmSunday9 am–7 pmMonday9 am–7 pmTuesday9 am–7 pmWednesday9 am–7 pmSuggest new hours",
+        "location": {
+          "latitude": 25.2009181,
+          "longitude": 55.2631435
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 1897125,
+          "max_revenue_aed": 3523234,
+          "avg_revenue_aed": 2710180
+        },
+        "expansion_analysis": {
+          "high_growth_potential": false,
+          "renovation_likely": false,
+          "expansion_likely": false,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 78.0
+      },
+      "contact_information": {
+        "primary_phone": "+971 54 200 5010",
+        "website": "/url?q=http://valiantclinic.com/&opi=79508299&sa=U&ved=0ahUKEwjI4-i51JaQAxUFtJUCHYCYHQgQ61gIGCgT&usg=AOvVaw3U4TGFDAaeSXEb9PLabbf5",
+        "google_maps_cid": "17951874094488140454",
+        "place_id_url": "https://www.google.com/maps?cid=17951874094488140454"
+      }
+    },
+    {
+      "rank": 5,
+      "facility_details": {
+        "name": "Mediclinic Dubai Mall",
+        "category": "Medical clinic",
+        "rating": 4.9,
+        "review_count": 22,
+        "address": "The Dubai Mall - Dubai Mall Fashion Avenue Parking - Level 7 - Financial Ctr St - Downtown Dubai - Dubai - United Arab Emirates",
+        "phone": "+971 4 449 5111",
+        "website": "/url?q=https://www.mediclinic.ae/en/dubai-mall/home.html&opi=79508299&sa=U&ved=0ahUKEwiB94rF05aQAxUYWHADHS4ZGvUQ61gIGCgT&usg=AOvVaw0M5OubNY3XMGFMTOJqMtpv",
+        "hours": "Open ⋅ Closes 8 pm Thursday8 am–8 pmFriday8 am–8 pmSaturday8 am–8 pmSunday10 am–8 pmMonday8 am–8 pmTuesday8 am–8 pmWednesday8 am–8 pmSuggest new hours",
+        "location": {
+          "latitude": 25.1981824,
+          "longitude": 55.276353
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 1817116,
+          "max_revenue_aed": 3374644,
+          "avg_revenue_aed": 2595880
+        },
+        "expansion_analysis": {
+          "high_growth_potential": false,
+          "renovation_likely": false,
+          "expansion_likely": false,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 78.0
+      },
+      "contact_information": {
+        "primary_phone": "+971 4 449 5111",
+        "website": "/url?q=https://www.mediclinic.ae/en/dubai-mall/home.html&opi=79508299&sa=U&ved=0ahUKEwiB94rF05aQAxUYWHADHS4ZGvUQ61gIGCgT&usg=AOvVaw0M5OubNY3XMGFMTOJqMtpv",
+        "google_maps_cid": "2691531154117357859",
+        "place_id_url": "https://www.google.com/maps?cid=2691531154117357859"
+      }
+    },
+    {
+      "rank": 6,
+      "facility_details": {
+        "name": "VPS Health",
+        "category": "Medical clinic",
+        "rating": 4.8,
+        "review_count": 10110,
+        "address": "Main Street - Al Nahyan - E19 02 - Abu Dhabi - United Arab Emirates",
+        "phone": "+971 2 222 2366",
+        "website": "/url?q=http://vpshealth.com/&opi=79508299&sa=U&ved=0ahUKEwj154uQ1JaQAxUyq5UCHX9SPVMQ61gIFigR&usg=AOvVaw1qKZh3Z7dpHPoP6RkeV2EI",
+        "hours": "Open ⋅ Closes 5 pm Thursday9 am–5 pmFriday9 am–5 pmSaturday9 am–5 pmSundayClosedMonday9 am–5 pmTuesday9 am–5 pmWednesday9 am–5 pmSuggest new hours",
+        "location": {
+          "latitude": 24.4772782,
+          "longitude": 54.381647
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 2604000,
+          "max_revenue_aed": 4836000,
+          "avg_revenue_aed": 3720000
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": false,
+          "expansion_likely": true,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 2 222 2366",
+        "website": "/url?q=http://vpshealth.com/&opi=79508299&sa=U&ved=0ahUKEwj154uQ1JaQAxUyq5UCHX9SPVMQ61gIFigR&usg=AOvVaw1qKZh3Z7dpHPoP6RkeV2EI",
+        "google_maps_cid": "7343734037608989412",
+        "place_id_url": "https://www.google.com/maps?cid=7343734037608989412"
+      }
+    },
+    {
+      "rank": 7,
+      "facility_details": {
+        "name": "Canadian Specialist Hospital",
+        "category": "Hospital",
+        "rating": 4.8,
+        "review_count": 395,
+        "address": "Behind Ministry of Environment and Water - Abu Hail - Dubai - United Arab Emirates",
+        "phone": "+971 4 707 2222",
+        "website": "/url?q=http://www.csh.ae/&opi=79508299&sa=U&ved=0ahUKEwjntqLC1JaQAxVUqpUCHWHbI2kQ61gIFSgQ&usg=AOvVaw1fZ_Jvjppvf18TfeZfUzWy",
+        "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+        "location": {
+          "latitude": 25.277331,
+          "longitude": 55.34859
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 6054300,
+          "max_revenue_aed": 11243700,
+          "avg_revenue_aed": 8649000
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": true,
+          "expansion_likely": true,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 4 707 2222",
+        "website": "/url?q=http://www.csh.ae/&opi=79508299&sa=U&ved=0ahUKEwjntqLC1JaQAxVUqpUCHWHbI2kQ61gIFSgQ&usg=AOvVaw1fZ_Jvjppvf18TfeZfUzWy",
+        "google_maps_cid": "16699406902143659653",
+        "place_id_url": "https://www.google.com/maps?cid=16699406902143659653"
+      }
+    },
+    {
+      "rank": 8,
+      "facility_details": {
+        "name": "Latifa Hospital",
+        "category": "Hospital",
+        "rating": 4.8,
+        "review_count": 228,
+        "address": "Oud Metha Rd - Al Jadaf - Dubai - United Arab Emirates",
+        "phone": "+971 800 60",
+        "website": "/url?q=https://dubaihealth.ae/&opi=79508299&sa=U&ved=0ahUKEwi50vni1JaQAxW0pZUCHdWDPGkQ61gIFigR&usg=AOvVaw0siEW_dAR2fHruZ_VK-26T",
+        "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+        "location": {
+          "latitude": 25.2234174,
+          "longitude": 55.3179147
+        }
+      },
+      "interior_design_opportunity": {
+        "revenue_potential_aed": {
+          "min_revenue_aed": 5329520,
+          "max_revenue_aed": 9897680,
+          "avg_revenue_aed": 7613600
+        },
+        "expansion_analysis": {
+          "high_growth_potential": true,
+          "renovation_likely": true,
+          "expansion_likely": true,
+          "multi_facility_group": false
+        },
+        "facility_portfolio": "Single facility",
+        "strategic_value": 100
+      },
+      "contact_information": {
+        "primary_phone": "+971 800 60",
+        "website": "/url?q=https://dubaihealth.ae/&opi=79508299&sa=U&ved=0ahUKEwi50vni1JaQAxW0pZUCHdWDPGkQ61gIFigR&usg=AOvVaw0siEW_dAR2fHruZ_VK-26T",
+        "google_maps_cid": "12706385274781941156",
+        "place_id_url": "https://www.google.com/maps?cid=12706385274781941156"
+      }
+    }
+  ]
+}

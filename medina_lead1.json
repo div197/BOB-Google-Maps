@@ -1,0 +1,63 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "M8 Designs",
+  "rating": 4.9,
+  "review_count": 60,
+  "address": "Plot No. 38B, 11th A, Pal Rd, Sardarpura, Jodhpur, Rajasthan 342003",
+  "phone": "098292 14494",
+  "hours": "Open ⋅ Closes 10 pm Thursday10 am–10 pmFriday10 am–10 pmSaturday10 am–10 pmSunday10 am–10 pmMonday10 am–10 pmTuesday10 am–10 pmWednesday10 am–10 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 26.2779673,
+  "longitude": 73.0018057,
+  "place_id_original": "0x39418e9f479f33e5:0xc60914ec9397397e",
+  "place_id_format": "hex",
+  "cid": "14269959900621126014",
+  "place_id": "14269959900621126014",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=14269959900621126014",
+  "place_id_confidence": "HIGH",
+  "plus_code": "72H2+5P Jodhpur, Rajasthan",
+  "current_status": "Open ⋅ Closes 10 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/a-/ALV-UjXwDv3P9xfAJ4OV4KS6jbIyoyt16m5XygIWcUVA_jeesgpeKrTM=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr8wAHQ0heOVLTpetUHazq6O6v26zZQiTREJVwK22FC1h7ap7TYSywEXRIqrtwp_wMK7Ua7zVb4xsd3SQLEOdm-DZ_ao4LjpogBiWWG8LSl5tuX4Hnfhxz8f82MjvDU-HeSFncl=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjW19hvj0CPKQRlvXAF25XVo8nyx9r-pZvlrYLzKoqZWbk6JM7I=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noPxHoCrEnnWaTco-zaeU1ZngUT_WsZFstoHrTYT4KylFXciGFOU99UiP6jWvcY_hFERp6yVQ1Mrwh0BrF_xyRfvnQz-MIseiSOe9ECOv5uMXEFSPGlUROOgwtAlT9DDsnHCIlINg=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqBr9GcSHhuh3uQj8-LPuASH53by1LHNknMW6xdKfzn_x1f5HOzdGAkVe6RW5M_9gxuMTzAKcHWT1BOeS-2hmhLd7jZJiSt6ds4cDlZPUD5HVSV36u8JQIcnrdFVNDdylBXjeMT=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noPxHoCrEnnWaTco-zaeU1ZngUT_WsZFstoHrTYT4KylFXciGFOU99UiP6jWvcY_hFERp6yVQ1Mrwh0BrF_xyRfvnQz-MIseiSOe9ECOv5uMXEFSPGlUROOgwtAlT9DDsnHCIlINg=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPs4-q5AeJnZOO4bfLDpjWBDy72JQ32oUhvRFIg=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOGBIfBeTjC8R-CuS5tWqzmcdqyMyxE-fpA7f5S=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUfUSQUjApSgRTUSM3pw4mDsF_rahgkpiNKlrjzeyJr2M83CkzwUQ=w4096-h4096-p-rp-mo-br100"
+  ],
+  "data_quality_score": 82,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Jaskaran Singh4 reviews · 3 photos9 months ago The team truly understands how to bring spaces to life, combining functionality with aesthetics seamlessly. What I admired most was their passion and commitment to delivering exactly what I envisioned. If you’re looking for someone who can … MoreLike Share",
+      "reviewer": "Jaskaran Singh",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "The team truly understands how to bring spaces to life, combining functionality with aesthetics seamlessly. What I admired most was their passion and commitment to delivering exactly what I envisioned. If you’re looking for someone who can … More"
+    },
+    {
+      "review_index": 3,
+      "text": "The team truly understands how to bring spaces to life, combining functionality with aesthetics seamlessly. What I admired most was their passion and commitment to delivering exactly what I envisioned. If you’re looking for someone who can …"
+    },
+    {
+      "review_index": 4,
+      "text": "jaskaran singh1 review · 2 photos9 months ago Working with M8 Design was an absolute pleasure! Their dedication to every detail and authentic approach to interior design set them apart. I had the chance to collaborate with their team, and I was blown away by their professionalism and … MoreLike Share",
+      "reviewer": "jaskaran singh",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Working with M8 Design was an absolute pleasure! Their dedication to every detail and authentic approach to interior design set them apart. I had the chance to collaborate with their team, and I was blown away by their professionalism and … More"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 55.75
+}

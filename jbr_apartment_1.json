@@ -1,0 +1,53 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Nord Living",
+  "rating": 4.9,
+  "review_count": 8,
+  "address": "Marsa Dubai - Dubai Marina - Dubai - United Arab Emirates",
+  "phone": "+971 58 556 2437",
+  "hours": "Open ⋅ Closes 5 pm Thursday9 am–5 pmFriday9 am–5 pmSaturday9 am–5 pmSunday9 am–5 pmMonday9 am–5 pmTuesday9 am–5 pmWednesday9 am–5 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.0805905,
+  "longitude": 55.1403024,
+  "place_id_original": "0x3e5f6be146ba237d:0x84943a38b635fc67",
+  "place_id_format": "hex",
+  "cid": "9553324724809235559",
+  "place_id": "9553324724809235559",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=9553324724809235559",
+  "place_id_confidence": "HIGH",
+  "plus_code": "34JR+64 Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 5 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNs_3KhnTXbdZKk-m8wo2dE1roFWJG8UHiVTXs3=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPTSFeegzKwkxSInBOSzztqVPt1Kf0IGiTEG-hi=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJP3Mcxal7pI5gwq-i44Xh2pYoZMpccWVJBW7iuor8F7aEtuw=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPTLXSUfVI9ccTMSKlKoUJjgFoBRANURUOWK1aC=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN5PxQJzpwLH-BrINrwAjGAMtmKijRxM7P2XFdn=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNs_3KhnTXbdZKk-m8wo2dE1roFWJG8UHiVTXs3=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNU9NgRsZFMJRcaUWLpkXFof6uUvula6nKUzF_6=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJ-_83Q9TxSP4kKCR_zgHCQQ-M2ankOzr15-mTLibujglbeDg=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/a/ACg8ocKDd0Bl0wIk0Vb0UlXRILVnsd0mYRl3Iod_NPVcEL7Xt4Q2qQ=w4096-h4096-p-rp-mo-br100"
+  ],
+  "data_quality_score": 78,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "karenlee williams7 reviews · 9 photosa month ago Working with Nord living was incredible. Natascha is professional, intelligent and extremely helpful. We worked on a Pilates studio together and I could not have done the process without her, I am forever grateful and now very happy to have … More +2Like Share",
+      "reviewer": "karenlee williams",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Working with Nord living was incredible. Natascha is professional, intelligent and extremely helpful. We worked on a Pilates studio together and I could not have done the process without her, I am forever grateful and now very happy to have … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Working with Nord living was incredible. Natascha is professional, intelligent and extremely helpful. We worked on a Pilates studio together and I could not have done the process without her, I am forever grateful and now very happy to have …"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 56.98
+}

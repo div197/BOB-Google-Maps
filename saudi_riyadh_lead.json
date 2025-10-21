@@ -1,0 +1,67 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Q Design Company (Architecture & Interior)",
+  "rating": 4.5,
+  "review_count": 39,
+  "address": "6th Floor, Al Faleh Center, Al Olaya Street, P.O. Box 301176 Riyadh 11372, KSA, Riyadh Saudi Arabia",
+  "phone": "+966 11 464 0897",
+  "website": "http://www.qdesign.net/",
+  "hours": "Open ⋅ Closes 7 pm Thursday8 am–7 pmFridayClosedSaturdayClosedSunday8 am–7 pmMonday8 am–7 pmTuesday8 am–7 pmWednesday8 am–7 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.705112,
+  "longitude": 46.678816,
+  "place_id_original": "0x3e2f0328f5a8d1f9:0xc4a8e776d2dd5daf",
+  "place_id_format": "hex",
+  "cid": "14170830725051145647",
+  "place_id": "14170830725051145647",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=14170830725051145647",
+  "place_id_confidence": "HIGH",
+  "plus_code": "PM4H+2G Al Olaya, Riyadh Saudi Arabia",
+  "current_status": "Open ⋅ Closes 7 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNW4aEQhl8i4rnbX4rbWxWcVqPP3LX5qS0xPuHy=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN5mZYGjdKKB2oD16J_V1agybzeu_ilM3Y1K6vm=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXkjKP5Uig_vpBA3reyiZudMbyoqMva9-biTf8V8pPz2K_y2_hU=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noSvhEKDr7k-qm5Dmy6qca4zx-LIQQRoYBDA37j_241623VYryy3_cD4bDG9TSvS_p15S5-kT029tgF9P8fBGEKlCDcu3G0Cn__JQldo_QBZKuRzWQ-q5oqa4Af6RITktHJRy1K=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocI1NJ2b-ASfIlbIwJpPvHeogADiXiAszqSmwMbq-ifUsbeutg=w4096-h4096-p-rp-mo-ba4-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipN5mZYGjdKKB2oD16J_V1agybzeu_ilM3Y1K6vm=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipMbChDnBWf8CQx6IIELldF21wlm2cY_-3Bp3w2S=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKc6_o4G6kqb1EDsqnsd93N77KyYOucoigxiVWQbLut-TkDcA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipO7vvMAWDaKll1Y4Ai4JPtLNJewXoHRmzgcvoHJ=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "info@qdesign.net"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "fahad razzaq1 review9 years ago I have 5 year experience in civil draftsman. And i can do work in autoCAD, 3D studio MAx (V-Ray),Like2 Share",
+      "reviewer": "fahad razzaq",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "I have 5 year experience in civil draftsman. And i can do work in autoCAD, 3D studio MAx (V-Ray),"
+    },
+    {
+      "review_index": 3,
+      "text": "I have 5 year experience in civil draftsman. And i can do work in autoCAD, 3D studio MAx (V-Ray),"
+    },
+    {
+      "review_index": 4,
+      "text": "ESSAM ALSAMRAHLocal Guide · 59 reviews5 years ago It is very good consultant officeLike Share",
+      "reviewer": "ESSAM ALSAMRAH",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "It is very good consultant office"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 52.02
+}

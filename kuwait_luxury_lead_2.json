@@ -1,0 +1,66 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "Royale Interiors (Design & Contracting)",
+  "rating": 5.0,
+  "address": "Beirut Street, Hawally, Kuwait",
+  "phone": "+965 506 11794",
+  "website": "http://www.royalearchitect.com/",
+  "hours": "Open ⋅ Closes 6 pm Thursday8 am–6 pmFridayClosedSaturdayClosedSunday8 am–6 pmMonday8 am–6 pmTuesday8 am–6 pmWednesday8 am–6 pmSuggest new hours",
+  "category": "Real Estate Builders & Construction Company",
+  "latitude": 29.3356472,
+  "longitude": 48.0158977,
+  "place_id_original": "0x3fcf9d0037089a19:0xa04fd4b7cb6cc527",
+  "place_id_format": "hex",
+  "cid": "11551685455085618471",
+  "place_id": "11551685455085618471",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=11551685455085618471",
+  "place_id_confidence": "HIGH",
+  "plus_code": "82P8+79 Hawally, Kuwait",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipNAW1tmCDPlMPPolmsbXhZrxJGDrdu4oDxI-tuI=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipM1yew-h26yL8mWjnRJ3kwyTHrudnwtlOEoXYVz=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipNhb71ws_uWgsCYMj6UisVzCIHaNDDw2RjxrkrA=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocIa2-HWPTHAnEDqeYRnX89BGkKiIH8S1N4tFc5OjyYE--k4kA=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPlinG52kuVA1m6hBsmQiBpO10tvBpZnD4IYRXH=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjUiLbqvBBwC5tkzS55QkfTVWWdrqrnkYmDitEWvb_dgVua2bNvz=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipNAW1tmCDPlMPPolmsbXhZrxJGDrdu4oDxI-tuI=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipP8RSzCuuCGELCq7rWhRPOOUK5Sr6r8WLvqcgid=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npqSQ1Sg4ouXJeEaIv4fGvTxxHjkxoppc_hWn256RpDW46cLUyFIN1GPAuJiMMKB4EEY1Tv9ifi0vQAcv3TaJBRqbKUZBwyep_28KwViWb7VABC2Bie02QnR9mPxCiTzeapk4v1qA=w4096-h4096-k-no"
+  ],
+  "emails": [
+    "info@royalearchitect.com"
+  ],
+  "data_quality_score": 90,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Arshiyan aabid Siddiqui2 reviews2 weeks ago New Royale Interiors handled our home as a full turnkey project, and the results are outstanding! From design to execution—civil, electrical, HVAC, furniture, and painting—their team was professional, timely, and detail-oriented. Every corner … MoreLike Share Response from the owner 2 weeks agoThank you for taking the time to share your review. We truly appreciate your feedback and support. At Royale Interiors Kuwait, our goal is to deliver creative, high quality design & fit out solutions, and your encouragement inspires us to keep raising the bar. We look forward to serving you again.",
+      "reviewer": "Arshiyan aabid Siddiqui",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Royale Interiors handled our home as a full turnkey project, and the results are outstanding! From design to execution—civil, electrical, HVAC, furniture, and painting—their team was professional, timely, and detail-oriented. Every corner … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Royale Interiors handled our home as a full turnkey project, and the results are outstanding! From design to execution—civil, electrical, HVAC, furniture, and painting—their team was professional, timely, and detail-oriented. Every corner …"
+    },
+    {
+      "review_index": 4,
+      "text": "Thank you for taking the time to share your review. We truly appreciate your feedback and support. At Royale Interiors Kuwait, our goal is to deliver creative, high quality design & fit out solutions, and your encouragement inspires us to keep raising the bar. We look forward to serving you again."
+    },
+    {
+      "review_index": 5,
+      "text": "Anil Kumar6 reviews2 weeks ago New Royale Interiors exceeded my expectations! Their technical knowledge and practical approach in setting up my central kitchen in Qurain made the space highly efficient and fully functional. Every detail, from workflow to equipment placement, was perfect. Truly professional and highly recommended!Like Share Response from the owner 2 weeks agoThank you for taking the time to share your review. We truly appreciate your feedback and support. At Royale Interiors Kuwait, our goal is to deliver creative, high quality design & fit out solutions, and your encouragement inspires us to keep raising the bar. We look forward to serving you again.",
+      "reviewer": "Anil Kumar",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 90.44
+}

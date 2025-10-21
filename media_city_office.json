@@ -1,0 +1,58 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "AAID (Allen Architecture Interiors Design)",
+  "rating": 4.1,
+  "review_count": 14,
+  "address": "DMC Building 9 Office 149 First Floor Media City UAE - Dubai - United Arab Emirates",
+  "phone": "+971 4 450 4115",
+  "website": "http://www.aaid.studio/",
+  "hours": "Open ⋅ Closes 6 pm Thursday9 am–6 pmFriday9 am–6 pmSaturdayClosedSundayClosedMonday9 am–6 pmTuesday9 am–6 pmWednesday9 am–6 pmSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 25.1015511,
+  "longitude": 55.168707,
+  "place_id_original": "0x3e5f6b6dda8b7d41:0x794a19ccf49c11a8",
+  "place_id_format": "hex",
+  "cid": "8739826394933760424",
+  "place_id": "8739826394933760424",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=8739826394933760424",
+  "place_id_confidence": "HIGH",
+  "plus_code": "4529+JF Dubai - United Arab Emirates",
+  "current_status": "Open ⋅ Closes 6 pm",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipPWAHZM8VhFgD1WyfifYYY7besWt8KSWLASZxvJ=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjU71h2fNgjH3hJpug2T_WVaoXYgxTZPjQPg6rTDucV9FMTW5uZxVg=w4096-h4096-p-rp-mo-ba5-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjV_gnfT4x1ir2l37YHMPl9M4I_5I6FcRmqX3vzC4oXSZHuJR4ZW=w4096-h4096-p-rp-mo-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipPWAHZM8VhFgD1WyfifYYY7besWt8KSWLASZxvJ=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPXp-UJrNr9_8eOVrSKS_zoeXetjxkuUyNmaAKV=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipPEI3J1gmsH41cBlKvDpPtvVQRKm19jQOJ8ZXU=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipN-fPxoW4e0VClPdThYfK1B0EZw5jTBTPJSeXuo=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOlCFIvpgbLh1vpsX5hIBufW7eC1Mye3d8mfQnc=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjWu2R6UGTp97cgur4Y5BHMHx4PTGYrdB2BaAGbr4G9SIIqHG8I=w4096-h4096-p-rp-mo-ba2-br100"
+  ],
+  "data_quality_score": 86,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "Luqman Jutt1 review5 years ago MoreLike Share",
+      "reviewer": "Luqman Jutt",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 4,
+      "text": "Esther EcheverriaLocal Guide · 12 reviews8 months ago",
+      "reviewer": "Esther Echeverria",
+      "rating": "5 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Mohammed SHUAIBLocal Guide · 37 reviews · 582 photos2 years ago",
+      "reviewer": "Mohammed SHUAIB",
+      "rating": "5 stars"
+    }
+  ],
+  "total_reviews_extracted": 3,
+  "success": true,
+  "extraction_time_seconds": 49.54
+}

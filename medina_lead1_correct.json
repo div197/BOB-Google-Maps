@@ -1,0 +1,62 @@
+{
+  "extractor_version": "Playwright Ultimate V3.0",
+  "extraction_method": "Playwright Ultimate",
+  "name": "I ❤️ Madinah",
+  "rating": 5.0,
+  "review_count": 1,
+  "address": "6677، 3580 King Faisal Rd, Al Haram, Madinah 42311, Saudi Arabia",
+  "hours": "Open 24 hours ThursdayOpen 24 hoursFridayOpen 24 hoursSaturdayOpen 24 hoursSundayOpen 24 hoursMondayOpen 24 hoursTuesdayOpen 24 hoursWednesdayOpen 24 hoursSuggest new hours",
+  "category": "Interior designer",
+  "latitude": 24.4729765,
+  "longitude": 39.6113216,
+  "place_id_original": "0x15bdbf004309e84b:0x98d4527086801515",
+  "place_id_format": "hex",
+  "cid": "11012517632074061077",
+  "place_id": "11012517632074061077",
+  "is_real_cid": true,
+  "place_id_url": "https://www.google.com/maps?cid=11012517632074061077",
+  "place_id_confidence": "HIGH",
+  "plus_code": "FJF6+5G Madinah Saudi Arabia",
+  "current_status": "Open 24 hours",
+  "photos": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npkkCqZjrmhCc3KvlzkxoVnOJnd0gier46ao5M9-gjrfu-aX4s36Bxt9obGPYBUV3qhCXYnvfo1fmFLRKftEAomYL_tmMOA_XlJx4UZH5BYfbNQPRdUA4N99hXWtqPFMhbFh0lg6nL1CFw4=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/a-/ALV-UjV_QpjH1rpQciOOVZiYuQkHES581LgpRXMWOpy2TAXoSSnVO_es=w4096-h4096-p-rp-mo-ba2-br100",
+    "https://lh3.googleusercontent.com/p/AF1QipMA4APkzPPS-gfFTdcKhdHdDtw6vhXWKkg3DhH-=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocKvXmqdsekHhOhoBmZZkIdNIgR7ipB8CaFXnP4R8UbPlWYVKQ=w4096-h4096-p-rp-mo-ba3-br100",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXCSzk3imBtEwxAB6It_22lgFtr3B7G3XCst1D5tHmSMrtsGnCzxw=w4096-h4096-p-rp-mo-ba8-br100",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrY5f76QIc1TlXiFNBsjoszxdjp-8I4ZWJIRNWbTNosOLJJvGnd0d0JJ0bslCvbpkyOQy9RuZAZqtDR7CBKDpU3BIPYoXwqWy72m5AvYT3AjWd83upgFwZY3pERnvErZ8uBsQN8KBMlSvI=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrggA9vQ5RzY9X1b0t369wRr8ifH4PNguEYgJi4xHvxpPmT-7w1igVUxV9fH-j8ZHta5EOaLfvH1s4qDTEWHYY1Z3R5RuOS_SohLVLRaZmMzlf7RV2zXGVOSUmwz5qcVmFjYxbrJ6ScuzU=w4096-h4096-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrggA9vQ5RzY9X1b0t369wRr8ifH4PNguEYgJi4xHvxpPmT-7w1igVUxV9fH-j8ZHta5EOaLfvH1s4qDTEWHYY1Z3R5RuOS_SohLVLRaZmMzlf7RV2zXGVOSUmwz5qcVmFjYxbrJ6ScuzU=w4096-h4096-p-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_C2ZPE8m1YvOzEAPniRB5p1svofA9Ks10grypf5L5apUZ9MuU_SV4epXFZ7kyOaZ0epZwCNF4zg_jeGcXCmM4yjbxaGt_x0C6Pl8WYuBouXifkjDdXE6tfLki_th3NZTEcEoc4g=w4096-h4096-k-no"
+  ],
+  "data_quality_score": 72,
+  "reviews": [
+    {
+      "review_index": 1,
+      "text": "indah nuria SavitriLocal Guide · 939 reviews · 49,447 photos4 months ago Obviously, it’s one of people’s favorite spot for photos near the Masjid Nabawi and the clock square. … MoreLike Share",
+      "reviewer": "indah nuria Savitri",
+      "rating": "4 stars"
+    },
+    {
+      "review_index": 2,
+      "text": "Obviously, it’s one of people’s favorite spot for photos near the Masjid Nabawi and the clock square. … More"
+    },
+    {
+      "review_index": 3,
+      "text": "Obviously, it’s one of people’s favorite spot for photos near the Masjid Nabawi and the clock square. …"
+    },
+    {
+      "review_index": 4,
+      "text": "mounir cherigueneLocal Guide · 7 reviews · 47 photos10 months ago Too crowded for a frame , the photograph workers won't move their kit away when you just want to take a picture with your phone for free, i suggest you take a photo around 1-3 am it will be the best time to go thereLike Share",
+      "reviewer": "mounir cheriguene",
+      "rating": "3 stars"
+    },
+    {
+      "review_index": 5,
+      "text": "Too crowded for a frame , the photograph workers won't move their kit away when you just want to take a picture with your phone for free, i suggest you take a photo around 1-3 am it will be the best time to go there"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "success": true,
+  "extraction_time_seconds": 55.49
+}
