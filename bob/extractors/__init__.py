@@ -1,17 +1,26 @@
 """
-BOB V3.0 - Extractors Package
-Revolutionary Google Maps Data Extraction
+BOB Google Maps - Extraction Engines
 
-Author: Divyanshu Singh Chouhan
-Release: October 3, 2025
+Three optimized extractors for different use cases:
+- PlaywrightExtractorOptimized: Fast, recommended default (7-11s per business)
+- SeleniumExtractorOptimized: Reliable fallback (8-15s per business)
+- HybridExtractorOptimized: Memory-optimized (9-12s per business)
 """
 
-from .playwright import PlaywrightExtractor
-from .selenium import SeleniumExtractor
-from .hybrid import HybridExtractor
+from .playwright_optimized import PlaywrightExtractorOptimized
+from .selenium_optimized import SeleniumExtractorOptimized
+from .hybrid_optimized import HybridExtractorOptimized
 
 __all__ = [
-    'PlaywrightExtractor',
-    'SeleniumExtractor',
-    'HybridExtractor',
+    'PlaywrightExtractorOptimized',
+    'SeleniumExtractorOptimized',
+    'HybridExtractorOptimized'
 ]
+
+# Legacy imports for backwards compatibility
+try:
+    from .playwright import PlaywrightExtractor
+    from .selenium import SeleniumExtractor
+    from .hybrid import HybridExtractor
+except ImportError:
+    pass

@@ -1,5 +1,3 @@
-# BOB Google Maps 1.0 - Production .gitignore
-
 # Python
 __pycache__/
 *.py[cod]
@@ -18,95 +16,72 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
 
-# Virtual Environment
+# Virtual environments
 venv/
 env/
 ENV/
 env.bak/
 venv.bak/
 
-# PyTest
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.hypothesis/
-
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.project
-.pydevproject
-.settings/
-
-# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+*.sublime-project
+*.sublime-workspace
 
-# Project Specific
-cache/
-logs/
-data/
-exports/
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# Cache
 *.db
+*.cache
+bob_cache*.db
+.cache/
+
+# Logs
 *.log
+logs/
+*.log.*
+
+# Temporary
+.tmp/
+temp/
+tmp/
 *.tmp
+
+# Output
+output/
+results/
+exports/
+
+# Chrome/Chromium
+.chrome/
+chrome_profiles/
 
 # Environment
 .env
 .env.local
-.env.*.local
+config.local.yaml
 
-# Test outputs
-test_output/
-test_results/
-downloaded_images/
-test_*.json
-test_*.csv
-test_*.xlsx
-test_cache.db
-single_business_result_*.json
-abcsteps*.json
-*_test_*.json
-comprehensive_test.log
+# Project specific
+.conductor/quebec/*.log
+.conductor/quebec/phase3_analysis/
+leads/
+projects/output/
 
-# Temporary files
-temp/
-tmp/
-*.bak
-
-# Browser drivers
-chromedriver
-chromedriver.exe
-geckodriver
-geckodriver.exe
-# Build artifacts and eggs
-*.egg-info/
-build/
-dist/
-
-# Runtime directories
-logs/
-data/
-__pycache__/
-*.pyc
-*.pyo
-
-# Cache databases
-*.db
-*.sqlite
+# Archive (local development only)
+.archive/
