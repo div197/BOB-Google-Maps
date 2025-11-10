@@ -95,16 +95,45 @@ class Review:
     source_element: Optional[str] = None
     processing_time: Optional[float] = None  # milliseconds
 
+    def __init__(self, **kwargs):
+        """
+        Initialize Review with backward compatibility support.
+
+        Supports both old API (reviewer, text, date) and new API (reviewer_name, review_text, review_date).
+        """
+        # Map old API names to new names for backward compatibility
+        if 'reviewer' in kwargs and 'reviewer_name' not in kwargs:
+            kwargs['reviewer_name'] = kwargs.pop('reviewer')
+        if 'text' in kwargs and 'review_text' not in kwargs:
+            kwargs['review_text'] = kwargs.pop('text')
+        if 'date' in kwargs and 'review_date' not in kwargs:
+            kwargs['review_date'] = kwargs.pop('date')
+
+        # Ensure review_index is provided or default to 0
+        if 'review_index' not in kwargs:
+            kwargs['review_index'] = 0
+
+        # Handle extracted_at
+        if 'extracted_at' not in kwargs:
+            kwargs['extracted_at'] = datetime.now()
+
+        # Set attributes from kwargs
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+        # Call post-init processing
+        self.__post_init__()
+
     def __post_init__(self):
         """Post-initialization processing with Nishkaam Karma efficiency."""
         # Calculate text length if not provided
         if self.text_length is None and self.review_text:
             self.text_length = len(self.review_text)
-        
+
         # Calculate data completeness automatically
         if self.data_completeness is None:
             self.data_completeness = self._calculate_completeness()
-        
+
         # Set default extraction method if not provided
         if self.extraction_method is None:
             self.extraction_method = "Enhanced V1.2.0"
@@ -147,12 +176,12 @@ class Review:
     def to_dict(self) -> Dict[str, Any]:
         """
         Convert to dictionary with Nishkaam Karma optimization.
-        
+
         Returns:
             Dict[str, Any]: Dictionary representation with minimal memory usage
         """
         result = {}
-        
+
         # Include all non-None fields for efficiency
         for key, value in self.__dict__.items():
             if value is not None:
@@ -160,8 +189,36 @@ class Review:
                     result[key] = value.isoformat()
                 else:
                     result[key] = value
-        
+
+        # Add backward compatibility aliases if main fields exist
+        if 'reviewer_name' in result and 'reviewer' not in result:
+            result['reviewer'] = result['reviewer_name']
+        if 'review_text' in result and 'text' not in result:
+            result['text'] = result['review_text']
+        if 'review_date' in result and 'date' not in result:
+            result['date'] = result['review_date']
+
         return result
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'Review':
+        """
+        Reconstruct Review from dictionary with Nishkaam Karma efficiency.
+
+        Supports both old API (reviewer, text, date) and new API field names.
+
+        Args:
+            data: Dictionary containing review data
+
+        Returns:
+            Review: Reconstructed Review instance
+        """
+        # Handle datetime fields
+        if 'extracted_at' in data and isinstance(data['extracted_at'], str):
+            data = data.copy()
+            data['extracted_at'] = datetime.fromisoformat(data['extracted_at'])
+
+        return cls(**data)
 
     def get_quality_score(self) -> int:
         """
@@ -217,6 +274,37 @@ class Review:
         """Detailed representation for debugging."""
         return (f"Review(index={self.review_index}, name='{self.reviewer_name}', "
                 f"rating={self.rating}, quality={self.get_quality_score()})")
+
+    # Backward compatibility properties for old API
+    @property
+    def reviewer(self) -> Optional[str]:
+        """Backward compatibility: Access reviewer_name as reviewer."""
+        return self.reviewer_name
+
+    @reviewer.setter
+    def reviewer(self, value: Optional[str]) -> None:
+        """Backward compatibility: Set reviewer_name via reviewer property."""
+        self.reviewer_name = value
+
+    @property
+    def text(self) -> Optional[str]:
+        """Backward compatibility: Access review_text as text."""
+        return self.review_text
+
+    @text.setter
+    def text(self, value: Optional[str]) -> None:
+        """Backward compatibility: Set review_text via text property."""
+        self.review_text = value
+
+    @property
+    def date(self) -> Optional[str]:
+        """Backward compatibility: Access review_date as date."""
+        return self.review_date
+
+    @date.setter
+    def date(self, value: Optional[str]) -> None:
+        """Backward compatibility: Set review_date via date property."""
+        self.review_date = value
 
 
 @dataclass

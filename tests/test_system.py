@@ -23,28 +23,28 @@ print("\n📦 TEST 1: IMPORT VERIFICATION")
 print("-" * 40)
 
 try:
-    from src.core.google_maps_extractor import GoogleMapsExtractor
-    print("✅ GoogleMapsExtractor imported")
+    from bob import HybridExtractorOptimized
+    print("✅ HybridExtractorOptimized imported")
 except ImportError as e:
-    print(f"❌ GoogleMapsExtractor import failed: {e}")
+    print(f"❌ HybridExtractorOptimized import failed: {e}")
 
 try:
-    from src.core.place_id_extractor import PlaceIDExtractor
-    print("✅ PlaceIDExtractor imported")
+    from bob.models import Business, Review, Image
+    print("✅ Data models imported")
 except ImportError as e:
-    print(f"❌ PlaceIDExtractor import failed: {e}")
+    print(f"❌ Data models import failed: {e}")
 
 try:
-    from src.core.place_id_converter import PlaceIDConverter, enhance_place_id
+    from bob.utils.converters import PlaceIDConverter, enhance_place_id
     print("✅ PlaceIDConverter imported")
 except ImportError as e:
     print(f"❌ PlaceIDConverter import failed: {e}")
 
 try:
-    from src.core.advanced_image_extractor import AdvancedImageExtractor
-    print("✅ AdvancedImageExtractor imported")
+    from bob.cache import CacheManager
+    print("✅ CacheManager imported")
 except ImportError as e:
-    print(f"❌ AdvancedImageExtractor import failed: {e}")
+    print(f"❌ CacheManager import failed: {e}")
 
 # Test 2: CID Normalization
 print("\n🔑 TEST 2: CID NORMALIZATION SYSTEM")
