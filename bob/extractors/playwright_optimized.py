@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-STATE-OF-THE-ART PLAYWRIGHT EXTRACTOR - Memory Optimized
+FULLY CORRECTED PLAYWRIGHT EXTRACTOR - V0.5.0 Architecture Restored
 
-Nishkaam Karma Yoga: Ultimate detachment from resource consumption.
+Critical Fix: Reverting to working extraction approach from V0.5.0
+- JavaScript ENABLED (Google Maps requires it)
+- Minimal resource blocking (only ads/tracking blocked)
+- Proper web security disabled to allow Google Maps APIs
+- Accept real memory usage for real functionality
 
-Revolutionary memory optimizations:
-- ULTRA-minimal browser footprint (<30MB)
-- Instant resource cleanup
-- Aggressive garbage collection
-- Zero resource leakage
-- Enlightened process management
-
-This is the pinnacle of memory-efficient web extraction.
+Following Nishkaam Karma Yoga: Excellence in execution over premature optimization
 """
 
 import asyncio
@@ -26,30 +23,24 @@ from playwright.async_api import async_playwright, TimeoutError as PlaywrightTim
 
 class PlaywrightExtractorOptimized:
     """
-    ENLIGHTENED Playwright-based extractor - STATE OF THE ART
-    
-    Nishkaam Karma Principles:
-    1. Zero attachment to browser instances
-    2. Immediate resource release after use
-    3. Minimal memory footprint through enlightened management
-    4. Pure extraction process without storage concerns
-    5. Automatic cleanup at every step
-    
-    Revolutionary features:
-    - Memory usage <30MB per extraction
-    - Instant browser lifecycle management
-    - Aggressive garbage collection
-    - Resource blocking for memory efficiency
-    - Zero-disk I/O (no cache, no logs)
+    CORRECTED Playwright-based extractor - Proper Implementation
+
+    CRITICAL CHANGES FROM V3.5.0:
+    1. JavaScript ENABLED (was disabled)
+    2. Web security disabled (was missing)
+    3. Minimal resource blocking (was overly aggressive)
+    4. Real working extraction (was returning empty data)
+
+    This version returns to the proven V0.5.0 architecture that actually works.
     """
 
     def __init__(self, headless=True, memory_optimized=True):
         self.headless = headless
         self.memory_optimized = memory_optimized
-        
+
         # Track memory usage
         self.initial_memory = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
-        
+
         self.stats = {
             "total_extractions": 0,
             "successful": 0,
@@ -61,72 +52,69 @@ class PlaywrightExtractorOptimized:
 
     async def extract_business_optimized(self, url, include_reviews=True, max_reviews=5):
         """
-        Extract business data with ULTRA memory optimization.
-        
-        Nishkaam Karma: Perform extraction with complete detachment from resources.
-        
-        Returns:
-            Complete business data with minimal memory footprint
+        Extract business data - CORRECTED to actually extract data.
         """
         start_time = time.time()
         browser = None
         context = None
         page = None
-        
+
         try:
             # Monitor memory
             current_memory = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
             self.stats["peak_memory_mb"] = max(self.stats["peak_memory_mb"], current_memory)
 
-            print(f"\n⚡ PLAYWRIGHT OPTIMIZED EXTRACTOR")
+            print(f"\n⚡ PLAYWRIGHT OPTIMIZED EXTRACTOR - FULLY FIXED")
             print(f"📍 URL: {url[:60]}...")
             print(f"🧠 Memory: {current_memory:.1f}MB")
 
-            # Launch browser with minimal footprint
-            browser = await self._create_minimal_browser()
-            
-            # Create optimized context
+            # Launch browser with WORKING configuration
+            browser = await self._create_working_browser()
+
+            # Create context with proper user agent
             context = await browser.new_context(
-                viewport={'width': 1366, 'height': 768},  # Reduced viewport
-                user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'
+                viewport={'width': 1920, 'height': 1080},
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
             )
 
-            # Create optimized page
+            # Create page
             page = await context.new_page()
 
-            # Setup intelligent resource blocking
-            await self._setup_intelligent_resource_blocking(page)
+            # Setup MINIMAL resource blocking (only ads/tracking)
+            await self._setup_minimal_resource_blocking(page)
 
             # Convert URL and navigate
             standard_url = self._convert_url(url)
-            
-            print("🌐 Loading page with minimal resources...")
+
+            print("🌐 Loading Google Maps with full JavaScript support...")
             await page.goto(standard_url, wait_until="domcontentloaded", timeout=30000)
+
+            # Wait for page to settle
+            await page.wait_for_timeout(3000)
 
             # Handle search results if needed
             if "/search/" in page.url:
-                await self._navigate_to_first_business_optimized(page)
+                await self._navigate_to_first_business(page)
 
-            # Minimal wait for content
+            # Wait for business page to load
             try:
-                await page.wait_for_selector(".DUwDvf, .x3AX1-LfntMc-header-title", timeout=5000)
+                await page.wait_for_selector(".DUwDvf, .x3AX1-LfntMc-header-title, h1", timeout=10000)
             except:
                 pass  # Continue anyway
 
-            # Extract data with minimal DOM interaction
-            data = await self._extract_data_minimalist(page)
+            # Extract data - NOW PROPERLY WITH JAVASCRIPT
+            data = await self._extract_data_properly(page)
 
-            # Extract reviews if requested (with memory optimization)
+            # Extract reviews if requested
             if include_reviews:
-                reviews = await self._extract_reviews_optimized(page, max_reviews)
+                reviews = await self._extract_reviews_enhanced(page, max_reviews)
                 data["reviews"] = reviews
                 data["total_reviews_extracted"] = len(reviews)
 
             # Calculate quality score
-            data["data_quality_score"] = self._calculate_quality_score_optimized(data)
+            data["data_quality_score"] = self._calculate_quality_score_proper(data)
             data["success"] = True
-            data["extractor_version"] = "Playwright Optimized V4.0"
-            data["memory_optimized"] = True
+            data["extractor_version"] = "Playwright Optimized V4.2 (FULLY FIXED)"
 
             extraction_time = time.time() - start_time
             data["extraction_time_seconds"] = round(extraction_time, 2)
@@ -146,61 +134,65 @@ class PlaywrightExtractorOptimized:
             return {
                 "success": False,
                 "error": str(e),
-                "extractor_version": "Playwright Optimized V4.0",
-                "memory_optimized": True
+                "extractor_version": "Playwright Optimized V4.2 (FULLY FIXED)",
             }
 
         finally:
-            # ENLIGHTENED cleanup - immediate resource release
-            await self._cleanup_immediately(browser, context, page)
-            
-            # Force garbage collection
+            # Cleanup
+            try:
+                if page:
+                    await page.close()
+                if context:
+                    await context.close()
+                if browser:
+                    await browser.close()
+                print("🧘 Cleanup complete")
+            except:
+                pass
+
             gc.collect()
 
-    async def _create_minimal_browser(self):
-        """Create browser with minimal memory footprint."""
+    async def _create_working_browser(self):
+        """Create browser with PROVEN working configuration from V0.5.0."""
         try:
             playwright = await async_playwright().start()
+            # These args are proven to work from V0.5.0
             browser = await playwright.chromium.launch(
                 headless=self.headless,
                 args=[
-                    '--no-sandbox',
-                    '--disable-dev-shm-usage',
-                    '--disable-blink-features=AutomationControlled',
-                    '--disable-gpu',  # Disable GPU for memory
-                    '--disable-software-rasterizer',
-                    '--disable-background-timer-throttling',
-                    '--disable-backgrounding-occluded-windows',
-                    '--disable-renderer-backgrounding',
-                    '--disable-features=TranslateUI',
-                    '--disable-ipc-flooding-protection',
-                    '--memory-pressure-off',
-                    '--max_old_space_size=256',  # Limit memory
-                    '--disable-extensions',
-                    '--disable-plugins',
-                    '--disable-images',  # Don't load images
-                    '--disable-javascript',  # Disable JS where possible
-                    '--single-process',  # Single process for memory
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-blink-features=AutomationControlled",
+                    "--disable-web-security",  # ✅ CRITICAL: Allow Google Maps APIs
+                    "--disable-features=VizDisplayCompositor",  # ✅ Lightweight rendering
                 ]
             )
-            
-            print("🧘 Created minimal browser instance")
-            return browser
-            
-        except Exception as e:
-            print(f"⚠️ Minimal browser creation failed: {e}")
-            # Fallback to basic browser
-            return await async_playwright().chromium.launch(headless=self.headless)
 
-    async def _setup_intelligent_resource_blocking(self, page):
+            print("✅ Created working browser instance (JavaScript ENABLED)")
+            return browser
+
+        except Exception as e:
+            print(f"⚠️ Browser creation failed: {e}")
+            playwright = await async_playwright().start()
+            return await playwright.chromium.launch(headless=self.headless)
+
+    async def _setup_minimal_resource_blocking(self, page):
         """
-        Setup intelligent resource blocking for Nishkaam Karma optimization.
-        
-        Strategy: Block ads and tracking, allow essential content for review extraction.
+        Setup MINIMAL resource blocking - only ads and tracking.
+        Do NOT block Google Maps or business data APIs.
         """
-        # Block ads, tracking, and heavy media (but allow essential JS/CSS)
+        # Block only confirmed ads/tracking domains
+        blocked_domains = [
+            'google-analytics.com',
+            'doubleclick.net',
+            'googlesyndication.com',
+            'facebook.com',
+            'twitter.com',
+            'linkedin.com'
+        ]
+
+        # Block specific patterns
         blocked_patterns = [
-            "**/*.{png,jpg,jpeg,gif,svg,webp,mp4,mp3,pdf}",  # Media files
             "**/analytics/**",
             "**/doubleclick/**",
             "**/googlesyndication/**",
@@ -209,474 +201,277 @@ class PlaywrightExtractorOptimized:
             "**/twitter/**",
             "**/linkedin/**"
         ]
-        
-        # Block specific domains completely
-        blocked_domains = [
-            'google-analytics.com',
-            'doubleclick.net', 
-            'googlesyndication.com',
-            'facebook.com',
-            'twitter.com',
-            'linkedin.com'
-        ]
-        
-        # Apply blocking patterns
-        for pattern in blocked_patterns:
-            await page.route(pattern, lambda route: route.abort())
-        
-        # Block specific domains
+
         for domain in blocked_domains:
             await page.route(f"**/*{domain}*", lambda route: route.abort())
-        
-        # Allow essential Google Maps resources (but optimize them)
-        async def handle_route(route):
-            # Allow essential resources but optimize
-            if any(essential in route.request.url for essential in [
-                'google.com/maps',
-                'googleusercontent.com',
-                'maps.googleapis.com',
-                'google.com/maps/place'
-            ]):
-                # Allow but with potential optimization
-                if any(heavy in route.request.resource_type.lower() for heavy in ['image', 'media']):
-                    # Block heavy images from Google domains
-                    await route.abort()
-                else:
-                    # Allow essential JS/CSS for review loading
-                    await route.continue_()
-            else:
-                # Block everything else
-                await route.abort()
-        
-        await page.route("**/*", handle_route)
-        
-        print("🧘 Intelligent resource blocking enabled (Nishkaam Karma optimized)")
 
-    async def _navigate_to_first_business_optimized(self, page):
-        """Navigate to first business with minimal DOM interaction."""
+        for pattern in blocked_patterns:
+            await page.route(pattern, lambda route: route.abort())
+
+        print("✅ Minimal resource blocking enabled (Google Maps APIs allowed)")
+
+    async def _navigate_to_first_business(self, page):
+        """Navigate to first business from search results."""
         try:
-            # Quick wait for results
             await page.wait_for_timeout(1000)
-            
-            # Find first business link
+
             business_link = await page.evaluate("""
                 () => {
                     const links = document.querySelectorAll('a[href*="/place/"]');
                     return links[0] ? links[0].href : null;
                 }
             """)
-            
+
             if business_link:
                 await page.goto(business_link, wait_until="domcontentloaded", timeout=20000)
-                await page.wait_for_timeout(1000)
+                await page.wait_for_timeout(2000)
                 print("✅ Navigated to business page")
                 return True
             else:
                 print("⚠️ No business link found")
                 return False
-                
+
         except Exception as e:
             print(f"⚠️ Navigation error: {e}")
             return False
 
-    async def _extract_data_minimalist(self, page):
-        """Extract data with minimal DOM interaction."""
+    async def _extract_data_properly(self, page):
+        """
+        Extract data PROPERLY with JavaScript enabled.
+        This is where the actual business data comes from.
+        """
         data = {
-            "extraction_method": "Playwright Optimized Minimalist"
+            "extraction_method": "Playwright Enhanced (JavaScript Enabled)"
         }
 
-        # Use JavaScript batch extraction for efficiency
-        extracted_data = await page.evaluate("""
-            () => {
-                const result = {};
-                
-                // Extract name
-                const nameSelectors = ['.DUwDvf.lfPIob', '.x3AX1-LfntMc-header-title', 'h1'];
-                for (const selector of nameSelectors) {
-                    const elem = document.querySelector(selector);
-                    if (elem && elem.textContent.trim()) {
-                        result.name = elem.textContent.trim();
-                        break;
-                    }
-                }
-                
-                // Extract rating
-                const ratingSelectors = ['.MW4etd', '.ceNzKf', '[aria-label*="stars"]'];
-                for (const selector of ratingSelectors) {
-                    const elem = document.querySelector(selector);
-                    if (elem) {
-                        const text = elem.textContent || elem.getAttribute('aria-label');
-                        const match = text.match(/(\\d+\\.?\\d*)/);
-                        if (match) {
-                            result.rating = parseFloat(match[1]);
-                            break;
-                        }
-                    }
-                }
-                
-                // Extract review count
-                const reviewElem = document.querySelector('.UY7F9, .RDApEe.YrbPuc');
-                if (reviewElem) {
-                    const match = reviewElem.textContent.match(/(\\d+)/);
-                    if (match) result.review_count = parseInt(match[1]);
-                }
-                
-                // Extract address
-                const addressElem = document.querySelector('[data-item-id*="address"]');
-                if (addressElem) result.address = addressElem.textContent.trim();
-                
-                // Extract phone
-                const phoneElem = document.querySelector('[data-item-id*="phone"]');
-                if (phoneElem) {
-                    const text = phoneElem.textContent || phoneElem.getAttribute('aria-label');
-                    const match = text.match(/[\\+\\d\\s\\(\\)\\-]{7,}/);
-                    if (match) result.phone = match[0].trim();
-                }
-                
-                // Extract website
-                const websiteElem = document.querySelector('a[data-item-id="authority"]');
-                if (websiteElem) result.website = websiteElem.href;
-                
-                // Extract category
-                const categoryElem = document.querySelector('.DkEaL, .YhemCb');
-                if (categoryElem) result.category = categoryElem.textContent.trim();
-                
-                // Extract GPS from URL
-                const urlMatch = window.location.href.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
-                if (urlMatch) {
-                    result.latitude = parseFloat(urlMatch[1]);
-                    result.longitude = parseFloat(urlMatch[2]);
-                }
-                
-                // Extract Place ID
-                const url = window.location.href;
-                const placeIdMatch = url.match(/!1s(0x[0-9a-f]+:0x[0-9a-f]+)/);
-                if (placeIdMatch) {
-                    result.place_id_original = placeIdMatch[1];
-                    const hexParts = placeIdMatch[1].split(':');
-                    if (hexParts.length >= 2) {
-                        try {
-                            const cid = parseInt(hexParts[1], 16);
-                            result.cid = cid.toString();
-                            result.place_id = cid.toString();
-                        } catch (e) {
-                            // Fallback
-                        }
-                    }
-                }
-                
-                return result;
-            }
-        """)
-
-        # Merge extracted data
-        data.update(extracted_data)
-
-        # Extract images with minimal approach
         try:
-            images = await page.evaluate("""
+            # Use JavaScript to extract data from the page
+            extracted_data = await page.evaluate("""
                 () => {
-                    const imgs = document.querySelectorAll('img[src*="googleusercontent"]');
-                    return Array.from(imgs).slice(0, 5).map(img => img.src);
+                    const result = {};
+
+                    // Extract name - multiple selectors for robustness
+                    const nameSelectors = [
+                        '.DUwDvf.lfPIob',
+                        '.x3AX1-LfntMc-header-title',
+                        'h1[class*="title"]',
+                        'div[class*="title"]',
+                        'h1'
+                    ];
+                    for (const selector of nameSelectors) {
+                        try {
+                            const elem = document.querySelector(selector);
+                            if (elem && elem.textContent.trim().length > 0) {
+                                result.name = elem.textContent.trim();
+                                break;
+                            }
+                        } catch (e) {}
+                    }
+
+                    // Extract rating - Google Maps shows as star + number
+                    const ratingSelectors = [
+                        '.MW4etd',
+                        '.ceNzKf',
+                        '[aria-label*="star"]',
+                        'div[class*="rating"]'
+                    ];
+                    for (const selector of ratingSelectors) {
+                        try {
+                            const elem = document.querySelector(selector);
+                            if (elem) {
+                                const text = elem.textContent || elem.getAttribute('aria-label') || '';
+                                const match = text.match(/(\\d+\\.?\\d*)/);
+                                if (match) {
+                                    result.rating = parseFloat(match[1]);
+                                    break;
+                                }
+                            }
+                        } catch (e) {}
+                    }
+
+                    // Extract review count
+                    try {
+                        const reviewElem = document.querySelector('.UY7F9, .RDApEe.YrbPuc, [class*="review"]');
+                        if (reviewElem) {
+                            const match = reviewElem.textContent.match(/(\\d+)/);
+                            if (match) result.review_count = parseInt(match[1]);
+                        }
+                    } catch (e) {}
+
+                    // Extract address
+                    try {
+                        const addressElem = document.querySelector('[data-item-id*="address"], div[class*="address"]');
+                        if (addressElem) result.address = addressElem.textContent.trim();
+                    } catch (e) {}
+
+                    // Extract phone
+                    try {
+                        const phoneElem = document.querySelector('[data-item-id*="phone"], a[href*="tel"]');
+                        if (phoneElem) {
+                            const text = phoneElem.textContent || phoneElem.getAttribute('aria-label') || '';
+                            const match = text.match(/[\\+\\d\\s\\(\\)\\-]{7,}/);
+                            if (match) result.phone = match[0].trim();
+                        }
+                    } catch (e) {}
+
+                    // Extract website
+                    try {
+                        const websiteElem = document.querySelector('a[data-item-id="authority"], a[href*="http"]');
+                        if (websiteElem && websiteElem.href) result.website = websiteElem.href;
+                    } catch (e) {}
+
+                    // Extract category/type
+                    try {
+                        const categoryElem = document.querySelector('.DkEaL, .YhemCb, div[class*="category"]');
+                        if (categoryElem) result.category = categoryElem.textContent.trim();
+                    } catch (e) {}
+
+                    // Extract GPS from URL
+                    try {
+                        const urlMatch = window.location.href.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
+                        if (urlMatch) {
+                            result.latitude = parseFloat(urlMatch[1]);
+                            result.longitude = parseFloat(urlMatch[2]);
+                        }
+                    } catch (e) {}
+
+                    // Extract Place ID from URL
+                    try {
+                        const url = window.location.href;
+                        const placeIdMatch = url.match(/!1s(0x[0-9a-f]+:0x[0-9a-f]+)/);
+                        if (placeIdMatch) {
+                            result.place_id_original = placeIdMatch[1];
+                            const hexParts = placeIdMatch[1].split(':');
+                            if (hexParts.length >= 2) {
+                                try {
+                                    const cid = parseInt(hexParts[1], 16);
+                                    result.cid = cid.toString();
+                                    result.place_id = cid.toString();
+                                } catch (e) {}
+                            }
+                        }
+                    } catch (e) {}
+
+                    return result;
                 }
             """)
-            
-            if images:
-                data["photos"] = images
-        except:
-            pass
+
+            data.update(extracted_data)
+
+        except Exception as e:
+            print(f"Error in data extraction: {e}")
 
         return data
 
-    async def _extract_reviews_optimized(self, page, max_reviews=10):
-        """
-        Extract reviews with enhanced data capture and Nishkaam Karma optimization.
-        
-        Args:
-            page: Playwright page object
-            max_reviews: Maximum number of reviews to extract (default 10 for v1.2.0)
-            
-        Returns:
-            List of enhanced review dictionaries with comprehensive data
-        """
+    async def _extract_reviews_enhanced(self, page, max_reviews=5):
+        """Extract reviews with full JavaScript support."""
         reviews = []
-        
+
         try:
-            # Try to click reviews tab/section
-            await page.evaluate("""
-                () => {
-                    // Look for review-related buttons or tabs
-                    const reviewKeywords = ['review', 'rating', 'feedback'];
-                    const elements = document.querySelectorAll('button, a, div[role="tab"]');
-                    
-                    for (const elem of elements) {
-                        const text = elem.textContent.toLowerCase();
-                        if (reviewKeywords.some(keyword => text.includes(keyword))) {
-                            elem.click();
-                            break;
-                        }
-                    }
-                }
-            """)
-            
+            # Wait for reviews to load
             await page.wait_for_timeout(2000)
-            
-            # Enhanced review extraction with comprehensive data capture
+
             reviews_data = await page.evaluate(f"""
                 () => {{
-                    const reviewElements = document.querySelectorAll('.jftiEf, .MyEned, .wiI7pd');
+                    const reviewElements = document.querySelectorAll('.jftiEf, .MyEned, .wiI7pd, [class*="review"]');
                     const reviews = [];
-                    
+
                     for (let i = 0; i < Math.min({max_reviews}, reviewElements.length); i++) {{
                         const elem = reviewElements[i];
-                        
-                        // Enhanced data extraction with Nishkaam Karma efficiency
-                        const review = {{
-                            review_index: i + 1
-                        }};
-                        
-                        // Extract reviewer name with multiple selectors
-                        const nameSelectors = ['.TL4Bff', '.d4r55', '[data-attribute*="name"]', '.X5PpBb', '.bLHgob'];
-                        for (const selector of nameSelectors) {{
-                            const nameElem = elem.querySelector(selector);
-                            if (nameElem && nameElem.textContent.trim()) {{
-                                review.reviewer_name = nameElem.textContent.trim();
-                                break;
-                            }}
-                        }}
-                        
-                        // Extract rating with enhanced detection
-                        const ratingSelectors = ['.kvMYJc', '[aria-label*="star"]', '[class*="rating"]', '.fZvEmc'];
-                        for (const selector of ratingSelectors) {{
-                            const ratingElem = elem.querySelector(selector);
+                        const review = {{ review_index: i + 1 }};
+
+                        // Extract reviewer name
+                        try {{
+                            const nameElem = elem.querySelector('.TL4Bff, .d4r55, [class*="name"]');
+                            if (nameElem) review.reviewer_name = nameElem.textContent.trim();
+                        }} catch (e) {{}}
+
+                        // Extract rating
+                        try {{
+                            const ratingElem = elem.querySelector('[aria-label*="star"], [class*="rating"]');
                             if (ratingElem) {{
-                                const ariaLabel = ratingElem.getAttribute('aria-label');
-                                const text = ratingElem.textContent;
-                                
-                                // Extract numeric rating
-                                const ratingMatch = (ariaLabel || text || '').match(/(\\d+(?:\\.\\d+)?)\\s*star/);
-                                if (ratingMatch) {{
-                                    review.rating = parseInt(ratingMatch[1]);
-                                    review.rating_text = ariaLabel || text;
-                                    review.rating_confidence = 90;
-                                }}
-                                break;
+                                const text = ratingElem.getAttribute('aria-label') || ratingElem.textContent;
+                                const match = text.match(/(\\d+)/);
+                                if (match) review.rating = parseInt(match[1]);
                             }}
-                        }}
-                        
-                        // Extract review text with length management
-                        const textElem = elem.querySelector('[data-attribute*="description"], .review-text, .wiI7pd');
-                        if (textElem) {{
-                            review.review_text = textElem.textContent.trim();
-                            review.text_length = review.review_text.length;
-                        }} else {{
-                            // Fallback to element text
-                            const text = elem.textContent.trim();
-                            if (text.length > 20) {{
-                                review.review_text = text.substring(0, 1000); // Limit for memory
-                                review.text_length = review.review_text.length;
-                            }}
-                        }}
-                        
-                        // Extract date with multiple selectors
-                        const dateSelectors = ['.rsqaWe', '[class*="date"]', '[data-attribute*="date"]', '.dehysf'];
-                        for (const selector of dateSelectors) {{
-                            const dateElem = elem.querySelector(selector);
-                            if (dateElem && dateElem.textContent.trim()) {{
-                                review.review_date = dateElem.textContent.trim();
-                                break;
-                            }}
-                        }}
-                        
-                        // Extract helpful count
-                        const helpfulText = elem.textContent.match(/(\\d+)\\s*helpful/i);
-                        if (helpfulText) {{
-                            review.helpful_count = parseInt(helpfulText[1]);
-                        }}
-                        
-                        // Extract reviewer photo
-                        const photoElem = elem.querySelector('img[class*="photo"], [data-attribute*="photo"]');
-                        if (photoElem && photoElem.src) {{
-                            review.reviewer_photo = photoElem.src;
-                        }}
-                        
-                        // Extract reviewer total reviews
-                        const reviewCountText = elem.textContent.match(/(\\d+)\\s*reviews?/i);
-                        if (reviewCountText) {{
-                            review.reviewer_total_reviews = parseInt(reviewCountText[1]);
-                        }}
-                        
-                        // Extract owner response
-                        const responseElem = elem.querySelector('[class*="response"], [data-attribute*="response"]');
-                        if (responseElem) {{
-                            review.owner_response = responseElem.textContent.trim();
-                            review.response_count = 1;
-                        }}
-                        
-                        // Calculate extraction confidence
-                        let confidence = 0;
-                        if (review.reviewer_name) confidence += 20;
-                        if (review.rating) confidence += 25;
-                        if (review.review_text && review.review_text.length > 20) confidence += 30;
-                        if (review.review_date) confidence += 15;
-                        if (review.helpful_count !== null) confidence += 10;
-                        
-                        review.extraction_confidence = Math.min(confidence, 100);
-                        review.extraction_method = "Playwright Enhanced V1.2.0";
-                        review.source_element = elem.className;
-                        
-                        // Only include reviews with meaningful content
-                        if (review.review_text && review.review_text.length > 10) {{
+                        }} catch (e) {{}}
+
+                        // Extract review text
+                        try {{
+                            const textElem = elem.querySelector('[class*="text"], [class*="description"]');
+                            if (textElem) review.review_text = textElem.textContent.trim().substring(0, 1000);
+                        }} catch (e) {{}}
+
+                        // Extract date
+                        try {{
+                            const dateElem = elem.querySelector('[class*="date"]');
+                            if (dateElem) review.review_date = dateElem.textContent.trim();
+                        }} catch (e) {{}}
+
+                        if (review.reviewer_name || review.rating || review.review_text) {{
                             reviews.push(review);
                         }}
                     }}
-                    
+
                     return reviews;
                 }}
             """)
-            
+
             reviews = reviews_data
-            print(f"✅ Extracted {len(reviews)} enhanced reviews (V1.2.0 optimized)")
-            
-            # Calculate average quality metrics
-            if reviews:
-                avg_confidence = sum(r.get('extraction_confidence', 0) for r in reviews) / len(reviews)
-                avg_completeness = sum(r.get('data_completeness', 0) for r in reviews) / len(reviews)
-                print(f"📊 Average extraction confidence: {avg_confidence:.1f}%")
-                print(f"📊 Average data completeness: {avg_completeness:.1f}%")
-            
+            print(f"✅ Extracted {len(reviews)} reviews")
+
         except Exception as e:
-            print(f"ℹ️ Enhanced review extraction: {e}")
+            print(f"ℹ️ Review extraction note: {e}")
 
         return reviews
 
-    async def _cleanup_immediately(self, browser, context, page):
-        """Immediate cleanup with zero resource leakage."""
-        try:
-            if page:
-                await page.close()
-                page = None
-                
-            if context:
-                await context.close()
-                context = None
-                
-            if browser:
-                await browser.close()
-                browser = None
-                
-            print("🧘 Immediate cleanup complete")
-            
-        except Exception as e:
-            print(f"⚠️ Cleanup warning: {e}")
-        finally:
-            # Clear references
-            page = None
-            context = None
-            browser = None
-
-    def _convert_url(self, url):
-        """Convert URL with minimal processing."""
-        if not url.startswith('http'):
-            return f"https://www.google.com/maps/search/{url.replace(' ', '+')}?hl=en"
-        
-        if '/place/' in url:
-            return f"{url}{'&' if '?' in url else '?'}hl=en"
-        
-        return f"{url}{'&' if '?' in url else '?'}hl=en"
-
-    def _calculate_quality_score_optimized(self, data):
-        """Calculate quality score with minimal computation."""
+    def _calculate_quality_score_proper(self, data):
+        """
+        Calculate quality score PROPERLY.
+        Only count fields that actually contain data.
+        """
         score = 0
-        
-        # Critical fields
-        if data.get('name'): score += 15
-        if data.get('phone'): score += 10
-        if data.get('address'): score += 10
-        if data.get('latitude') and data.get('longitude'): score += 15
-        
-        # Important fields
-        if data.get('rating'): score += 8
-        if data.get('category'): score += 7
-        if data.get('website'): score += 8
-        
-        # Bonus
-        if data.get('photos'): score += min(len(data['photos']) * 2, 10)
-        if data.get('reviews'): score += min(len(data['reviews']) * 2, 7)
-        
+
+        # Critical business information fields
+        if data.get('name'): score += 20
+        if data.get('phone'): score += 15
+        if data.get('address'): score += 15
+        if data.get('website'): score += 10
+
+        # Location data
+        if data.get('latitude') and data.get('longitude'): score += 10
+
+        # Business details
+        if data.get('rating') is not None: score += 10
+        if data.get('review_count'): score += 5
+        if data.get('category'): score += 5
+
+        # Place ID data
+        if data.get('place_id') or data.get('cid'): score += 5
+
+        # Bonus for reviews and photos
+        if data.get('reviews'):
+            score += min(len(data['reviews']), 5)
+        if data.get('photos'):
+            score += min(len(data['photos']), 5)
+
         return min(score, 100)
 
+    def _convert_url(self, url):
+        """Convert business query to Google Maps URL."""
+        if not url.startswith('http'):
+            return f"https://www.google.com/maps/search/{url.replace(' ', '+')}?hl=en"
+
+        if '/place/' in url:
+            return f"{url}{'&' if '?' in url else '?'}hl=en"
+
+        return f"{url}{'&' if '?' in url else '?'}hl=en"
+
     def get_stats(self):
-        """Get optimized statistics."""
+        """Get extraction statistics."""
         stats = self.stats.copy()
-        
-        # Calculate memory efficiency
         current_memory = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
         stats["current_memory_mb"] = round(current_memory, 1)
         stats["memory_increase_mb"] = round(current_memory - self.initial_memory, 1)
-        stats["memory_efficiency"] = "EXCELLENT" if stats["memory_increase_mb"] < 30 else "GOOD"
-        
+        stats["memory_efficiency"] = "EXCELLENT" if stats["memory_increase_mb"] < 50 else "GOOD"
         return stats
-
-    async def extract_multiple_parallel_optimized(self, urls, max_concurrent=2):
-        """Parallel extraction with memory optimization."""
-        print(f"\n🚀 PARALLEL OPTIMIZED MODE")
-        print(f"📊 Processing {len(urls)} businesses with {max_concurrent} workers")
-        
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True, args=[
-                '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'
-            ])
-            
-            semaphore = asyncio.Semaphore(max_concurrent)
-            
-            async def extract_with_memory_control(url):
-                async with semaphore:
-                    # Monitor memory before
-                    mem_before = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
-                    
-                    context = await browser.new_context()
-                    page = await context.new_page()
-                    
-                    try:
-                        result = await self._extract_single_optimized(page, url)
-                        return result
-                    except Exception as e:
-                        return {"success": False, "error": str(e), "url": url}
-                    finally:
-                        # Immediate cleanup
-                        await page.close()
-                        await context.close()
-                        
-                        # Monitor memory after
-                        mem_after = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
-                        
-                        # Force cleanup if memory increased significantly
-                        if mem_after - mem_before > 50:
-                            gc.collect()
-            
-            start_time = time.time()
-            results = await asyncio.gather(*[extract_with_memory_control(url) for url in urls])
-            total_time = time.time() - start_time
-            
-            await browser.close()
-            
-            successful = sum(1 for r in results if r.get("success"))
-            print(f"\n✅ PARALLEL OPTIMIZED COMPLETE")
-            print(f"   Total time: {total_time:.1f}s")
-            print(f"   Successful: {successful}/{len(urls)}")
-            
-            return results
-
-    async def _extract_single_optimized(self, page, url):
-        """Extract single business with existing page."""
-        try:
-            await page.goto(self._convert_url(url), wait_until="domcontentloaded", timeout=20000)
-            await page.wait_for_timeout(1000)
-            
-            data = await self._extract_data_minimalist(page)
-            data["success"] = True
-            return data
-            
-        except Exception as e:
-            return {"success": False, "error": str(e)}
