@@ -1,0 +1,2508 @@
+{
+  "export_version": "3.4.1",
+  "export_timestamp": "2025-10-21T12:53:32.063037",
+  "export_format": "detailed_json",
+  "total_records": 50,
+  "businesses": [
+    {
+      "index": 1,
+      "business_name": "Lalgarh Palace Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "business_name": "Gajner Palace Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "business_name": "Bhanwar Vilas Palace",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "business_name": "Hotel Lord Bikaneri",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "business_name": "Hotel The Rajputana",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "business_name": "Gypsy Vegetarian Restaurant",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "business_name": "Dilkhush Restaurant",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "business_name": "Rajasthani Thali Restaurant",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "business_name": "Bikaner Bhujia House",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "business_name": "Desert Rose Restaurant",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "business_name": "Bikaner Shopping Mall",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "business_name": "Rajasthani Handicraft Store",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "business_name": "Bikaner Textiles",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "business_name": "Traditional Market Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "business_name": "Bikaner Sweets Shop",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "business_name": "Bikaner Municipality Office",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "business_name": "District Collector Office",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "business_name": "Bikaner Chamber of Commerce",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "business_name": "Business Service Center",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "business_name": "Tax Office Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "business_name": "Junagarh Fort Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 81,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "business_name": "Laxminath Temple",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "business_name": "Gajner Wildlife Sanctuary",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "business_name": "Camel Breeding Farm",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "business_name": "Desert Festival Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "business_name": "Bikaner Medical Center",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "business_name": "District Hospital Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "business_name": "Private Clinic Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "business_name": "Dental Hospital",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "business_name": "Ayurveda Center",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "business_name": "Bikaner University",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "business_name": "Government School Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "business_name": "Private School Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "business_name": "College Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "business_name": "Engineering Institute",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "business_name": "Bikaner Bus Station",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "business_name": "Railway Station Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "business_name": "Taxi Service Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 39,
+      "business_name": "Auto Rickshaw Service",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 40,
+      "business_name": "Car Rental Service",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 41,
+      "business_name": "State Bank Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 42,
+      "business_name": "ICICI Bank Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 43,
+      "business_name": "HDFC Bank Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 44,
+      "business_name": "Bank of Baroda Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 68,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 45,
+      "business_name": "Post Office Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 46,
+      "business_name": "Real Estate Agency Bikaner",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 47,
+      "business_name": "Property Developer",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "business_name": "Housing Society",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 49,
+      "business_name": "Property Management",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    },
+    {
+      "index": 50,
+      "business_name": "Land Office",
+      "status": "✅ SUCCESS",
+      "quality_score": 73,
+      "result": {
+        "extraction_version": "3.4.1",
+        "timestamp": "2025-10-21T12:28:58.778148",
+        "enhancements": {
+          "emails": {
+            "status": "✅ SUCCESS",
+            "count": 1,
+            "emails": [
+              "info@kdpropertypvtltd.com"
+            ],
+            "quality_boost": 5
+          },
+          "gps": {
+            "status": "⚠️ GEOCODING FAILED",
+            "quality_boost": 0
+          },
+          "hours": {
+            "status": "⚠️ NOT FOUND",
+            "quality_boost": 0
+          }
+        },
+        "core_data": {
+          "name": "Land Settlement Office Jodhpur",
+          "phone": null,
+          "address": "72VM+H5P, Neni bai ka mandir, Udai Mandir, Jodhpur",
+          "website": null,
+          "rating": 4.6,
+          "review_count": 16,
+          "photos": [
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npRBvgHT-xuBfDvo8BC2s-DT9456oJVa4cP9RJgJB4vExINGDUr2d5higLJZAz3JiDDrOqXv504vI5O7xcIXECTlwwR2NBp-yQpfLwZ6ujXMOL3RG_EWnNa-7UHgRR9xkDjrKpiuA=w397-h298-k-no",
+            "https://lh3.googleusercontent.com/a/ACg8ocI-PBYvG8gA_gRwpU7RuiKnyf2K-UQ3hQgMQBNVu0Col5GTjw=w36-h36-p-rp-mo-br100",
+            "https://lh3.googleusercontent.com/a-/ALV-UjV-C1eNT6vK76XWGMT63cpx24gPZqwk4lwLGB1Wn22_2C639hOs=w36-h36-p-rp-mo-ba3-br100",
+            "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLT2qZf7lNNOgtLzUoxWa-Jg0QZ7d-dS2zAnv_Js0H5K-tYa7cPZMr02o5frERqQupsbSQab1Wc_oPKXwmFbpIPM-IUJZNzZFlvyG7xeZ61tKVrRxUifaURA3az5jH7QrdZCCp=w156-h114-p-k-no"
+          ],
+          "place_id": "4925150038225583000",
+          "cid": "4925150038225583000"
+        },
+        "quality_score": {
+          "base": 68,
+          "boost": 5,
+          "final": 73,
+          "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+        }
+      }
+    }
+  ]
+}

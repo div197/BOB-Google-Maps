@@ -1,0 +1,915 @@
+{
+  "metadata": {
+    "test_type": "Phase 3a 100-Business Scale Validation",
+    "timestamp": "2025-10-21T18:33:57.499921",
+    "total_businesses": 100,
+    "gps_success": 84,
+    "gps_failed": 16,
+    "success_rate": 84.0,
+    "total_time_seconds": 1155.204826,
+    "avg_time_per_business": 11.55204826,
+    "decision": "GO"
+  },
+  "results": [
+    {
+      "index": 1,
+      "business": "Gypsy Vegetarian Restaurant Jodhpur",
+      "success": true,
+      "has_gps": 73.0077764,
+      "latitude": 26.2751618,
+      "longitude": 73.0077764,
+      "quality": 73.0077764
+    },
+    {
+      "index": 2,
+      "business": "Delhi Royal Restaurant Bikaner",
+      "success": true,
+      "has_gps": 73.3188738,
+      "latitude": 28.009148,
+      "longitude": 73.3188738,
+      "quality": 73.3188738
+    },
+    {
+      "index": 3,
+      "business": "Mumbai Street Food Cafe Bangalore",
+      "success": true,
+      "has_gps": 77.6104632,
+      "latitude": 12.9139165,
+      "longitude": 77.6104632,
+      "quality": 77.6104632
+    },
+    {
+      "index": 4,
+      "business": "Taj Indian Restaurant New York",
+      "success": true,
+      "has_gps": -73.987969,
+      "latitude": 40.726982,
+      "longitude": -73.987969,
+      "quality": -73.987969
+    },
+    {
+      "index": 5,
+      "business": "Maharaja Palace Restaurant London",
+      "success": true,
+      "has_gps": -0.1287427,
+      "latitude": 51.5103104,
+      "longitude": -0.1287427,
+      "quality": -0.1287427
+    },
+    {
+      "index": 6,
+      "business": "Namaste Restaurant Singapore",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 7,
+      "business": "Spice Route Cafe Dubai",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 8,
+      "business": "Golden Fork Restaurant Hong Kong",
+      "success": true,
+      "has_gps": 75.9084686,
+      "latitude": 17.6318783,
+      "longitude": 75.9084686,
+      "quality": 75.9084686
+    },
+    {
+      "index": 9,
+      "business": "Taj Mumbai Restaurant Tokyo",
+      "success": true,
+      "has_gps": 72.833685,
+      "latitude": 18.922881,
+      "longitude": 72.833685,
+      "quality": 72.833685
+    },
+    {
+      "index": 10,
+      "business": "Royal Cuisine Restaurant Sydney",
+      "success": true,
+      "has_gps": 151.2046542,
+      "latitude": -33.8779247,
+      "longitude": 151.2046542,
+      "quality": 151.2046542
+    },
+    {
+      "index": 11,
+      "business": "Fashion Forward Clothing Delhi",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 12,
+      "business": "DC Fashion Karol Bagh",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 13,
+      "business": "Style Haven Mumbai",
+      "success": true,
+      "has_gps": 72.877325,
+      "latitude": 19.0658414,
+      "longitude": 72.877325,
+      "quality": 72.877325
+    },
+    {
+      "index": 14,
+      "business": "Designer Boutique Bangalore",
+      "success": true,
+      "has_gps": 77.6193078,
+      "latitude": 12.9373498,
+      "longitude": 77.6193078,
+      "quality": 77.6193078
+    },
+    {
+      "index": 15,
+      "business": "Luxury Retail Store Singapore",
+      "success": true,
+      "has_gps": 103.8363746,
+      "latitude": 1.3022297,
+      "longitude": 103.8363746,
+      "quality": 103.8363746
+    },
+    {
+      "index": 16,
+      "business": "Fashion District Dubai",
+      "success": true,
+      "has_gps": 55.3019726,
+      "latitude": 25.1866742,
+      "longitude": 55.3019726,
+      "quality": 55.3019726
+    },
+    {
+      "index": 17,
+      "business": "Style Central London",
+      "success": true,
+      "has_gps": -0.126584,
+      "latitude": 51.520763,
+      "longitude": -0.126584,
+      "quality": -0.126584
+    },
+    {
+      "index": 18,
+      "business": "Designer Outlet Hong Kong",
+      "success": true,
+      "has_gps": 114.1328359,
+      "latitude": 22.360956,
+      "longitude": 114.1328359,
+      "quality": 114.1328359
+    },
+    {
+      "index": 19,
+      "business": "Fashion Plaza Tokyo",
+      "success": true,
+      "has_gps": 139.7624127,
+      "latitude": 35.6722448,
+      "longitude": 139.7624127,
+      "quality": 139.7624127
+    },
+    {
+      "index": 20,
+      "business": "Retail Mega Mall Sydney",
+      "success": true,
+      "has_gps": 151.0285351,
+      "latitude": -33.8379135,
+      "longitude": 151.0285351,
+      "quality": 151.0285351
+    },
+    {
+      "index": 21,
+      "business": "Apollo Hospital Delhi",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 22,
+      "business": "Fortis Healthcare Mumbai",
+      "success": true,
+      "has_gps": 72.9418091,
+      "latitude": 19.1617943,
+      "longitude": 72.9418091,
+      "quality": 72.9418091
+    },
+    {
+      "index": 23,
+      "business": "Max Healthcare Bangalore",
+      "success": true,
+      "has_gps": 77.582767,
+      "latitude": 12.956466,
+      "longitude": 77.582767,
+      "quality": 77.582767
+    },
+    {
+      "index": 24,
+      "business": "Manipal Hospital Hyderabad",
+      "success": true,
+      "has_gps": 78.3587426,
+      "latitude": 17.4707751,
+      "longitude": 78.3587426,
+      "quality": 78.3587426
+    },
+    {
+      "index": 25,
+      "business": "Aravind Eye Care Chennai",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 26,
+      "business": "Liver Institute Mumbai",
+      "success": true,
+      "has_gps": 72.840166,
+      "latitude": 19.09583,
+      "longitude": 72.840166,
+      "quality": 72.840166
+    },
+    {
+      "index": 27,
+      "business": "Heart Care Center Delhi",
+      "success": true,
+      "has_gps": 77.2410351,
+      "latitude": 28.5645283,
+      "longitude": 77.2410351,
+      "quality": 77.2410351
+    },
+    {
+      "index": 28,
+      "business": "Orthopedic Clinic Bangalore",
+      "success": true,
+      "has_gps": 77.6051432,
+      "latitude": 12.913448,
+      "longitude": 77.6051432,
+      "quality": 77.6051432
+    },
+    {
+      "index": 29,
+      "business": "Pediatric Hospital Singapore",
+      "success": true,
+      "has_gps": 103.7828698,
+      "latitude": 1.293475,
+      "longitude": 103.7828698,
+      "quality": 103.7828698
+    },
+    {
+      "index": 30,
+      "business": "Medical Center Tokyo",
+      "success": true,
+      "has_gps": 139.6666897,
+      "latitude": 35.6262131,
+      "longitude": 139.6666897,
+      "quality": 139.6666897
+    },
+    {
+      "index": 31,
+      "business": "Taj Hotel Mumbai",
+      "success": true,
+      "has_gps": 72.8332028,
+      "latitude": 18.9216631,
+      "longitude": 72.8332028,
+      "quality": 72.8332028
+    },
+    {
+      "index": 32,
+      "business": "The Leela Palace Delhi",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 33,
+      "business": "Oberoi Hotel Bangalore",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 34,
+      "business": "Hyatt Regency Hyderabad",
+      "success": true,
+      "has_gps": 78.447467,
+      "latitude": 17.4192197,
+      "longitude": 78.447467,
+      "quality": 78.447467
+    },
+    {
+      "index": 35,
+      "business": "Marriott Hotel Chennai",
+      "success": true,
+      "has_gps": 80.2478248,
+      "latitude": 13.0460041,
+      "longitude": 80.2478248,
+      "quality": 80.2478248
+    },
+    {
+      "index": 36,
+      "business": "ITC Hotel Pune",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 37,
+      "business": "Hilton Singapore",
+      "success": true,
+      "has_gps": 103.8358673,
+      "latitude": 1.3019203,
+      "longitude": 103.8358673,
+      "quality": 103.8358673
+    },
+    {
+      "index": 38,
+      "business": "Four Seasons Dubai",
+      "success": true,
+      "has_gps": 55.2402131,
+      "latitude": 25.2023141,
+      "longitude": 55.2402131,
+      "quality": 55.2402131
+    },
+    {
+      "index": 39,
+      "business": "Peninsula Hong Kong",
+      "success": true,
+      "has_gps": 114.176687,
+      "latitude": 22.296164,
+      "longitude": 114.176687,
+      "quality": 114.176687
+    },
+    {
+      "index": 40,
+      "business": "Park Hyatt Sydney",
+      "success": true,
+      "has_gps": 151.208897,
+      "latitude": -33.855994,
+      "longitude": 151.208897,
+      "quality": 151.208897
+    },
+    {
+      "index": 41,
+      "business": "Google India Office Bangalore",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 42,
+      "business": "Microsoft Delhi",
+      "success": true,
+      "has_gps": 77.095253,
+      "latitude": 28.5036155,
+      "longitude": 77.095253,
+      "quality": 77.095253
+    },
+    {
+      "index": 43,
+      "business": "Amazon Hyderabad",
+      "success": true,
+      "has_gps": 78.3452099,
+      "latitude": 17.4206226,
+      "longitude": 78.3452099,
+      "quality": 78.3452099
+    },
+    {
+      "index": 44,
+      "business": "Apple Store Mumbai",
+      "success": true,
+      "has_gps": 72.8494107,
+      "latitude": 19.0532485,
+      "longitude": 72.8494107,
+      "quality": 72.8494107
+    },
+    {
+      "index": 45,
+      "business": "IBM India Bangalore",
+      "success": true,
+      "has_gps": 77.622419,
+      "latitude": 13.0479572,
+      "longitude": 77.622419,
+      "quality": 77.622419
+    },
+    {
+      "index": 46,
+      "business": "TCS Mumbai",
+      "success": true,
+      "has_gps": 72.857067,
+      "latitude": 19.1205969,
+      "longitude": 72.857067,
+      "quality": 72.857067
+    },
+    {
+      "index": 47,
+      "business": "Infosys Bangalore",
+      "success": true,
+      "has_gps": 77.6640689,
+      "latitude": 12.8502542,
+      "longitude": 77.6640689,
+      "quality": 77.6640689
+    },
+    {
+      "index": 48,
+      "business": "Wipro Bangalore",
+      "success": true,
+      "has_gps": 77.683644,
+      "latitude": 12.9113905,
+      "longitude": 77.683644,
+      "quality": 77.683644
+    },
+    {
+      "index": 49,
+      "business": "HCL Technologies Delhi",
+      "success": true,
+      "has_gps": 77.1209067,
+      "latitude": 28.6518188,
+      "longitude": 77.1209067,
+      "quality": 77.1209067
+    },
+    {
+      "index": 50,
+      "business": "Tech Park Singapore",
+      "success": true,
+      "has_gps": 103.8615995,
+      "latitude": 1.3515655,
+      "longitude": 103.8615995,
+      "quality": 103.8615995
+    },
+    {
+      "index": 51,
+      "business": "ICICI Bank Mumbai",
+      "success": true,
+      "has_gps": 72.8166747,
+      "latitude": 18.9578646,
+      "longitude": 72.8166747,
+      "quality": 72.8166747
+    },
+    {
+      "index": 52,
+      "business": "HDFC Bank Delhi",
+      "success": true,
+      "has_gps": 73.020364,
+      "latitude": 26.270771,
+      "longitude": 73.020364,
+      "quality": 73.020364
+    },
+    {
+      "index": 53,
+      "business": "Axis Bank Bangalore",
+      "success": true,
+      "has_gps": 77.6167102,
+      "latitude": 12.9733823,
+      "longitude": 77.6167102,
+      "quality": 77.6167102
+    },
+    {
+      "index": 54,
+      "business": "RBI Mumbai",
+      "success": true,
+      "has_gps": 72.8365302,
+      "latitude": 18.9332655,
+      "longitude": 72.8365302,
+      "quality": 72.8365302
+    },
+    {
+      "index": 55,
+      "business": "State Bank of India Delhi",
+      "success": true,
+      "has_gps": 77.2192815,
+      "latitude": 28.6347461,
+      "longitude": 77.2192815,
+      "quality": 77.2192815
+    },
+    {
+      "index": 56,
+      "business": "Bank of India Mumbai",
+      "success": true,
+      "has_gps": 72.8311142,
+      "latitude": 18.9308816,
+      "longitude": 72.8311142,
+      "quality": 72.8311142
+    },
+    {
+      "index": 57,
+      "business": "Punjab National Bank Delhi",
+      "success": true,
+      "has_gps": 73.0057379,
+      "latitude": 26.2710576,
+      "longitude": 73.0057379,
+      "quality": 73.0057379
+    },
+    {
+      "index": 58,
+      "business": "Kotak Bank Mumbai",
+      "success": true,
+      "has_gps": 72.8609049,
+      "latitude": 19.0741236,
+      "longitude": 72.8609049,
+      "quality": 72.8609049
+    },
+    {
+      "index": 59,
+      "business": "IDBI Bank Chennai",
+      "success": true,
+      "has_gps": 80.2404771,
+      "latitude": 13.0415841,
+      "longitude": 80.2404771,
+      "quality": 80.2404771
+    },
+    {
+      "index": 60,
+      "business": "IndusInd Bank Hyderabad",
+      "success": true,
+      "has_gps": 78.475687,
+      "latitude": 17.394091,
+      "longitude": 78.475687,
+      "quality": 78.475687
+    },
+    {
+      "index": 61,
+      "business": "IIT Delhi",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 62,
+      "business": "IIT Mumbai",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 63,
+      "business": "University of Mumbai",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 64,
+      "business": "Delhi University",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 65,
+      "business": "Bangalore Institute",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 66,
+      "business": "Chennai University",
+      "success": true,
+      "has_gps": 80.2830029,
+      "latitude": 13.0662341,
+      "longitude": 80.2830029,
+      "quality": 80.2830029
+    },
+    {
+      "index": 67,
+      "business": "Hyderabad College",
+      "success": true,
+      "has_gps": 78.5246424,
+      "latitude": 17.4205607,
+      "longitude": 78.5246424,
+      "quality": 78.5246424
+    },
+    {
+      "index": 68,
+      "business": "Pune University",
+      "success": true,
+      "has_gps": 73.835329,
+      "latitude": 18.537233,
+      "longitude": 73.835329,
+      "quality": 73.835329
+    },
+    {
+      "index": 69,
+      "business": "Singapore University",
+      "success": true,
+      "has_gps": 103.775118,
+      "latitude": 1.292953,
+      "longitude": 103.775118,
+      "quality": 103.775118
+    },
+    {
+      "index": 70,
+      "business": "Hong Kong University",
+      "success": true,
+      "has_gps": 114.136811,
+      "latitude": 22.261359,
+      "longitude": 114.136811,
+      "quality": 114.136811
+    },
+    {
+      "index": 71,
+      "business": "Oberoi Realty Mumbai",
+      "success": true,
+      "has_gps": 72.860506,
+      "latitude": 19.1728698,
+      "longitude": 72.860506,
+      "quality": 72.860506
+    },
+    {
+      "index": 72,
+      "business": "DLF Limited Delhi",
+      "success": true,
+      "has_gps": 77.090101,
+      "latitude": 28.498467,
+      "longitude": 77.090101,
+      "quality": 77.090101
+    },
+    {
+      "index": 73,
+      "business": "Godrej Properties Mumbai",
+      "success": true,
+      "has_gps": 72.9205367,
+      "latitude": 19.0925727,
+      "longitude": 72.9205367,
+      "quality": 72.9205367
+    },
+    {
+      "index": 74,
+      "business": "Prestige Bangalore",
+      "success": true,
+      "has_gps": 77.5873147,
+      "latitude": 12.8455968,
+      "longitude": 77.5873147,
+      "quality": 77.5873147
+    },
+    {
+      "index": 75,
+      "business": "Sobha Bangalore",
+      "success": true,
+      "has_gps": 77.547964,
+      "latitude": 13.041541,
+      "longitude": 77.547964,
+      "quality": 77.547964
+    },
+    {
+      "index": 76,
+      "business": "Puravankara Mumbai",
+      "success": true,
+      "has_gps": 72.91636,
+      "latitude": 19.045629,
+      "longitude": 72.91636,
+      "quality": 72.91636
+    },
+    {
+      "index": 77,
+      "business": "Mahindra Lifespace",
+      "success": true,
+      "has_gps": 73.8136746,
+      "latitude": 18.6288603,
+      "longitude": 73.8136746,
+      "quality": 73.8136746
+    },
+    {
+      "index": 78,
+      "business": "Lodha Group Mumbai",
+      "success": true,
+      "has_gps": 72.8291534,
+      "latitude": 18.9878692,
+      "longitude": 72.8291534,
+      "quality": 72.8291534
+    },
+    {
+      "index": 79,
+      "business": "Emaar India Delhi",
+      "success": true,
+      "has_gps": null,
+      "latitude": null,
+      "longitude": null,
+      "quality": null
+    },
+    {
+      "index": 80,
+      "business": "Shapoorji Pallonji Mumbai",
+      "success": true,
+      "has_gps": 72.8395961,
+      "latitude": 18.9363528,
+      "longitude": 72.8395961,
+      "quality": 72.8395961
+    },
+    {
+      "index": 81,
+      "business": "Tata Steel Limited Mumbai",
+      "success": true,
+      "has_gps": 72.8326444,
+      "latitude": 18.9316401,
+      "longitude": 72.8326444,
+      "quality": 72.8326444
+    },
+    {
+      "index": 82,
+      "business": "Reliance Industries Mumbai",
+      "success": true,
+      "has_gps": 73.0094444,
+      "latitude": 19.125,
+      "longitude": 73.0094444,
+      "quality": 73.0094444
+    },
+    {
+      "index": 83,
+      "business": "Hindustan Unilever Mumbai",
+      "success": true,
+      "has_gps": 72.8584332,
+      "latitude": 19.1124294,
+      "longitude": 72.8584332,
+      "quality": 72.8584332
+    },
+    {
+      "index": 84,
+      "business": "ITC Limited Kolkata",
+      "success": true,
+      "has_gps": 88.3497102,
+      "latitude": 22.5405302,
+      "longitude": 88.3497102,
+      "quality": 88.3497102
+    },
+    {
+      "index": 85,
+      "business": "Bajaj Auto Pune",
+      "success": true,
+      "has_gps": 73.8347391,
+      "latitude": 18.494649,
+      "longitude": 73.8347391,
+      "quality": 73.8347391
+    },
+    {
+      "index": 86,
+      "business": "Hero Cycles Delhi",
+      "success": true,
+      "has_gps": 73.0363924,
+      "latitude": 26.2744777,
+      "longitude": 73.0363924,
+      "quality": 73.0363924
+    },
+    {
+      "index": 87,
+      "business": "Bosch India Bangalore",
+      "success": true,
+      "has_gps": 77.6054474,
+      "latitude": 12.9445242,
+      "longitude": 77.6054474,
+      "quality": 77.6054474
+    },
+    {
+      "index": 88,
+      "business": "Siemens India Delhi",
+      "success": true,
+      "has_gps": 77.068304,
+      "latitude": 28.4911473,
+      "longitude": 77.068304,
+      "quality": 77.068304
+    },
+    {
+      "index": 89,
+      "business": "Mahindra Group Mumbai",
+      "success": true,
+      "has_gps": 72.8683091,
+      "latitude": 19.2056709,
+      "longitude": 72.8683091,
+      "quality": 72.8683091
+    },
+    {
+      "index": 90,
+      "business": "Bharat Heavy Electricals Delhi",
+      "success": true,
+      "has_gps": 77.2124021,
+      "latitude": 28.5521808,
+      "longitude": 77.2124021,
+      "quality": 77.2124021
+    },
+    {
+      "index": 91,
+      "business": "Maruti Suzuki Delhi",
+      "success": true,
+      "has_gps": 77.290758,
+      "latitude": 28.6384129,
+      "longitude": 77.290758,
+      "quality": 77.290758
+    },
+    {
+      "index": 92,
+      "business": "Hyundai Motors Bangalore",
+      "success": true,
+      "has_gps": 77.60828,
+      "latitude": 12.9728772,
+      "longitude": 77.60828,
+      "quality": 77.60828
+    },
+    {
+      "index": 93,
+      "business": "Toyota Bangalore",
+      "success": true,
+      "has_gps": 77.5978963,
+      "latitude": 12.985492,
+      "longitude": 77.5978963,
+      "quality": 77.5978963
+    },
+    {
+      "index": 94,
+      "business": "Honda Bangalore",
+      "success": true,
+      "has_gps": 77.6658945,
+      "latitude": 12.9948337,
+      "longitude": 77.6658945,
+      "quality": 77.6658945
+    },
+    {
+      "index": 95,
+      "business": "Renault Bangalore",
+      "success": true,
+      "has_gps": 77.5805871,
+      "latitude": 12.9065943,
+      "longitude": 77.5805871,
+      "quality": 77.5805871
+    },
+    {
+      "index": 96,
+      "business": "Volkswagen Pune",
+      "success": true,
+      "has_gps": 73.8179705,
+      "latitude": 18.5403513,
+      "longitude": 73.8179705,
+      "quality": 73.8179705
+    },
+    {
+      "index": 97,
+      "business": "BMW India Delhi",
+      "success": true,
+      "has_gps": 77.2951073,
+      "latitude": 28.5176372,
+      "longitude": 77.2951073,
+      "quality": 77.2951073
+    },
+    {
+      "index": 98,
+      "business": "Mercedes Bangalore",
+      "success": true,
+      "has_gps": 77.5961881,
+      "latitude": 12.9739119,
+      "longitude": 77.5961881,
+      "quality": 77.5961881
+    },
+    {
+      "index": 99,
+      "business": "Audi Delhi",
+      "success": true,
+      "has_gps": 77.2953692,
+      "latitude": 28.5171823,
+      "longitude": 77.2953692,
+      "quality": 77.2953692
+    },
+    {
+      "index": 100,
+      "business": "Porsche Mumbai",
+      "success": true,
+      "has_gps": 72.8348851,
+      "latitude": 19.085446,
+      "longitude": 72.8348851,
+      "quality": 72.8348851
+    }
+  ]
+}

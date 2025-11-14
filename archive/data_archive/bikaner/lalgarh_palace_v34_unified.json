@@ -1,0 +1,46 @@
+{
+  "extraction_version": "3.4.1",
+  "timestamp": "2025-10-21T11:59:42.382861",
+  "enhancements": {
+    "emails": {
+      "status": "\u2705 SUCCESS",
+      "count": 2,
+      "emails": [
+        "info@lallgarhpalace.com",
+        "info@hotel.com"
+      ],
+      "quality_boost": 5
+    },
+    "gps": {
+      "status": "\u26a0\ufe0f GEOCODING FAILED",
+      "quality_boost": 0
+    },
+    "hours": {
+      "status": "\u26a0\ufe0f NOT FOUND",
+      "quality_boost": 0
+    }
+  },
+  "core_data": {
+    "name": "The Lallgarh Palace - A Heritage Hotel",
+    "phone": "088000 03100",
+    "address": "\ue0c828RJ+6F3, Lallgarh Palace Complex Opposite Roadways Bus Stand, Samta Nagar, Bikaner, Rajasthan 334001",
+    "website": "https://www.google.com/url?q=http://www.lallgarhpalace.com/&opi=79508299&sa=U&ved=0ahUKEwjrp8yc1bSQAxVGyjgGHSiVDAsQ61gIFSgR&usg=AOvVaw3Mq9Z4gGx4YxO8WFOLIx2O",
+    "rating": 4.1,
+    "review_count": 26,
+    "photos": [
+      "https://lh3.googleusercontent.com/p/AF1QipM7X56FF-5fUxPatgmCB7flchBZuqqQf9ZLFg78=w298-h298-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHrs3PZ-FE4KLSyFYeT7zsVOjvv3Lxv2q16GBLLEysX_Smqp5HJWL_jjZ6ycd8m_FrqvOAvmGGa8kNXv0HsWZrO6wT3fJCRLMb07zli8zAfuvM-4jioIXks8vYd6DTRKGDzsOvYzQ2Sgs=w529-h298-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8WgdzX_ElCXYyPFW43eiwoywYRZGDbbOON8hp1IIXCJx6sw6PTAwhUdbmc_Ua4EbXLLxgD-ODf50CqlwHI0cEGV6NPhelBU4xZHapB_9HK13MBHumHjX4wHY8aveLuk1uXVKNgA=w529-h298-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipMfrpsAlTzlszydi0CzcrZDrjXropGcxyxTscoo=w447-h298-k-no",
+      "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no8_-N3jMEr-syc2UVjvuUFwUU2lCarCzAbdW1xgtIpBDZ9GsdwvHKxNLpF9qwd1GFIcJzYhpD0X9GJhxk2YnQ-2LGOPnIm9Ilzrii017mKdKENfjUnjMii2iG0Ao5KcbFm7tTK=w397-h298-k-no"
+    ],
+    "place_id": "16475682288560930000",
+    "cid": "16475682288560930000"
+  },
+  "quality_score": {
+    "base": 68,
+    "boost": 5,
+    "final": 73,
+    "improvement_text": "Improved from 68/100 to 73/100 (+5 points)"
+  }
+}

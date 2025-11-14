@@ -1,0 +1,68 @@
+{
+  "extraction_method": "Playwright Optimized",
+  "name": "The Lallgarh Palace - A Heritage Hotel",
+  "rating": 4.1,
+  "review_count": 26,
+  "address": "\ue0c828RJ+6F3, Lallgarh Palace Complex Opposite Roadways Bus Stand, Samta Nagar, Bikaner, Rajasthan 334001",
+  "phone": "088000 03100",
+  "website": "https://www.google.com/url?q=http://www.lallgarhpalace.com/&opi=79508299&sa=U&ved=0ahUKEwjUscnh_7KQAxUWbWwGHSlTJbAQ61gIFigR&usg=AOvVaw3cBHul0rymq-Z4id699m4W",
+  "photos": [
+    "https://lh3.googleusercontent.com/p/AF1QipM7X56FF-5fUxPatgmCB7flchBZuqqQf9ZLFg78=w298-h298-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqHrs3PZ-FE4KLSyFYeT7zsVOjvv3Lxv2q16GBLLEysX_Smqp5HJWL_jjZ6ycd8m_FrqvOAvmGGa8kNXv0HsWZrO6wT3fJCRLMb07zli8zAfuvM-4jioIXks8vYd6DTRKGDzsOvYzQ2Sgs=w529-h298-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np8WgdzX_ElCXYyPFW43eiwoywYRZGDbbOON8hp1IIXCJx6sw6PTAwhUdbmc_Ua4EbXLLxgD-ODf50CqlwHI0cEGV6NPhelBU4xZHapB_9HK13MBHumHjX4wHY8aveLuk1uXVKNgA=w529-h298-k-no",
+    "https://lh3.googleusercontent.com/p/AF1QipOjmfFIqlzlCp6Pkf2iFWkUiNucXvIqIJKC_GHF=w447-h298-k-no",
+    "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no8_-N3jMEr-syc2UVjvuUFwUU2lCarCzAbdW1xgtIpBDZ9GsdwvHKxNLpF9qwd1GFIcJzYhpD0X9GJhxk2YnQ-2LGOPnIm9Ilzrii017mKdKENfjUnjMii2iG0Ao5KcbFm7tTK=w397-h298-k-no"
+  ],
+  "reviews": [
+    {
+      "review_index": 1,
+      "reviewer_name": "Namrt Tulsian",
+      "review_text": "We mother and son really admire and cherish our stay in the hotel Lallgadh palace, bikaner. The management team there I found the best of all of my life experience, with greatest of ideological values, truly owsom, very generous, honest, \u2026",
+      "text_length": 239,
+      "reviewer_total_reviews": 6,
+      "extraction_confidence": 60,
+      "extraction_method": "Playwright Enhanced V1.2.0",
+      "source_element": "jftiEf fontBodyMedium "
+    },
+    {
+      "review_index": 2,
+      "review_text": "We mother and son really admire and cherish our stay in the hotel Lallgadh palace, bikaner. The management team there I found the best of all of my life experience, with greatest of ideological values, truly owsom, very generous, honest, \u2026",
+      "text_length": 239,
+      "extraction_confidence": 40,
+      "extraction_method": "Playwright Enhanced V1.2.0",
+      "source_element": "MyEned"
+    },
+    {
+      "review_index": 3,
+      "review_text": "We mother and son really admire and cherish our stay in the hotel Lallgadh palace, bikaner. The management team there I found the best of all of my life experience, with greatest of ideological values, truly owsom, very generous, honest, \u2026",
+      "text_length": 239,
+      "extraction_confidence": 40,
+      "extraction_method": "Playwright Enhanced V1.2.0",
+      "source_element": "wiI7pd"
+    },
+    {
+      "review_index": 4,
+      "reviewer_name": "mamatha n",
+      "review_text": "An impressive royal palace converted into a luxury heritage hotel.  of extraordinary beauty, which however reflects a bit of its 50 years. The rooms are very spacious and modernized in services. The staff is welcoming and very respectful. \u2026",
+      "text_length": 240,
+      "reviewer_total_reviews": 21,
+      "extraction_confidence": 60,
+      "extraction_method": "Playwright Enhanced V1.2.0",
+      "source_element": "jftiEf fontBodyMedium "
+    },
+    {
+      "review_index": 5,
+      "review_text": "An impressive royal palace converted into a luxury heritage hotel.  of extraordinary beauty, which however reflects a bit of its 50 years. The rooms are very spacious and modernized in services. The staff is welcoming and very respectful. \u2026",
+      "text_length": 240,
+      "extraction_confidence": 40,
+      "extraction_method": "Playwright Enhanced V1.2.0",
+      "source_element": "MyEned"
+    }
+  ],
+  "total_reviews_extracted": 5,
+  "data_quality_score": 68,
+  "success": true,
+  "extractor_version": "Playwright Optimized V4.0",
+  "memory_optimized": true,
+  "extraction_time_seconds": 4.93
+}
