@@ -30,11 +30,18 @@ __author__ = 'Divyanshu (Dhrishtadyumna)'
 __license__ = 'MIT'
 
 # Core extractors
-from .extractors import (
-    PlaywrightExtractorOptimized,
-    SeleniumExtractorOptimized,
-    HybridExtractorOptimized
-)
+from .extractors import PlaywrightExtractorOptimized
+
+# Try to import optional extractors
+try:
+    from .extractors import SeleniumExtractorOptimized
+except ImportError:
+    SeleniumExtractorOptimized = None
+
+try:
+    from .extractors import HybridExtractorOptimized
+except ImportError:
+    HybridExtractorOptimized = None
 
 # Data models
 from .models.business import Business

@@ -1,0 +1,64 @@
+name: 🛡️ Security Vulnerability Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly on Monday at 2 AM
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    name: Security Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: 🔧 Install security tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install bandit[toml] semgrep
+
+      - name: 🔒 Run Bandit security linter
+        run: |
+          bandit -r bob/ -f json -o bandit-report.json || true
+          bandit -r bob/ -ll
+
+      - name: 🔍 Run Semgrep security analysis
+        run: |
+          semgrep --config=auto --json --output semgrep-report.json bob/ || true
+          semgrep --config=auto bob/ || true
+
+      - name: 📤 Upload security reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-scan-reports
+          path: |
+            bandit-report.json
+            semgrep-report.json
+          retention-days: 30
+
+      - name: 🛡️ Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: python
+          queries: security-and-quality
+
+      - name: 🔍 Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
+      - name: ✅ Security scan complete
+        run: echo "✅ Security vulnerability scan completed!"

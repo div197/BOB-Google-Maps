@@ -1,0 +1,48 @@
+# Configuration for actions/labeler
+# Automatically label PRs based on file changes
+
+# Documentation changes
+documentation:
+  - '**/*.md'
+  - 'docs/**/*'
+
+# Code changes
+code:
+  - 'bob/**/*.py'
+  - 'tests/**/*.py'
+
+# Core extractors
+extractors:
+  - 'bob/extractors/**/*'
+
+# Cache system
+cache:
+  - 'bob/cache/**/*'
+
+# Configuration
+configuration:
+  - 'config.yaml'
+  - '.env*'
+  - 'bob/config/**/*'
+
+# Tests
+tests:
+  - 'tests/**/*'
+  - 'pytest.ini'
+  - 'conftest.py'
+
+# CI/CD
+ci-cd:
+  - '.github/**/*'
+  - 'Dockerfile'
+  - 'docker-compose.yml'
+
+# Dependencies
+dependencies:
+  - 'requirements.txt'
+  - 'pyproject.toml'
+  - 'setup.py'
+
+# Examples
+examples:
+  - 'examples/**/*'
