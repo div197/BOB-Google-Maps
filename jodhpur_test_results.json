@@ -1,0 +1,61 @@
+{
+  "test_date": "2025-11-14T10:30:23.897986",
+  "location": "Jodhpur, Rajasthan, India",
+  "keyword": "restaurants",
+  "total": 10,
+  "successful": 0,
+  "failed": 10,
+  "success_rate": 0,
+  "results": [
+    {
+      "query": "Gypsy Vegetarian Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Gypsy+Vegetarian+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Gypsy+Vegetarian+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Jharokha Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Jharokha+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Jharokha+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Indique Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Indique+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Indique+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Pillars Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Pillars+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Pillars+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Janta Sweet House Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Janta+Sweet+House+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Janta+Sweet+House+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Omelette Shop Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Omelette+Shop+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Omelette+Shop+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Cafe Mehran Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Cafe+Mehran+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Cafe+Mehran+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Hanwant Mahal Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Hanwant+Mahal+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Hanwant+Mahal+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "Darikhana Restaurant Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/Darikhana+Restaurant+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/Darikhana+Restaurant+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    },
+    {
+      "query": "The Spice Court Jodhpur",
+      "success": false,
+      "error": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.google.com/maps/search/The+Spice+Court+Jodhpur?hl=en\nCall log:\n  - navigating to \"https://www.google.com/maps/search/The+Spice+Court+Jodhpur?hl=en\", waiting until \"networkidle\"\n"
+    }
+  ]
+}
