@@ -1,0 +1,20 @@
+# Code Owners for BOB Google Maps
+# These owners will be requested for review when someone opens a PR
+
+# Default owner for everything
+* @div197
+
+# Extractors
+/bob/extractors/ @div197
+
+# Tests
+/tests/ @div197
+
+# Documentation
+/docs/ @div197
+*.md @div197
+
+# CI/CD
+/.github/ @div197
+/Dockerfile @div197
+/docker-compose.yml @div197
