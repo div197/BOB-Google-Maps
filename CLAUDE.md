@@ -421,6 +421,79 @@ BOB-Google-Maps/
 └── Dockerfile                     # Docker configuration
 ```
 
+### **Website Extraction - The Breakthrough (November 2025)**
+
+**Critical Fix:** Intelligent multi-tier URL filtering now properly integrated into PRIMARY and FALLBACK extractors.
+
+#### **The Problem Solved**
+Google Maps was displaying provider URLs instead of actual business websites:
+- Provider chooser: `https://www.google.com/viewer/chooseprovider?mid=...`
+- Maps reservation: `https://www.google.com/maps/reserve?...`
+- Booking platforms: Links to Zomato, TripAdvisor, booking.com
+
+This prevented proper email extraction and data validation.
+
+#### **The Solution: 3-Tier Architecture**
+
+**Tier 1: Raw URL Collection**
+- Extracts ALL available URLs from page (8-10 per business)
+- Uses multiple CSS selectors: `a[data-item-id='authority']`, `a[href*='http']`, etc.
+- JavaScript execution for comprehensive coverage
+
+**Tier 2: Intelligent Filtering** ⭐
+- Blocks 45+ patterns of invalid URLs:
+  - Google internal (viewer, maps, reserve, aclk)
+  - Booking platforms (Zomato, Swiggy, Booking.com, TripAdvisor, Yelp, Deliveroo, etc.)
+  - Social media (Facebook, Instagram, Twitter, YouTube)
+  - Review sites (Trustpilot, Glassdoor, G2)
+- Parses Google redirects: extracts real URL from `?q=` parameter
+- Scores URLs: Direct > Pattern-based > Redirects
+
+**Tier 3: Pattern-Based Fallback**
+- Searches page text for patterns: "website:", "visit:", "contact:"
+- Regex URL extraction from content
+- Validates against blocked keywords
+
+#### **Implementation Files**
+- **`bob/utils/website_extractor.py`** - Filtering logic (lines 16-269)
+  - `extract_website_intelligent()` - Multi-layer extraction
+  - `parse_google_redirect()` - Google URL unwrapping
+  - `_is_valid_business_url()` - 45+ keyword validation
+  - `_extract_urls_from_patterns()` - Fallback extraction
+
+- **`bob/extractors/playwright_optimized.py`** - PRIMARY engine (lines 239-398)
+  - Collects all URLs via JavaScript batch extraction
+  - Passes to intelligent filtering function
+  - Returns validated real business domain
+
+- **`bob/extractors/selenium_optimized.py`** - FALLBACK engine (lines 275-348)
+  - Identical intelligent filtering integration
+  - Multi-selector approach for reliability
+
+#### **Real-World Validation (November 15, 2025)**
+5 businesses tested across India:
+```
+✅ Gypsy Vegetarian Restaurant    → http://www.gypsyfoods.com/ (98/100)
+✅ Janta Sweet House              → https://jantasweethome.com/ (88/100)
+✅ Niro's Restaurant              → http://www.nirosindia.com/ (98/100)
+✅ Laxmi Mishthan Bhandar         → http://www.lmbsweets.com/ (88/100)
+⚠️  Surya Mahal                   → No website listed (Edge case)
+
+Success Rate: 4/5 (80%) real business domains
+Quality Improvement: 3-30/100 → 88-98/100
+```
+
+#### **Commits**
+- `b4018de` - FIX: Apply intelligent website filtering to PRIMARY & FALLBACK extractors
+- `9ee23df` - FIX: Correct page.text_content() call to use locator in playwright_optimized
+- `4cc2511` - MAJOR FIX: Implement intelligent navigation & website extraction
+
+#### **Impact on Email & Image Extraction**
+✅ Email extraction can now safely fetch real business websites
+✅ Prevents data corruption from Google URLs
+✅ Validates domain legitimacy before processing
+✅ Enables accurate contact information extraction
+
 ### **Extraction Workflow (Real-World Tested)**
 
 #### **Step 1: Query Processing**

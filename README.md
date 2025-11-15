@@ -241,6 +241,92 @@ Quality Score:         85.5/100 (verified with real data)
 Scalability:           Handles 1000+ businesses/day
 ```
 
+## 🌐 Website Extraction Technology - The Breakthrough
+
+### The Problem We Solved
+
+Google Maps often displays provider URLs instead of actual business websites:
+- **Provider Chooser URLs:** `https://www.google.com/viewer/chooseprovider?mid=...`
+- **Maps Reservation URLs:** `https://www.google.com/maps/reserve?...`
+- **Booking Platform Redirects:** Links to Zomato, TripAdvisor, booking.com instead of the actual business website
+
+This prevented proper email extraction, business validation, and data enrichment.
+
+### The Solution: Intelligent Multi-Tier Filtering
+
+BOB implements a sophisticated 3-tier website extraction architecture:
+
+**Tier 1: Raw Collection**
+- Extracts ALL available URLs from the business page (8-10 URLs per business)
+- Collects from multiple CSS selectors: `a[data-item-id='authority']`, `a[href*='http']`, etc.
+- Deduplicates results
+
+**Tier 2: Intelligent Filtering** ⭐
+- Blocks 45+ patterns of invalid URLs:
+  - Google internal URLs (viewer, maps, reserve, aclk, etc.)
+  - Booking platforms (Zomato, Swiggy, Booking.com, TripAdvisor, Yelp, Uber Eats, Deliveroo, etc.)
+  - Social media profiles (Facebook, Instagram, Twitter, YouTube - not primary websites)
+  - Review sites (Trustpilot, Glassdoor, G2)
+  - Email addresses and localhost
+- Scores URLs by type: Direct URLs > Pattern-based > Redirects
+- Parses Google redirect URLs to extract actual domains from `q=` parameter
+
+**Tier 3: Pattern-Based Fallback**
+- Searches page text for patterns: "website: ...", "visit: ...", "contact: ..."
+- Extracts direct URLs from page content using regex
+- Validates all extracted URLs against blocked keywords
+
+### Real-World Results (November 2025)
+
+**5-Business Validation Test:**
+
+| Business | Result | Confidence |
+|----------|--------|-----------|
+| Gypsy Vegetarian Restaurant | ✅ http://www.gypsyfoods.com/ | 98/100 |
+| Janta Sweet House | ✅ https://jantasweethome.com/ | 88/100 |
+| Niro's Restaurant | ✅ http://www.nirosindia.com/ | 98/100 |
+| Laxmi Mishthan Bhandar | ✅ http://www.lmbsweets.com/ | 88/100 |
+| Surya Mahal | ⚠️ No real website on listing | Edge case |
+
+**Success Rate:** 4/5 (80%) extracted real business domains
+**Quality Improvement:** 3-30/100 (before) → 88-98/100 (after)
+
+### Technical Implementation
+
+The intelligent filtering is implemented in:
+- **`bob/utils/website_extractor.py`** - Filtering logic and URL validation
+- **`bob/extractors/playwright_optimized.py`** - PRIMARY engine integration
+- **`bob/extractors/selenium_optimized.py`** - FALLBACK engine integration
+
+Key functions:
+```python
+def extract_website_intelligent(page_text, available_urls):
+    """Multi-layer extraction with 45+ blocked keywords"""
+
+def parse_google_redirect(google_url):
+    """Extract actual URL from google.com/url?q=... wrapper"""
+
+def _is_valid_business_url(url):
+    """Validate against blocked patterns (45+ keywords)"""
+```
+
+### Impact on Email & Image Extraction
+
+With proper website extraction in place:
+- ✅ **Email Extraction:** Can now fetch and parse business websites safely
+- ✅ **Data Validation:** Prevents invalid email extraction from Google URLs
+- ✅ **Business Verification:** Confirms actual business domain vs intermediaries
+
+### Architectural Advantages
+
+1. **Multi-Strategy Approach** - Not reliant on single CSS selector
+2. **Resilient to Google Changes** - Works across different Google Maps layouts
+3. **Validation Safety** - Prevents false positives and data corruption
+4. **Pattern Fallback** - Alternative extraction method if primary fails
+5. **Google Redirect Parsing** - Unwraps Google's URL parameter masking
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
