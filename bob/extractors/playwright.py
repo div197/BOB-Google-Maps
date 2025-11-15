@@ -140,9 +140,9 @@ class PlaywrightExtractor:
                 # Convert URL to standard format
                 standard_url = self._convert_url(url)
 
-                # Navigate with timeout
+                # Navigate with timeout (using domcontentloaded instead of networkidle to avoid timeouts)
                 print("🌐 Loading page...")
-                await page.goto(standard_url, wait_until="networkidle", timeout=45000)
+                await page.goto(standard_url, wait_until="domcontentloaded", timeout=25000)
 
                 # Check if we're on search results page and navigate to first business
                 if "/search/" in page.url:
@@ -263,59 +263,87 @@ class PlaywrightExtractor:
             return {"success": False, "error": str(e)}
 
     async def _navigate_to_first_business_result(self, page):
-        """Navigate from search results to the first business listing."""
+        """Navigate from search results to the first business listing.
+
+        INDIE HACKER APPROACH: Instead of relying on fragile CSS selectors that Google
+        constantly changes, we construct the /place/ URL directly using the business name.
+        This is more robust than searching for specific DOM elements.
+        """
         try:
-            # Wait for search results to load
-            await page.wait_for_timeout(2000)
-            
-            # Multiple selectors for business results
-            business_selectors = [
-                "a[href*='/place/']",                    # Direct place links
-                ".Io6Yb.fontHeadlineSmall",              # Business name links
-                ".hfpxzc",                               # Result container links
-                "[data-href*='/place/']",                # Place links with data-href
-                "a[aria-label*='Directions']"            # Links with directions
-            ]
-            
-            business_link = None
-            
-            for selector in business_selectors:
+            # Get the search query from the current URL
+            current_url = page.url
+            print("🔍 Analyzing current URL to extract search query...")
+
+            # Extract search query from URL like:
+            # https://www.google.com/maps/search/Gypsy+Vegetarian+Restaurant/@26.27,...
+            import re
+            match = re.search(r'/maps/search/([^/@]+)', current_url)
+
+            if match:
+                search_query = match.group(1)
+                search_query = search_query.replace('+', ' ')
+                print(f"📍 Extracted search query: {search_query}")
+
+                # Build direct /place/ URL - INDIE HACKER METHODOLOGY
+                # This bypasses the need to find/click result elements entirely
+                place_url = f"https://www.google.com/maps/place/{search_query.replace(' ', '+')}"
+                print(f"🎯 Constructing direct /place/ URL: {place_url[:80]}...")
+
                 try:
-                    elements = await page.query_selector_all(selector)
-                    for element in elements:
-                        href = await element.get_attribute("href") or await element.get_attribute("data-href")
-                        if href and "/place/" in href:
-                            business_link = href
-                            print(f"🎯 Found business link: {href[:80]}...")
-                            break
-                    if business_link:
-                        break
-                except:
-                    continue
-            
-            if business_link:
-                # Navigate to the business page
-                await page.goto(business_link, wait_until="networkidle", timeout=30000)
-                await page.wait_for_timeout(2000)
-                print("✅ Successfully navigated to business page")
-                return True
-            else:
-                # Try clicking the first result
-                try:
-                    first_result = await page.query_selector(".m6QErb, .bHzsHc, .lI9IFe")
-                    if first_result:
-                        await first_result.click()
-                        await page.wait_for_timeout(3000)
-                        print("✅ Clicked first business result")
+                    # Use 'domcontentloaded' instead of 'networkidle' to avoid timeouts
+                    await page.goto(place_url, wait_until="domcontentloaded", timeout=25000)
+                    await page.wait_for_timeout(2000)
+
+                    # Verify we're on a business detail page
+                    title_elem = await page.query_selector(".DUwDvf.lfPIob, h1")
+                    if title_elem:
+                        print("✅ Successfully navigated to business detail page via direct URL")
                         return True
-                except:
-                    pass
-            
-            print("⚠️ Could not find business result to click")
+                    else:
+                        print("⚠️ Navigated to place URL but couldn't verify business detail page")
+                        # Continue anyway - extraction might still work
+                        return True
+
+                except Exception as e:
+                    print(f"⚠️ Direct URL navigation failed: {str(e)[:50]}")
+
+            # Fallback: Try to find place links in search results
+            print("📌 Fallback: Searching for place links in search results...")
+
+            try:
+                # Wait for results to render
+                await page.wait_for_timeout(1500)
+
+                # Try multiple selectors for business result links
+                business_selectors = [
+                    "a[href*='/place/']",              # Direct place links
+                    ".hfpxzc",                         # Result container
+                    "a.Io6Yb",                         # Business name link
+                ]
+
+                for selector in business_selectors:
+                    try:
+                        elements = await page.query_selector_all(selector)
+                        if elements and len(elements) > 0:
+                            # Get first element's href
+                            href = await elements[0].get_attribute("href")
+                            if href and "/place/" in href:
+                                print(f"🔗 Found place link: {href[:80]}...")
+                                await page.goto(href, wait_until="domcontentloaded", timeout=25000)
+                                await page.wait_for_timeout(2000)
+                                print("✅ Successfully navigated via place link")
+                                return True
+                    except:
+                        continue
+
+            except Exception as e:
+                print(f"⚠️ Fallback place link search failed: {str(e)[:50]}")
+
+            print("⚠️ Could not navigate to business result")
             return False
-            
+
         except Exception as e:
-            print(f"⚠️ Error navigating to business result: {e}")
+            print(f"⚠️ Error in navigation logic: {e}")
             return False
 
     async def _smart_scroll(self, page):

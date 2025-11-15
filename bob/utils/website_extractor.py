@@ -99,6 +99,7 @@ def _is_valid_business_url(url: str) -> bool:
     Check if URL looks like a legitimate business website.
 
     Filters out:
+    - Google Maps/internal URLs (including provider choosers, viewers)
     - Facebook/Instagram profiles (not primary websites)
     - Booking platforms (ZomatoOneTableResy, etc) - these are intermediaries
     - Maps/review sites
@@ -111,13 +112,18 @@ def _is_valid_business_url(url: str) -> bool:
 
     url_lower = url.lower()
 
-    # Block specific intermediary platforms
+    # Block specific intermediary platforms and Google services
     blocked_keywords = [
-        'maps.google',
-        'google.com/maps',
-        '/maps/reserve',
-        '/maps/place',
-        'maps-booking',
+        # Google internal URLs - CRITICAL FILTER
+        'google.com/viewer',         # Provider chooser: https://google.com/viewer/chooseprovider?mid=...
+        'google.com/aclk',           # Google ads: https://google.com/aclk?sa=l&ai=...
+        '/maps/reserve',             # Maps booking
+        '/maps/place',               # Maps place redirect
+        '/viewer/choose',            # Viewer choice page
+        'viewer/chooseprovider',     # Provider selector
+        'maps.google',               # Maps domain
+        'google.com/maps',           # Maps redirect
+        'maps-booking',              # Maps booking
         # Social media (not primary business website)
         'facebook.com',
         'instagram.com',
