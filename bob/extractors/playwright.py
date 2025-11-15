@@ -610,19 +610,12 @@ class PlaywrightExtractor:
         except:
             pass
 
-        # Extract images
+        # Extract images using improved extraction
         try:
-            images = []
-            img_elements = await page.query_selector_all("img[src*='googleusercontent']")
-            for img in img_elements[:10]:
-                src = await img.get_attribute("src")
-                if src and "googleusercontent" in src:
-                    # Convert to high-res
-                    high_res = self._convert_to_high_res(src)
-                    images.append(high_res)
-
+            from bob.utils.image_extractor import extract_images_playwright
+            images = await extract_images_playwright(page)
             if images:
-                data["photos"] = list(set(images))
+                data["photos"] = images
                 # image_count is calculated from photos, not stored separately
         except:
             pass
