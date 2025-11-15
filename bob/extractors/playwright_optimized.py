@@ -248,7 +248,11 @@ class PlaywrightExtractorOptimized:
         try:
             # Get page content for pattern-based website extraction
             page_content = await page.content()
-            page_text = await page.text_content()
+            # Get page text from the body element
+            try:
+                page_text = await page.locator("body").text_content()
+            except:
+                page_text = ""
 
             # Use JavaScript to extract data from the page
             extracted_data = await page.evaluate("""
