@@ -20,6 +20,7 @@ import psutil
 import os
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
 from bob.utils.website_extractor import extract_website_intelligent, parse_google_redirect
+from bob.utils.image_extractor import is_valid_image_url, convert_to_high_res, get_comprehensive_image_selectors
 
 
 class PlaywrightExtractorOptimized:
@@ -411,6 +412,20 @@ class PlaywrightExtractorOptimized:
                     # Remove the raw website if it's filtered out
                     data['website'] = None
 
+            # CRITICAL FIX: Extract images from the page
+            print(f"\n📸 EXTRACTING IMAGES...")
+            try:
+                images = await self._extract_images_optimized(page)
+                if images:
+                    print(f"✅ Extracted {len(images)} images")
+                    data['photos'] = images
+                else:
+                    print(f"⚠️ No valid business images found")
+                    data['photos'] = []
+            except Exception as e:
+                print(f"⚠️ Image extraction error: {str(e)[:80]}")
+                data['photos'] = []
+
         except Exception as e:
             print(f"Error in data extraction: {e}")
 
@@ -477,6 +492,69 @@ class PlaywrightExtractorOptimized:
             print(f"ℹ️ Review extraction note: {e}")
 
         return reviews
+
+    async def _extract_images_optimized(self, page):
+        """Extract business images using CSS selectors - CRITICAL FIX."""
+        all_images = set()
+
+        try:
+            # Get all comprehensive selectors
+            selectors = get_comprehensive_image_selectors()
+
+            print(f"    Testing {len(selectors)} CSS selectors...")
+
+            for selector in selectors:
+                try:
+                    img_elements = await page.query_selector_all(selector)
+                    if img_elements:
+                        for img in img_elements:
+                            try:
+                                # Try src first, then data-src
+                                src = await img.get_attribute('src')
+                                if not src:
+                                    src = await img.get_attribute('data-src')
+                                if not src:
+                                    src = await img.get_attribute('data-lazy-src')
+
+                                if src and is_valid_image_url(src):
+                                    high_res = convert_to_high_res(src)
+                                    all_images.add(high_res)
+                            except:
+                                continue
+                except:
+                    continue
+
+            # Also try getting images via JavaScript (direct DOM access)
+            try:
+                js_images = await page.evaluate("""
+                    () => {
+                        const images = [];
+                        const imgElements = document.querySelectorAll('img');
+                        for (let img of imgElements) {
+                            const src = img.src || img.getAttribute('data-src') || img.getAttribute('data-lazy-src') || '';
+                            if (src && src.includes('googleusercontent.com') && !src.includes('mapslogo') && !src.includes('/a/')) {
+                                images.push(src);
+                            }
+                        }
+                        return Array.from(new Set(images));  // Deduplicate
+                    }
+                """)
+
+                if js_images:
+                    for url in js_images:
+                        if is_valid_image_url(url):
+                            high_res = convert_to_high_res(url)
+                            all_images.add(high_res)
+
+            except:
+                pass
+
+            print(f"    Found {len(all_images)} valid business images")
+            return list(all_images)
+
+        except Exception as e:
+            print(f"    Image extraction failed: {str(e)[:60]}")
+            return []
 
     def _calculate_quality_score_proper(self, data):
         """

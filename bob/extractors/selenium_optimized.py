@@ -25,6 +25,7 @@ import os
 import re
 from urllib.parse import unquote
 from bob.utils.website_extractor import extract_website_intelligent, parse_google_redirect
+from bob.utils.image_extractor import is_valid_image_url, convert_to_high_res, get_comprehensive_image_selectors
 
 
 class SeleniumExtractorOptimized:
