@@ -332,20 +332,30 @@ class PlaywrightExtractorOptimized:
                             'a[href*="www"]'
                         ];
 
+                        // Debug: Log selector results
+                        console.log("🔍 URL Collection Debug:");
                         for (const selector of selectors) {
                             const elems = document.querySelectorAll(selector);
+                            console.log(`  Selector '${selector}': found ${elems.length} elements`);
                             for (const elem of elems) {
                                 if (elem.href) {
+                                    console.log(`    - ${elem.href.substring(0, 100)}`);
                                     websiteLinks.push(elem.href);
                                 }
                             }
                         }
 
+                        console.log(`  Total collected (before dedup): ${websiteLinks.length}`);
                         result.available_urls = Array.from(new Set(websiteLinks));  // Deduplicate
+                        console.log(`  Total after dedup: ${result.available_urls.length}`);
+
                         if (result.available_urls.length > 0) {
                             result.website = result.available_urls[0];  // Primary selection (will be filtered below)
+                            console.log(`  Primary website: ${result.website.substring(0, 100)}`);
                         }
-                    } catch (e) {}
+                    } catch (e) {
+                        console.log(`  ❌ URL collection error: ${e.message}`);
+                    }
 
                     // Extract category/type
                     try {

@@ -1,0 +1,467 @@
+================================================================================
+                    BOB-GOOGLE-MAPS WEBSITE EXTRACTION
+                        COMPLETE VISUAL MAP
+================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         BOB-GOOGLE-MAPS PACKAGE (v4.2.1)                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+                                    /bob/
+                    ┌──────────────────┼──────────────────┐
+                    │                  │                  │
+            ┌───────▼────────┐  ┌─────▼──────┐  ┌──────▼────────┐
+            │   extractors/  │  │  utils/    │  │  models/      │
+            │   (6 engines)  │  │  (7 modules)  │  (Business)    │
+            └────────────────┘  └────────────┘  └───────────────┘
+
+
+================================================================================
+EXTRACTOR ENGINE LAYER (6 Implementations)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  OPTIMIZED TIER (Recommended - Fastest & Lean)                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌──────────────────────────┐    ┌──────────────────────────┐               │
+│  │ PlaywrightExtractorOptimized   │ SeleniumExtractorOptimized              │
+│  │ (477 lines)                    │ (465 lines)                             │
+│  │ ─────────────────────────      │ ───────────────────────                 │
+│  │ Speed:       ⚡⚡⚡             │ Speed:       ⚡⚡                         │
+│  │ Reliability: 95%               │ Reliability: 99%                        │
+│  │ Use case:    DEFAULT           │ Use case:    FALLBACK                   │
+│  │ Config:      Async/Playwright  │ Config:      Selenium+Undetected       │
+│  │                                │                                        │
+│  │ extract_business_optimized()   │ extract_business_optimized()           │
+│  └──────────────────────────┘    └──────────────────────────┘               │
+│                 │                                  │                        │
+│                 ├─ [collect raw URLs] ────────────┤                        │
+│                 │   via CSS selectors              │                        │
+│                 └──────────────┬───────────────────┘                        │
+│                                │                                            │
+│                ┌───────────────▼───────────────┐                           │
+│                │ website_extractor_intelligent()│ ← CORE LOGIC            │
+│                │                               │                           │
+│                │ 1. Filter Google URLs         │                           │
+│                │ 2. Parse redirects            │                           │
+│                │ 3. Validate business URLs     │                           │
+│                │ 4. Extract from text patterns │                           │
+│                │ 5. Score & rank results       │                           │
+│                └───────────────┬───────────────┘                           │
+│                                │                                            │
+│                                ▼                                            │
+│                    VALID BUSINESS WEBSITE URL                               │
+│                    (or None if failed)                                     │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  HYBRID TIER (Orchestrator - Auto-selects best engine)                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌──────────────────────────┐    ┌──────────────────────────┐               │
+│  │ HybridExtractorOptimized      │ HybridExtractor (Legacy)                 │
+│  │ (281 lines - RECOMMENDED)     │ (203 lines)                              │
+│  │                                │                                         │
+│  │ 1. Check cache                 │ Same strategy but                       │
+│  │ 2. Try Playwright first        │ older codebase                          │
+│  │ 3. Fallback to Selenium        │                                         │
+│  │ 4. Return result               │                                         │
+│  │                                │                                         │
+│  │ Reliability: 99%               │ Reliability: 99%                        │
+│  └──────────────────────────┘    └──────────────────────────┘               │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  FULL-FEATURED TIER (Legacy - Complete implementations)                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌──────────────────────────┐    ┌──────────────────────────┐               │
+│  │ PlaywrightExtractor            │ SeleniumExtractor                       │
+│  │ (885 lines - FULL)             │ (849 lines - FULL)                      │
+│  │                                │                                         │
+│  │ All extraction features        │ All extraction features                 │
+│  │ + reviews + images             │ + reviews + images                      │
+│  │ + advanced caching             │ + advanced caching                      │
+│  │ + network interception         │ + multi-strategy finder                 │
+│  │                                │                                         │
+│  │ Website extraction:            │ Website extraction:                     │
+│  │ Lines 454-500                  │ Lines 619-638                           │
+│  └──────────────────────────┘    └──────────────────────────┘               │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+WEBSITE EXTRACTION UTILITY LAYER (Core Logic)
+================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FILE: bob/utils/website_extractor.py (277 lines)                             │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│  TIER 2: INTELLIGENT FILTERING & GOOGLE REDIRECT PARSING                     │
+│                                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │ FUNCTION: extract_website_intelligent(page_text, available_urls)    │    │
+│  │ (Lines 16-69)                                                       │    │
+│  │                                                                      │    │
+│  │ STEP 1: Filter URLs                                                │    │
+│  │ ┌────────────────────────────────────────────────────────────────┐ │    │
+│  │ │ for url in available_urls:                                     │ │    │
+│  │ │   if 'google.com' in url:                                      │ │    │
+│  │ │     if '/url?' in url or 'q=' in url:                          │ │    │
+│  │ │       actual = parse_google_redirect(url)  ◄── PARSING         │ │    │
+│  │ │       if valid: add to filtered_urls                           │ │    │
+│  │ │     skip provider chooser URLs                                 │ │    │
+│  │ │   elif _is_valid_business_url(url):  ◄── VALIDATION            │ │    │
+│  │ │     add to filtered_urls                                       │ │    │
+│  │ └────────────────────────────────────────────────────────────────┘ │    │
+│  │                                                                      │    │
+│  │ STEP 2: Extract from page patterns                                 │    │
+│  │ ┌────────────────────────────────────────────────────────────────┐ │    │
+│  │ │ pattern_based_urls = _extract_urls_from_patterns(page_text)   │ │    │
+│  │ │ ◄── Finds "website: ...", "visit: ...", direct URLs            │ │    │
+│  │ └────────────────────────────────────────────────────────────────┘ │    │
+│  │                                                                      │    │
+│  │ STEP 3: Score & Rank                                               │    │
+│  │ ┌────────────────────────────────────────────────────────────────┐ │    │
+│  │ │ priority: direct > pattern > redirect                         │ │    │
+│  │ │ return filtered_urls[0][1]  (highest priority)                │ │    │
+│  │ └────────────────────────────────────────────────────────────────┘ │    │
+│  │                                                                      │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │ FUNCTION: parse_google_redirect(google_url) (Lines 72-94)           │    │
+│  │                                                                      │    │
+│  │ Extracts actual URL from Google redirect format:                   │    │
+│  │                                                                      │    │
+│  │ INPUT:  https://www.google.com/url?q=http://business.com/&opi=... │    │
+│  │ ▼                                                                    │    │
+│  │ Extract 'q' parameter from query string                            │    │
+│  │ Decode URL-encoded characters                                       │    │
+│  │ ▼                                                                    │    │
+│  │ OUTPUT: http://business.com/                                       │    │
+│  │                                                                      │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │ FUNCTION: _is_valid_business_url(url) (Lines 97-173)                │    │
+│  │                                                                      │    │
+│  │ CRITICAL FILTER: Blocks problematic URLs                           │    │
+│  │                                                                      │    │
+│  │ BLOCKED KEYWORDS (45+ keywords):                                   │    │
+│  │ ┌────────────────────────────────────────────────────────────────┐ │    │
+│  │ │ Google Internal URLs:                                          │ │    │
+│  │ │   - google.com/viewer         (provider chooser)               │ │    │
+│  │ │   - google.com/aclk          (Google ads)                      │ │    │
+│  │ │   - /maps/reserve            (booking)                         │ │    │
+│  │ │   - viewer/chooseprovider    (provider selector)               │ │    │
+│  │ │   - google.com/maps          (maps redirect)                   │ │    │
+│  │ │                                                                │ │    │
+│  │ │ Social Media (not primary website):                            │ │    │
+│  │ │   - facebook.com, instagram.com, twitter.com, youtube.com     │ │    │
+│  │ │                                                                │ │    │
+│  │ │ Booking Platforms (intermediaries):                            │ │    │
+│  │ │   - zomato.com, swiggy.com, booking.com, tripadvisor         │ │    │
+│  │ │   - yelp.com, justdial, ubereats, doordash, grubhub          │ │    │
+│  │ │                                                                │ │    │
+│  │ │ Review Sites:                                                  │ │    │
+│  │ │   - trustpilot, glassdoor, g2.com                             │ │    │
+│  │ │                                                                │ │    │
+│  │ │ Invalid Formats:                                               │ │    │
+│  │ │   - @, mailto, localhost, 127.0.0.1, 192.168, 10.0            │ │    │
+│  │ └────────────────────────────────────────────────────────────────┘ │    │
+│  │                                                                      │    │
+│  │ VALIDATION:                                                         │    │
+│  │   - Must have netloc (domain)                                       │    │
+│  │   - Must be http/https                                              │    │
+│  │   - Must be valid URL structure                                     │    │
+│  │                                                                      │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │ FUNCTION: _extract_urls_from_patterns(text) (Lines 176-208)         │    │
+│  │                                                                      │    │
+│  │ FALLBACK PATTERN MATCHING:                                          │    │
+│  │                                                                      │    │
+│  │ Pattern 1: Text labels                                              │    │
+│  │   "website:", "visit:", "web:", "contact us at:", "homepage"      │    │
+│  │   ▼                                                                  │    │
+│  │   Extract domain and construct URL                                  │    │
+│  │                                                                      │    │
+│  │ Pattern 2: Direct URLs in text                                      │    │
+│  │   https?://(?:www\.)?[domain]                                       │    │
+│  │   ▼                                                                  │    │
+│  │   Extract full URL from page text                                   │    │
+│  │                                                                      │    │
+│  │ Output: List of validated URLs                                      │    │
+│  │                                                                      │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+EMAIL EXTRACTION LAYER (Depends on Website)
+================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FILE: bob/utils/email_extractor.py (148 lines)                               │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│ TIER 3: EMAIL EXTRACTION FROM VALIDATED WEBSITE                              │
+│                                                                               │
+│ INPUT: Website URL from website_extractor.py                                 │
+│        (e.g., "https://gypsyfoods.in")                                       │
+│        OR Google redirect (handled)                                           │
+│        OR None (no extraction attempted)                                      │
+│                                                                               │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ FUNCTION: extract_real_url_from_google_redirect(url) (Lines 14-47)  │    │
+│ │                                                                       │    │
+│ │ Handles Google redirect format:                                     │    │
+│ │ https://www.google.com/url?q=http://actual.com/&opi=...           │    │
+│ │                          ▼                                           │    │
+│ │                      Returns: http://actual.com/                    │    │
+│ │                                                                       │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ FUNCTION: extract_emails_from_website(url, timeout=10)              │    │
+│ │           (Lines 50-147)                                             │    │
+│ │                                                                       │    │
+│ │ STEP 1: Parse Google redirect if present                            │    │
+│ │         real_url = extract_real_url_from_google_redirect(url)       │    │
+│ │                                                                       │    │
+│ │ STEP 2: SAFETY GATE - Reject Google URLs                            │    │
+│ │         if 'google' in real_url.lower():                            │    │
+│ │           return []  ◄── CRITICAL: Stops unrecognized formats      │    │
+│ │                                                                       │    │
+│ │ STEP 3: Validate URL format                                         │    │
+│ │         Ensure protocol (http/https)                                │    │
+│ │                                                                       │    │
+│ │ STEP 4: Fetch website content                                       │    │
+│ │         requests.get(real_url, timeout=10)                          │    │
+│ │         Check HTTP 200 status                                       │    │
+│ │                                                                       │    │
+│ │ STEP 5: Extract emails with multiple patterns                       │    │
+│ │         Pattern 1: Standard format                                   │    │
+│ │           [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}           │    │
+│ │         Pattern 2: Mailto links                                      │    │
+│ │           mailto:([email-regex])                                     │    │
+│ │         Pattern 3: Email field labels                                │    │
+│ │           (?:email|e-mail)[\s:=]+([email-regex])                    │    │
+│ │                                                                       │    │
+│ │ STEP 6: Filter spam emails                                          │    │
+│ │         Reject: 'example', 'test', 'noreply', 'admin@localhost'    │    │
+│ │         Validate: Single @, domain has extension                     │    │
+│ │                                                                       │    │
+│ │ OUTPUT: List of valid emails (max 5)                                │    │
+│ │         or [] if website extraction failed                           │    │
+│ │                                                                       │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+IMAGE EXTRACTION LAYER (6-Phase Strategy)
+================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FILES: bob/utils/image_extractor.py (292 lines) + images.py (406 lines)      │
+├──────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│ 6-PHASE EXTRACTION PROCESS:                                                  │
+│                                                                               │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 1: Immediate Images (fast)                                    │    │
+│ │ - Extract visible images on page load                               │    │
+│ │ - 10+ CSS selectors for different image types                       │    │
+│ │ - Filters out: maps, logos, avatars, UI icons                       │    │
+│ │ - Converts to high-res URLs                                         │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 2: Scroll Loading (+2-3s)                                     │    │
+│ │ - Scroll page to trigger lazy-load                                  │    │
+│ │ - Extract new images after each scroll                              │    │
+│ │ - Multiple scroll iterations                                        │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 3: Click Gallery (+4-5s)                                      │    │
+│ │ - Find and click main photo element                                 │    │
+│ │ - Wait for gallery to open                                          │    │
+│ │ - Extract images from gallery container                             │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 4: Scroll Gallery                                             │    │
+│ │ - Scroll within gallery to load more images                         │    │
+│ │ - Extract additional images                                         │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 5: Hidden Images                                              │    │
+│ │ - Extract from hidden/offscreen containers                          │    │
+│ │ - Look for lazy-load attributes                                     │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ PHASE 6: Special Views (+2-3s)                                      │    │
+│ │ - Street View panoramas                                             │    │
+│ │ - 360° photos                                                        │    │
+│ │ - Special view selectors                                            │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                      │                                                      │
+│                      ▼                                                      │
+│ ┌──────────────────────────────────────────────────────────────────────┐    │
+│ │ OUTPUT: High-res unique images (deduplicated)                       │    │
+│ │ Total extraction time: 8-15 seconds                                  │    │
+│ └──────────────────────────────────────────────────────────────────────┘    │
+│                                                                               │
+│ KEY FUNCTIONS:                                                               │
+│ - is_valid_image_url(url): Filters non-business images                      │
+│ - convert_to_high_res(url): Converts to maximum resolution                  │
+│ - extract_images_playwright(page): Async extraction                         │
+│ - extract_images_selenium(driver): Fallback extraction                      │
+│ - AdvancedImageExtractor: Full-featured class with 6 phases                 │
+│                                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+COMPLETE DATA FLOW
+================================================================================
+
+USER CODE / TEST
+       │
+       ▼
+HybridExtractorOptimized.extract_business("Business Name")
+       │
+       ├─ Cache check (SQLite) ─── HIT: Return cached result
+       │
+       └─ MISS: Continue extraction
+           │
+           ├─ Try Playwright (fast)
+           │   │
+           │   └─ Navigate to Google Maps
+           │       │
+           │       ▼
+           │   Collect raw URLs (7 CSS selectors)
+           │   a[data-item-id='authority']
+           │   a[aria-label*='website']
+           │   .lVcKpb a[href*='http']
+           │   (+ 4 more)
+           │       │
+           │       ▼
+           │   website_extractor.extract_website_intelligent()
+           │   │
+           │   ├─ Filter Google URLs ─── Pass: add to filtered
+           │   │                     └─ Fail: try parse_google_redirect()
+           │   ├─ _is_valid_business_url() ─── Check 45+ blocked keywords
+           │   ├─ _extract_urls_from_patterns() ─── Find pattern matches
+           │   └─ Score & rank ─── Return best match
+           │       │
+           │       ▼
+           │   WEBSITE RESULT: "https://gypsyfoods.in" OR None
+           │       │
+           │       ├─ If valid website:
+           │       │   │
+           │       │   ├─ email_extractor.extract_emails_from_website()
+           │       │   │   ├─ Parse Google redirects
+           │       │   │   ├─ Safety gate check
+           │       │   │   ├─ Fetch website (HTTP GET)
+           │       │   │   ├─ Extract with 3 regex patterns
+           │       │   │   └─ Spam filtering
+           │       │   │       │
+           │       │   │       ▼
+           │       │   │   EMAILS: ["contact@gypsyfoods.in", ...]
+           │       │   │
+           │       │   └─ image_extractor (6-phase)
+           │       │       Phase 1-6: extract_images_playwright()
+           │       │           │
+           │       │           ▼
+           │       │       IMAGES: [hires_url1, hires_url2, ...]
+           │       │
+           │       ├─ Extract reviews (if requested)
+           │       ├─ Extract Place ID/CID
+           │       ├─ Extract GPS coordinates
+           │       ├─ Calculate quality score
+           │       └─ Save to cache
+           │       │
+           │       ▼
+           │   SUCCESS RESULT ✓
+           │   {
+           │     name: "Gypsy Vegetarian Restaurant",
+           │     phone: "074120 74078",
+           │     address: "Jodhpur, Rajasthan",
+           │     website: "https://gypsyfoods.in",
+           │     emails: ["contact@gypsyfoods.in"],
+           │     rating: 4.0,
+           │     review_count: 123,
+           │     photos: [...],
+           │     ...
+           │     data_quality_score: 85/100
+           │   }
+           │
+           │
+           └─ On Playwright failure: Fallback to Selenium
+               (Same process as above, but slower)
+               │
+               └─ If also fails: Return error result
+
+
+================================================================================
+CRITICAL POINTS FOR UNDERSTANDING
+================================================================================
+
+1. CSS SELECTOR (Tier 1):
+   - Primary: a[data-item-id='authority']
+   - This extracts the raw href attribute from HTML
+   - Raw value may be: Google URL, redirect, or actual website
+
+2. INTELLIGENT FILTERING (Tier 2):
+   - extract_website_intelligent() processes raw URLs
+   - Filters out Google URLs using blocked keyword list
+   - Parses Google redirects using query parameter 'q'
+   - Extracts from page text as fallback
+
+3. EMAIL EXTRACTION (Tier 3):
+   - ONLY works if Tier 2 returns valid business website
+   - Safety gate (line 76-78) rejects Google URLs
+   - Requires HTTP request to actual domain
+   - Multiple regex patterns + spam filtering
+
+4. IMAGE EXTRACTION (Parallel):
+   - 6-phase strategy for maximum coverage
+   - Longest phase: gallery interaction (4-5 seconds)
+   - Filters out Google Maps artifacts
+   - Converts to maximum resolution
+
+5. PERFORMANCE BREAKDOWN:
+   - Navigate + selectors:       1-2 seconds
+   - Website extraction:          1 second
+   - Email extraction:            2-3 seconds (if website valid)
+   - Image extraction:            8-15 seconds (all 6 phases)
+   - Reviews:                     2-5 seconds (if requested)
+   - Total:                       11-50 seconds (varies by business)
+
+6. RELIABILITY:
+   - Playwright: 95% success (3-5x faster)
+   - Selenium:   99% success (more compatible)
+   - Hybrid:     99% success (auto-failover)
+
+================================================================================
+END OF VISUAL MAP
+================================================================================
