@@ -24,6 +24,7 @@ import psutil
 import os
 import re
 from urllib.parse import unquote
+from bob.utils.website_extractor import extract_website_intelligent, parse_google_redirect
 
 
 class SeleniumExtractorOptimized:
@@ -212,16 +213,22 @@ class SeleniumExtractorOptimized:
             return False
 
     def _extract_data_minimalist(self, driver):
-        """Extract data with minimal DOM interaction."""
+        """Extract data with minimal DOM interaction AND intelligent website filtering."""
         data = {
-            "extraction_method": "Selenium Optimized Minimalist"
+            "extraction_method": "Selenium Optimized Minimalist (with Intelligent Filtering)"
         }
+
+        # Get page text for intelligent filtering
+        try:
+            page_text = driver.find_element(By.TAG_NAME, "html").text
+        except:
+            page_text = ""
 
         # Use JavaScript batch extraction for efficiency
         try:
             extracted_data = driver.execute_script("""
                 const result = {};
-                
+
                 // Extract name
                 const nameSelectors = ['.DUwDvf.lfPIob', '.x3AX1-LfntMc-header-title', 'h1'];
                 for (const selector of nameSelectors) {
@@ -231,7 +238,7 @@ class SeleniumExtractorOptimized:
                         break;
                     }
                 }
-                
+
                 // Extract rating
                 const ratingSelectors = ['.MW4etd', '.ceNzKf', '[aria-label*="stars"]'];
                 for (const selector of ratingSelectors) {
@@ -245,18 +252,18 @@ class SeleniumExtractorOptimized:
                         }
                     }
                 }
-                
+
                 // Extract review count
                 const reviewElem = document.querySelector('.UY7F9, .RDApEe.YrbPuc');
                 if (reviewElem) {
                     const match = reviewElem.textContent.match(/(\\d+)/);
                     if (match) result.review_count = parseInt(match[1]);
                 }
-                
+
                 // Extract address
                 const addressElem = document.querySelector('[data-item-id*="address"]');
                 if (addressElem) result.address = addressElem.textContent.trim();
-                
+
                 // Extract phone
                 const phoneElem = document.querySelector('[data-item-id*="phone"]');
                 if (phoneElem) {
@@ -264,22 +271,42 @@ class SeleniumExtractorOptimized:
                     const match = text.match(/[\\+\\d\\s\\(\\)\\-]{7,}/);
                     if (match) result.phone = match[0].trim();
                 }
-                
-                // Extract website
-                const websiteElem = document.querySelector('a[data-item-id="authority"]');
-                if (websiteElem) result.website = websiteElem.href;
-                
+
+                // Extract ALL available URLs - collect multiple for intelligent filtering
+                try {
+                    const websiteLinks = [];
+                    const selectors = [
+                        'a[data-item-id="authority"]',
+                        'a[href*="http"]',
+                        'a[href*="www"]'
+                    ];
+
+                    for (const selector of selectors) {
+                        const elems = document.querySelectorAll(selector);
+                        for (const elem of elems) {
+                            if (elem.href) {
+                                websiteLinks.push(elem.href);
+                            }
+                        }
+                    }
+
+                    result.available_urls = Array.from(new Set(websiteLinks));  // Deduplicate
+                    if (result.available_urls.length > 0) {
+                        result.website = result.available_urls[0];  // Primary selection (will be filtered below)
+                    }
+                } catch (e) {}
+
                 // Extract category
                 const categoryElem = document.querySelector('.DkEaL, .YhemCb');
                 if (categoryElem) result.category = categoryElem.textContent.trim();
-                
+
                 // Extract GPS from URL
                 const urlMatch = window.location.href.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
                 if (urlMatch) {
                     result.latitude = parseFloat(urlMatch[1]);
                     result.longitude = parseFloat(urlMatch[2]);
                 }
-                
+
                 // Extract Place ID
                 const url = window.location.href;
                 const placeIdMatch = url.match(/!1s(0x[0-9a-f]+:0x[0-9a-f]+)/);
@@ -296,16 +323,32 @@ class SeleniumExtractorOptimized:
                         }
                     }
                 }
-                
+
                 return result;
             """)
-            
+
             # Merge extracted data
             data.update(extracted_data)
-            
+
+            # CRITICAL FIX: Apply intelligent website filtering
+            # This is the missing piece that was bypassing the intelligent filter!
+            if data.get('available_urls'):
+                print(f"🔍 Raw URLs found: {data['available_urls']}")
+                intelligent_website = extract_website_intelligent(
+                    page_text,
+                    data['available_urls']
+                )
+                if intelligent_website:
+                    print(f"✅ Intelligent filter selected: {intelligent_website[:80]}")
+                    data['website'] = intelligent_website
+                else:
+                    print(f"⚠️ Intelligent filter found no valid business website")
+                    # Remove the raw website if it's filtered out
+                    data['website'] = None
+
         except Exception as e:
             print(f"⚠️ JavaScript extraction failed: {e}")
-            
+
             # Fallback to direct element extraction
             try:
                 # Name
@@ -314,7 +357,7 @@ class SeleniumExtractorOptimized:
                     data["name"] = name_elem.text.strip()
                 except:
                     pass
-                
+
                 # Rating
                 try:
                     rating_elem = driver.find_element(By.CSS_SELECTOR, ".MW4etd")
@@ -324,7 +367,7 @@ class SeleniumExtractorOptimized:
                         data["rating"] = float(rating_match.group(1))
                 except:
                     pass
-                    
+
             except:
                 pass
 
@@ -334,7 +377,7 @@ class SeleniumExtractorOptimized:
                 const imgs = document.querySelectorAll('img[src*="googleusercontent"]');
                 return Array.from(imgs).slice(0, 3).map(img => img.src);
             """)
-            
+
             if images:
                 data["photos"] = images
         except:

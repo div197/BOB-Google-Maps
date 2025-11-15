@@ -19,6 +19,7 @@ import gc
 import psutil
 import os
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeout
+from bob.utils.website_extractor import extract_website_intelligent, parse_google_redirect
 
 
 class PlaywrightExtractorOptimized:
@@ -237,14 +238,18 @@ class PlaywrightExtractorOptimized:
 
     async def _extract_data_properly(self, page):
         """
-        Extract data PROPERLY with JavaScript enabled.
+        Extract data PROPERLY with JavaScript enabled AND intelligent website filtering.
         This is where the actual business data comes from.
         """
         data = {
-            "extraction_method": "Playwright Enhanced (JavaScript Enabled)"
+            "extraction_method": "Playwright Enhanced (JavaScript Enabled + Intelligent Filtering)"
         }
 
         try:
+            # Get page content for pattern-based website extraction
+            page_content = await page.content()
+            page_text = await page.text_content()
+
             # Use JavaScript to extract data from the page
             extracted_data = await page.evaluate("""
                 () => {
@@ -314,10 +319,28 @@ class PlaywrightExtractorOptimized:
                         }
                     } catch (e) {}
 
-                    // Extract website
+                    // Extract ALL available URLs (not just one) - collect multiple for intelligent filtering
                     try {
-                        const websiteElem = document.querySelector('a[data-item-id="authority"], a[href*="http"]');
-                        if (websiteElem && websiteElem.href) result.website = websiteElem.href;
+                        const websiteLinks = [];
+                        const selectors = [
+                            'a[data-item-id="authority"]',
+                            'a[href*="http"]',
+                            'a[href*="www"]'
+                        ];
+
+                        for (const selector of selectors) {
+                            const elems = document.querySelectorAll(selector);
+                            for (const elem of elems) {
+                                if (elem.href) {
+                                    websiteLinks.push(elem.href);
+                                }
+                            }
+                        }
+
+                        result.available_urls = Array.from(new Set(websiteLinks));  // Deduplicate
+                        if (result.available_urls.length > 0) {
+                            result.website = result.available_urls[0];  // Primary selection (will be filtered below)
+                        }
                     } catch (e) {}
 
                     // Extract category/type
@@ -357,6 +380,22 @@ class PlaywrightExtractorOptimized:
             """)
 
             data.update(extracted_data)
+
+            # CRITICAL FIX: Apply intelligent website filtering
+            # This is the missing piece that was bypassing the intelligent filter!
+            if data.get('available_urls'):
+                print(f"🔍 Raw URLs found: {data['available_urls']}")
+                intelligent_website = extract_website_intelligent(
+                    page_text,
+                    data['available_urls']
+                )
+                if intelligent_website:
+                    print(f"✅ Intelligent filter selected: {intelligent_website[:80]}")
+                    data['website'] = intelligent_website
+                else:
+                    print(f"⚠️ Intelligent filter found no valid business website")
+                    # Remove the raw website if it's filtered out
+                    data['website'] = None
 
         except Exception as e:
             print(f"Error in data extraction: {e}")
