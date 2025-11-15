@@ -26,6 +26,7 @@ import json
 from urllib.parse import unquote
 import ssl
 import certifi
+import requests
 
 # Fix SSL certificate verification on macOS
 import os
@@ -439,6 +440,17 @@ class SeleniumExtractor:
             image_data = image_extractor.extract_all_images_comprehensive()
             data.update(image_data)
 
+            # Extract emails from business website (V3.3 - Selenium version)
+            if data.get("website"):
+                try:
+                    print("📧 Extracting emails from business website...")
+                    emails = self._extract_emails_from_website(data["website"])
+                    if emails:
+                        data["emails"] = emails
+                        print(f"📧 Found {len(emails)} email(s) from website")
+                except Exception as e:
+                    print(f"ℹ️  Could not extract emails: {str(e)[:50]}")
+
             # Extract reviews if requested
             if include_reviews:
                 reviews = self._extract_reviews_enhanced(driver, max_reviews)
@@ -698,6 +710,41 @@ class SeleniumExtractor:
             return int(review_match.group(1)) if review_match else None
 
         return cleaned if len(cleaned) > 1 else None
+
+    def _extract_emails_from_website(self, website_url, timeout=10):
+        """Extract email addresses from business website (Selenium version)."""
+        emails = []
+        if not website_url or "google" in website_url.lower():
+            return emails
+
+        try:
+            # Make request to website
+            response = requests.get(website_url, timeout=timeout, headers={
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            })
+
+            if response.status_code == 200:
+                # Email regex pattern
+                email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+
+                # Find all emails
+                found_emails = re.findall(email_pattern, response.text)
+
+                # Clean and validate emails
+                for email in found_emails:
+                    email = email.lower()
+                    # Filter out common non-business emails
+                    if not any(x in email for x in ['example.', 'test@', 'noreply', 'no-reply', '.png', '.jpg', 'wixpress']):
+                        if email not in emails:
+                            emails.append(email)
+
+                if emails:
+                    print(f"📧 Found {len(emails)} email(s) from website")
+
+        except Exception as e:
+            print(f"ℹ️ Could not extract emails from website: {str(e)[:50]}")
+
+        return emails[:3]  # Return max 3 emails
 
     def _extract_reviews_enhanced(self, driver, max_reviews=5):
         """Extract reviews with enhanced reliability."""

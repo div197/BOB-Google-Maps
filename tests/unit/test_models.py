@@ -87,7 +87,7 @@ class TestBusinessModel:
             hours="Mon-Fri: 9AM-5PM"
         )
         business_high.photos = ["url1", "url2", "url3"]
-        business_high.reviews = [Review(reviewer="John", rating=5, text="Great!")]
+        business_high.reviews = [Review(review_index=0, reviewer_name="John", rating=5, review_text="Great!")]
 
         score_high = business_high.calculate_quality_score()
 
@@ -120,47 +120,50 @@ class TestReviewModel:
     def test_review_creation(self):
         """Test creating a Review instance."""
         review = Review(
-            reviewer="John Doe",
+            review_index=0,
+            reviewer_name="John Doe",
             rating=5,
-            text="Excellent service!",
-            date="2 days ago"
+            review_text="Excellent service!",
+            review_date="2025-11-15"
         )
 
-        assert review.reviewer == "John Doe"
+        assert review.reviewer_name == "John Doe"
         assert review.rating == 5
-        assert review.text == "Excellent service!"
-        assert review.date == "2 days ago"
+        assert review.review_text == "Excellent service!"
+        assert review.review_date == "2025-11-15"
 
     def test_review_to_dict(self):
         """Test Review to_dict() method."""
         review = Review(
-            reviewer="Jane Smith",
+            review_index=0,
+            reviewer_name="Jane Smith",
             rating=4,
-            text="Good experience",
-            date="1 week ago"
+            review_text="Good experience",
+            review_date="2025-11-14"
         )
 
         data = review.to_dict()
 
         assert isinstance(data, dict)
-        assert data['reviewer'] == "Jane Smith"
+        assert data['reviewer_name'] == "Jane Smith"
         assert data['rating'] == 4
-        assert data['text'] == "Good experience"
+        assert data['review_text'] == "Good experience"
 
     def test_review_from_dict(self):
         """Test Review from_dict() method."""
         data = {
-            'reviewer': 'Bob Johnson',
+            'review_index': 0,
+            'reviewer_name': 'Bob Johnson',
             'rating': 3,
-            'text': 'Average',
-            'date': '3 weeks ago'
+            'review_text': 'Average',
+            'review_date': '2025-11-13'
         }
 
         review = Review.from_dict(data)
 
-        assert review.reviewer == 'Bob Johnson'
+        assert review.reviewer_name == 'Bob Johnson'
         assert review.rating == 3
-        assert review.text == 'Average'
+        assert review.review_text == 'Average'
 
 
 class TestImageModel:
@@ -170,42 +173,33 @@ class TestImageModel:
         """Test creating an Image instance."""
         image = Image(
             url="https://example.com/image.jpg",
-            thumbnail="https://example.com/thumb.jpg",
-            width=1920,
-            height=1080
+            resolution="1920x1080"
         )
 
         assert image.url == "https://example.com/image.jpg"
-        assert image.thumbnail == "https://example.com/thumb.jpg"
-        assert image.width == 1920
-        assert image.height == 1080
+        assert image.resolution == "1920x1080"
 
     def test_image_to_dict(self):
         """Test Image to_dict() method."""
         image = Image(
             url="https://example.com/photo.jpg",
-            width=800,
-            height=600
+            resolution="800x600"
         )
 
         data = image.to_dict()
 
         assert isinstance(data, dict)
         assert data['url'] == "https://example.com/photo.jpg"
-        assert data['width'] == 800
-        assert data['height'] == 600
+        assert data['resolution'] == "800x600"
 
     def test_image_from_dict(self):
         """Test Image from_dict() method."""
         data = {
             'url': 'https://example.com/pic.jpg',
-            'thumbnail': 'https://example.com/pic_thumb.jpg',
-            'width': 1024,
-            'height': 768
+            'resolution': '1024x768'
         }
 
         image = Image.from_dict(data)
 
         assert image.url == 'https://example.com/pic.jpg'
-        assert image.thumbnail == 'https://example.com/pic_thumb.jpg'
-        assert image.width == 1024
+        assert image.resolution == '1024x768'

@@ -147,12 +147,12 @@ class Review:
     def to_dict(self) -> Dict[str, Any]:
         """
         Convert to dictionary with Nishkaam Karma optimization.
-        
+
         Returns:
             Dict[str, Any]: Dictionary representation with minimal memory usage
         """
         result = {}
-        
+
         # Include all non-None fields for efficiency
         for key, value in self.__dict__.items():
             if value is not None:
@@ -160,8 +160,49 @@ class Review:
                     result[key] = value.isoformat()
                 else:
                     result[key] = value
-        
+
         return result
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'Review':
+        """
+        Recreate Review from dictionary (for cache/database recovery).
+
+        Args:
+            data: Dictionary with review data
+
+        Returns:
+            Review: Reconstructed Review object
+        """
+        # Parse datetime if provided as ISO string
+        extracted_at = data.get('extracted_at')
+        if isinstance(extracted_at, str):
+            extracted_at = datetime.fromisoformat(extracted_at)
+
+        return cls(
+            review_index=data.get('review_index', 0),
+            reviewer_name=data.get('reviewer_name'),
+            reviewer_photo=data.get('reviewer_photo'),
+            reviewer_total_reviews=data.get('reviewer_total_reviews'),
+            rating=data.get('rating'),
+            rating_text=data.get('rating_text'),
+            rating_confidence=data.get('rating_confidence'),
+            review_text=data.get('review_text'),
+            text_length=data.get('text_length'),
+            text_language=data.get('text_language'),
+            review_date=data.get('review_date'),
+            relative_time=data.get('relative_time'),
+            extracted_at=extracted_at or datetime.now(),
+            helpful_count=data.get('helpful_count'),
+            response_count=data.get('response_count'),
+            owner_response=data.get('owner_response'),
+            extraction_confidence=data.get('extraction_confidence'),
+            data_completeness=data.get('data_completeness'),
+            extraction_method=data.get('extraction_method'),
+            review_id=data.get('review_id'),
+            source_element=data.get('source_element'),
+            processing_time=data.get('processing_time')
+        )
 
     def get_quality_score(self) -> int:
         """
