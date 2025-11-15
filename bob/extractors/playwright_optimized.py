@@ -364,14 +364,113 @@ class PlaywrightExtractorOptimized:
                         if (categoryElem) result.category = categoryElem.textContent.trim();
                     } catch (e) {}
 
-                    // Extract GPS from URL
+                    // Extract GPS from MULTIPLE SOURCES (comprehensive approach)
                     try {
-                        const urlMatch = window.location.href.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
-                        if (urlMatch) {
-                            result.latitude = parseFloat(urlMatch[1]);
-                            result.longitude = parseFloat(urlMatch[2]);
+                        // METHOD 1A: Extract from Google Maps URL parameters (!3d=latitude, !4d=longitude)
+                        const url = window.location.href;
+                        const lat3dMatch = url.match(/!3d(-?\\d+\\.\\d+)/);
+                        const lon4dMatch = url.match(/!4d(-?\\d+\\.\\d+)/);
+                        if (lat3dMatch && lon4dMatch) {
+                            result.latitude = parseFloat(lat3dMatch[1]);
+                            result.longitude = parseFloat(lon4dMatch[1]);
+                            console.log(`✅ GPS from URL params (!3d/!4d): ${result.latitude}, ${result.longitude}`);
                         }
-                    } catch (e) {}
+
+                        // METHOD 1B: Extract from URL pattern /@latitude,longitude (fallback)
+                        if (!result.latitude || !result.longitude) {
+                            const urlMatch = url.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
+                            if (urlMatch) {
+                                result.latitude = parseFloat(urlMatch[1]);
+                                result.longitude = parseFloat(urlMatch[2]);
+                                console.log(`✅ GPS from URL @pattern: ${result.latitude}, ${result.longitude}`);
+                            }
+                        }
+
+                        // METHOD 2: Extract from data-latlng attribute
+                        if (!result.latitude || !result.longitude) {
+                            const latlngElem = document.querySelector('[data-latlng]');
+                            if (latlngElem) {
+                                const latlng = latlngElem.getAttribute('data-latlng');
+                                const coords = latlng.match(/(-?\\d+\\.\\d+)/g);
+                                if (coords && coords.length >= 2) {
+                                    result.latitude = parseFloat(coords[0]);
+                                    result.longitude = parseFloat(coords[1]);
+                                    console.log(`✅ GPS from data-latlng: ${result.latitude}, ${result.longitude}`);
+                                }
+                            }
+                        }
+
+                        // METHOD 3: Search DOM for coordinate-like text patterns
+                        if (!result.latitude || !result.longitude) {
+                            const bodyText = document.body.innerText || '';
+                            const coordMatch = bodyText.match(/(-?\\d{2}\\.\\d+)[,\\s]+(-?\\d{2,3}\\.\\d+)/);
+                            if (coordMatch) {
+                                const lat = parseFloat(coordMatch[1]);
+                                const lng = parseFloat(coordMatch[2]);
+                                // Validate coordinates are plausible
+                                if (lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180) {
+                                    result.latitude = lat;
+                                    result.longitude = lng;
+                                    console.log(`✅ GPS from text pattern: ${result.latitude}, ${result.longitude}`);
+                                }
+                            }
+                        }
+
+                        // METHOD 4: Extract from JSON-LD structured data
+                        if (!result.latitude || !result.longitude) {
+                            const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+                            for (const script of scripts) {
+                                try {
+                                    const data = JSON.parse(script.textContent);
+                                    if (data.geo && data.geo.latitude && data.geo.longitude) {
+                                        result.latitude = parseFloat(data.geo.latitude);
+                                        result.longitude = parseFloat(data.geo.longitude);
+                                        console.log(`✅ GPS from JSON-LD: ${result.latitude}, ${result.longitude}`);
+                                        break;
+                                    }
+                                    if (data.latitude && data.longitude) {
+                                        result.latitude = parseFloat(data.latitude);
+                                        result.longitude = parseFloat(data.longitude);
+                                        console.log(`✅ GPS from JSON-LD direct: ${result.latitude}, ${result.longitude}`);
+                                        break;
+                                    }
+                                } catch (e) {}
+                            }
+                        }
+                    } catch (e) {
+                        console.log(`GPS extraction error: ${e.message}`);
+                    }
+
+                    // Extract Plus Code (also from multiple sources)
+                    try {
+                        // METHOD 1: From URL
+                        const plusCodeMatch = window.location.href.match(/1s([A-Z0-9]{4}\\+[A-Z0-9]{2,})/);
+                        if (plusCodeMatch) {
+                            result.plus_code = plusCodeMatch[1];
+                            console.log(`✅ Plus Code from URL: ${result.plus_code}`);
+                        }
+
+                        // METHOD 2: Search page text for Plus Code pattern
+                        if (!result.plus_code) {
+                            const pageText = document.body.innerText || '';
+                            const plusMatch = pageText.match(/([A-Z0-9]{4}\\+[A-Z0-9]{2,})/);
+                            if (plusMatch) {
+                                result.plus_code = plusMatch[1];
+                                console.log(`✅ Plus Code from text: ${result.plus_code}`);
+                            }
+                        }
+
+                        // METHOD 3: From data attributes
+                        if (!result.plus_code) {
+                            const plusElem = document.querySelector('[data-plus-code]');
+                            if (plusElem) {
+                                result.plus_code = plusElem.getAttribute('data-plus-code');
+                                console.log(`✅ Plus Code from attribute: ${result.plus_code}`);
+                            }
+                        }
+                    } catch (e) {
+                        console.log(`Plus Code extraction error: ${e.message}`);
+                    }
 
                     // Extract Place ID from URL
                     try {
