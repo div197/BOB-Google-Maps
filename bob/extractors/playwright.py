@@ -423,13 +423,50 @@ class PlaywrightExtractor:
         except:
             pass
 
-        # Extract website
+        # Extract website - improved to get actual business website, not Google URLs
         try:
-            website_link = await page.query_selector("a[data-item-id='authority']")
-            if website_link:
-                website = await website_link.get_attribute("href")
-                if website:
-                    data["website"] = website
+            # Try multiple selectors to find website link
+            website_selectors = [
+                "a[data-item-id='authority']",  # Primary selector
+                "a[aria-label*='website']",
+                "a[aria-label*='Website']",
+                ".lVcKpb a[href*='http']",  # Links that start with http (not Google)
+            ]
+
+            website = None
+            for selector in website_selectors:
+                try:
+                    website_link = await page.query_selector(selector)
+                    if website_link:
+                        href = await website_link.get_attribute("href")
+                        if href and not href.startswith("javascript:"):
+                            website = href
+                            # If we found a non-Google URL, use it
+                            if 'google.com' not in website.lower():
+                                break
+                except:
+                    continue
+
+            # If we got a Google URL, try to click the link and follow redirect
+            if website and 'google.com' in website.lower():
+                try:
+                    # Click the website link to trigger navigation
+                    website_link = await page.query_selector("a[data-item-id='authority']")
+                    if website_link:
+                        # Listen for new page/tab
+                        async with page.context.expect_page() as popup_info:
+                            await website_link.click(timeout=5000)
+                        new_page = await popup_info.value
+                        # Get the final URL after redirects
+                        await new_page.wait_for_load_state('networkidle', timeout=5000)
+                        website = new_page.url
+                        await new_page.close()
+                except:
+                    # If click navigation fails, keep the original extracted URL
+                    pass
+
+            if website:
+                data["website"] = website
         except:
             pass
 
