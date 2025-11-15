@@ -728,39 +728,29 @@ class PlaywrightExtractor:
         return reviews
 
     async def _extract_emails_from_website(self, website_url, timeout=10):
-        """Extract email addresses from business website (V3.3)."""
-        emails = []
-        if not website_url or "google" in website_url.lower():
-            return emails
+        """
+        Extract email addresses from business website.
+
+        Now handles Google redirect URLs by parsing them to get actual website.
+        Uses improved email extraction from bob.utils.email_extractor
+        """
+        from bob.utils.email_extractor import extract_emails_from_website
+
+        if not website_url:
+            return []
 
         try:
-            # Make async request to website
-            response = requests.get(website_url, timeout=timeout, headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            })
+            # Use improved email extractor that handles Google redirects
+            emails = extract_emails_from_website(website_url, timeout=timeout)
 
-            if response.status_code == 200:
-                # Email regex pattern
-                email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+            if emails:
+                print(f"📧 Found {len(emails)} email(s) from website")
 
-                # Find all emails
-                found_emails = re.findall(email_pattern, response.text)
-
-                # Clean and validate emails
-                for email in found_emails:
-                    email = email.lower()
-                    # Filter out common non-business emails
-                    if not any(x in email for x in ['example.', 'test@', 'noreply', 'no-reply', '.png', '.jpg', 'wixpress']):
-                        if email not in emails:
-                            emails.append(email)
-
-                if emails:
-                    print(f"📧 Found {len(emails)} email(s) from website")
+            return emails
 
         except Exception as e:
-            print(f"ℹ️ Could not extract emails from website: {str(e)[:50]}")
-
-        return emails[:3]  # Return max 3 emails
+            print(f"ℹ️ Email extraction error: {str(e)[:50]}")
+            return []
 
     def _convert_url(self, url):
         """Convert any URL to standard format with proper business page navigation."""

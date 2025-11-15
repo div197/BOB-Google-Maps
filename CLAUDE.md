@@ -1,13 +1,12 @@
 # BOB Google Maps - Ultimate Memory Documentation for Claude
 
-## **🔱 CURRENT STATUS: V4.2.0 PRODUCTION-READY - FINAL CONSOLIDATION COMPLETE**
-**Version:** V4.2.0 (Phase 4 Complete - November 15, 2025)
+## **🔱 CURRENT STATUS: V4.2.1 UNDER INVESTIGATION - CRITICAL FEATURE ANALYSIS IN PROGRESS**
+**Version:** V4.2.1 (Investigation Phase - November 15, 2025)
 **Last Updated:** November 15, 2025
-**Consolidation Status:** ✅ COMPLETE - All documentation consolidated into core files (README.md + CLAUDE.md)
-**Workspace Organization:** ✅ COMPLETE - Root directory cleaned and professionalized
-**Real-World Validation:** ✅ VERIFIED WORKING (100% success rate: 124 businesses across North America + South Asia)
-**Production Status:** ✅ APPROVED FOR IMMEDIATE DEPLOYMENT
-**Confidence Level:** VERY HIGH
+**Current Focus:** Deep investigation of email and image extraction features
+**Testing Status:** Core extraction WORKING | Email extraction BLOCKED | Image extraction BLOCKED
+**Investigation Findings:** ROOT CAUSE IDENTIFIED - See "CRITICAL INVESTIGATION" section below
+**Production Status:** ⚠️ CONDITIONAL - Core features work, advanced features need investigation
 
 ---
 
@@ -49,6 +48,94 @@ The silent failure wasn't a system bug - it was a **test framework bug**. The re
 - Success rate: 100% on validated real-world data
 - Production-ready: YES, fully verified
 - Fallback system: PROVEN FUNCTIONAL (Playwright failures → Selenium success)
+
+---
+
+## 🔴 **CRITICAL INVESTIGATION: EMAIL & IMAGE EXTRACTION FEATURES (NOVEMBER 15, 2025)**
+
+### **Investigation Scope**
+Deep analysis of email and image extraction after testing 10 Jaipur restaurants:
+
+| Feature | Tested | Success | Status |
+|---------|--------|---------|--------|
+| Core Data (name, phone, address, rating, reviews) | 10/10 | 10/10 (100%) | ✅ WORKING |
+| **Email Extraction** | 10/10 | 0/10 (0%) | ❌ BLOCKED |
+| **Image Extraction** | 10/10 | 0/10 (0%) | ❌ BLOCKED |
+
+### **ROOT CAUSE #1: EMAIL EXTRACTION - GOOGLE'S REDIRECT URL DESIGN**
+
+**The Issue:**
+Both Selenium and Playwright email extraction have this code (lines 717 & 733):
+```python
+if not website_url or "google" in website_url.lower():
+    return []  # Immediately returns empty!
+```
+
+**Why This Happens:**
+1. **Website URL Extraction Process:**
+   - Playwright: Extracts `a[data-item-id='authority']` href attribute (line 430)
+   - Selenium: Extracts same element via CSS selector (field config line 620)
+
+2. **What Google Maps Actually Provides:**
+   - Expected: `https://gypsyfoods.com/` (actual business website)
+   - Actual: `https://www.google.com/viewer/chooseprovider?mid=/g/1td74zyg&g2lbs=...` (Google redirect)
+
+3. **Why Google Uses Redirects:**
+   - Tracking/analytics (monitors which sites users visit from Maps)
+   - Security (prevents scraping patterns)
+   - Data collection (Google controls the click path)
+
+4. **Email Extraction Impact:**
+   - All extracted website URLs contain "google" in them
+   - Email method immediately returns empty without trying
+   - Result: 0/10 success rate across all restaurants
+
+**Real Problem:** The code is CORRECTLY extracting what Google Maps provides, but Google provides redirect URLs, not actual business websites. This blocks email extraction.
+
+### **ROOT CAUSE #2: IMAGE EXTRACTION - DOM SELECTOR MISMATCH**
+
+**The Issue:**
+Image extraction (bob/utils/images.py:28-84) runs 6 extraction phases but all return 0 images:
+1. Extract immediately visible images (CSS selectors)
+2. Open main photo gallery
+3. Open photos tab
+4. Scroll and extract
+5. Extract hidden images
+6. Extract street view/360 images
+
+**Likely Causes:**
+1. **CSS Selectors Don't Match Current Google Maps HTML:**
+   ```python
+   selectors = [
+       "img[src*='googleusercontent.com']",
+       ".section-hero-header img",
+       ".gallery-image img",
+       # ... many more
+   ]
+   ```
+   Google Maps likely changed its DOM structure, making these selectors invalid.
+
+2. **Timing Issues:**
+   - Images may load via JavaScript after extraction runs
+   - Extraction may complete before image elements render
+
+3. **Gallery Opening Fails:**
+   - If gallery buttons don't exist (changed class names), all phases fail
+
+**Real Problem:** The implementation exists but selectors/approach don't work with current Google Maps page structure.
+
+### **System Status Assessment**
+- **✅ Core Extraction (50% functionality)**: WORKING PERFECTLY
+  - Name, phone, address, rating, reviews, categories all extract correctly
+
+- **❌ Email Extraction (25% functionality)**: BLOCKED BY GOOGLE'S DESIGN
+  - Root cause: Google provides redirect URLs instead of actual websites
+  - This is a Google Maps limitation, not a code bug
+  - Would require decoding Google redirects OR finding actual website elsewhere on page
+
+- **❌ Image Extraction (25% functionality)**: BLOCKED BY DOM STRUCTURE MISMATCH
+  - Root cause: CSS selectors don't match current Google Maps HTML
+  - Would require updating selectors and/or extraction timing
 
 ---
 
