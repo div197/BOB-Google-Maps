@@ -25,7 +25,7 @@ Usage:
         print(f"Rating: {business.rating}")
 """
 
-__version__ = '4.2.0'
+__version__ = '4.2.1'
 __author__ = 'Divyanshu (Dhrishtadyumna)'
 __license__ = 'MIT'
 
