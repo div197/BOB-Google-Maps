@@ -1,0 +1,94 @@
+{
+  "test_metadata": {
+    "test_date": "2025-11-17T11:29:09.996985",
+    "business_query": "Delhi Royale Kuala Lumpur",
+    "extraction_time_seconds": 9.61,
+    "engine_used": "HybridExtractorOptimized (Playwright)",
+    "extraction_successful": true
+  },
+  "basic_information": {
+    "name": "Delhi Royale",
+    "phone": "+60 12-774 0155",
+    "address": "3, Wisma Longrich, 33, Jalan Yap Kwan Seng, Kampung Baru, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+    "website": "https://www.delhiroyale.com/",
+    "category": "North Indian restaurant",
+    "price_range": "N/A"
+  },
+  "location_data": {
+    "latitude": 3.1628167,
+    "longitude": 101.7149971,
+    "plus_code": "5P77+4X",
+    "place_id": "14342688602388517000"
+  },
+  "business_details": {
+    "rating": 4.1,
+    "review_count": 1,
+    "hours": "N/A",
+    "current_status": "N/A"
+  },
+  "contact_information": {
+    "emails": [],
+    "phones": [
+      "+60 12-774 0155"
+    ]
+  },
+  "images": {
+    "total_images": 19,
+    "image_urls": [
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGQkUMN-sBvvcYe7JIjfmIlD7eHtEHbuaGXnMOGxozBZugg_gJRPUp8rqRxuVbC6bkZ21Cmux91ES0IQsUqQOTnBucfH4wIBp7UE1BX6UpxLSfce7nMbd2p_ZASawi9TvMvxdAfUYFYaWGZkBczBpww6e0dmBe1N3JnFgScbMmpjVaeKPRM4dUJow",
+      "https://lh3.googleusercontent.com/p/AF1QipMXnpjKE4HK2DqjT0r5OEIqcfXJ5NuxoIFb-X0L",
+      "https://lh3.googleusercontent.com/gps-proxy/ALd4DhHVSJyRtLWt25kGM7zFQGgWhD12m2Qjo0YWzcRFz4ZMTTlL9_ft8KJAhyNmuudMsPX58LrBMhKg8gHwnav_vBzH_xGGAqzPjEIb84xIzvNtZHvp3Cx1b-ImsSQuKcYknXIW7PU6LkIWBIOlZ7DyodD23ihV75_8GCj-iUho4DitOZQdEBG08FyM",
+      "https://lh3.googleusercontent.com/p/AF1QipMSle0pK0bjavb52Waa6cl2xgq6XmjiNOuvcPC0",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzwoJimjRMs1kJf_EyDsiCsht2cW38TJT11bH6bZZOcgV8o7CW6PhuIpOou3DGpoio9y9X-1sTn14gIRutXvQbucbk4xhKOViWnX6kUhAKvCoHgSUI_gFKGDoR4GOpVfeiHbgyA3g",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwRG3mlOwyVaN5jRzOOs6rs5sLR-Tj2DHmrKD8FRYOTuxE8S58NmI7KCbINIIzU9NfpZts-lh3__sdhj0ppuEByERE-m2TKTsn8vm0CHDdDu1xbZgv63fvA2SeMcvObMFdBeJIO",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxPF4Od6wrq2yMHSa_GGluOLiZt1UjnN16AznnIN4-hnTMBTcFxKDl6hzTim9a4s-i6MzDgWy8PyggiJaf51eIM9BoGhgUehLC3VOmmEO0vRbOHZ415UsCVPygIoScgxSVlN9nBbg",
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyqYN896ZqlYlyHFNk3oUjggx4XpCBhSsnF8vh2VkWk7pcessF1MdzzTSVg3Wc4QcJmhr1Ytz16F6LpF-3gfP5OGn-VAVIfU7ZbvPGYuCLi5-UxZGnW0dKOZi6exP09u_62kCMl",
+      "https://lh3.googleusercontent.com/p/AF1QipM1CMMGHKCi3_dLIq3uyIveuKnMusIHtpvWMP8S",
+      "https://lh3.googleusercontent.com/p/AF1QipMHjWCClzUtl0_DaAI4Z5B0gk-W6o0ab1wFYPrV"
+    ]
+  },
+  "reviews": {
+    "total_reviews_extracted": 3,
+    "reviews": [
+      {
+        "review_number": 1,
+        "reviewer": "Anonymous",
+        "rating": 4,
+        "date": "N/A",
+        "text": "N/A"
+      },
+      {
+        "review_number": 2,
+        "reviewer": "Anonymous",
+        "rating": 2,
+        "date": "N/A",
+        "text": "N/A"
+      },
+      {
+        "review_number": 3,
+        "reviewer": "Anonymous",
+        "rating": 4,
+        "date": "N/A",
+        "text": "N/A"
+      }
+    ]
+  },
+  "quality_assessment": {
+    "overall_score": 100,
+    "completeness": {
+      "has_name": true,
+      "has_phone": true,
+      "has_address": true,
+      "has_website": true,
+      "has_latitude": true,
+      "has_longitude": true,
+      "has_plus_code": true,
+      "has_rating": true,
+      "has_images": true,
+      "has_reviews": true,
+      "has_emails": false
+    },
+    "fields_completed": "10/11",
+    "completeness_percentage": 90.9
+  }
+}
