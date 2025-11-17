@@ -530,65 +530,100 @@ class PlaywrightExtractorOptimized:
 
         return data
 
-    async def _extract_reviews_enhanced(self, page, max_reviews=5):
-        """Extract reviews with full JavaScript support."""
+    async def _extract_reviews_enhanced(self, page, max_reviews=10):
+        """Extract reviews using proven DOM-based approach with click/scroll interaction."""
         reviews = []
 
         try:
-            # Wait for reviews to load
-            await page.wait_for_timeout(2000)
+            # Step 1: Try to click Reviews tab (if not already there)
+            try:
+                reviews_button = page.locator("text=/Reviews/i").first
+                await reviews_button.click(timeout=5000)
+                await asyncio.sleep(2)
+                print("📝 Clicked Reviews tab")
+            except Exception as e:
+                print(f"ℹ️ Reviews tab not found or already open: {str(e)[:40]}")
 
-            reviews_data = await page.evaluate(f"""
-                () => {{
-                    const reviewElements = document.querySelectorAll('.jftiEf, .MyEned, .wiI7pd, [class*="review"]');
-                    const reviews = [];
+            # Step 2: Scroll reviews section to load more
+            try:
+                scrollable = await page.query_selector(".m6QErb.DxyBCb.kA9KIf.dS8AEf")
+                if scrollable:
+                    # Scroll 3 times to load more reviews
+                    for scroll_attempt in range(3):
+                        await page.evaluate("""
+                            () => {
+                                const elem = document.querySelector('.m6QErb.DxyBCb.kA9KIf.dS8AEf');
+                                if (elem) elem.scrollTop = elem.scrollHeight;
+                            }
+                        """)
+                        await asyncio.sleep(0.5)
+                    print("↓ Scrolled reviews section")
+            except Exception as e:
+                print(f"ℹ️ Could not scroll reviews: {str(e)[:40]}")
 
-                    for (let i = 0; i < Math.min({max_reviews}, reviewElements.length); i++) {{
-                        const elem = reviewElements[i];
-                        const review = {{ review_index: i + 1 }};
+            # Step 3: Extract reviews using specific CSS selectors (proven to work)
+            review_elements = await page.query_selector_all(".jftiEf.fontBodyMedium, .jftiEf, .MyEned, .wiI7pd")
 
-                        // Extract reviewer name
-                        try {{
-                            const nameElem = elem.querySelector('.TL4Bff, .d4r55, [class*="name"]');
-                            if (nameElem) review.reviewer_name = nameElem.textContent.trim();
-                        }} catch (e) {{}}
+            print(f"🔍 Found {len(review_elements)} review elements")
 
-                        // Extract rating
-                        try {{
-                            const ratingElem = elem.querySelector('[aria-label*="star"], [class*="rating"]');
-                            if (ratingElem) {{
-                                const text = ratingElem.getAttribute('aria-label') || ratingElem.textContent;
-                                const match = text.match(/(\\d+)/);
-                                if (match) review.rating = parseInt(match[1]);
-                            }}
-                        }} catch (e) {{}}
+            for idx, elem in enumerate(review_elements[:max_reviews]):
+                try:
+                    # Get full text content of review element
+                    review_text_content = await elem.text_content()
 
-                        // Extract review text
-                        try {{
-                            const textElem = elem.querySelector('[class*="text"], [class*="description"]');
-                            if (textElem) review.review_text = textElem.textContent.trim().substring(0, 1000);
-                        }} catch (e) {{}}
+                    if not review_text_content or len(review_text_content.strip()) < 5:
+                        continue
 
-                        // Extract date
-                        try {{
-                            const dateElem = elem.querySelector('[class*="date"]');
-                            if (dateElem) review.review_date = dateElem.textContent.trim();
-                        }} catch (e) {{}}
+                    review = {
+                        "review_index": len(reviews) + 1,
+                        "text": review_text_content.strip()
+                    }
 
-                        if (review.reviewer_name || review.rating || review.review_text) {{
-                            reviews.push(review);
-                        }}
-                    }}
+                    # Extract reviewer name (usually first line)
+                    try:
+                        name_elem = await elem.query_selector(".d4r55, .TL4Bff")
+                        if name_elem:
+                            reviewer_name = await name_elem.text_content()
+                            review["reviewer"] = reviewer_name.strip()
+                        else:
+                            # Fallback: first line of text
+                            lines = review_text_content.split('\n')
+                            if lines and lines[0].strip():
+                                review["reviewer"] = lines[0].strip()
+                    except:
+                        lines = review_text_content.split('\n')
+                        if lines and lines[0].strip():
+                            review["reviewer"] = lines[0].strip()
 
-                    return reviews;
-                }}
-            """)
+                    # Extract rating (look for star aria-label)
+                    try:
+                        rating_elem = await elem.query_selector("[aria-label*='star']")
+                        if rating_elem:
+                            rating_label = await rating_elem.get_attribute("aria-label")
+                            # Extract number from "X stars" format
+                            match = __import__('re').search(r'(\d+)', rating_label or "")
+                            if match:
+                                review["rating"] = int(match.group(1))
+                        else:
+                            # Try alternative: look for rating text pattern
+                            rating_match = __import__('re').search(r'(\d+)\s*(?:star|★|⭐)', review_text_content)
+                            if rating_match:
+                                review["rating"] = int(rating_match.group(1))
+                    except:
+                        pass
 
-            reviews = reviews_data
-            print(f"✅ Extracted {len(reviews)} reviews")
+                    # Only add if we have meaningful data
+                    if review.get("rating") or review.get("reviewer") or (review.get("text") and len(review["text"]) > 20):
+                        reviews.append(review)
+
+                except Exception as elem_error:
+                    print(f"  ⚠️ Error extracting review {idx}: {str(elem_error)[:40]}")
+                    continue
+
+            print(f"✅ Successfully extracted {len(reviews)} reviews with text and ratings")
 
         except Exception as e:
-            print(f"ℹ️ Review extraction note: {e}")
+            print(f"ℹ️ Review extraction error: {str(e)[:60]}")
 
         return reviews
 
