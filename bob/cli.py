@@ -30,7 +30,7 @@ class BOBUltimate:
     """Ultimate BOB Google Maps application."""
 
     def __init__(self):
-        self.version = "3.0 ULTIMATE"
+        self.version = "4.2.3"
         self.release_date = "October 3, 2025"
         self.engine = HybridExtractor(use_cache=True, prefer_playwright=True)
 
