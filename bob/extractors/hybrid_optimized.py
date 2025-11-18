@@ -41,10 +41,17 @@ class HybridExtractorOptimized:
     - Process isolation for reliability
     """
 
-    def __init__(self, prefer_playwright=True, memory_optimized=True):
+    def __init__(self, prefer_playwright=True, memory_optimized=True, use_cache=True):
         self.prefer_playwright = prefer_playwright
         self.memory_optimized = memory_optimized
+        self.use_cache = use_cache
         
+        if self.use_cache:
+            from bob.cache.cache_manager import CacheManagerUltimate
+            self.cache_manager = CacheManagerUltimate()
+        else:
+            self.cache_manager = None
+
         # Track memory usage
         self.initial_memory = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
         
@@ -54,26 +61,35 @@ class HybridExtractorOptimized:
             "selenium_success": 0,
             "failures": 0,
             "peak_memory_mb": 0,
-            "avg_memory_mb": 0
+            "avg_memory_mb": 0,
+            "cache_hits": 0
         }
 
     def extract_business(self, url, include_reviews=True, max_reviews=10):
         """
-        Extract business with ultimate optimization and zero cache dependency.
+        Extract business with ultimate optimization and optional cache dependency.
         
         Nishkaam Karma: Perform the action without attachment to results.
         
         Strategy:
-        1. Try Playwright (fast, memory-efficient)
-        2. Fallback to Selenium (if needed)
-        3. Instant cleanup (no lingering resources)
-        4. Return result (no storage concerns)
+        1. Check cache if enabled.
+        2. Try Playwright (fast, memory-efficient)
+        3. Fallback to Selenium (if needed)
+        4. Save to cache if enabled.
+        5. Instant cleanup (no lingering resources)
         
         Returns:
             Complete business data with minimal resource usage
         """
         self.stats["total_requests"] += 1
-        
+
+        # Step 1: Check cache
+        if self.use_cache and self.cache_manager:
+            cached_result = self.cache_manager.get_cached(url)
+            if cached_result:
+                self.stats["cache_hits"] += 1
+                return cached_result
+
         # Monitor memory
         current_memory = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
         self.stats["peak_memory_mb"] = max(self.stats["peak_memory_mb"], current_memory)
@@ -83,7 +99,9 @@ class HybridExtractorOptimized:
         print(f"📊 Memory: {current_memory:.1f}MB (Peak: {self.stats['peak_memory_mb']:.1f}MB)")
         print(f"{'='*70}")
 
-        # Step 1: Try Playwright (preferred, memory-efficient)
+        live_result = None
+
+        # Step 2: Try Playwright (preferred, memory-efficient)
         if self.prefer_playwright:
             print("\n⚡ STEP 1: Playwright extraction (enlightened speed)...")
             try:
@@ -103,48 +121,46 @@ class HybridExtractorOptimized:
                 if playwright_data.get('success'):
                     self.stats["playwright_success"] += 1
                     print("✅ Playwright extraction SUCCESSFUL!")
-                    
-                    # Force garbage collection
-                    gc.collect()
-                    
-                    return playwright_data
-
-                print("⚠️ Playwright extraction had issues, trying fallback...")
+                    live_result = playwright_data
+                else:
+                    print("⚠️ Playwright extraction had issues, trying fallback...")
 
             except Exception as e:
                 print(f"⚠️ Playwright failed: {e}")
                 print("🔄 Falling back to Selenium...")
 
-        # Step 2: Fallback to Selenium (memory-optimized)
-        print("\n🔧 STEP 2: Selenium extraction (optimized memory)...")
-        try:
-            selenium_data = self._extract_with_selenium_optimized(url, include_reviews, max_reviews)
+        # Step 3: Fallback to Selenium (memory-optimized)
+        if not live_result:
+            print("\n🔧 STEP 2: Selenium extraction (optimized memory)...")
+            try:
+                selenium_data = self._extract_with_selenium_optimized(url, include_reviews, max_reviews)
 
-            if selenium_data.get('success'):
-                self.stats["selenium_success"] += 1
-                print("✅ Selenium extraction SUCCESSFUL!")
-                
-                # Force garbage collection
-                gc.collect()
-                
-                return selenium_data
+                if selenium_data.get('success'):
+                    self.stats["selenium_success"] += 1
+                    print("✅ Selenium extraction SUCCESSFUL!")
+                    live_result = selenium_data
 
-        except Exception as e:
-            print(f"❌ Selenium also failed: {e}")
+            except Exception as e:
+                print(f"❌ Selenium also failed: {e}")
 
-        # All strategies failed
-        self.stats["failures"] += 1
-        print("\n❌ ALL EXTRACTION STRATEGIES FAILED")
-
-        # Final cleanup
+        # Final cleanup and return logic
         gc.collect()
 
-        return {
-            "success": False,
-            "error": "All extraction methods failed",
-            "tried_methods": ["playwright", "selenium_optimized"],
-            "memory_usage_mb": current_memory
-        }
+        if live_result:
+            # Step 4: Save to cache if enabled
+            if self.use_cache and self.cache_manager:
+                self.cache_manager.save_result(live_result)
+            return live_result
+        else:
+            # All strategies failed
+            self.stats["failures"] += 1
+            print("\n❌ ALL EXTRACTION STRATEGIES FAILED")
+            return {
+                "success": False,
+                "error": "All extraction methods failed",
+                "tried_methods": ["playwright", "selenium_optimized"],
+                "memory_usage_mb": current_memory
+            }
 
     async def _extract_with_playwright_optimized(self, url, include_reviews, max_reviews):
         """Extract using Playwright with ULTRA memory optimization."""
@@ -180,7 +196,7 @@ class HybridExtractorOptimized:
             if hasattr(extractor, 'cleanup'):
                 extractor.cleanup()
 
-    def extract_multiple(self, urls, parallel=True, max_concurrent=3):
+    async def extract_multiple(self, urls, parallel=True, max_concurrent=3):
         """
         Extract multiple businesses with memory optimization.
         
@@ -201,17 +217,21 @@ class HybridExtractorOptimized:
 
         if parallel and self.prefer_playwright:
             print(f"⚡ Using PARALLEL Playwright extraction ({max_concurrent} concurrent)")
-            return asyncio.run(self._extract_parallel_optimized(urls, max_concurrent))
+            return await self._extract_parallel_optimized(urls, max_concurrent)
         else:
             print("🔧 Using SEQUENTIAL extraction (memory efficient)")
             results = []
+            loop = asyncio.get_running_loop()
             for idx, url in enumerate(urls, 1):
                 print(f"\n[{idx}/{len(urls)}] Processing: {url[:60]}...")
                 
                 # Monitor memory before extraction
                 mem_before = psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
                 
-                result = self.extract_business(url)
+                # Run synchronous function in a thread pool to not block the event loop
+                result = await loop.run_in_executor(
+                    None, self.extract_business, url
+                )
                 results.append(result)
                 
                 # Monitor memory after extraction
@@ -225,16 +245,24 @@ class HybridExtractorOptimized:
             return results
 
     async def _extract_parallel_optimized(self, urls, max_concurrent):
-        """Parallel extraction with memory optimization."""
-        # Create optimized extractor
-        extractor = PlaywrightExtractorOptimized(memory_optimized=True)
+        """Correctly runs extractions in parallel using a semaphore."""
+        semaphore = asyncio.Semaphore(max_concurrent)
+        tasks = []
+
+        async def run_with_semaphore(url):
+            async with semaphore:
+                # Run the synchronous extract_business method in an executor
+                loop = asyncio.get_running_loop()
+                result = await loop.run_in_executor(
+                    None, self.extract_business, url
+                )
+                return result
+
+        for url in urls:
+            tasks.append(run_with_semaphore(url))
         
-        try:
-            results = await extractor.extract_multiple_parallel_optimized(urls, max_concurrent)
-            return results
-        finally:
-            if hasattr(extractor, 'cleanup'):
-                extractor.cleanup()
+        results = await asyncio.gather(*tasks)
+        return results
 
     def get_stats(self):
         """Get extraction statistics with memory metrics."""

@@ -193,12 +193,17 @@ for r in results:
 
 ### With Caching (1800x faster for repeats)
 
+The `HybridExtractorOptimized` is the recommended engine for most tasks, as it combines the speed of Playwright with caching capabilities.
+
 ```python
-# First extraction: 10 seconds (from Google Maps)
-extractor = PlaywrightExtractorOptimized(use_cache=True)
+from bob import HybridExtractorOptimized
+
+# First extraction: ~10 seconds (from Google Maps)
+# The Hybrid extractor is recommended and now supports caching.
+extractor = HybridExtractorOptimized(use_cache=True)
 result1 = extractor.extract_business("Starbucks Times Square")
 
-# Second extraction: 0.1 seconds (from cache)
+# Second extraction: ~0.01 seconds (from cache)
 result2 = extractor.extract_business("Starbucks Times Square")
 ```
 
@@ -224,20 +229,18 @@ df.to_csv('businesses.csv', index=False)
 
 ### Three Extraction Engines
 
-1. **PlaywrightExtractorOptimized** ⚡ (Recommended)
-   - Speed: 7-11 seconds per business
-   - Memory: <30MB per extraction
-   - Perfect for: General use, large batches
+1. **HybridExtractorOptimized** 🧘 (Recommended)
+   - The primary, recommended engine for all tasks.
+   - Orchestrates the other engines and includes the smart caching system.
+   - Automatically uses the fast Playwright engine and is designed to fall back to Selenium if needed.
 
-2. **SeleniumExtractorOptimized** 🛡️ (Fallback)
-   - Speed: 8-15 seconds per business
-   - Memory: <40MB per extraction
-   - Perfect for: Critical data, stealth mode
+2. **PlaywrightExtractorOptimized** ⚡ (Fast Engine)
+   - The fast, modern engine used by the Hybrid Extractor.
+   - Offers excellent performance and is suitable for large-scale batches.
 
-3. **HybridExtractorOptimized** 🧘 (Memory-Optimized)
-   - Speed: 9-12 seconds per business
-   - Memory: <50MB per extraction
-   - Perfect for: Constrained environments
+3. **SeleniumExtractorOptimized** 🛡️ (Fallback Engine)
+   - A more traditional engine intended for reliability and fallback.
+   - **⚠️ Important Note (Nov 2025):** This engine is currently **non-operational** with the latest versions of Google Chrome (v141+). The required `undetected-chromedriver` dependency has not been updated to support these recent browser versions. This is an external issue, and the functionality will be restored once the third-party dependency is updated.
 
 ### Data Model (108 Fields)
 

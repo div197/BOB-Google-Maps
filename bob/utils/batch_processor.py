@@ -67,9 +67,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 try:
-    from bob.extractors import SeleniumExtractor
+    from bob.extractors import HybridExtractorOptimized
 
-    extractor = SeleniumExtractor(headless={self.headless})
+    extractor = HybridExtractorOptimized(use_cache=False) # Caching is not ideal for isolated subprocesses
     result = extractor.extract_business(
         "{business_name}",
         include_reviews={self.include_reviews},
@@ -277,14 +277,15 @@ except Exception as e:
 def main():
     """Command-line interface for batch processor."""
     import argparse
+    import sys
 
     parser = argparse.ArgumentParser(
         description="BOB Batch Processor - 100% reliable batch extraction"
     )
     parser.add_argument(
-        'businesses',
-        nargs='+',
-        help='Business names or URLs to extract'
+        '--input-file',
+        required=True,
+        help='Path to a text file containing business names or URLs, one per line.'
     )
     parser.add_argument(
         '--headless',
@@ -300,8 +301,8 @@ def main():
     parser.add_argument(
         '--max-reviews',
         type=int,
-        default=0,
-        help='Maximum reviews to extract (default: 0)'
+        default=5,
+        help='Maximum reviews to extract (default: 5)'
     )
     parser.add_argument(
         '--retry',
@@ -317,6 +318,14 @@ def main():
 
     args = parser.parse_args()
 
+    # Read businesses from input file
+    try:
+        with open(args.input_file, 'r') as f:
+            businesses = [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print(f"❌ Error: Input file not found at {args.input-file}")
+        sys.exit(1)
+
     # Create processor
     processor = BatchProcessor(
         headless=args.headless,
@@ -326,7 +335,7 @@ def main():
 
     # Process batch with retry
     results = processor.process_batch_with_retry(
-        businesses=args.businesses,
+        businesses=businesses,
         max_retries=args.retry,
         verbose=True
     )
