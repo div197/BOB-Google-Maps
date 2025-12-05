@@ -1,51 +1,100 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3#!/usr/bin/env python3
+
+""""""
+
+Example 1: Basic ExtractionExample 1: Basic Business Extraction
+
+
+
+Extract a single business from Google Maps.This example demonstrates the simplest way to extract business data
+
+"""from Google Maps using BOB Google Maps Extractor.
+
+
+
+import asyncioAuthor: BOB Google Maps Team
+
+from bob import PlaywrightExtractorOptimizedVersion: 4.2.0
+
 """
-Example 1: Basic Business Extraction
-
-This example demonstrates the simplest way to extract business data
-from Google Maps using BOB Google Maps Extractor.
-
-Author: BOB Google Maps Team
-Version: 4.2.0
-"""
-
-from bob import HybridExtractor
 
 
-def main():
-    """Extract a single business with basic configuration."""
 
-    print("🔱 BOB Google Maps - Basic Extraction Example")
-    print("=" * 60)
+async def main():from bob import HybridExtractor
 
-    # Create extractor with default settings
-    extractor = HybridExtractor()
+    """Extract a single business."""
 
-    # Extract a well-known business
-    business_query = "Starbucks Reserve Roastery Seattle"
+    
 
-    print(f"\n📍 Searching for: {business_query}")
-    print("⏳ Extracting data...")
+    print("🔱 BOB Google Maps v4.3.0 - Basic Extraction")def main():
 
-    # Perform extraction
-    result = extractor.extract_business(business_query)
+    print("=" * 60)    """Extract a single business with basic configuration."""
 
-    # Check result
+    
+
+    # Create extractor    print("🔱 BOB Google Maps - Basic Extraction Example")
+
+    extractor = PlaywrightExtractorOptimized(headless=True)    print("=" * 60)
+
+    
+
+    # Extract business    # Create extractor with default settings
+
+    query = "Starbucks Times Square NYC"    extractor = HybridExtractor()
+
+    print(f"\n📍 Extracting: {query}")
+
+        # Extract a well-known business
+
+    result = await extractor.extract_business_optimized(    business_query = "Starbucks Reserve Roastery Seattle"
+
+        query,
+
+        include_reviews=False,    print(f"\n📍 Searching for: {business_query}")
+
+        max_reviews=0    print("⏳ Extracting data...")
+
+    )
+
+        # Perform extraction
+
+    # Display results    result = extractor.extract_business(business_query)
+
     if result.get('success'):
-        business = result['business']
 
-        print("\n✅ Extraction Successful!")
-        print(f"{'─' * 60}")
-        print(f"📛 Name: {business.name}")
-        print(f"📞 Phone: {business.phone or 'N/A'}")
-        print(f"📧 Emails: {', '.join(business.emails) if business.emails else 'N/A'}")
-        print(f"🌐 Website: {business.website or 'N/A'}")
-        print(f"📍 Address: {business.address or 'N/A'}")
-        print(f"⭐ Rating: {business.rating or 'N/A'} ({business.review_count or 0} reviews)")
-        print(f"🏷️ Category: {business.category or 'N/A'}")
+        print("\n✅ Extraction Successful!")    # Check result
+
+        print("-" * 40)    if result.get('success'):
+
+        print(f"Name: {result.get('name')}")        business = result['business']
+
+        print(f"Phone: {result.get('phone', 'N/A')}")
+
+        print(f"Address: {result.get('address', 'N/A')}")        print("\n✅ Extraction Successful!")
+
+        print(f"Website: {result.get('website', 'N/A')}")        print(f"{'─' * 60}")
+
+        print(f"Rating: {result.get('rating')} ⭐")        print(f"📛 Name: {business.name}")
+
+        print(f"Category: {result.get('category', 'N/A')}")        print(f"📞 Phone: {business.phone or 'N/A'}")
+
+        print(f"GPS: {result.get('latitude')}, {result.get('longitude')}")        print(f"📧 Emails: {', '.join(business.emails) if business.emails else 'N/A'}")
+
+        print(f"Quality: {result.get('quality_score')}/100")        print(f"🌐 Website: {business.website or 'N/A'}")
+
+        print(f"Time: {result.get('extraction_time_seconds')}s")        print(f"📍 Address: {business.address or 'N/A'}")
+
+    else:        print(f"⭐ Rating: {business.rating or 'N/A'} ({business.review_count or 0} reviews)")
+
+        print(f"\n❌ Extraction failed: {result.get('error', 'Unknown error')}")        print(f"🏷️ Category: {business.category or 'N/A'}")
+
         print(f"📊 Quality Score: {business.data_quality_score}/100")
+
         print(f"⏱️ Extraction Time: {result.get('extraction_time_seconds', 0):.2f}s")
-        print(f"🔧 Method: {result.get('method', 'unknown')}")
+
+if __name__ == "__main__":        print(f"🔧 Method: {result.get('method', 'unknown')}")
+
+    asyncio.run(main())
 
         # Show coordinates if available
         if business.latitude and business.longitude:

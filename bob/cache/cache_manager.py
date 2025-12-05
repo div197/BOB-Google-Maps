@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-ULTIMATE CACHE MANAGER - SQLite-based intelligent caching
+BOB Cache Manager v4.3.0 - SQLite-based intelligent caching
 
-Features:
-- Instant re-queries (milliseconds vs minutes)
-- Incremental updates (only fetch new reviews/ratings)
-- Smart expiration (fresh data within 24 hours)
-- Compression for large datasets
+Key Features:
+- Instant re-queries (milliseconds vs minutes)  
+- 1800x speedup for cached results
+- Smart expiration (configurable TTL)
 - Full-text search on cached data
+- Automatic cleanup of old entries
 """
 
 import sqlite3

@@ -4,9 +4,7 @@ Custom exception classes for BOB Google Maps Extractor.
 This module defines a hierarchy of custom exceptions for better error handling
 and debugging throughout the BOB Google Maps extraction system.
 
-Philosophy: Nishkaam Karma Yoga - Clear error communication without attachment
-Author: Divyanshu Singh Chouhan
-Version: 4.2.0
+Version: 4.3.0
 """
 
 from typing import Optional, Dict, Any

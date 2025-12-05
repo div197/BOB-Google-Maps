@@ -1,16 +1,14 @@
-# BOB Google Maps V4.2.0 Production-Verified - State-of-the-Art Docker Compose
-# Author: Divyanshu Singh Chouhan
-# Release: November 14, 2025
-# Built with Nishkaam Karma Yoga principles - Ultimate optimization through minimal resource usage
-# Validated on 124+ real businesses - Ready for Production Deployment
+# BOB Google Maps v4.3.0 - Docker Compose
+# Enterprise-grade Google Maps data extraction
+# Use: docker-compose up --build
 
 services:
   bob-extractor:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: bob-google-maps-optimized
-    image: bob-google-maps:4.2.0
+    container_name: bob-google-maps
+    image: bob-google-maps:4.3.0
     # Use host IPC namespace for optimized Chromium
     ipc: host
     # Port mapping - Using port 8000 (verified available in ecosystem)

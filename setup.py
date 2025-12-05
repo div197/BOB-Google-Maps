@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BOB Google Maps 1.0 Setup
+BOB Google Maps v4.3.0 Setup
 Backwards compatible setup.py (uses pyproject.toml)
 """
 

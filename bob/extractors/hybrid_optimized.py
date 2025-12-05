@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 """
-STATE-OF-THE-ART HYBRID ENGINE - Cache-Free Ultimate Optimization
+BOB Hybrid Extractor v4.3.0 - Intelligent Fallback Engine
 
-Nishkaam Karma Yoga Approach: Selfless action focused on pure process, detached from outcomes.
+Enterprise-grade hybrid extraction combining Playwright + Selenium.
 
-Revolutionary optimizations:
-- NO CACHE (eliminates complexity, disk I/O, and potential issues)
-- ULTRA-MINIMAL memory footprint (<50MB vs 200MB)
-- INSTANT browser lifecycle management
-- PURE extraction focus - no storage concerns
-- ENLIGHTENED resource management
-
-This is the ultimate, contemplative approach to web extraction.
+Key Features:
+- Primary: Playwright (fast, 95%+ success rate)
+- Fallback: Selenium (undetected-chromedriver)
+- SQLite caching for instant re-queries
+- Memory-optimized (<50MB footprint)
+- Automatic cleanup and garbage collection
 """
 
 import asyncio
@@ -20,6 +18,7 @@ import psutil
 import os
 from bob.extractors.playwright_optimized import PlaywrightExtractorOptimized
 from bob.extractors.selenium_optimized import SeleniumExtractorOptimized
+from bob.config.settings import DEFAULT_EXTRACTOR_CONFIG # Import the default config
 
 
 class HybridExtractorOptimized:
@@ -45,6 +44,7 @@ class HybridExtractorOptimized:
         self.prefer_playwright = prefer_playwright
         self.memory_optimized = memory_optimized
         self.use_cache = use_cache
+        self.selenium_enabled = DEFAULT_EXTRACTOR_CONFIG.selenium_enabled # Get selenium_enabled from config
         
         if self.use_cache:
             from bob.cache.cache_manager import CacheManagerUltimate
@@ -95,7 +95,7 @@ class HybridExtractorOptimized:
         self.stats["peak_memory_mb"] = max(self.stats["peak_memory_mb"], current_memory)
 
         print(f"\n{'='*70}")
-        print(f"🧘 STATE-OF-THE-ART HYBRID ENGINE - NISHKAAM KARMA YOGA")
+        print(f"🔱 BOB HYBRID EXTRACTOR v4.3.0")
         print(f"📊 Memory: {current_memory:.1f}MB (Peak: {self.stats['peak_memory_mb']:.1f}MB)")
         print(f"{'='*70}")
 
@@ -130,7 +130,7 @@ class HybridExtractorOptimized:
                 print("🔄 Falling back to Selenium...")
 
         # Step 3: Fallback to Selenium (memory-optimized)
-        if not live_result:
+        if not live_result and self.selenium_enabled: # Only attempt Selenium if enabled
             print("\n🔧 STEP 2: Selenium extraction (optimized memory)...")
             try:
                 selenium_data = self._extract_with_selenium_optimized(url, include_reviews, max_reviews)
@@ -142,6 +142,8 @@ class HybridExtractorOptimized:
 
             except Exception as e:
                 print(f"❌ Selenium also failed: {e}")
+        elif not self.selenium_enabled:
+            print("\n⚠️ Selenium fallback skipped: Selenium engine is disabled in configuration.")
 
         # Final cleanup and return logic
         gc.collect()

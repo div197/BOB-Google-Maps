@@ -1,9 +1,8 @@
 """
-BOB Google Maps V3.0 - Configuration Settings
-Author: Divyanshu Singh Chouhan
-Release: October 3, 2025
+BOB Google Maps v4.3.0 - Configuration Settings
 
 Centralized configuration for all extraction operations.
+Supports environment variables for Docker/production deployments.
 """
 
 from dataclasses import dataclass, field
@@ -34,7 +33,8 @@ class ExtractorConfig:
     block_resources: bool = True
     blocked_resource_types: List[str] = field(default_factory=lambda: ['image', 'stylesheet', 'font', 'media'])
 
-    # Data extraction
+    # Engine settings
+    selenium_enabled: bool = True
     max_reviews: int = 10
     max_images: int = 20
     include_reviews: bool = True
@@ -60,6 +60,7 @@ class ExtractorConfig:
             block_resources=os.getenv('BOB_BLOCK_RESOURCES', 'true').lower() == 'true',
             max_reviews=int(os.getenv('BOB_MAX_REVIEWS', '10')),
             max_images=int(os.getenv('BOB_MAX_IMAGES', '20')),
+            selenium_enabled=os.getenv('BOB_SELENIUM_ENABLED', 'true').lower() == 'true',
         )
 
 

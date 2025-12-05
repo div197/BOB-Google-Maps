@@ -1,6 +1,4 @@
-# BOB Google Maps V3.0 - Docker Ignore
-# Author: Divyanshu Singh Chouhan
-# Release: October 3, 2025
+# BOB Google Maps v4.3.0 - Docker Ignore
 
 # Python
 __pycache__/

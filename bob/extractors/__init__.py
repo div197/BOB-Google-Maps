@@ -1,46 +1,42 @@
 """
-BOB Google Maps - Extraction Engines
+BOB Google Maps v4.3.0 - Extraction Engines
 
-Three optimized extractors for different use cases:
-- PlaywrightExtractorOptimized: Fast, recommended default (7-11s per business)
-- SeleniumExtractorOptimized: Reliable fallback (8-15s per business)
-- HybridExtractorOptimized: Memory-optimized (9-12s per business)
+Production-grade extractors for Google Maps data extraction.
+
+Recommended Usage:
+    from bob.extractors import HybridExtractorOptimized
+    
+    extractor = HybridExtractorOptimized()
+    result = extractor.extract_business("Business Name")
+
+Available Extractors:
+- PlaywrightExtractorOptimized: Primary engine (10-22s per business)
+- SeleniumExtractorOptimized: Fallback engine (15-30s per business)  
+- HybridExtractorOptimized: Smart orchestrator with caching
 """
 
-# Import Playwright extractors (no external dependencies)
+# Primary extractor (always available)
 from .playwright_optimized import PlaywrightExtractorOptimized
 
 __all__ = ['PlaywrightExtractorOptimized']
 
-# Try to import Selenium extractors (requires undetected-chromedriver)
-try:
-    from .selenium_optimized import SeleniumExtractorOptimized
-    __all__.append('SeleniumExtractorOptimized')
-except ImportError:
-    pass
-
-# Try to import Hybrid extractors
+# Hybrid extractor (recommended for production)
 try:
     from .hybrid_optimized import HybridExtractorOptimized
     __all__.append('HybridExtractorOptimized')
 except ImportError:
-    pass
+    HybridExtractorOptimized = None
 
-# Legacy imports for backwards compatibility
+# Selenium fallback (optional)
 try:
-    from .playwright import PlaywrightExtractor
-    __all__.append('PlaywrightExtractor')
+    from .selenium_optimized import SeleniumExtractorOptimized
+    __all__.append('SeleniumExtractorOptimized')
 except ImportError:
-    pass
+    SeleniumExtractorOptimized = None
 
-try:
-    from .selenium import SeleniumExtractor
-    __all__.append('SeleniumExtractor')
-except ImportError:
-    pass
-
+# Legacy imports for backwards compatibility (deprecated)
 try:
     from .hybrid import HybridExtractor
     __all__.append('HybridExtractor')
 except ImportError:
-    pass
+    HybridExtractor = None

@@ -1,5 +1,7 @@
 """
-Image Data Model - BOB V3.0
+Image Data Model - BOB v4.3.0
+
+Photo/image data model with URL, caption, and resolution info.
 """
 
 from dataclasses import dataclass

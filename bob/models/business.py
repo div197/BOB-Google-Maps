@@ -1,5 +1,5 @@
 """
-Business Data Model - BOB V3.0
+Business Data Model - BOB v4.3.0
 """
 
 from dataclasses import dataclass, field
@@ -79,7 +79,7 @@ class Business:
     data_quality_score: int = 0
     extraction_method: str = "unknown"
     extraction_time_seconds: Optional[float] = None
-    extractor_version: str = "3.3.0"
+    extractor_version: str = "4.3.0"
     metadata: Dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

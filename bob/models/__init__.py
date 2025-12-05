@@ -1,5 +1,7 @@
 """
-Data Models for BOB V3.0
+BOB Google Maps v4.3.0 - Data Models
+
+Business, Review, and Image data models with comprehensive fields.
 """
 
 from .business import Business

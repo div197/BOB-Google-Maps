@@ -1,38 +1,39 @@
 #!/usr/bin/env python3
 """
-🔱 BOB GOOGLE MAPS ULTIMATE - V3.0 REVOLUTIONARY EDITION
+🔱 BOB GOOGLE MAPS v4.3.0 - PRODUCTION EDITION
 
-The Most Powerful Google Maps Scraper Ever Built.
+Enterprise-grade Google Maps data extraction.
 
-REVOLUTIONARY FEATURES:
-✅ 95%+ success rate (vs 75% original)
-✅ 3-5x faster extraction
-✅ Parallel processing (10x throughput)
-✅ Intelligent caching (instant re-queries)
-✅ Hybrid dual-engine (Playwright + Selenium)
-✅ Network API interception
-✅ Auto-healing selectors
-✅ Stealth mode (undetected)
+KEY FEATURES:
+✅ 95%+ verified success rate
+✅ One-click setup (./setup.sh)
+✅ Fast extraction (10-22 seconds)
+✅ Intelligent caching (1800x speedup)
+✅ Hybrid dual-engine (Playwright + Selenium fallback)
+✅ GPS, photos, reviews, all contact details
+✅ Production-ready enterprise quality
 
 Created: October 3, 2025
-Version: 3.0 Ultimate
+Updated: December 5, 2025
+Version: 4.3.0
 """
 
 import argparse
 import json
 import time
+import sys
 
-# Use new package imports
-from bob.extractors import HybridExtractor
+# Use optimized extractors
+from bob.extractors import HybridExtractorOptimized
 
 
 class BOBUltimate:
     """Ultimate BOB Google Maps application."""
 
     def __init__(self):
-        self.version = "4.2.3"
-        self.release_date = "October 3, 2025"
-        self.engine = HybridExtractor(use_cache=True, prefer_playwright=True)
+        self.version = "4.3.0"
+        self.release_date = "December 5, 2025"
+        self.engine = HybridExtractorOptimized(use_cache=True, prefer_playwright=True)
 
     def extract_single(self, url, force_fresh=False, include_reviews=True, max_reviews=5, output=None):
         """Extract single business with ultimate power."""
@@ -48,13 +49,21 @@ Mode: {'FRESH EXTRACTION' if force_fresh else 'CACHE-FIRST'}
 
         start_time = time.time()
 
+        # Handle force_fresh by temporarily disabling cache
+        if force_fresh:
+            old_use_cache = self.engine.use_cache
+            self.engine.use_cache = False
+
         # Extract business
         result = self.engine.extract_business(
             url,
-            force_fresh=force_fresh,
             include_reviews=include_reviews,
             max_reviews=max_reviews
         )
+
+        # Restore cache setting
+        if force_fresh:
+            self.engine.use_cache = old_use_cache
 
         extraction_time = time.time() - start_time
 
@@ -238,41 +247,37 @@ def main():
     """Command-line interface."""
     parser = argparse.ArgumentParser(
         description=f"""
-🔱 BOB GOOGLE MAPS ULTIMATE V3.0 - REVOLUTIONARY EDITION
+🔱 BOB GOOGLE MAPS v4.3.0 - PRODUCTION EDITION
 
-The most powerful Google Maps scraper ever built.
-
-95%+ success rate | 3-5x faster | Intelligent caching | Parallel processing
+Enterprise-grade Google Maps data extraction with 95%+ success rate.
         """,
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 EXAMPLES:
 
   Single extraction:
-    python bob_maps_ultimate.py "Filos 24/7 jodhpur"
+    python -m bob "Starbucks Times Square NYC"
 
   Force fresh (bypass cache):
-    python bob_maps_ultimate.py "Starbucks" --fresh --output results.json
+    python -m bob "Taj Mahal Palace Mumbai" --fresh --output results.json
 
   Batch extraction (parallel):
-    python bob_maps_ultimate.py --batch urls.txt --parallel --max-concurrent 10
+    python -m bob --batch urls.txt --parallel --max-concurrent 5
 
   Show statistics:
-    python bob_maps_ultimate.py --stats
+    python -m bob --stats
 
   Clear old cache:
-    python bob_maps_ultimate.py --clear-cache --days 7
+    python -m bob --clear-cache --days 7
 
-REVOLUTIONARY FEATURES:
-  ⚡ Playwright engine (3-5x faster)
-  🔧 Selenium V2 fallback (stealth mode)
-  📦 SQLite caching (instant re-queries)
-  🚀 Parallel extraction (10x throughput)
-  🎯 Network API interception
-  🛡️  Auto-healing selectors
-  🔐 Undetected stealth mode
+KEY FEATURES:
+  ✅ 95%+ verified success rate
+  ⚡ Fast extraction (10-22 seconds)
+  � Intelligent caching (1800x speedup)
+  � GPS, photos, reviews extraction
+  � Hybrid Playwright + Selenium
 
-Made with 💪 on October 3, 2025
+Version: 4.3.0 (December 5, 2025)
         """
     )
 

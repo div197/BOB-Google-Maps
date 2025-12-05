@@ -1,8 +1,6 @@
-# BOB Google Maps V4.2.0 Production-Verified - Production Dockerfile
-# Author: Divyanshu Singh Chouhan
-# Release: November 14, 2025
-# Built with Nishkaam Karma Yoga principles - Triple-engine architecture with intelligent caching
-# Validated on 124+ real businesses across Jodhpur + USA cities
+# BOB Google Maps v4.3.0 - Production Dockerfile
+# Enterprise-grade Google Maps data extraction
+# 95%+ verified success rate with hybrid Playwright+Selenium engine
 
 FROM python:3.10-slim
 
@@ -72,14 +70,14 @@ RUN python -m playwright install --with-deps chromium
 RUN mkdir -p /app/cache /app/logs /app/data /app/exports /app/ms-playwright && \
     chmod 777 /app/cache /app/logs /app/data /app/exports /app/ms-playwright
 
-# Set environment variables for V3.0 Ultimate extraction
+# Set environment variables for v4.3.0 extraction
 ENV BOB_HEADLESS=true \
     BOB_MEMORY_OPTIMIZED=true \
     BOB_CACHE_ENABLED=true \
     BOB_LOG_LEVEL=INFO \
     BOB_MAX_CONCURRENT=3 \
     BOB_PARALLEL_ENABLED=true \
-    BOB_VERSION=4.2.0
+    BOB_VERSION=4.3.0
 
 # Healthcheck for optimized system
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \

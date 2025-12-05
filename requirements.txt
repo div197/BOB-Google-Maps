@@ -1,20 +1,29 @@
-# BOB Google Maps 1.0 - Production Requirements
+# BOB Google Maps v4.3.0 - Production Requirements
 # Author: Divyanshu Singh Chouhan
-# Release: October 3, 2025
+# Release: December 5, 2025
 
-# Core web automation
-selenium>=4.15.0
-playwright>=1.40.0
-undetected-chromedriver>=3.5.0
+# ===== CORE DEPENDENCIES (REQUIRED) =====
 
-# HTTP requests
-requests>=2.31.0
-urllib3>=2.0.0
+# Web automation engines
+selenium>=4.15.0,<5.0.0
+playwright>=1.40.0,<2.0.0
+undetected-chromedriver>=3.5.0,<4.0.0
+
+# HTTP and networking
+requests>=2.31.0,<3.0.0
+urllib3>=2.0.0,<3.0.0
 
 # Async support
-greenlet>=3.0.0
+greenlet>=3.0.0,<4.0.0
 
-# Development dependencies (optional)
+# System monitoring (REQUIRED - was missing!)
+psutil>=5.9.0,<6.0.0
+
+# Python 3.12+ compatibility (distutils replacement)
+setuptools>=65.0.0
+
+# ===== DEVELOPMENT DEPENDENCIES =====
+
 pytest>=7.4.0
 pytest-cov>=4.1.0
 pytest-asyncio>=0.21.0
@@ -22,6 +31,7 @@ black>=23.0.0
 flake8>=6.0.0
 mypy>=1.5.0
 
-# Documentation (optional)
-mkdocs>=1.5.0
-mkdocs-material>=9.0.0
+# ===== DOCUMENTATION (OPTIONAL) =====
+
+# mkdocs>=1.5.0
+# mkdocs-material>=9.0.0

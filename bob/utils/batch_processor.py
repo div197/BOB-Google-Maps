@@ -21,8 +21,10 @@ import subprocess
 import json
 import sys
 import time
+import traceback # Import traceback
 from typing import List, Dict, Any
 from pathlib import Path
+from bob.config.settings import DEFAULT_EXTRACTOR_CONFIG
 
 
 class BatchProcessor:
@@ -34,7 +36,7 @@ class BatchProcessor:
     resource issues that cause browser crashes.
     """
 
-    def __init__(self, headless: bool = True, include_reviews: bool = False, max_reviews: int = 0):
+    def __init__(self, headless: bool = True, include_reviews: bool = False, max_reviews: int = 0, timeout: int = DEFAULT_EXTRACTOR_CONFIG.timeout):
         """
         Initialize batch processor.
 
@@ -42,10 +44,12 @@ class BatchProcessor:
             headless: Run browser in headless mode
             include_reviews: Extract reviews
             max_reviews: Maximum number of reviews to extract
+            timeout: Timeout in seconds for each subprocess extraction
         """
         self.headless = headless
         self.include_reviews = include_reviews
         self.max_reviews = max_reviews
+        self.timeout = timeout
 
     def extract_single_subprocess(self, business_name: str) -> Dict[str, Any]:
         """
@@ -82,14 +86,16 @@ try:
     print("BOB_RESULT_END")
 
 except Exception as e:
-    # Output error as JSON
+    import traceback
+    # Output error as JSON with full traceback
     print("BOB_RESULT_START")
-    print(json.dumps({{
+    print(json.dumps({
         "success": False,
         "error": str(e),
+        "traceback": traceback.format_exc(),
         "business": "{business_name}",
         "extractor": "Subprocess Batch Processor"
-    }}))
+    }))
     print("BOB_RESULT_END")
 '''
 
@@ -99,7 +105,7 @@ except Exception as e:
                 [sys.executable, '-c', code],
                 capture_output=True,
                 text=True,
-                timeout=120  # 2 minute timeout per extraction
+                timeout=self.timeout  # Use configurable timeout
             )
 
             # Parse result from stdout

@@ -1,201 +1,399 @@
-# Architecture Guide - BOB Google Maps
+# Architecture Guide - BOB Google Maps v4.3.0# Architecture Guide - BOB Google Maps
 
-Understanding the system design and components.
 
-## System Overview
 
-BOB Google Maps uses a **multi-engine extraction architecture** optimized for speed, reliability, and memory efficiency.
+## OverviewUnderstanding the system design and components.
 
-```
-┌─────────────────────────────────────────────────────┐
-│         User Application Layer                       │
-│  (Your Python code using BOB extractors)            │
-└──────────────────┬──────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────┐
-│      Extraction Engine Layer (Choose One)            │
-│  ┌────────────────┬─────────────┬────────────────┐  │
-│  │ Playwright     │ Selenium    │ Hybrid         │  │
-│  │ (Fast)         │ (Reliable)  │ (Balanced)     │  │
-│  └────────────────┴─────────────┴────────────────┘  │
-└──────────────────┬──────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────┐
-│      Data Extraction & Processing                    │
-│  ├─ DOM Parsing & Extraction                        │
-│  ├─ Quality Score Calculation                       │
-│  ├─ Error Handling & Fallbacks                      │
-│  └─ Data Validation                                 │
-└──────────────────┬──────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────┐
-│      Support Systems                                 │
-│  ┌──────────────┬──────────────┬──────────────────┐ │
-│  │ Cache System │ Config Mgmt   │ Logging/Monitor  │ │
-│  │ (SQLite)     │ (YAML/Python) │ (Real-time)      │ │
-│  └──────────────┴──────────────┴──────────────────┘ │
-└──────────────────┬──────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────┐
-│      Browser Layer (Chrome/Chromium)                │
-│  ├─ Playwright or Selenium Driver                   │
-│  ├─ Resource Blocking (Ads/Tracking only)          │
+
+
+BOB Google Maps uses a **hybrid extraction architecture** with Playwright as the primary engine and Selenium as fallback, backed by SQLite caching.## System Overview
+
+
+
+```BOB Google Maps uses a **multi-engine extraction architecture** optimized for speed, reliability, and memory efficiency.
+
+┌─────────────────────────────────────────────────┐
+
+│              User Application                    │```
+
+│  python -m bob "query"  OR  Python API          │┌─────────────────────────────────────────────────────┐
+
+└────────────────────┬────────────────────────────┘│         User Application Layer                       │
+
+                     ││  (Your Python code using BOB extractors)            │
+
+┌────────────────────▼────────────────────────────┐└──────────────────┬──────────────────────────────────┘
+
+│           HybridExtractorOptimized              │                   │
+
+│  ┌─────────────────────────────────────────┐    │┌──────────────────▼──────────────────────────────────┐
+
+│  │            Cache Check                   │    ││      Extraction Engine Layer (Choose One)            │
+
+│  │  (SQLite: bob_cache_ultimate.db)        │    ││  ┌────────────────┬─────────────┬────────────────┐  │
+
+│  └─────────────────────────────────────────┘    ││  │ Playwright     │ Selenium    │ Hybrid         │  │
+
+│           │ miss           │ hit                ││  │ (Fast)         │ (Reliable)  │ (Balanced)     │  │
+
+│           ▼                ▼                    ││  └────────────────┴─────────────┴────────────────┘  │
+
+│  ┌────────────────┐  ┌─────────────┐           │└──────────────────┬──────────────────────────────────┘
+
+│  │   Playwright   │  │ Return from │           │                   │
+
+│  │   Extractor    │  │    cache    │           │┌──────────────────▼──────────────────────────────────┐
+
+│  └────────┬───────┘  └─────────────┘           ││      Data Extraction & Processing                    │
+
+│           │ fail                                ││  ├─ DOM Parsing & Extraction                        │
+
+│           ▼                                     ││  ├─ Quality Score Calculation                       │
+
+│  ┌────────────────┐                            ││  ├─ Error Handling & Fallbacks                      │
+
+│  │    Selenium    │                            ││  └─ Data Validation                                 │
+
+│  │    Fallback    │                            │└──────────────────┬──────────────────────────────────┘
+
+│  └────────────────┘                            │                   │
+
+└────────────────────┬────────────────────────────┘┌──────────────────▼──────────────────────────────────┐
+
+                     ││      Support Systems                                 │
+
+┌────────────────────▼────────────────────────────┐│  ┌──────────────┬──────────────┬──────────────────┐ │
+
+│              Browser Layer                       ││  │ Cache System │ Config Mgmt   │ Logging/Monitor  │ │
+
+│  • Chromium (Playwright/Selenium)               ││  │ (SQLite)     │ (YAML/Python) │ (Real-time)      │ │
+
+│  • Headless mode                                ││  └──────────────┴──────────────┴──────────────────┘ │
+
+│  • Resource blocking (images/fonts)             │└──────────────────┬──────────────────────────────────┘
+
+└────────────────────┬────────────────────────────┘                   │
+
+                     │┌──────────────────▼──────────────────────────────────┐
+
+                     ▼│      Browser Layer (Chrome/Chromium)                │
+
+              Google Maps│  ├─ Playwright or Selenium Driver                   │
+
+```│  ├─ Resource Blocking (Ads/Tracking only)          │
+
 │  └─ Network Interception                            │
-└──────────────────┬──────────────────────────────────┘
+
+## Core Components└──────────────────┬──────────────────────────────────┘
+
                    │
-         Google Maps API (Production)
+
+### 1. Extraction Engines         Google Maps API (Production)
+
 ```
 
-## Component Architecture
+| Engine | Type | Speed | Use Case |
 
-### 1. Extraction Engines
+|--------|------|-------|----------|## Component Architecture
+
+| `PlaywrightExtractorOptimized` | Async | 10-22s | Primary extraction |
+
+| `SeleniumExtractorOptimized` | Sync | 15-30s | Fallback |### 1. Extraction Engines
+
+| `HybridExtractorOptimized` | Sync | 10-25s | **Recommended** - combines both |
 
 #### PlaywrightExtractorOptimized (Recommended)
-- **Speed:** 7-11 seconds per business
+
+### 2. Cache System- **Speed:** 7-11 seconds per business
+
 - **Memory:** <30MB per extraction
-- **Advantages:** Fast, low memory, good data quality
+
+SQLite-based caching in `bob_cache_ultimate.db`:- **Advantages:** Fast, low memory, good data quality
+
 - **Use Case:** Default choice for most applications
 
-#### SeleniumExtractorOptimized
-- **Speed:** 8-15 seconds per business
-- **Memory:** <40MB per extraction
-- **Advantages:** Reliable fallback, stealth mode
-- **Use Case:** When Playwright fails, critical businesses
+```
 
-#### HybridExtractorOptimized
-- **Speed:** 9-12 seconds per business
+businesses table:#### SeleniumExtractorOptimized
+
+  - place_id (PRIMARY KEY)- **Speed:** 8-15 seconds per business
+
+  - name, phone, address, website- **Memory:** <40MB per extraction
+
+  - latitude, longitude- **Advantages:** Reliable fallback, stealth mode
+
+  - rating, review_count- **Use Case:** When Playwright fails, critical businesses
+
+  - full_data (JSON blob)
+
+  - extracted_at, updated_at#### HybridExtractorOptimized
+
+```- **Speed:** 9-12 seconds per business
+
 - **Memory:** <50MB per extraction
-- **Advantages:** Flexible, memory-conscious
+
+Cache provides **~1800x speedup** for repeat queries.- **Advantages:** Flexible, memory-conscious
+
 - **Use Case:** Memory-constrained environments
+
+### 3. Data Model
 
 ### 2. Data Models
 
+The `Business` model has **34 fields**:
+
 #### Business (108 Fields)
-```
-Core Fields (8):        place_id, cid, name, phone, address, emails, latitude, longitude
-Business Details (15):  category, rating, review_count, website, hours, price_range, etc.
-Rich Data (25+):        photos, reviews, popular_times, social_media, menu_items
+
+```python```
+
+# Identification (7 fields)Core Fields (8):        place_id, cid, name, phone, address, emails, latitude, longitude
+
+place_id, cid, place_id_original, place_id_confidence,Business Details (15):  category, rating, review_count, website, hours, price_range, etc.
+
+place_id_format, is_real_cid, place_id_urlRich Data (25+):        photos, reviews, popular_times, social_media, menu_items
+
 Metadata (12):          quality_score, extraction_time, extracted_at, etc.
-```
+
+# Core Info (4 fields)```
+
+name, phone, address, emails
 
 ### 3. Cache System
 
-**SQLite-based intelligent caching:**
-- 1800x faster for repeated queries
-- Automatic expiration (configurable)
-- Smart incremental updates
-- Efficient cleanup
+# Location (3 fields)
 
-### 4. Configuration Management
+latitude, longitude, plus_code**SQLite-based intelligent caching:**
+
+- 1800x faster for repeated queries
+
+# Business Details (7 fields)- Automatic expiration (configurable)
+
+category, rating, review_count, website, hours,- Smart incremental updates
+
+current_status, price_range- Efficient cleanup
+
+
+
+# Service Options (1 field)### 4. Configuration Management
+
+service_options  # dict: dine_in, takeout, delivery
 
 ```yaml
-extraction:  # Extraction behavior
-memory:      # Memory optimization
+
+# Rich Data (5 fields)extraction:  # Extraction behavior
+
+attributes, photos, reviews, popular_times, social_media, menu_itemsmemory:      # Memory optimization
+
 browser:     # Browser settings
-cache:       # Cache configuration
-logging:     # Log settings
+
+# Metadata (7 fields)cache:       # Cache configuration
+
+extracted_at, data_quality_score, extraction_method,logging:     # Log settings
+
+extraction_time_seconds, extractor_version, metadata```
+
 ```
 
 ## Data Flow
 
+## Directory Structure
+
 ### Single Business Extraction
 
 ```
-1. Query Input
-   └─> "Starbucks Times Square New York"
 
-2. Cache Check
-   ├─ Found → Return (0.1 seconds)
-   └─ Not found → Continue
+bob/```
 
-3. Browser Launch
-   ├─ JavaScript enabled
-   ├─ Minimal resource blocking
-   └─ Navigate to Google Maps
+├── __init__.py           # Package exports1. Query Input
 
-4. Search Execution
-   ├─ Input query
-   ├─ Wait for results
-   └─ Parse results page
+├── __main__.py           # CLI entry point   └─> "Starbucks Times Square New York"
 
-5. Business Link Discovery
-   ├─ Find first result
-   └─ Extract link/place_id
+├── cli.py                # Command-line interface
 
-6. Business Details Extraction
-   ├─ Extract name, phone, address
-   ├─ Extract rating, reviews
-   ├─ Extract hours, website
-   └─ Extract additional fields
+├── exceptions.py         # Custom exceptions2. Cache Check
 
-7. Quality Scoring
+├── extractors/   ├─ Found → Return (0.1 seconds)
+
+│   ├── __init__.py   └─ Not found → Continue
+
+│   ├── playwright_optimized.py   # Primary engine
+
+│   ├── selenium_optimized.py     # Fallback engine3. Browser Launch
+
+│   └── hybrid_optimized.py       # Orchestrator   ├─ JavaScript enabled
+
+├── models/   ├─ Minimal resource blocking
+
+│   ├── __init__.py   └─ Navigate to Google Maps
+
+│   ├── business.py       # Business dataclass (34 fields)
+
+│   ├── review.py         # Review dataclass4. Search Execution
+
+│   └── image.py          # Image dataclass   ├─ Input query
+
+├── cache/   ├─ Wait for results
+
+│   ├── __init__.py   └─ Parse results page
+
+│   └── cache_manager.py  # SQLite cache
+
+├── config/5. Business Link Discovery
+
+│   ├── __init__.py   ├─ Find first result
+
+│   └── settings.py       # Configuration   └─ Extract link/place_id
+
+└── utils/
+
+    ├── __init__.py6. Business Details Extraction
+
+    ├── website_extractor.py   ├─ Extract name, phone, address
+
+    ├── image_extractor.py   ├─ Extract rating, reviews
+
+    └── email_extractor.py   ├─ Extract hours, website
+
+```   └─ Extract additional fields
+
+
+
+## Extraction Flow7. Quality Scoring
+
    ├─ Count extracted fields
-   ├─ Verify data validity
+
+### 1. URL Handling   ├─ Verify data validity
+
    └─ Calculate quality score 0-100
 
+Input is converted to Google Maps search URL:
+
 8. Cache Storage
-   └─ Save for future requests
 
-9. Return Results
-   └─> Business object with all data
-```
+```   └─ Save for future requests
 
-### Batch Processing Flow
+"Starbucks Times Square NYC"
 
-```
+    ↓9. Return Results
+
+https://www.google.com/maps/search/Starbucks+Times+Square+NYC?hl=en   └─> Business object with all data
+
+``````
+
+
+
+Key insight: Using `/search/` instead of `/place/` allows Google to redirect to the correct business page automatically.### Batch Processing Flow
+
+
+
+### 2. Data Extraction```
+
 Input: [Business1, Business2, ..., BusinessN]
-       ↓
+
+JavaScript is executed in the browser to extract:       ↓
+
 For Each Business:
-├─ Check Cache
-├─ Extract (if not cached)
-├─ Quality Check
-├─ Store Result
-└─ Rate Limit (pause between)
-       ↓
-Output: Results array + statistics
+
+1. **Name** - from `h1` element├─ Check Cache
+
+2. **Phone** - from `button[data-item-id^='phone:']`├─ Extract (if not cached)
+
+3. **Address** - from `button[data-item-id='address']`├─ Quality Check
+
+4. **Website** - from `a[data-item-id='authority']`├─ Store Result
+
+5. **Rating** - from review element└─ Rate Limit (pause between)
+
+6. **GPS** - from URL parameters or page elements (3 fallback methods)       ↓
+
+7. **Images** - from photo galleryOutput: Results array + statistics
+
 ```
+
+### 3. Quality Scoring
 
 ## Quality Scoring Algorithm
 
-```python
-score = 0
-score += 20 if name          # Essential field
-score += 15 if phone         # Contact info
-score += 15 if address       # Location data
-score += 10 if rating        # Business metrics
-score += 10 if category      # Business type
-score += 10 if website       # Web presence
-score += 5  if emails        # Email contacts
-score += 5  if hours         # Operating hours
-score += 5  if reviews       # Social proof
-score += 5  if photos        # Visual content
+Score calculated based on field completeness:
 
-return min(score, 100)
+```python
+
+```score = 0
+
+Name:      15 pointsscore += 20 if name          # Essential field
+
+Phone:     10 pointsscore += 15 if phone         # Contact info
+
+Address:   10 pointsscore += 15 if address       # Location data
+
+GPS:       15 pointsscore += 10 if rating        # Business metrics
+
+Rating:     8 pointsscore += 10 if category      # Business type
+
+Category:   7 pointsscore += 10 if website       # Web presence
+
+Website:    8 pointsscore += 5  if emails        # Email contacts
+
+Photos:    up to 10 pointsscore += 5  if hours         # Operating hours
+
+Reviews:   up to 7 pointsscore += 5  if reviews       # Social proof
+
+-----------------------score += 5  if photos        # Visual content
+
+Maximum:  100 points
+
+```return min(score, 100)
+
 ```
+
+## Configuration
 
 ## Memory Management
 
+Environment variables (optional):
+
 ### Optimization Strategies
 
-1. **Resource Blocking**
-   - Block ads, tracking, analytics
-   - Allow Google Maps APIs only
-   - Reduce page load size
+```bash
+
+BOB_HEADLESS=true          # Headless browser1. **Resource Blocking**
+
+BOB_TIMEOUT=60             # Page timeout   - Block ads, tracking, analytics
+
+BOB_MAX_RETRIES=3          # Retry attempts   - Allow Google Maps APIs only
+
+BOB_SELENIUM_ENABLED=true  # Enable Selenium fallback   - Reduce page load size
+
+```
 
 2. **Incremental Loading**
-   - Load data as needed
-   - Don't load full page DOM
-   - Clean up after extraction
 
-3. **Process Cleanup**
-   - Proper browser instance closure
-   - Memory leak prevention
-   - Garbage collection triggers
+## Performance Characteristics   - Load data as needed
+
+   - Don't load full page DOM
+
+| Metric | Value |   - Clean up after extraction
+
+|--------|-------|
+
+| First extraction | 10-22 seconds |3. **Process Cleanup**
+
+| Cached extraction | ~10ms |   - Proper browser instance closure
+
+| Memory usage | <50MB |   - Memory leak prevention
+
+| Success rate | 95%+ |   - Garbage collection triggers
+
+| Quality score | 90-100 avg |
 
 ### Memory Profile
-- **Base:** 26-27MB (just extractors)
+
+---- **Base:** 26-27MB (just extractors)
+
 - **Per Extraction:** 35-40MB peak
-- **Peak Total:** 64MB across all operations
+
+**v4.3.0** | December 5, 2025- **Peak Total:** 64MB across all operations
+
 
 ## Error Handling & Fallbacks
 

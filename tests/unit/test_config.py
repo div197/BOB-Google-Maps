@@ -26,6 +26,23 @@ class TestExtractorConfig:
         assert config.max_reviews == 10
         assert config.max_images == 20
 
+    def test_selenium_enabled_default(self):
+        """Test default value of selenium_enabled."""
+        config = ExtractorConfig()
+        assert config.selenium_enabled is True
+
+    def test_selenium_enabled_from_env(self):
+        """Test selenium_enabled from environment variable."""
+        os.environ['BOB_SELENIUM_ENABLED'] = 'false'
+        config = ExtractorConfig.from_env()
+        assert config.selenium_enabled is False
+        del os.environ['BOB_SELENIUM_ENABLED']
+
+        os.environ['BOB_SELENIUM_ENABLED'] = 'true'
+        config = ExtractorConfig.from_env()
+        assert config.selenium_enabled is True
+        del os.environ['BOB_SELENIUM_ENABLED']
+
     def test_custom_config(self):
         """Test custom configuration values."""
         config = ExtractorConfig(

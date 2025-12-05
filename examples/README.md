@@ -1,50 +1,98 @@
-# 🔱 BOB Google Maps - Usage Examples
+# 📚 BOB Google Maps Examples# 🔱 BOB Google Maps - Usage Examples
 
-This directory contains comprehensive examples demonstrating how to use BOB Google Maps Extractor for various use cases.
 
-## 📚 Available Examples
 
-### Example 1: Basic Extraction
-**File:** `01_basic_extraction.py`
-**Description:** Simplest way to extract a single business
-**Key Features:**
-- Basic HybridExtractor usage
-- Single business extraction
+Example scripts demonstrating BOB Google Maps v4.3.0 usage.This directory contains comprehensive examples demonstrating how to use BOB Google Maps Extractor for various use cases.
+
+
+
+## Examples## 📚 Available Examples
+
+
+
+| File | Description |### Example 1: Basic Extraction
+
+|------|-------------|**File:** `01_basic_extraction.py`
+
+| `01_basic_extraction.py` | Basic single business extraction |**Description:** Simplest way to extract a single business
+
+| `02_with_reviews.py` | Extract with customer reviews |**Key Features:**
+
+| `03_with_cache.py` | Using HybridExtractor with caching |- Basic HybridExtractor usage
+
+| `04_export_json.py` | Export results to JSON |- Single business extraction
+
 - Display all extracted fields
-- Success/failure handling
 
-**Run:**
-```bash
-python examples/01_basic_extraction.py
+## Running Examples- Success/failure handling
+
+
+
+```bash**Run:**
+
+# Activate your environment first```bash
+
+source .venv/bin/activatepython examples/01_basic_extraction.py
+
 ```
 
-**What You'll Learn:**
-- How to create an extractor
+# Run any example
+
+python examples/01_basic_extraction.py**What You'll Learn:**
+
+```- How to create an extractor
+
 - How to extract a business
-- How to access extracted data
+
+## Key Points- How to access extracted data
+
 - How to check extraction status
 
----
+1. **PlaywrightExtractorOptimized** is async - use `asyncio.run()`
 
-### Example 2: Extract with Reviews
+2. **HybridExtractorOptimized** is sync - recommended for most uses---
+
+3. Results are flat dictionaries, access data directly: `result['name']`
+
+4. Always check `result.get('success')` before using data### Example 2: Extract with Reviews
+
 **File:** `02_with_reviews.py`
-**Description:** Extract business data including customer reviews
+
+## Result Structure**Description:** Extract business data including customer reviews
+
 **Key Features:**
-- Review extraction
-- Reviewer information
-- Rating and review text
-- Review photos
 
-**Run:**
-```bash
-python examples/02_with_reviews.py
+```python- Review extraction
+
+{- Reviewer information
+
+    'success': True,- Rating and review text
+
+    'name': 'Business Name',- Review photos
+
+    'phone': '+1 234-567-8900',
+
+    'address': 'Full address...',**Run:**
+
+    'website': 'https://...',```bash
+
+    'rating': 4.5,python examples/02_with_reviews.py
+
+    'reviews_count': 1234,```
+
+    'category': 'Category',
+
+    'latitude': 40.123,**What You'll Learn:**
+
+    'longitude': -73.456,- How to enable review extraction
+
+    'quality_score': 95,- How to limit number of reviews
+
+    'extraction_time_seconds': 15.2- How to access review data
+
+}- How to display review information
+
 ```
-
-**What You'll Learn:**
-- How to enable review extraction
-- How to limit number of reviews
-- How to access review data
-- How to display review information
 
 ---
 

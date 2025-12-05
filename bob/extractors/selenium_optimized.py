@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """
-STATE-OF-THE-ART SELENIUM EXTRACTOR - Memory Optimized
+BOB Selenium Extractor v4.3.0 - Memory Optimized
 
-Nishkaam Karma Yoga: Ultimate detachment from browser processes.
+Enterprise-grade Selenium-based extraction with memory optimization.
 
-Revolutionary memory optimizations:
+Key Features:
 - ULTRA-minimal browser footprint (<40MB)
 - Instant process termination
 - Aggressive memory cleanup
 - Zero resource leakage
-- Enlightened process management
 
-This is the pinnacle of memory-efficient Selenium extraction.
+Used as fallback when Playwright extraction fails.
 """
 
 import undetected_chromedriver as uc
@@ -112,7 +111,7 @@ class SeleniumExtractorOptimized:
             # Calculate quality score
             data["data_quality_score"] = self._calculate_quality_score_optimized(data)
             data["success"] = True
-            data["extractor_version"] = "Selenium Optimized V4.0"
+            data["extractor_version"] = "Selenium Optimized v4.3.0"
             data["memory_optimized"] = True
 
             extraction_time = time.time() - start_time

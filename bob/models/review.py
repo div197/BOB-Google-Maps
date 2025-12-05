@@ -1,8 +1,7 @@
 """
-Enhanced Review Data Model - BOB V1.2.0 (Nishkaam Karma Yoga Optimized)
+Review Data Model - BOB v4.3.0
 
-State-of-the-Art review extraction with minimal resource usage and complete data capture.
-Built with enlightened optimization principles for maximum efficiency through minimal consumption.
+Comprehensive review data model with author info, rating, and text.
 """
 
 from dataclasses import dataclass, field

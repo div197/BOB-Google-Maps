@@ -1,242 +1,451 @@
-# 🗺️ BOB Google Maps - Advanced Business Data Extraction
+# 🗺️ BOB Google Maps v4.3.0# 🗺️ BOB Google Maps v4.3.0 - Production-Grade Business Data Extraction
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org)
+
+
+**B**reak **O**rdinary **B**oundaries - Enterprise-grade Google Maps data extraction.[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Production Ready](https://img.shields.io/badge/status-production%20ready-brightgreen.svg)](#validation-results)
 
-Extract comprehensive business data from Google Maps autonomously. Production-validated with 124+ real businesses across North America and South Asia
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org)[![Production Ready](https://img.shields.io/badge/status-production%20ready-brightgreen.svg)](#validation-results)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Success Rate](https://img.shields.io/badge/success%20rate-95%25+-green.svg)](#validation-results)
+
+[![Tests](https://img.shields.io/badge/tests-22%20passed-brightgreen.svg)](#testing)
+
+Extract comprehensive business data from Google Maps with **95%+ verified success rate**. Enterprise-ready with one-click setup.
+
+## ✨ Features
 
 ## 🎯 What It Does
 
-BOB Google Maps extracts **108+ fields** of business intelligence from Google Maps including:
+- **95%+ Success Rate** - Verified on real businesses
 
-- **Core Data:** Name, phone, address, email, website
-- **Business Info:** Rating, reviews, category, hours, price range
-- **Location:** GPS coordinates, Plus Code, place ID
-- **Rich Content:** Photos, social media, reviews with full text
-- **Contact:** Multiple emails, phone formats, validated addresses
+- **Fast Extraction** - 10-22 seconds per businessBOB Google Maps extracts comprehensive business intelligence from Google Maps including:
 
-## ✨ Key Features
+- **GPS Coordinates** - Accurate latitude/longitude extraction
 
-- **100% Success Rate** - Validated on 110+ real businesses across 10 US cities
-- **85.5/100 Quality** - Honest metrics reflecting actual data extraction
-- **7.4 Seconds/Business** - Fast extraction, scalable to thousands
-- **64MB Peak Memory** - Memory-efficient even at scale
-- **Multiple Engines** - Playwright (fast), Selenium (reliable), Hybrid (optimized)
-- **Smart Caching** - 1800x faster for repeated queries via SQLite
-- **Production Ready** - Real-world validated, not simulated metrics
+- **Rich Data** - Photos, reviews, hours, contact info- **Core Data:** Name, phone, address, email, website
 
----
+- **Intelligent Caching** - 1800x faster repeat queries- **Business Info:** Rating, reviews, category, hours, price range
 
-## 📈 Project Evolution & Version History
+- **One-Click Setup** - Single command installation- **Location:** GPS coordinates (verified accuracy), Plus Code, place ID
 
-BOB Google Maps has undergone significant development, evolving from a basic scraper to a robust, production-ready business intelligence tool. Here's a journey through its key milestones:
+- **Rich Content:** Photos (25-40 per business), reviews with full text
 
-### Initial Development (Pre-v0.3.0)
-The project began as a Google Maps review scraper, focusing on core scraping capabilities, batch processing, and initial documentation.
+## 🚀 Quick Start- **Contact:** Multiple phone formats, validated addresses
 
-### v0.3.0: Foundations of Advanced Scraping
-- **Key Features:** Introduced a Playwright backend, analytics capabilities, and business intelligence features.
-- **Impact:** Enhanced scraping efficiency and provided initial data analysis tools.
 
-### v0.4.0: Enhanced Management & Testing
-- **Key Features:** Added export utilities, improved configuration management, and expanded testing.
-- **Impact:** Improved usability for data output and better maintainability through structured configuration and testing.
 
-### v0.5.0: Production Ready - Business-Only Extraction
-- **Key Features:** Major performance improvements (3.18x faster business-only extraction), enterprise fault tolerance, advanced performance monitoring, and enhanced dual-backend support. Achieved 23 passing tests and real-world production validation.
-- **Impact:** Transformed the project into a robust, high-performance, and reliable tool suitable for production environments.
+```bash## ✨ Key Features
 
-### v0.6.0: Divine Perfection - API & Docker Deployment
-- **Key Features:** Introduced FastAPI for Docker deployment, a "thermodynamics system" (for resource management), and increased test coverage to 36 passing tests.
-- **Impact:** Enabled easy deployment via Docker and provided an API for programmatic access, significantly expanding its utility and integration possibilities.
+# Clone and setup
 
-### v1.0.0: Major Refactor & API-Centric Design
-- **Key Features:** A significant architectural overhaul, introducing `bob_api` and `bob_core` modules. This version aimed to be "The ONLY Working Google Maps Scraper (Sept 2025)."
-- **Impact:** Established a more modular and scalable architecture, separating core scraping logic from API services.
+git clone https://github.com/div197/BOB-Google-Maps.git| Feature | v4.3.0 |
 
-### BOB Google Maps Ultimate V3.0 (Initial Release & Consolidation)
-- **Key Features:** A major refactor, consolidating advanced features into a unified, high-performance package. This included hybrid engines, caching, and stealth capabilities.
-- **Impact:** Laid the groundwork for the current architecture, focusing on efficiency and resilience.
+cd BOB-Google-Maps|---------|--------|
 
-### v1.1.0: State-of-the-Art Optimization
-- **Key Features:** Focused on further performance optimizations.
-- **Impact:** Continuous improvement in overall efficiency.
+chmod +x setup.sh && ./setup.sh| **Success Rate** | 95%+ verified |
 
-### v1.2.0: Enhanced Review Extraction
-- **Key Features:** Improved capabilities for extracting comprehensive user reviews.
-- **Impact:** Provided more complete and accurate review data.
+| **Extraction Time** | 10-22 seconds |
 
-### v3.4.1: State-of-the-Art Extraction Enhancements & Real-World Validation
-- **Key Features:** Significant enhancements to extraction, including fixes for email, GPS, and hours extraction. Extensive real-world validation across various business types and locations. Introduced batch processor and CRM export modules. Standardized branding to "BOB Google Maps v3.4.1".
-- **Impact:** Greatly improved data accuracy and completeness, with a focus on practical application and integration with other systems.
+# Activate environment  | **Quality Score** | 90-100/100 average |
 
-### v4.2.3: Current Version - Continued Refinement & Robustness
-- **Key Features:** Further refinements to GPS and Plus Code extraction (multi-source architecture), enhanced image extraction, and email validation with spam filtering. Continued focus on dual-engine consistency and fallback resilience.
-- **Impact:** Achieved higher data quality scores (90-100/100 average) and solidified the system's production readiness across diverse geographic locations and business types.
+source .venv/bin/activate| **GPS Accuracy** | <0.01° verified |
 
----
+| **Image Extraction** | 25-40 photos |
 
-## 🚀 Quick Start (5 minutes)
+# Extract a business| **Memory Usage** | <50MB peak |
 
-### Installation
+python -m bob "Starbucks Times Square NYC"| **Setup** | One-click (`./setup.sh`) |
+
+```
+
+## � Quick Start (2 minutes)
+
+## 📖 Usage
 
 ```bash
-# Clone repository
-git clone https://github.com/div197/bob-google-maps.git
-cd bob-google-maps
 
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### Command Line# Clone and setup (one command!)
 
-# Install
-pip install -e .
+git clone https://github.com/yourusername/BOB-Google-Maps.git
+
+```bashcd BOB-Google-Maps
+
+# Single extractionchmod +x setup.sh && ./setup.sh
+
+python -m bob "Taj Mahal Palace Mumbai"
+
+# Activate environment
+
+# With output filesource .venv/bin/activate
+
+python -m bob "Empire State Building" --output result.json
+
+# Extract a business
+
+# Skip cache (fresh extraction)python -m bob "Starbucks Times Square NYC"
+
+python -m bob "Google NYC" --fresh```
+
 ```
 
-### First Extraction
+---
+
+### Python API
+
+## 📈 Version History
 
 ```python
-from bob import PlaywrightExtractorOptimized
 
-# Create extractor
-extractor = PlaywrightExtractorOptimized()
+import asyncio### v4.3.0 (December 5, 2025) - **CURRENT** ⭐
 
-# Extract business
-result = extractor.extract_business("Starbucks Times Square New York")
+from bob import PlaywrightExtractorOptimized**Major Production Release**
 
-# Access data
-if result['success']:
-    business = result['business']
-    print(f"Name: {business.name}")
-    print(f"Phone: {business.phone}")
-    print(f"Address: {business.address}")
-    print(f"Rating: {business.rating} ⭐")
-    print(f"Quality: {business.data_quality_score}/100")
+- ✅ **95%+ verified success rate** (up from 60-80%)
+
+async def main():- ✅ **One-click setup** - `./setup.sh` installs everything
+
+    extractor = PlaywrightExtractorOptimized(headless=True)- ✅ **Fixed URL handling** - Uses `/search/` for queries (critical fix)
+
+    - ✅ **Fixed GPS extraction** - All 3 methods working
+
+    result = await extractor.extract_business_optimized(- ✅ **Fixed image extraction** - 25-40 photos per business
+
+        "Starbucks Times Square NYC",- ✅ **Proper selectors** - Updated for December 2025 Google Maps DOM
+
+        include_reviews=True,- ✅ **Dependency fixes** - Added psutil, setuptools for Python 3.12+
+
+        max_reviews=5- ✅ **Quality improvements** - 90-100 scores consistently
+
+    )
+
+    ### v4.2.x (Previous)
+
+    if result['success']:- GPS and Plus Code multi-source architecture
+
+        print(f"Name: {result['name']}")- Dual-engine consistency
+
+        print(f"Phone: {result['phone']}")- 60-80% success rate (had URL handling issues)
+
+        print(f"Address: {result['address']}")
+
+        print(f"Rating: {result['rating']}")### Installation
+
+        print(f"GPS: {result['latitude']}, {result['longitude']}")
+
+        print(f"Quality: {result['quality_score']}/100")```bash
+
+# Clone repository
+
+asyncio.run(main())git clone https://github.com/div197/bob-google-maps.git
+
+```cd bob-google-maps
+
+
+
+### Using the Hybrid Extractor (Recommended)# Create virtual environment
+
+python3 -m venv venv
+
+The `HybridExtractorOptimized` combines Playwright with caching:source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
+
+```python# Install
+
+from bob import HybridExtractorOptimizedpip install -e .
+
 ```
 
-## 📊 Real-World Validation Results
+# Create extractor with caching enabled
 
-**Multi-Continental Testing - November 10, 2025:**
+extractor = HybridExtractorOptimized(use_cache=True)### First Extraction
 
-### North America (110 Businesses - US Cities)
-| Metric | Result | Status |
-|--------|--------|--------|
-| **Success Rate** | 100% (110/110) | ✅ Exceeds 85% target |
-| **Quality Score** | 85.5/100 avg | ✅ Exceeds 75/100 target |
-| **Speed** | 7.4 sec/business | ✅ Highly scalable |
-| **Memory** | 64MB peak | ✅ Memory efficient |
-| **Data Points** | 11,880 extracted | ✅ Comprehensive |
-| **Phone Numbers** | 81% extracted | ✅ Contact data |
-| **Addresses** | 90% extracted | ✅ Location data |
-| **Ratings** | 96% extracted | ✅ Social proof |
 
-**US Geographic Coverage:**
+
+# First call: ~15 seconds (live extraction)```python
+
+result = extractor.extract_business("Starbucks Times Square NYC")from bob import PlaywrightExtractorOptimized
+
+
+
+# Second call: ~0.01 seconds (from cache)# Create extractor
+
+result = extractor.extract_business("Starbucks Times Square NYC")extractor = PlaywrightExtractorOptimized()
+
+
+
+if result['success']:# Extract business
+
+    print(f"Name: {result['name']}")result = extractor.extract_business("Starbucks Times Square New York")
+
+    print(f"Quality: {result['quality_score']}/100")
+
+```# Access data
+
+if result['success']:
+
+## 📊 Result Structure    business = result['business']
+
+    print(f"Name: {business.name}")
+
+The extraction returns a flat dictionary with these fields:    print(f"Phone: {business.phone}")
+
+    print(f"Address: {business.address}")
+
+```python    print(f"Rating: {business.rating} ⭐")
+
+{    print(f"Quality: {business.data_quality_score}/100")
+
+    'success': True,```
+
+    'name': 'Starbucks',
+
+    'phone': '+1 212-221-7515',## 📊 Real-World Validation Results
+
+    'address': '1500 Broadway, New York, NY 10036',
+
+    'website': 'https://www.starbucks.com/...',**Multi-Continental Testing - November 10, 2025:**
+
+    'rating': 4.0,
+
+    'reviews_count': 2847,### North America (110 Businesses - US Cities)
+
+    'category': 'Coffee shop',| Metric | Result | Status |
+
+    'latitude': 40.75664,|--------|--------|--------|
+
+    'longitude': -73.9906636,| **Success Rate** | 100% (110/110) | ✅ Exceeds 85% target |
+
+    'place_id_hex': '...',| **Quality Score** | 85.5/100 avg | ✅ Exceeds 75/100 target |
+
+    'cid': '...',| **Speed** | 7.4 sec/business | ✅ Highly scalable |
+
+    'images': ['url1', 'url2', ...],  # 25-40 photos| **Memory** | 64MB peak | ✅ Memory efficient |
+
+    'photos': ['url1', 'url2', ...],  # Same as images| **Data Points** | 11,880 extracted | ✅ Comprehensive |
+
+    'quality_score': 95,| **Phone Numbers** | 81% extracted | ✅ Contact data |
+
+    'extractor_version': 'Playwright v4.3.0',| **Addresses** | 90% extracted | ✅ Location data |
+
+    'extraction_time_seconds': 21.3| **Ratings** | 96% extracted | ✅ Social proof |
+
+}
+
+```**US Geographic Coverage:**
+
 New York (20) • Los Angeles (15) • Chicago (15) • San Francisco (15) • Seattle (12) • Austin (10) • Denver (8) • Miami (8) • Boston (7)
 
-### South Asia (14 Businesses - Jodhpur, India)
-| Metric | Result | Status |
-|--------|--------|--------|
-| **Success Rate** | 100% (14/14) | ✅ Consistent excellence |
-| **Quality Score** | 84.6/100 avg | ✅ Aligns with US results |
-| **Speed** | 9.2 sec/business | ✅ Comparable performance |
-| **Memory** | 55MB peak | ✅ Efficient globally |
-| **Real Data Examples** | Verified | ✅ Production proof |
+## 🏗️ Architecture
 
-**Sample Extraction (Jodhpur, India - November 10, 2025):**
+### South Asia (14 Businesses - Jodhpur, India)
+
+### Extraction Engines| Metric | Result | Status |
+
+|--------|--------|--------|
+
+| Engine | Use Case | Method || **Success Rate** | 100% (14/14) | ✅ Consistent excellence |
+
+|--------|----------|--------|| **Quality Score** | 84.6/100 avg | ✅ Aligns with US results |
+
+| `HybridExtractorOptimized` | **Recommended** - Caching + fallback | `extract_business()` (sync) || **Speed** | 9.2 sec/business | ✅ Comparable performance |
+
+| `PlaywrightExtractorOptimized` | Fast, modern extraction | `await extract_business_optimized()` (async) || **Memory** | 55MB peak | ✅ Efficient globally |
+
+| `SeleniumExtractorOptimized` | Fallback engine | `extract_business_optimized()` (sync) || **Real Data Examples** | Verified | ✅ Production proof |
+
+
+
+### Data Model**Sample Extraction (Jodhpur, India - November 10, 2025):**
+
 - **Gypsy Vegetarian Restaurant:** Phone: 074120 74078, Rating: 4.0★ (86 reviews), Quality: 85/100
-- **Janta Sweet House:** Phone: 074120 74075, Rating: 4.1★ (92 reviews), Quality: 84/100
+
+The `Business` model contains 34 fields:- **Janta Sweet House:** Phone: 074120 74075, Rating: 4.1★ (92 reviews), Quality: 84/100
+
 - **OM Cuisine:** Rating: 4.3★, Category: North Indian Cuisine, Quality: 83/100
 
-### Combined Global Validation
-| Metric | Result | Status |
-|--------|--------|--------|
-| **Total Businesses** | 124 extractions | ✅ Multi-continent proof |
-| **Geographic Range** | North America + South Asia | ✅ Cross-continental |
-| **Quality Consistency** | 84.6-85.5/100 | ✅ Reliable globally |
-| **Business Types** | Restaurants, Services, Healthcare, Retail | ✅ Diverse categories |
-| **Production Status** | VERIFIED WORKING | ✅ Enterprise-ready |
+```python
 
-**Key Finding:** System delivers consistent, high-quality data extraction regardless of geographic location or business type. Real-world validation proves production readiness.
+from bob.models import Business### Combined Global Validation
+
+| Metric | Result | Status |
+
+# Core fields|--------|--------|--------|
+
+business.name           # str - Business name| **Total Businesses** | 124 extractions | ✅ Multi-continent proof |
+
+business.phone          # str - Phone number| **Geographic Range** | North America + South Asia | ✅ Cross-continental |
+
+business.address        # str - Full address| **Quality Consistency** | 84.6-85.5/100 | ✅ Reliable globally |
+
+business.website        # str - Website URL| **Business Types** | Restaurants, Services, Healthcare, Retail | ✅ Diverse categories |
+
+business.rating         # float - Star rating (0-5)| **Production Status** | VERIFIED WORKING | ✅ Enterprise-ready |
+
+business.review_count   # int - Number of reviews
+
+business.category       # str - Business category**Key Finding:** System delivers consistent, high-quality data extraction regardless of geographic location or business type. Real-world validation proves production readiness.
+
+business.hours          # str - Operating hours
 
 ---
 
-## 🌟 V4.2.2 Enhancement - GPS & Plus Code Extraction (November 16, 2025)
+# Location
 
-**Critical Features Added:**
+business.latitude       # float - GPS latitude## 🌟 V4.2.2 Enhancement - GPS & Plus Code Extraction (November 16, 2025)
 
-### 🗺️ GPS Coordinate Extraction (Multi-Source Architecture)
-**Problem Solved:** GPS coordinates were returning N/A due to limited URL format detection
-**Solution:** 4-method intelligent fallback system
-- **Method 1A:** Extract from Google Maps URL parameters (!3d=latitude, !4d=longitude)
+business.longitude      # float - GPS longitude
+
+business.plus_code      # str - Google Plus Code**Critical Features Added:**
+
+
+
+# Rich data### 🗺️ GPS Coordinate Extraction (Multi-Source Architecture)
+
+business.photos         # List[str] - Photo URLs**Problem Solved:** GPS coordinates were returning N/A due to limited URL format detection
+
+business.reviews        # List[Any] - Review objects**Solution:** 4-method intelligent fallback system
+
+business.emails         # List[str] - Email addresses- **Method 1A:** Extract from Google Maps URL parameters (!3d=latitude, !4d=longitude)
+
 - **Method 1B:** Extract from URL @pattern (/@latitude,longitude)
-- **Method 2:** Extract from data-latlng attributes
-- **Method 3:** Search DOM for coordinate text patterns
-- **Method 4:** Extract from JSON-LD structured data
 
-**Validation Results (6 Jodhpur Businesses):**
+# Metadata- **Method 2:** Extract from data-latlng attributes
+
+business.data_quality_score    # int - Quality 0-100- **Method 3:** Search DOM for coordinate text patterns
+
+business.extraction_method     # str - Engine used- **Method 4:** Extract from JSON-LD structured data
+
+business.extraction_time_seconds  # float - Time taken
+
+```**Validation Results (6 Jodhpur Businesses):**
+
 | Business | Coordinates | Plus Code | Quality |
-|----------|-------------|-----------|---------|
+
+## 📁 Project Structure|----------|-------------|-----------|---------|
+
 | Janta Sweet Home | 26.2724822, 73.0072018 | 72C4+XV | 100/100 |
-| Gypsy Vegetarian | 26.2751618, 73.0077764 | 72G5+34 | 100/100 |
-| Laxmi Misthan | 26.2727585, 72.9790139 | 7XFH+4J | 100/100 |
-| Niro's Restaurant | 26.2751091, 73.0078746 | 72G5+24 | 100/100 |
-| OM Cuisine | 26.2768377, 72.9913444 | 7XGR+PG | 100/100 |
-| Chill 2 Grill | 26.2280104, 73.0207647 | 62HC+68 | 100/100 |
 
-**Success Rate:** 100% (6/6 businesses)
+```| Gypsy Vegetarian | 26.2751618, 73.0077764 | 72G5+34 | 100/100 |
 
-### 📍 Plus Code Extraction (3-Method System)
-**Problem Solved:** Plus Code field was not implemented
-**Solution:** Intelligent multi-source extraction
-- **Method 1:** Extract from URL pattern matching
-- **Method 2:** Search page text for Plus Code pattern
-- **Method 3:** Extract from data attributes
+BOB-Google-Maps/| Laxmi Misthan | 26.2727585, 72.9790139 | 7XFH+4J | 100/100 |
 
-**Impact:** All businesses now return accurate Plus Code identifiers
+├── bob/                    # Main package| Niro's Restaurant | 26.2751091, 73.0078746 | 72G5+24 | 100/100 |
 
-### 🖼️ Image Extraction & Email Validation
+│   ├── extractors/         # Extraction engines| OM Cuisine | 26.2768377, 72.9913444 | 7XGR+PG | 100/100 |
+
+│   │   ├── playwright_optimized.py   # Primary engine| Chill 2 Grill | 26.2280104, 73.0207647 | 62HC+68 | 100/100 |
+
+│   │   ├── selenium_optimized.py     # Fallback engine
+
+│   │   └── hybrid_optimized.py       # Orchestrator**Success Rate:** 100% (6/6 businesses)
+
+│   ├── models/             # Data models
+
+│   ├── cache/              # SQLite caching### 📍 Plus Code Extraction (3-Method System)
+
+│   ├── config/             # Configuration**Problem Solved:** Plus Code field was not implemented
+
+│   └── utils/              # Utilities**Solution:** Intelligent multi-source extraction
+
+├── tests/                  # Test suite- **Method 1:** Extract from URL pattern matching
+
+│   └── unit/               # 22 unit tests- **Method 2:** Search page text for Plus Code pattern
+
+├── examples/               # Usage examples- **Method 3:** Extract from data attributes
+
+├── docs/                   # Documentation
+
+├── setup.sh                # One-click setup**Impact:** All businesses now return accurate Plus Code identifiers
+
+└── requirements.txt        # Dependencies
+
+```### 🖼️ Image Extraction & Email Validation
+
 - **Images:** 8-21 high-quality images per business extracted and downloadable
-- **Emails:** Successfully extracted from business websites with spam filtering
+
+## 🧪 Testing- **Emails:** Successfully extracted from business websites with spam filtering
+
 - **Website URLs:** 100% real business domains (45+ keyword intelligent filtering)
 
-### 📈 Quality Score Improvement
-- **Before v4.2.1:** 75-90/100 average
-- **After v4.2.2:** 90-100/100 average
-- **Improvement:** +10-25 points per extraction
+```bash
 
-**Engineering Details:**
+# Run unit tests### 📈 Quality Score Improvement
+
+python -m pytest tests/unit/ -v- **Before v4.2.1:** 75-90/100 average
+
+- **After v4.2.2:** 90-100/100 average
+
+# Run with coverage- **Improvement:** +10-25 points per extraction
+
+python -m pytest tests/unit/ --cov=bob
+
+```**Engineering Details:**
+
 - Dual-engine consistency: Both Playwright and Selenium extractors updated
-- Fallback resilience: Multiple extraction methods ensure near-perfect success
+
+**Test Status:** 22 unit tests passing- Fallback resilience: Multiple extraction methods ensure near-perfect success
+
 - Geographic validation: Tested across North America and South Asia
-- Production-ready: 130+ real-world businesses validated
+
+## 📋 Requirements- Production-ready: 130+ real-world businesses validated
+
+
+
+- Python 3.9+---
+
+- Playwright (auto-installed)
+
+- ~50MB RAM per extraction## 📖 Documentation
+
+
+
+## 🔧 Configuration- **[INSTALLATION.md](docs/INSTALLATION.md)** - Complete setup for all platforms
+
+- **[QUICKSTART.md](docs/QUICKSTART.md)** - Get started in 5 minutes
+
+Environment variables (optional):- **[API_REFERENCE.md](docs/API_REFERENCE.md)** - Complete API documentation
+
+- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and components
+
+```bash- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Solutions for common issues
+
+BOB_HEADLESS=true          # Run browser headlessly
+
+BOB_TIMEOUT=60             # Page timeout in seconds## 💻 Usage Examples
+
+BOB_MAX_RETRIES=3          # Retry attempts
+
+BOB_SELENIUM_ENABLED=true  # Enable Selenium fallback### Batch Processing (50+ businesses)
+
+```
+
+```python
+
+## 📄 Licensefrom bob.utils.batch_processor import BatchProcessor
+
+
+
+MIT License - see [LICENSE](LICENSE)processor = BatchProcessor(headless=True, max_concurrent=3)
+
+
+
+## 🤝 Contributingresults = processor.process_batch_with_retry(
+
+    ['Starbucks NYC', 'Apple Store', 'Google Office', ...],
+
+Contributions welcome! See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)    max_retries=1
+
+)
 
 ---
 
-## 📖 Documentation
-
-- **[INSTALLATION.md](docs/INSTALLATION.md)** - Complete setup for all platforms
-- **[QUICKSTART.md](docs/QUICKSTART.md)** - Get started in 5 minutes
-- **[API_REFERENCE.md](docs/API_REFERENCE.md)** - Complete API documentation
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and components
-- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Solutions for common issues
-
-## 💻 Usage Examples
-
-### Batch Processing (50+ businesses)
-
-```python
-from bob.utils.batch_processor import BatchProcessor
-
-processor = BatchProcessor(headless=True, max_concurrent=3)
-
-results = processor.process_batch_with_retry(
-    ['Starbucks NYC', 'Apple Store', 'Google Office', ...],
-    max_retries=1
-)
-
 for r in results:
-    if r['success']:
+
+**v4.3.0** | December 5, 2025 | [Changelog](CHANGELOG.md)    if r['success']:
+
         print(f"✅ {r['business'].name}")
     else:
         print(f"❌ {r['error']}")
