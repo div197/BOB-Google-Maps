@@ -5,6 +5,44 @@ All notable changes to BOB Google Maps will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.1] - 2025-12-06
+
+### 🚀 New Features
+
+This release adds comprehensive export functionality, parallel extraction, and production examples.
+
+### Added
+- **Multi-format export module** (`bob/utils/exporters.py`)
+  - JSON export with metadata
+  - CSV export (spreadsheet compatible)
+  - SQLite database export
+  - Excel export (requires openpyxl)
+  - Batch export to all formats at once
+- **Parallel extraction** (`bob/utils/parallel_extractor.py`)
+  - Concurrent extraction with multiple browser instances
+  - Memory monitoring (auto-stop at 80% usage)
+  - Configurable workers (default: 2, max: 5)
+  - ~2-3x speedup vs sequential extraction
+- **Resume capability** for long-running extractions
+  - Progress tracking in `.progress.json`
+  - Skip already-extracted businesses
+  - Rate limiting with configurable delays
+- **4 new examples** (05-08)
+  - `05_batch_extraction.py` - Multiple businesses with progress
+  - `06_export_formats.py` - CSV, Excel, SQLite export
+  - `07_city_extraction.py` - Bulk city extraction
+  - `08_parallel_extraction.py` - Concurrent extraction
+
+### Changed
+- `requirements.txt` - Added openpyxl as optional dependency
+- `bob/utils/__init__.py` - Exported new modules
+- `examples/README.md` - Updated with all 8 examples
+
+### Fixed
+- Added TYPE_CHECKING import for openpyxl to suppress Pylance warnings
+
+---
+
 ## [4.3.0] - 2025-12-05
 
 ### 🎉 Major Production Release

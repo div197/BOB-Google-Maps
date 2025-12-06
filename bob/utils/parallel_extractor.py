@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BOB Parallel Extractor v4.3.0
+BOB Parallel Extractor v4.3.1
 
 Extract multiple businesses concurrently using asyncio.
 Uses multiple browser instances for faster extraction.
@@ -149,7 +149,7 @@ class ParallelExtractor:
             "end_time": None,
         }
         
-        print(f"\n🔱 BOB PARALLEL EXTRACTOR v4.3.0")
+        print(f"\n🔱 BOB PARALLEL EXTRACTOR v4.3.1")
         print("=" * 60)
         print(f"📊 Total businesses: {len(urls)}")
         print(f"⚡ Max concurrent: {self.config.max_concurrent}")

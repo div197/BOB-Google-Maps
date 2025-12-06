@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BOB Data Exporters v4.3.0
+BOB Data Exporters v4.3.1
 
 Export extracted business data to multiple formats:
 - JSON (default)
@@ -21,7 +21,12 @@ import json
 import sqlite3
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, TYPE_CHECKING
+
+# Type hints for optional openpyxl (suppresses Pylance warning)
+if TYPE_CHECKING:
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment
 
 
 # ============================================================================
@@ -53,7 +58,7 @@ def export_to_json(
         output = {
             "metadata": {
                 "exported_at": datetime.now().isoformat(),
-                "exporter_version": "4.3.0",
+                "exporter_version": "4.3.1",
                 "format": "json",
                 "total_records": len(data),
             },

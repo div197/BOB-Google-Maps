@@ -25,7 +25,7 @@ Usage:
     print(f"GPS: {result.get('latitude')}, {result.get('longitude')}")
 """
 
-__version__ = '4.3.0'
+__version__ = '4.3.1'
 __author__ = 'Divyanshu (Dhrishtadyumna)'
 __license__ = 'MIT'
 

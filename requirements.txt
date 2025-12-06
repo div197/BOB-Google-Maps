@@ -31,6 +31,11 @@ black>=23.0.0
 flake8>=6.0.0
 mypy>=1.5.0
 
+# ===== OPTIONAL DEPENDENCIES =====
+
+# Excel export support (pip install openpyxl)
+openpyxl>=3.1.0,<4.0.0
+
 # ===== DOCUMENTATION (OPTIONAL) =====
 
 # mkdocs>=1.5.0

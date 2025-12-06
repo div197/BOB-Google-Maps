@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bob-google-maps"
-version = "4.3.0"
-description = "BOB Google Maps v4.3.0 - Enterprise-grade Google Maps data extraction with 95%+ verified success rate, hybrid Playwright+Selenium engine, intelligent caching"
+version = "4.3.1"
+description = "BOB Google Maps v4.3.1 - Enterprise-grade Google Maps data extraction with 95%+ verified success rate, hybrid Playwright+Selenium engine, intelligent caching"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
