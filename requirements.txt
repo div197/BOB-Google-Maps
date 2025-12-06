@@ -1,42 +1,52 @@
-# BOB Google Maps v4.3.0 - Production Requirements
+# BOB Google Maps v4.3.1 - Production Requirements
 # Author: Divyanshu Singh Chouhan
-# Release: December 5, 2025
+# Release: December 6, 2025
 
-# ===== CORE DEPENDENCIES (REQUIRED) =====
+# ============================================================================
+# CORE DEPENDENCIES (REQUIRED)
+# ============================================================================
 
-# Web automation engines
-selenium>=4.15.0,<5.0.0
+# Primary extraction engine - Playwright (async, fast, reliable)
 playwright>=1.40.0,<2.0.0
+
+# Backup extraction engine - Selenium (fallback for edge cases)
+selenium>=4.15.0,<5.0.0
+
+# Anti-detection for Selenium
 undetected-chromedriver>=3.5.0,<4.0.0
 
-# HTTP and networking
+# HTTP requests (for website email extraction)
 requests>=2.31.0,<3.0.0
+
+# URL handling
 urllib3>=2.0.0,<3.0.0
 
-# Async support
+# Async support (required by Playwright)
 greenlet>=3.0.0,<4.0.0
 
-# System monitoring (REQUIRED - was missing!)
+# System memory monitoring (for parallel extraction)
 psutil>=5.9.0,<6.0.0
 
 # Python 3.12+ compatibility (distutils replacement)
 setuptools>=65.0.0
 
-# ===== DEVELOPMENT DEPENDENCIES =====
+# ============================================================================
+# EXPORT DEPENDENCIES
+# ============================================================================
 
+# Excel export (optional but included for convenience)
+openpyxl>=3.1.0,<4.0.0
+
+# ============================================================================
+# DEVELOPMENT DEPENDENCIES
+# ============================================================================
+
+# Testing
 pytest>=7.4.0
 pytest-cov>=4.1.0
 pytest-asyncio>=0.21.0
+
+# Code quality
 black>=23.0.0
 flake8>=6.0.0
 mypy>=1.5.0
-
-# ===== OPTIONAL DEPENDENCIES =====
-
-# Excel export support (pip install openpyxl)
-openpyxl>=3.1.0,<4.0.0
-
-# ===== DOCUMENTATION (OPTIONAL) =====
-
-# mkdocs>=1.5.0
-# mkdocs-material>=9.0.0

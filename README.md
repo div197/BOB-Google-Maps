@@ -1,4 +1,4 @@
-# 🔱 BOB Google Maps v4.3.0
+# 🔱 BOB Google Maps v4.3.1
 
 **B**reak **O**rdinary **B**oundaries — Production-grade Google Maps data extraction
 
@@ -30,7 +30,7 @@ print(result['longitude'])  # -73.9855
 
 ## ✨ Key Features
 
-| Feature | BOB v4.3.0 |
+| Feature | BOB v4.3.1 |
 |---------|------------|
 | **Success Rate** | 95%+ verified |
 | **Extraction Time** | 10-22 seconds per business |
@@ -53,6 +53,13 @@ print(result['longitude'])  # -73.9855
 - ✅ Customer reviews with ratings
 - ✅ Opening hours
 - ✅ Price level
+
+### v4.3.1 New Features
+
+- 📤 **Multi-format export**: JSON, CSV, SQLite, Excel
+- ⚡ **Parallel extraction**: 2-3x faster with concurrent browsers
+- 🔄 **Resume capability**: Continue interrupted extractions
+- 🛑 **Rate limiting**: Configurable delays for respectful scraping
 
 ---
 
@@ -106,12 +113,54 @@ asyncio.run(main())
 
 ---
 
+## 📤 Export Formats
+
+Export extracted data to multiple formats:
+
+```python
+from bob.utils.exporters import export_to_csv, export_to_sqlite, export_to_excel
+
+# Export to CSV (spreadsheet compatible)
+export_to_csv(results, "businesses.csv")
+
+# Export to SQLite database
+export_to_sqlite(results, "businesses.db")
+
+# Export to Excel (requires openpyxl)
+export_to_excel(results, "businesses.xlsx")
+```
+
+---
+
+## ⚡ Parallel Extraction
+
+Extract multiple businesses 2-3x faster:
+
+```python
+from bob.utils.parallel_extractor import ParallelExtractor, ParallelConfig
+
+config = ParallelConfig(
+    max_concurrent=2,          # 2 parallel browsers
+    memory_limit_percent=80,   # Stop if memory > 80%
+    delay_between_starts=3.0   # 3s delay between browsers
+)
+
+extractor = ParallelExtractor(config)
+results = await extractor.extract_batch([
+    "Starbucks NYC",
+    "Apple Store NYC",
+    "Empire State Building"
+])
+```
+
+---
+
 ## 📊 Output Format
 
 ```json
 {
   "success": true,
-  "extraction_method": "Playwright v4.3.0",
+  "extraction_method": "Playwright v4.3.1",
   "name": "Mehrangarh Fort",
   "rating": 4.7,
   "reviews_count": 52847,
@@ -123,15 +172,12 @@ asyncio.run(main())
   "longitude": 73.0183095,
   "place_id_hex": "0x39418d617aaaaaab:0x1234567890abcdef",
   "cid": "1311234567890123456",
-  "images": [
-    "https://lh3.googleusercontent.com/...",
-    "https://lh3.googleusercontent.com/..."
-  ],
+  "images": ["https://lh3.googleusercontent.com/..."],
   "reviews": [
     {
       "author": "John Smith",
       "rating": 5,
-      "text": "Amazing historical fort with stunning views!",
+      "text": "Amazing historical fort!",
       "time": "2 months ago"
     }
   ],
@@ -143,10 +189,9 @@ asyncio.run(main())
 
 ## 🏙️ City-Wide Extraction
 
-BOB can extract **entire cities** worth of business data:
+Extract entire cities worth of business data:
 
 ```python
-# Example: Extract all restaurants in Jodhpur
 from jodhpur.extract_jodhpur import extract_category, ExtractionConfig
 
 config = ExtractionConfig()
@@ -156,7 +201,7 @@ config.max_per_category = 100
 await extract_category("restaurants", config)
 ```
 
-### Tested Capacity (Jodhpur, India)
+### Tested Capacity
 
 | Category | Extractable |
 |----------|-------------|
@@ -167,82 +212,63 @@ await extract_category("restaurants", config)
 | Banks | ~120 |
 | **Total (10 categories)** | **~1,100** |
 
-Full city extraction with 65 categories: **~3,700 businesses** in ~12 hours.
+---
+
+## 📁 Project Structure
+
+```
+BOB-Google-Maps/
+├── bob/                        # Core package
+│   ├── __init__.py             # Package exports
+│   ├── __main__.py             # CLI entry point
+│   ├── cli.py                  # Command line interface
+│   ├── extractors/             # Extraction engines
+│   │   ├── playwright_optimized.py  # Primary engine
+│   │   ├── hybrid_optimized.py      # With caching
+│   │   └── selenium_optimized.py    # Backup engine
+│   ├── models/                 # Data models
+│   ├── cache/                  # SQLite caching
+│   ├── config/                 # Configuration
+│   └── utils/                  # Utilities
+│       ├── exporters.py        # CSV, JSON, SQLite, Excel
+│       └── parallel_extractor.py  # Concurrent extraction
+├── examples/                   # Usage examples (8 examples)
+├── tests/                      # Unit, integration, E2E tests
+├── jodhpur/                    # City extraction workspace
+├── docs/                       # Documentation
+├── requirements.txt            # Dependencies
+├── setup.sh                    # One-click setup
+└── README.md                   # This file
+```
 
 ---
 
 ## 🧪 Verified Results
 
-Tested on December 5, 2025:
+Tested on December 6, 2025:
 
 | Business | Quality | GPS | Phone | Photos |
 |----------|---------|-----|-------|--------|
 | Mehrangarh Fort | 100/100 | ✅ | ✅ | 25 |
 | Starbucks NYC | 98/100 | ✅ | ✅ | 22 |
 | Taj Mahal Palace | 95/100 | ✅ | ✅ | 30 |
-| Random Cafe | 88/100 | ✅ | ✅ | 18 |
+| Empire State Building | 96/100 | ✅ | ✅ | 28 |
 
 **Average Success Rate: 95%+**
 
 ---
 
-## 📁 Project Structure
-
-```
-bob/
-├── __init__.py              # Package exports
-├── __main__.py              # CLI entry point
-├── cli.py                   # Command line interface
-├── extractors/
-│   ├── playwright_optimized.py  # Main extraction engine
-│   ├── hybrid_optimized.py      # With caching layer
-│   └── selenium_optimized.py    # Backup engine
-├── models/
-│   ├── business.py          # Business data model
-│   ├── review.py            # Review data model
-│   └── image.py             # Image data model
-├── cache/
-│   └── cache_manager.py     # Redis/SQLite caching
-├── config/
-│   └── settings.py          # Configuration
-└── utils/
-    ├── converters.py        # Data converters
-    ├── email_extractor.py   # Email from websites
-    └── image_extractor.py   # Photo extraction
-```
-
----
-
-## 🔧 Advanced Configuration
-
-```python
-from bob import PlaywrightExtractorOptimized
-
-extractor = PlaywrightExtractorOptimized(
-    headless=True,          # Run without browser window
-    timeout=30000,          # Page load timeout (ms)
-    user_agent="...",       # Custom user agent
-)
-
-result = await extractor.extract_business_optimized(
-    "Business Name City",
-    include_reviews=True,   # Extract reviews
-    max_reviews=20,         # Limit review count
-)
-```
-
----
-
 ## 🆚 Why BOB?
 
-| Feature | BOB v4.3.0 | Google Places API | SerpApi |
+| Feature | BOB v4.3.1 | Google Places API | SerpApi |
 |---------|------------|-------------------|---------|
 | **Cost** | Free | $17/1000 req | $50/5000 req |
 | **Photos** | 20-40 | 1-10 | 5-10 |
 | **Reviews** | Full text | Limited | Limited |
 | **GPS** | Full precision | Full | Full |
 | **Rate Limits** | None* | Strict | Moderate |
-| **Setup** | 1 command | API key + billing | API key |
+| **Export Formats** | 4 formats | JSON only | JSON only |
+| **Parallel** | Yes (2-5x) | N/A | N/A |
 
 *BOB uses ethical scraping speeds (~5 businesses/minute)
 
@@ -251,14 +277,14 @@ result = await extractor.extract_business_optimized(
 ## 🧪 Running Tests
 
 ```bash
-# All tests
-pytest
-
-# Unit tests only
-pytest tests/unit/
+# All unit tests
+pytest tests/unit/ -v
 
 # With coverage
-pytest --cov=bob
+pytest tests/unit/ --cov=bob
+
+# Integration tests (requires internet)
+pytest tests/integration/ -v
 ```
 
 ---
@@ -291,5 +317,7 @@ MIT License - Use freely for personal and commercial projects.
 **⭐ Star this repo if BOB helped you!**
 
 Made with 🔱 by the BOB Team
+
+**v4.3.1** | December 6, 2025
 
 </div>
